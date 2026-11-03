@@ -1,0 +1,176 @@
+\section{The sixteen-qubit exclusion}\label{sec:sixteen}
+
+Assume that \(S\leq V_{16}\) defines a \(\qc{16,5,d\geq5}\) code.
+Then \(|S|=2^{11}=2048\). The counts \(A_j\) include products of basis generators.
+The argument has three steps. First we prove purity and restrict the
+minimum stabilizer weight. Next we show that shortening on such a word
+leaves one of four complete code classifications. Finally we test the
+extension inequalities on every class in those lists.
+
+\subsection{Purity and minimum stabilizer weight}
+
+\begin{proposition}[Exact low-weight reduction]\label{prop:16-reduction}
+Such a code is pure to distance five. Its minimum nonzero stabilizer
+weight \(m\) belongs to \(\{6,7,8,9\}\).
+\end{proposition}
+\begin{proof}
+The weight-enumerator equations count words of each weight without
+specifying the full code. The MacWilliams identities express centralizer
+counts in terms of stabilizer counts, and the shadow identities give
+additional nonnegative counts. A certificate is an integer combination
+of these necessary relations that gives a contradiction under a stated
+case assumption. Its check uses integer arithmetic alone; the general
+construction is given in Appendix~\ref{app:certificates}.
+
+The six integer certificates in the repository exclude, in order:
+\begin{enumerate}[label=(\alph*)]
+\item a stabilizer word of weight one, two, or three;
+\item a weight-four stabilizer word together with \(A_4\geq2\);
+\item a weight-five stabilizer word under \(A_1=\cdots=A_4=0\);
+\item \(A_1=\cdots=A_9=0\).
+\end{enumerate}
+For a proposed word of weight \(w\), local Clifford operations normalize
+it to \(Z^w\). The split system counts complete cosets of
+\(\langle Z^w\rangle\), with distance equations through weight four,
+centralizer inclusion, and nonnegative shadow coefficients. Every actual
+code yields a feasible point. Appendix~\ref{app:certificates} defines
+the system and the exact arithmetic checks; the case assumptions and
+negative certificate values are tabulated there.
+
+It remains to exclude \(A_4=1\). Write \(\mathcal{K}_j(w)\) for the quaternary
+Krawtchouk polynomial at length sixteen, and \(\operatorname{Sh}_j\)
+for the shadow counts. Set
+\[
+ \Delta_0=\sum_wA_w=2048,\quad
+ \Delta_j=\sum_w\mathcal{K}_j(w)A_w-2048A_j=0\ (1\leq j\leq4),
+\]
+and \(\Omega_j=\sum_w(-1)^w\mathcal{K}_j(w)A_w-2048\operatorname{Sh}_j=0\).
+In the integer combination
+\[
+ -740\Delta_0-265\Delta_1-81\Delta_2-19\Delta_3-3\Delta_4
+       +80\Omega_0+10\Omega_1-2\Omega_3,
+\]
+all coefficients vanish modulo \(4096\), except those of
+\(A_1,A_2,A_3,A_4\), each congruent to \(2048\).
+The right-hand side is \(-740\cdot2048\), which is divisible by
+\(4096\).
+\(A_1+A_2+A_3+A_4\) is even. The first certificates give
+\(A_1=A_2=A_3=0\), \(A_4\leq1\), so \(A_4=0\).
+Every centralizer word of weight below five must be a stabilizer;
+therefore purity follows. The last two certificate cases give
+\(6\leq m\leq9\).
+\end{proof}
+
+\subsection{The four shortened-code classifications}
+
+Choose a weight-\(m\) word \(p\) with support \(T\), and normalize
+\(p=Z^m\). We first need the \emph{entire} local stabilizer.
+
+\begin{lemma}\label{lem:16-rankone}
+For \(m\in\{6,7,8,9\}\), \(S\cap V_T=\langle p\rangle\).
+\end{lemma}
+\begin{proof}
+If \(\dim(S\cap V_T)\geq2\), the shortened centralizer contains a
+subcode with parameters
+\[
+ (10,2^{11},\geq5)_4,\quad(9,2^9,\geq5)_4,
+       \quad\text{or}\quad(8,2^7,\geq5)_4
+\]
+for \(m=6,7,8\), respectively. No additive codes with these parameters exist
+\cite{dodeca}; the repository also verifies their emptiness through the
+complete lengthening census.
+For \(m=9\), an independent local stabilizer word \(\zeta\) and \(\zeta+p\)
+must both have weight nine by minimality of \(m\). \(\zeta\) has
+\(X\) or \(Y\) at every site of \(T\). It anticommutes with
+\(Z^9\) on an odd number of sites, contradicting isotropy.
+\end{proof}
+
+The shorter code \(C\) has length \(16-m\), dimension
+\(22-2m\), and distance at least five. The quotient \(W/C\) has
+dimension ten for every case. The complete classifications contain the following
+numbers of physical equivalence classes:
+\begin{center}
+\begin{tabular}{@{}cccc@{}}\toprule
+\(m\)&Shortened length&Binary dimension&Classes\\\midrule
+6&10&10&37\\7&9&8&2,298\\8&8&6&1,579\\9&7&4&43\\\bottomrule
+\end{tabular}
+\end{center}
+The four class counts are the exact entries of Table~1 in
+Grassl et al. \cite{dodeca}.
+The repository reconstructs representatives and checks their completeness
+by a second physical graph encoding and orbit--stabilizer mass identities.
+The classification procedure is specified in Section~\ref{sec:classification}.
+
+\subsection{The finite prefix-map problem}
+
+For \(R=\langle Z^m\rangle\), use the symplectic basis
+\[
+ Z_0,\ldots,Z_{m-2},\qquad X_iX_{m-1}\quad(0\leq i<m-1)
+\]
+of \(E\), with \(Z_{m-1}=\sum_{i<m-1}Z_i\) modulo \(R\).
+Each basis image is a ten-bit syndrome. Every actual code gives a linear
+map satisfying
+\begin{equation}\label{eq:16-weight}
+ \cost(e)+\delta(Me)\geq5\qquad(e\ne0).
+\end{equation}
+Only classes of minimum weight less than five constrain the search.
+Omitting \(\Gamma=MJM^\tr\) enlarges the feasible set, so
+nonexistence of a map in this larger set is sufficient.
+
+The depth-first traversal assigns basis images and checks each newly
+determined subset sum. The forward-checking version maintains every
+remaining basis image's allowed domain. A value is removed only when a
+specific already determined subset would violate \eqref{eq:16-weight}.
+Every word is tested: each \(e\in E\) is a binary sum of the basis
+vectors, and its image is the corresponding sum of assigned syndromes.
+A Boolean satisfiability (SAT) encoding uses Boolean entries of \(M\), XOR chains
+for its values, and a clause for every forbidden element/syndrome pair.
+Each forbidden pair is a clause
+requiring the entries of \(M\) to avoid that particular map value.
+The two encodings construct their coset labels separately.
+
+\begin{lemma}[Physical normalization for the weight-only search]\label{lem:16-symmetry}
+If a map satisfying \eqref{eq:16-weight} exists, one exists with
+\[
+ \xi_0<\xi_1<\cdots<\xi_{m-1},\qquad
+ \eta_i<\eta_i+\xi_i\quad(0\leq i<m-1),
+\]
+where \(\xi_i=M(Z_i)\), \(\eta_i=M(X_iX_{m-1})\), and labels use
+any fixed total order.
+\end{lemma}
+\begin{proof}
+The singleton and pair constraints force all \(\xi_i\) to be distinct
+and nonzero. A physical permutation of the \(m\) sites fixes \(Z^m\)
+and preserves coset minimum weights, so orders the singleton images.
+After this permutation, the map is re-expressed in the displayed standard
+basis; the dependent image is still
+\(\xi_{m-1}=\sum_{i=0}^{m-2}\xi_i\).
+The phase operation
+\(X\leftrightarrow Y\) on site \(i<m-1\) fixes every \(Z_j\),
+fixes the other complementary basis vectors, and replaces
+\(X_iX_{m-1}\) by \(X_iX_{m-1}+Z_i\). It exchanges
+\(\eta_i\) and \(\eta_i+\xi_i\) independently for each \(i\).
+These physical operations preserve all weight inequalities.
+\end{proof}
+
+\begin{proposition}[Complete sixteen-qubit extension exclusion]\label{prop:16-search}
+None of the 3,957 shortened-code classes admits a map satisfying
+\eqref{eq:16-weight}.
+\end{proposition}
+\begin{proof}[Computer-assisted proof]
+The recorded reports cover completed searches for every class.
+For \(m\leq8\), a symmetry-free depth-first search and a separately
+constructed SAT encoding both exclude every class. For \(m=9\), two
+depth-first implementations use Lemma~\ref{lem:16-symmetry}, with
+different coset coordinates and search orders. Both exclude all 43 classes.
+A known pure \(\qc{16,4,5}\) code is accepted by
+both encodings, with and without their symmetry restrictions.
+Appendix~\ref{app:search} specifies the finite predicate and completeness
+argument; Appendix~\ref{app:evidence} identifies the evidence and its checks.
+\end{proof}
+
+Proposition~\ref{prop:16-reduction}, Lemma~\ref{lem:16-rankone}, and
+Theorem~\ref{thm:extension} put every hypothetical code into one of these
+weight-admissible extension problems. Proposition~\ref{prop:16-search}
+excludes them all. This proves the first assertion of
+Theorem~\ref{thm:main}.

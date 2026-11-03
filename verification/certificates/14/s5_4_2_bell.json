@@ -1,0 +1,403 @@
+{
+ "name": "s5_4_2_bell",
+ "section": "5.4.2",
+ "description": "R = <XXXX, ZZZZ>; variables are the split counts H_{a,b}",
+ "blocks": [
+  {
+   "sites": 4,
+   "generators": [
+    "XXXX",
+    "ZZZZ"
+   ],
+   "variables": "cells"
+  }
+ ],
+ "suffix_sites": 10,
+ "certificate": [
+  {
+   "type": "total",
+   "multiplier": -156258699264
+  },
+  {
+   "type": "coset_eq",
+   "weights": [
+    -3,
+    0,
+    -1,
+    0,
+    1
+   ],
+   "suffix_weight": 0,
+   "multiplier": -71030002360320
+  },
+  {
+   "type": "coset_eq",
+   "weights": [
+    -3,
+    0,
+    -1,
+    0,
+    1
+   ],
+   "suffix_weight": 1,
+   "multiplier": -32592923615232
+  },
+  {
+   "type": "coset_eq",
+   "weights": [
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   "suffix_weight": 2,
+   "multiplier": -20463916941312
+  },
+  {
+   "type": "coset_eq",
+   "weights": [
+    -3,
+    0,
+    -1,
+    0,
+    1
+   ],
+   "suffix_weight": 2,
+   "multiplier": -57353676398592
+  },
+  {
+   "type": "coset_eq",
+   "weights": [
+    -3,
+    0,
+    -1,
+    0,
+    1
+   ],
+   "suffix_weight": 3,
+   "multiplier": 12424131862528
+  },
+  {
+   "type": "coset_eq",
+   "weights": [
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   "suffix_weight": 4,
+   "multiplier": -7567457386496
+  },
+  {
+   "type": "coset_eq",
+   "weights": [
+    -3,
+    0,
+    -1,
+    0,
+    1
+   ],
+   "suffix_weight": 4,
+   "multiplier": -5102547968000
+  },
+  {
+   "type": "coset_eq",
+   "weights": [
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   "suffix_weight": 5,
+   "multiplier": 3606646816768
+  },
+  {
+   "type": "coset_eq",
+   "weights": [
+    -3,
+    0,
+    -1,
+    0,
+    1
+   ],
+   "suffix_weight": 5,
+   "multiplier": 1275495718912
+  },
+  {
+   "type": "coset_eq",
+   "weights": [
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   "suffix_weight": 6,
+   "multiplier": 4992251985920
+  },
+  {
+   "type": "coset_eq",
+   "weights": [
+    -3,
+    0,
+    -1,
+    0,
+    1
+   ],
+   "suffix_weight": 6,
+   "multiplier": 1687651868672
+  },
+  {
+   "type": "coset_eq",
+   "weights": [
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   "suffix_weight": 7,
+   "multiplier": 7437695418368
+  },
+  {
+   "type": "coset_eq",
+   "weights": [
+    -3,
+    0,
+    -1,
+    0,
+    1
+   ],
+   "suffix_weight": 7,
+   "multiplier": 696200585216
+  },
+  {
+   "type": "coset_eq",
+   "weights": [
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   "suffix_weight": 8,
+   "multiplier": 8361320382464
+  },
+  {
+   "type": "coset_eq",
+   "weights": [
+    -3,
+    0,
+    -1,
+    0,
+    1
+   ],
+   "suffix_weight": 8,
+   "multiplier": 835489685504
+  },
+  {
+   "type": "coset_eq",
+   "weights": [
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   "suffix_weight": 9,
+   "multiplier": 7806577410048
+  },
+  {
+   "type": "coset_eq",
+   "weights": [
+    -3,
+    0,
+    -1,
+    0,
+    1
+   ],
+   "suffix_weight": 9,
+   "multiplier": 1461026463744
+  },
+  {
+   "type": "coset_eq",
+   "weights": [
+    -3,
+    0,
+    -1,
+    0,
+    1
+   ],
+   "suffix_weight": 10,
+   "multiplier": 689024655360
+  },
+  {
+   "type": "low",
+   "cell": [
+    0,
+    1
+   ],
+   "multiplier": 91576037376
+  },
+  {
+   "type": "low",
+   "cell": [
+    0,
+    2
+   ],
+   "multiplier": 65942304768
+  },
+  {
+   "type": "low",
+   "cell": [
+    0,
+    3
+   ],
+   "multiplier": 17760964608
+  },
+  {
+   "type": "low",
+   "cell": [
+    0,
+    4
+   ],
+   "multiplier": 9447321600
+  },
+  {
+   "type": "low",
+   "cell": [
+    2,
+    1
+   ],
+   "multiplier": 5605410816
+  },
+  {
+   "type": "low",
+   "cell": [
+    2,
+    2
+   ],
+   "multiplier": 2109901824
+  },
+  {
+   "type": "low",
+   "cell": [
+    3,
+    0
+   ],
+   "multiplier": 6424178688
+  },
+  {
+   "type": "low",
+   "cell": [
+    3,
+    1
+   ],
+   "multiplier": 3763183104
+  },
+  {
+   "type": "low",
+   "cell": [
+    4,
+    0
+   ],
+   "multiplier": 153676431360
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    0,
+    1
+   ],
+   "multiplier": 6928035840
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    0,
+    4
+   ],
+   "multiplier": 188946432
+  },
+  {
+   "type": "incl",
+   "cell": [
+    1,
+    3
+   ],
+   "multiplier": 134061392
+  },
+  {
+   "type": "cnonneg",
+   "cell": [
+    1,
+    3
+   ],
+   "multiplier": 2757441392
+  },
+  {
+   "type": "cnonneg",
+   "cell": [
+    1,
+    4
+   ],
+   "multiplier": 1326542976
+  },
+  {
+   "type": "cnonneg",
+   "cell": [
+    1,
+    10
+   ],
+   "multiplier": 70682880
+  },
+  {
+   "type": "cnonneg",
+   "cell": [
+    2,
+    0
+   ],
+   "multiplier": 122972636160
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    2,
+    0
+   ],
+   "multiplier": 32876679168
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    2,
+    2
+   ],
+   "multiplier": 3464017920
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    3,
+    0
+   ],
+   "multiplier": 11431259136
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    3,
+    1
+   ],
+   "multiplier": 5888830464
+  }
+ ],
+ "expected": {
+  "columns": 55,
+  "nu_rhs": -320017816092672,
+  "positive_residuals": 17
+ }
+}

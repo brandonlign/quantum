@@ -1,0 +1,576 @@
+{
+  "status": "PASS_COMPLETE_LOCAL_KERNEL_CLASSES_AND_CAPACITIES",
+  "q1_direct_normalized_subspaces": 7072,
+  "ordered_lift_replays": [
+    {
+      "q": 2,
+      "parents": 32,
+      "ordered_pairs": 2048,
+      "minimum6_lifts": 784,
+      "marked_full_radical_words": 189
+    },
+    {
+      "q": 3,
+      "parents": 43,
+      "ordered_pairs": 11008,
+      "minimum6_lifts": 861,
+      "marked_full_radical_words": 285
+    }
+  ],
+  "distinguished_classes": {
+    "1,0": 4,
+    "2,0": 6,
+    "2,2": 2,
+    "3,0": 7,
+    "3,2": 5
+  },
+  "capacity_profiles": 38,
+  "capacity_checks": [
+    {
+      "profile": 0,
+      "q": 1,
+      "t": 0,
+      "cosets": 8192,
+      "caps": [
+        1512,
+        4860,
+        7327,
+        8043,
+        8183,
+        8191
+      ]
+    },
+    {
+      "profile": 1,
+      "q": 1,
+      "t": 0,
+      "cosets": 8192,
+      "caps": [
+        1080,
+        4700,
+        7315,
+        8043,
+        8183,
+        8191
+      ]
+    },
+    {
+      "profile": 2,
+      "q": 1,
+      "t": 0,
+      "cosets": 8192,
+      "caps": [
+        1080,
+        4670,
+        7315,
+        8043,
+        8183,
+        8191
+      ]
+    },
+    {
+      "profile": 3,
+      "q": 1,
+      "t": 0,
+      "cosets": 8192,
+      "caps": [
+        630,
+        4550,
+        7315,
+        8043,
+        8183,
+        8191
+      ]
+    },
+    {
+      "profile": 4,
+      "q": 2,
+      "t": 0,
+      "cosets": 4096,
+      "caps": [
+        140,
+        1394,
+        3255,
+        3947,
+        4087,
+        4095
+      ]
+    },
+    {
+      "profile": 5,
+      "q": 2,
+      "t": 0,
+      "cosets": 4096,
+      "caps": [
+        132,
+        1391,
+        3255,
+        3947,
+        4087,
+        4095
+      ]
+    },
+    {
+      "profile": 6,
+      "q": 2,
+      "t": 0,
+      "cosets": 4096,
+      "caps": [
+        56,
+        1286,
+        3243,
+        3947,
+        4087,
+        4095
+      ]
+    },
+    {
+      "profile": 7,
+      "q": 2,
+      "t": 0,
+      "cosets": 4096,
+      "caps": [
+        56,
+        1286,
+        3243,
+        3947,
+        4087,
+        4095
+      ]
+    },
+    {
+      "profile": 8,
+      "q": 2,
+      "t": 2,
+      "cosets": 4096,
+      "caps": [
+        58,
+        1272,
+        3243,
+        3947,
+        4087,
+        4095
+      ]
+    },
+    {
+      "profile": 9,
+      "q": 2,
+      "t": 0,
+      "cosets": 4096,
+      "caps": [
+        28,
+        1160,
+        3231,
+        3947,
+        4087,
+        4095
+      ]
+    },
+    {
+      "profile": 10,
+      "q": 2,
+      "t": 0,
+      "cosets": 4096,
+      "caps": [
+        28,
+        1160,
+        3231,
+        3947,
+        4087,
+        4095
+      ]
+    },
+    {
+      "profile": 11,
+      "q": 2,
+      "t": 0,
+      "cosets": 4096,
+      "caps": [
+        28,
+        1160,
+        3231,
+        3947,
+        4087,
+        4095
+      ]
+    },
+    {
+      "profile": 12,
+      "q": 2,
+      "t": 2,
+      "cosets": 4096,
+      "caps": [
+        0,
+        1138,
+        3231,
+        3947,
+        4087,
+        4095
+      ]
+    },
+    {
+      "profile": 13,
+      "q": 2,
+      "t": 0,
+      "cosets": 4096,
+      "caps": [
+        41,
+        1193,
+        3243,
+        3947,
+        4087,
+        4095
+      ]
+    },
+    {
+      "profile": 14,
+      "q": 2,
+      "t": 0,
+      "cosets": 4096,
+      "caps": [
+        41,
+        1193,
+        3243,
+        3947,
+        4087,
+        4095
+      ]
+    },
+    {
+      "profile": 15,
+      "q": 2,
+      "t": 0,
+      "cosets": 4096,
+      "caps": [
+        41,
+        1193,
+        3243,
+        3947,
+        4087,
+        4095
+      ]
+    },
+    {
+      "profile": 16,
+      "q": 2,
+      "t": 0,
+      "cosets": 4096,
+      "caps": [
+        29,
+        1113,
+        3231,
+        3947,
+        4087,
+        4095
+      ]
+    },
+    {
+      "profile": 17,
+      "q": 3,
+      "t": 0,
+      "cosets": 2048,
+      "caps": [
+        2,
+        191,
+        1255,
+        1899,
+        2039,
+        2047
+      ]
+    },
+    {
+      "profile": 18,
+      "q": 3,
+      "t": 0,
+      "cosets": 2048,
+      "caps": [
+        0,
+        120,
+        1243,
+        1899,
+        2039,
+        2047
+      ]
+    },
+    {
+      "profile": 19,
+      "q": 3,
+      "t": 0,
+      "cosets": 2048,
+      "caps": [
+        0,
+        120,
+        1243,
+        1899,
+        2039,
+        2047
+      ]
+    },
+    {
+      "profile": 20,
+      "q": 3,
+      "t": 0,
+      "cosets": 2048,
+      "caps": [
+        0,
+        120,
+        1243,
+        1899,
+        2039,
+        2047
+      ]
+    },
+    {
+      "profile": 21,
+      "q": 3,
+      "t": 2,
+      "cosets": 2048,
+      "caps": [
+        0,
+        116,
+        1231,
+        1899,
+        2039,
+        2047
+      ]
+    },
+    {
+      "profile": 22,
+      "q": 3,
+      "t": 0,
+      "cosets": 2048,
+      "caps": [
+        0,
+        118,
+        1231,
+        1899,
+        2039,
+        2047
+      ]
+    },
+    {
+      "profile": 23,
+      "q": 3,
+      "t": 0,
+      "cosets": 2048,
+      "caps": [
+        0,
+        118,
+        1231,
+        1899,
+        2039,
+        2047
+      ]
+    },
+    {
+      "profile": 24,
+      "q": 3,
+      "t": 0,
+      "cosets": 2048,
+      "caps": [
+        0,
+        118,
+        1231,
+        1899,
+        2039,
+        2047
+      ]
+    },
+    {
+      "profile": 25,
+      "q": 3,
+      "t": 2,
+      "cosets": 2048,
+      "caps": [
+        0,
+        116,
+        1231,
+        1899,
+        2039,
+        2047
+      ]
+    },
+    {
+      "profile": 26,
+      "q": 3,
+      "t": 0,
+      "cosets": 2048,
+      "caps": [
+        0,
+        144,
+        1243,
+        1899,
+        2039,
+        2047
+      ]
+    },
+    {
+      "profile": 27,
+      "q": 3,
+      "t": 0,
+      "cosets": 2048,
+      "caps": [
+        0,
+        144,
+        1243,
+        1899,
+        2039,
+        2047
+      ]
+    },
+    {
+      "profile": 28,
+      "q": 3,
+      "t": 0,
+      "cosets": 2048,
+      "caps": [
+        0,
+        144,
+        1243,
+        1899,
+        2039,
+        2047
+      ]
+    },
+    {
+      "profile": 29,
+      "q": 3,
+      "t": 0,
+      "cosets": 2048,
+      "caps": [
+        0,
+        118,
+        1231,
+        1899,
+        2039,
+        2047
+      ]
+    },
+    {
+      "profile": 30,
+      "q": 3,
+      "t": 0,
+      "cosets": 2048,
+      "caps": [
+        0,
+        116,
+        1231,
+        1899,
+        2039,
+        2047
+      ]
+    },
+    {
+      "profile": 31,
+      "q": 3,
+      "t": 0,
+      "cosets": 2048,
+      "caps": [
+        0,
+        116,
+        1231,
+        1899,
+        2039,
+        2047
+      ]
+    },
+    {
+      "profile": 32,
+      "q": 3,
+      "t": 2,
+      "cosets": 2048,
+      "caps": [
+        0,
+        107,
+        1231,
+        1899,
+        2039,
+        2047
+      ]
+    },
+    {
+      "profile": 33,
+      "q": 3,
+      "t": 0,
+      "cosets": 2048,
+      "caps": [
+        2,
+        142,
+        1243,
+        1899,
+        2039,
+        2047
+      ]
+    },
+    {
+      "profile": 34,
+      "q": 3,
+      "t": 0,
+      "cosets": 2048,
+      "caps": [
+        2,
+        142,
+        1243,
+        1899,
+        2039,
+        2047
+      ]
+    },
+    {
+      "profile": 35,
+      "q": 3,
+      "t": 0,
+      "cosets": 2048,
+      "caps": [
+        2,
+        142,
+        1243,
+        1899,
+        2039,
+        2047
+      ]
+    },
+    {
+      "profile": 36,
+      "q": 3,
+      "t": 2,
+      "cosets": 2048,
+      "caps": [
+        0,
+        107,
+        1231,
+        1899,
+        2039,
+        2047
+      ]
+    },
+    {
+      "profile": 37,
+      "q": 3,
+      "t": 2,
+      "cosets": 2048,
+      "caps": [
+        0,
+        106,
+        1231,
+        1899,
+        2039,
+        2047
+      ]
+    }
+  ],
+  "seconds": 1.8555299999989074,
+  "hashes": {
+    "prefix_mass_check/run.py": "b890b26832704cc736b008613896c0fa33f37a07e5e108f4afbea6160e584411",
+    "prefix_mass_check/PROOF.md": "a2b610fabf68608c0f0dcbbb28a6032e2b4073cf40c5d48d97a399e43cd1ecc7",
+    "parent_mass_check/chain.json": "7a135bdaaac95507ba413a1884f2d664c8e263e7a7f334e84260c48976721c9a",
+    "kernel_case_plan/plan.json": "53f022c4746830ce02da54bb5a0cdb47863db4be6d004c8a52b7fccefea49bbc",
+    "kernel_capacity/profiles.json": "d44e8d01fa0c68924546a9aa21a8e80b3dc19233e6580d14b1bbffa5f06e10fc",
+    "model.py": "70806c8beb8a7b885c80f79fa89984b51839e4e9a9c3c24d794146190c8f9e84",
+    "suffix_mass_check/common.py": "7126582ad0c57d6e6c71bfdb5b91020fe06b789d7dd8f015c69afa103da42b44",
+    "mixed_frames/frames.py": "5bb4b67b50444dfa10731922919a334ab811cdbb4c52064cf28a0c9f9dd9231d",
+    "opus_parallel/suffix9_dimension5/cells_d5_7_3.json": "73d30ffc479e093bf93957a9c2b4b8d00822d548add2dce62e183222af3300db",
+    "opus_parallel/suffix9_dimension5/cells_d5_7_4.json": "0daa47e5065f98e1e8f2eaf7c4f8594d35c5e8ec9d56870275db357b72ca7362"
+  },
+  "scope": "Complete distinguished local H,p classes and independent physical capacity histograms. No quantum extension or target exclusion; full search coverage remains required."
+}

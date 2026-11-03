@@ -1,0 +1,59 @@
+{
+ "nine_site_integer_solutions": [
+  [
+   84,
+   0,
+   27,
+   16
+  ]
+ ],
+ "gauss_sums": [
+  96
+ ],
+ "gauss_allowed": [
+  -128,
+  -64,
+  -32,
+  -16,
+  0,
+  16,
+  32,
+  64,
+  128
+ ],
+ "nine_site_bound_holds": true,
+ "gauss_lemma_random_trials": 400,
+ "gauss_lemma_failures": 0,
+ "admissible_q": 14144,
+ "rank_two_orbits": 4,
+ "orbit_representatives": {
+  "(0, 0, 2, 2, 2, 2, 2, 2)": "IIXXXXXX",
+  "(0, 0, 1, 1, 2, 2, 2, 2)": "IIXXXXZZ",
+  "(0, 1, 2, 2, 2, 2, 2, 2)": "IXXXXXXZ",
+  "(2, 2, 2, 2, 2, 2, 2, 2)": "XXXXXXXX"
+ },
+ "weight_spectra": [
+  [
+   6,
+   6,
+   8
+  ],
+  [
+   6,
+   8,
+   8
+  ],
+  [
+   7,
+   7,
+   8
+  ],
+  [
+   8,
+   8,
+   8
+  ]
+ ],
+ "status": "PASS",
+ "sha256": "ac633de8a6b4322e32da9e2925a17d951be83b7f62857ba4283c61e0ba3704e5"
+}

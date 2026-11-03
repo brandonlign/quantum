@@ -1,0 +1,279 @@
+\section{An extension criterion for stabilizer codes}\label{sec:extension}
+
+\subsection{Pauli space, distance, and degeneracy}
+
+All vector spaces are over \(\F\). Write
+\[
+ V_n=\F^{2n}=\{(x\mid z):x,z\in\F^n\},\qquad
+ \langle(x\mid z),(x'\mid z')\rangle=x\cdot z'+z\cdot x'.
+\]
+At each coordinate, the pairs \((0,0),(1,0),(0,1),(1,1)\) represent
+\(I,X,Z,Y\), respectively, with scalar phases omitted. Vector addition
+then represents multiplication of Pauli operators up to phase. The
+symplectic product is zero for commuting operators and one for
+anticommuting operators. The support of a word is the set of coordinates
+where its letter is not \(I\).
+The Pauli weight is \(\wt(x\mid z)=|\{i:(x_i,z_i)\ne(0,0)\}|\).
+A \(Z\)-only word has letters \(I\) and \(Z\), so its \(X\)-component vanishes.
+A stabilizer is represented by its binary subspace; Pauli phases are omitted.
+A subspace is isotropic if every pair of its words has symplectic product zero.
+A binary \(\qc{n,k}\) stabilizer is an isotropic subspace
+\(S\leq V_n\) of dimension \(n-k\). Its centralizer is \(D=S^\perp\),
+of dimension \(n+k\). For a Pauli stabilizer this commuting space is
+also called its normalizer. For \(k>0\) its distance is
+\[
+ d(S)=\min\{\wt(w):w\in S^\perp\setminus S\}.
+\]
+The encoded states are the common eigenspace of independent commuting
+generators. The centralizer contains the Pauli operators commuting with
+all these generators; its elements outside \(S\) act nontrivially on
+the encoded information. Stabilizer words themselves act trivially there,
+so a low-weight stabilizer word is permitted. A code is pure to distance
+\(d\) when every nonzero word of its centralizer has weight at least \(d\).
+For a code of distance at least \(d\), degeneracy at that threshold
+means that \(S\) contains a nonzero word of weight below \(d\).
+An additive code here is an \(\F\)-linear subspace of Pauli space;
+it need not be isotropic. For an additive code \(C\), \(d(C)\) means the
+minimum weight of a nonzero codeword, with \(d(\{0\})=+\infty\).
+The notation \((\ell,2^c,d)_4\) means an additive code of length
+\(\ell\), binary dimension \(c\), and minimum distance \(d\) over
+the four-letter Pauli alphabet.
+
+Write \(A_j\) for the number of stabilizer words of weight \(j\); their
+list is the weight enumerator. Two additive codes are physically equivalent
+if a permutation of coordinates and independent permutations of
+\(X,Y,Z\) at each coordinate carry one onto the other. These relabelings
+preserve weight and commutation.
+
+Split the coordinates into \(T\), of size \(m\), and its complement,
+of size \(f=n-m\). Write \(V_n=V_T\oplus W\), with \(W=V_f\).
+We view \(V_T\) and \(W\) as subspaces of \(V_n\) by padding with
+identity letters on the other coordinates. Write \(\pi_T\) and
+\(\pi_W\) for the two coordinate projections. A prefix is a word on
+\(T\), and a suffix is a word on its complement.
+
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}lX@{}}\toprule
+Symbol&Meaning\\\midrule
+\(n,k,d\)&Physical qubits, encoded qubits, and target distance\\
+\(S,D=S^\perp,A_j\)&Stabilizer, centralizer, and stabilizer weight counts\\
+\(T,m,f\)&Selected support, its size, and complementary size \(n-m\)\\
+\(R,r\)&Stabilizer supported on \(T\), and its dimension\\
+\(C,P=C^\perp\)&Shortened centralizer, and its dual on the complement\\
+\(E,a,b\)&Local quotient \(R_T^\perp/R\), its dimension, and \(\dim P\)\\
+\(M,\tau,\Gamma\)&Extension map, its symplectic adjoint, and the Gram matrix on \(P\)\\
+\(K,q,t\)&Kernel of \(M\), its dimension, and its restricted form rank\\
+\(N,h\)&Kernel of \(\tau\), and hull dimension \(\dim(C\cap C^\perp)\)\\
+\(H,Q\)&Local centralizer \(S^\perp\cap V_T\), and syndrome image \(\im M\)\\
+\(\sigma,c_R,\delta\)&Syndrome map, local coset minimum weight, and complementary coset minimum weight\\
+\(\varepsilon,\mathcal{K}_j^\ell\)&Weight-parity function and quaternary Krawtchouk polynomial\\
+\(\mu\)&Half the local quotient dimension in the search appendix\\\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection{The local quotient and the shortened code}
+
+The local data have different roles. The space \(R=S\cap V_T\)
+records stabilizer words supported on \(T\); the shortened centralizer
+\(C=S^\perp\cap W\) records centralizer words supported on its
+complement. We now prescribe \(R\) and \(C\) and ask which full
+stabilizers can have these two spaces.
+Fix an isotropic subspace \(R\leq V_T\) of dimension \(r\), where
+\(0\leq r\leq m\), and define
+\[
+ E=R_T^\perp/R,\qquad a=\dim E=2m-2r.
+\]
+Here \(R_T^\perp\) is the orthogonal complement of \(R\) within
+\(V_T\).
+An element of \(E\) is a coset \(v+R\): two local operators are
+identified when their difference is a local stabilizer. This identification
+retains their possible logical action, while the function below retains
+their least physical weight.
+The quotient carries a nondegenerate symplectic form. Fix a symplectic basis with matrix
+\(J=\left[\begin{smallmatrix}0&I\\I&0\end{smallmatrix}\right]\).
+For \(e\in E\), define
+\[
+ \cost(e)=\min_{v+R=e}\wt(v).
+\]
+\(c_R\) is the minimum coset weight in the original coordinate block.
+An arbitrary
+symplectic change of basis need not preserve it.
+
+The dimension required of \(C\) follows from projection and rank--nullity.
+For an actual extension, a vector on \(T\) is orthogonal to
+\(\pi_T S^\perp\) if and only if it lies in \(S\cap V_T=R\).
+\(\pi_T S^\perp=R_T^\perp\), of dimension \(2m-r\).
+Its projection kernel is \(C\), so
+\(\dim C=(n+k)-(2m-r)\).
+Fix an additive code \(C\leq W\) of binary dimension
+\(n+k-2m+r\), assumed to lie between zero and \(2f\). Put
+\[
+ P=C^\perp_W,\qquad b=\dim P=n-k-r.
+\]
+Orthogonal complements of \(C\) and \(P\) are taken inside \(W\).
+Choose a basis \(v_1,\ldots,v_b\) of \(P\), set
+\(\Gamma_{ij}=\langle v_i,v_j\rangle\), and identify \(W/C\)
+with \(\F^b\) by the surjective syndrome map
+\[
+ \sigma(w)_j=\langle v_j,w\rangle,\qquad
+ \delta(u)=\min\{\wt(w):\sigma(w)=u\}.
+\]
+Its kernel is \(C\). In particular \(\delta(0)=0\), regardless of
+\(d(C)\). A syndrome \(u\) is a label for one coset of
+\(C\), and \(\delta(u)\) is the smallest weight of any word with
+that label.
+
+For a subspace \(U\), its radical is
+\(\rad(U)=\{u\in U:\langle u,v\rangle=0\text{ for every }v\in U\}\).
+For a code, this same intersection with its dual is called its hull.
+The nullspace of \(\Gamma\) represents \(\rad(P)=P\cap P^\perp
+=C^\perp\cap C\). The binary nullity of \(\Gamma\) is
+\(h=\dim(C\cap C^\perp)=\dim\Hull(C)\).
+
+For reference, the four spaces used in the extension criterion are:
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}lXl@{}}\toprule
+Space&Meaning&Binary dimension\\\midrule
+\(R\)&Stabilizer words supported on \(T\)&\(r\)\\
+\(E\)&Local operators commuting with \(R\), modulo \(R\)&\(a=2m-2r\)\\
+\(C\)&Centralizer shortened on \(T\)&\(n+k-2m+r\)\\
+\(P=C^\perp\)&Projections of stabilizer words onto the complement&\(b=n-k-r\)\\\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection{Reconstructing the full stabilizer}
+
+The matrix \(M\) specifies which suffix coset accompanies each local
+class. Its entries alone do not guarantee a code: the two coordinate
+blocks must give commuting stabilizer words, and their combined weights
+must satisfy the distance requirement. These are the two conditions in
+the following theorem.
+
+\begin{theorem}[Stabilizer extension criterion]\label{thm:extension}
+Assume \(0<k<n\) and \(d(C)\geq d\), with \(R,C\) and their dimensions
+as above.
+There is a bijection between:
+\begin{enumerate}[label=(\roman*)]
+\item isotropic stabilizers \(S\) of dimension \(n-k\) satisfying
+\[
+ S\cap V_T=R,\quad S^\perp\cap W=C,\quad
+ \wt(v)\geq d\ \text{for every }v\in S^\perp\setminus R;
+\]
+\item matrices \(M\in\F^{b\times a}\) satisfying
+\begin{equation}\label{eq:exact}
+ \Gamma=MJM^\tr,\qquad
+ \cost(e)+\delta(Me)\geq d\quad(0\ne e\in E).
+\end{equation}
+\end{enumerate}
+The stabilizer corresponding to \(M\) is \(S_M=D_M^\perp\), where
+\begin{equation}\label{eq:graph-D}
+ D_M=\{(v,w):v\in R_T^\perp,\ \sigma(w)=M(v+R)\}.
+\end{equation}
+The weight hypothesis in (i) is equivalent to distance at least \(d\)
+together with localization of every stabilizer word of weight below \(d\)
+inside \(R\).
+\end{theorem}
+
+\begin{proof}
+\emph{Recovering the attachment map.}
+Let \(S\) satisfy (i), and put \(D=S^\perp\). The annihilator of
+\(\pi_TD\) inside \(V_T\) is \(S\cap V_T=R\); hence
+\(\pi_TD=R_T^\perp\). The kernel of \(\pi_T|_D\) is \(C\).
+For each \(v\in R_T^\perp\), the corresponding words on the
+complement of \(T\) form a nonempty coset of \(C\). Addition in \(D\) makes this coset assignment linear. Since \(R\subseteq S\subseteq D\), it depends only
+on \(e=v+R\), defining \(M:E\to W/C\).
+
+For \(e\ne0\), its prefix representatives and the members of its suffix
+coset can be chosen independently, by adding \(R\) and \(C\).
+Their minimum total weight is
+\(\cost(e)+\delta(Me)\). All lie outside \(R\), proving the inequality.
+The suffix-only fiber gives \(d(C)\geq d\).
+
+\emph{Recovering the commutation condition.}
+The duality between projection and shortening also gives \(\pi_WS=P\). Indeed,
+a word on \(W\) annihilates \(\pi_WS\) if and only if its extension
+by zeros belongs to \(S^\perp\cap W=C\), so
+\((\pi_WS)^\perp_W=C\). The kernel of
+\(\pi_W|_S\) is \(R\), so \(S/R\) is the graph of a linear map
+\(\tau:P\to E\). Write \(A\) for its \(a\)-by-\(b\) coordinate matrix.
+For \(x=\sum c_jv_j\), this graph has prefix class \(Ac\).
+Commutation with a centralizer word of prefix class \(e\) gives
+\(e^\tr JAc+c^\tr Me=0\) for every \(e,c\). Thus
+\(M=A^\tr J\), equivalently \(A=JM^\tr\). Two graph words
+commute if and only if their local and complementary symplectic products
+cancel. Isotropy of the graph gives
+\(\Gamma=A^\tr JA=MJM^\tr\). \(\tau\) is the symplectic
+adjoint of \(M\).
+Its kernel has a direct interpretation: \(\tau(x)=0\) means that
+a stabilizer projecting to \(x\) has local part in \(R\), which can
+be removed by adding that local stabilizer. \(\ker\tau=S\cap W\).
+
+\emph{Constructing a stabilizer from the map.}
+Conversely, let \(M\) satisfy (ii) and define \(D_M\) by
+\eqref{eq:graph-D}. Its projection is \(R_T^\perp\), its suffix-only
+kernel is \(C\), and it contains \(R\). Consequently
+\(\dim D_M=2m-r+\dim C=n+k\), so \(\dim S_M=n-k\),
+and annihilator duality gives \(S_M\cap V_T=R\).
+For a projected stabilizer word \(x=\sum c_jv_j\), commutation with
+\(D_M\) forces its prefix class to be \(JM^\tr c\). The symplectic product of
+two such words is
+\(c^\tr(MJM^\tr+\Gamma)c'=0\). The local words of \(R\) commute
+with them because their prefixes lie in \(R_T^\perp\). \(S_M\)
+is isotropic.
+
+Every fiber of nonzero prefix class has weight at least \(d\) by (ii).
+In the zero-class fiber, the prefix lies in \(R\) and the suffix lies in
+\(C\); a word outside \(R\) has a nonzero suffix, of weight at least
+\(d\). This proves (i). The fibers determine \(D\) and therefore
+\(S=D^\perp\) uniquely, establishing the bijection.
+\end{proof}
+
+\subsection{A relaxation using only coset weights}
+
+The distance inequalities do not generally imply commutation. For example,
+take \(n=4,k=1,d=2\), \(R=\langle ZZ\rangle\), and
+\(C=\langle XX,ZZ\rangle\) on the other two sites. In the prefix basis
+\(Z_0,X_0X_1\), the nonzero coset minimum weights are \(1,2,2\). Choose independent
+nonzero syndrome columns. All weight inequalities hold, since the three
+nonzero cosets of \(C\) have distance one. But \(C\) is self-dual,
+so \(\Gamma=0\), whereas \(MJM^\tr\ne0\).
+Excluding all weight-admissible maps still excludes genuine extensions.
+Finding one such map would not construct a code.
+
+\subsection{Extensions of degenerate codes}
+
+For an arbitrary degenerate code, \(C\) may contain short stabilizer words.
+The same graph construction still applies, with the distance taken relative
+to the reconstructed stabilizer.
+
+\begin{theorem}[Relative extension criterion]\label{thm:relative}
+Keep \(R,C,E,P\) and their dimensions, but impose no lower bound on
+\(d(C)\). Let \(M\) satisfy \(\Gamma=MJM^\tr\), and define
+\(\tau_M(\sum c_jv_j)=JM^\tr c\), and
+\[
+ \delta_M^{\rm log}(e)=\min\{\wt(w):\sigma(w)=Me,\
+             w\notin\tau_M^{-1}(e)\},
+\]
+where \(\tau_M^{-1}(e)\) is a subset of \(P\), and the minimum of
+the empty set is \(+\infty\).
+Then \(S_M\) has distance at least \(d\) if and only if
+\[
+ \cost(e)+\delta_M^{\rm log}(e)\geq d\quad\text{for every }e\in E,
+\]
+including \(e=0\).
+\end{theorem}
+\begin{proof}
+The graph and dimension arguments above do not require a distance assumption.
+A word \((v,w)\in D_M\), with \(v+R=e\), is in \(S_M\) if and only if
+\(w\in P\) and \(\tau_M(w)=e\). Membership is independent of the
+representative of \(e\), because \(R\subseteq S_M\). The displayed
+minimum ranges over precisely the suffixes of logical words in
+that fiber. Prefix and suffix representatives vary independently. Minimizing
+their sum gives the assertion, fiber by fiber.
+\end{proof}
+
+At \(e=0\), the suffix minimum is the distance of \(C\) relative to
+\(N=\ker\tau_M\): it is \(\min\{\wt(w):w\in C\setminus N\}\).
+The coset minimum depends on \(M\), so the theorem does not supply a fixed
+precomputed table of coset minimum weights for arbitrary degeneracy. The searches below
+use Theorem~\ref{thm:extension} only after proving purity or localization.

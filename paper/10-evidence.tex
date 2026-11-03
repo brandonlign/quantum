@@ -1,0 +1,74 @@
+\section{Computational data and reproducibility}\label{app:evidence}
+
+\paragraph{Data availability.}
+The manuscript is archived at
+\href{https://doi.org/10.5281/zenodo.23874369}{doi:10.5281/zenodo.23874369};
+the public repository is \url{https://github.com/brandonlign/quantum}.
+It contains the paper, exact certificates and standalone checks in
+\pathcode{verification/}, byte-preserved research programs and inputs in
+\pathcode{source/}, and saved reports in \pathcode{results/recorded_checks/}.
+The evidence archive in the same Zenodo release
+(\href{https://doi.org/10.5281/zenodo.23897639}{doi:10.5281/zenodo.23897639})
+supplies the search-record database
+\pathcode{source/evidence/search_records.sqlite}, its index description
+\pathcode{source/evidence/record_store_manifest.json}, and the classified
+inputs and aggregation files required by the full saved-evidence verifier.
+Extracting both archives into the same directory reconstructs the expected
+layout. The database contains original compressed record payloads in an
+indexed container; \pathcode{source/record_store.py} reads their original
+bytes, and \pathcode{source/materialize_records.py} extracts them to the
+original relative directory layout. The reproduction guide
+\pathcode{REPRODUCING.md} gives the commands, dependencies, expected outputs,
+and scope of each verification tier.
+
+\subsection{Verification programs and their scope}
+
+\pathcode{verification/replay_certificates.py} rebuilds the linear systems
+of Appendix~\ref{app:certificates}, checks 37 integer certificates, and
+checks four ordinary identities. Fourteen-qubit data and its standalone
+checker are in \pathcode{verification/certificates/14/} and
+\pathcode{verification/check_certificates14.py}.
+\pathcode{verification/check_constructions.py} enumerates both matching
+constructions. The local classification and full-plane orbit checks are
+\pathcode{verification/check_local_classification.py} and
+\pathcode{verification/check_full_plane_orbits.py}.
+The sixteen-qubit census entry point is
+\pathcode{verification/release16/census/check_cells.py}; its search
+programs are in \pathcode{verification/release16/search/}.
+\pathcode{SHA256SUMS} identifies the tracked files, excluding itself.
+
+The original saved-evidence program is
+\pathcode{source/quantum-extension/verification/verify_evidence.py},
+with the storage entry point \pathcode{source/verify.py}.
+Using its original inputs and records, it checks the classification
+completeness arguments in Section~\ref{sec:computation}, the local kernel
+classifications, and the expected completed search parts. It recomputes
+the saved aggregations except for the three kernel cases
+\((q,t,h)=(1,0,1),(2,2,1),(2,0,3)\).
+Their saved aggregation covers 32,747 shortened-code classes and 2,419,796
+search records. The default command checks full class coverage and source
+hashes and repeats the aggregation for eight complete classes containing
+1,059 records. Its \pathcode{--deep} option repeats that full aggregation.
+The final complete aggregation was performed on 16 October 2026.
+The original reports record which checks were repeated and which saved
+results were checked by their hashes. A separate integrity program,
+\pathcode{source/verify_all_record_hashes.py}, compares each record from
+those three kernel cases with its saved SHA-256 digest and checks its
+completed-status fields.
+
+\subsection{Shared enumerations and implementation checks}
+
+Some rank-one \(q=1\) local types give identical necessary problems for
+the \(Z\)-only images. Their enumeration is shared after checking that
+the serialized inputs, group actions, program version, and options agree.
+Each target type retains its own kernel equations and exhaustive search
+over complementary images. The verifier checks the hashes of the shared
+complete enumerations before and after reuse.
+
+The Mac and Linux implementations are assigned disjoint sets of code
+classes. The saved-evidence program checks this assignment, source and
+binary hashes, and completion of every expected search part. It rejects
+unrecognized versions, conflicting records, unfinished searches, and
+unresolved candidates. The implementations enumerate the same domain
+with different pruning tests. Their recorded reports are retained in
+\pathcode{results/recorded_checks/}.

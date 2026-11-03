@@ -1,0 +1,439 @@
+{
+  "status": "PASS_LINUX_NATIVE_AND_PHYSICAL_CONTROLS",
+  "source_hashes": {
+    "rankone_residual/common.py": "350b2727699e832b9c5037e68c667223fae2f5c08780c9386809ea77fc187b27",
+    "rankone_residual/search.py": "1d67b799606107fd548d47633f0ef5e577708f924d837fd408b201baf217e1da",
+    "rankone_residual/PROOF.md": "4c8f8421f52a7b3465b038dc8fb526fe1118e988bd50192d1fe6ca54b860e27f",
+    "kernel_case_plan/provenance.json": "b8a9c983ba7b3733f2f7133732daaab2f7bfc817b901a156550bd0c5e09064e7",
+    "kernel_context_cache/common.py": "ad5ccf4b2c7a80828aa8f193e6b4e2373daf3488833ed28250fa64830031854e",
+    "kernel_context_cache/PROOF.md": "53808a4c88b9b4c96656160f4619fc916a8b8995b400baa873b875c75a888997",
+    "kernel_context_cache/verification.json": "f7f1479723e5ad792ec13d82c5ebbe3a4601a407ea15031f5712a90ead354046",
+    "kernel_z_compact/z_enum_compact.c": "d8f959540a4eba21a8e67cac6720c79255ea96153a595d17e41f5da43f8bc05f",
+    "kernel_z_compact/z_enum_compact": "01cbc8197d755ac226d30139a7b43d846757ad82bd3818a49e7e213735194db7",
+    "kernel_z_compact/PROOF.md": "16c24d4884791a9d4b729a75496e76ce9470a9854d9f90827de6d8adc5e57d1f",
+    "kernel_z_compact/verification.json": "3749e0df3c8acc5263aad142acec692fbc26f3ec0c44805ca8d7367dab0c1d3e",
+    "kernel_z_joint/z_enum_joint.c": "72a4c355d4f2681db51422952b421744a746c9f7adcd49b876530c4dfd126a69",
+    "kernel_z_joint/z_enum_joint": "1d20830b76a34e6946a53e4381a488c84d7d06636ac69e9271cf4ed342d05b72",
+    "kernel_z_joint/build.py": "3c64728025a3840735e1a9fc8218398b821ebf03f84c4827b12b3e95ec186433",
+    "kernel_z_joint/PROOF.md": "7712aee6a29a52ddfb498b0a586f06fb4d60ccd82c71ce8a52e28661f0664a39",
+    "kernel_z_joint/verification.json": "c63c24286282e030acdbf5ba98269e909d695edfac67a56fc96fb96cfd2fd49c",
+    "kernel_z_joint/threshold_verification.json": "16205ebe01aa1a441ca951878cc7973b69f9e93901842dad44a1e00bf51cfb7d",
+    "kernel_y_parity/solve.py": "6bcffab433a451a4492566f7302f23a106f11db2424abce729a500c891b056a7",
+    "kernel_y_parity/PROOF.md": "0eda01cfa1332a6c3bac2d4585abea4fc16ffa3ad3ca5bfb0605f46bda7f4047",
+    "kernel_y_parity/verification.json": "e7fc429acb5b08eef11a91b47f6175c8beb634ca90559b94b22364c00545a63e",
+    "kernel_y_cache/solve.py": "3c82ca896d416d2ba50b466f5d2601bde9972a8450992583d0fece3872f4cefb",
+    "kernel_y_cache/build.py": "8f7feaceb92902e19f052cadcff7873f7d825c8b2ff9952136e1d79cce4ccd2b",
+    "kernel_y_cache/PROOF.md": "9a175f5c4905adf63fae9fcf60da11d5926b823480a78bdcd3508828586430e1",
+    "kernel_y_cache/verification.json": "0c98e2f903bb00b2c1b55666a1c1bf0a3186e1066101ab03f9961bf8fb6532e1",
+    "fixed_kernel/common.py": "ba5dc5351fcab138c2b1e84f7f0a6b918c34e95384f694e533c672c281c210df",
+    "fixed_kernel/symmetry.py": "616e8ed3349304b5e949642bc3471f1734d87b02806776a93acc28a86936f66e",
+    "fixed_kernel/PROOF.md": "dd92354cf94a32447b54549404fb82cf1a20d3d79731bd56f3ce08299b9f0fe7",
+    "fixed_kernel/symmetry_verification.json": "ad66751a107072ac88265283771819a3617094246697a4f72b021bdcc9dd0259",
+    "fixed_kernel/joint_verification.json": "c9bd2c90a8d3c315f309b391c4e04f3d3d461fb5232cce1062f121552d20024f",
+    "fixed_kernel/generic_verification.json": "9344793e70aabd489ebe7c4ffcf12de47c128b1555aa8875780e620b9c2acd2b",
+    "kernel_case_plan/plan.json": "53f022c4746830ce02da54bb5a0cdb47863db4be6d004c8a52b7fccefea49bbc",
+    "kernel_case_plan/PROOF.md": "894c5bdc825ddc8512f380aec50859b18f896e2df29269bfe5ddfd98074cb856",
+    "kernel_case_plan/prepare.py": "95fa5b723d03bbe6b3633141932f4ab3e10e01bed8c8b1b252330d7fc31618aa",
+    "kernel_capacity/profiles.json": "d44e8d01fa0c68924546a9aa21a8e80b3dc19233e6580d14b1bbffa5f06e10fc",
+    "opus_parallel/suffix9_dimension5/suffix9_dim5.json": "c683f1aaa89baf858027d88f76eca3b95cf4afafa469069d9e8df0e9219b83eb",
+    "model.py": "70806c8beb8a7b885c80f79fa89984b51839e4e9a9c3c24d794146190c8f9e84",
+    "fixed_suffix_search.py": "bd65c4af329442fcbd08305cdd1a1c631f7dc6df6a5325689d613c0cdfd321e1",
+    "two_site.py": "85a46def6bba0fdcdf507262427ce772af4b69645c3c71d3d10ccf54cd74750a",
+    "mixed_frames/frames.py": "5bb4b67b50444dfa10731922919a334ab811cdbb4c52064cf28a0c9f9dd9231d",
+    "m8r1/suffix_symmetries.py": "6b6f53f038fae2ffa5f71b77ebccd27fb204c8cc4ff7a9aa729b919de8b0d9d4",
+    "gauge_rankone_h5/common.py": "6d343b0a51fa9ccfb33513b53990378681eb8fd3868f40bc55994257f3790cec",
+    "gauge_rankone_h5/symmetry.py": "2e3648bb390d66f2bde2248b5e38902773480aa77186f218fb445833d59a3510",
+    "mixed_frames/stage3/common.py": "bc0f818065ec63373ff4e099a7ee37c7124b8fd1de51cfc786d2ac6027cc943c",
+    "r1_column/Q4_KERNEL.md": "219bc6cc318fc75b2af7c54cc43f5dac0fdc5bad233944d27496d43ecad4f8cb",
+    "oracle_residual/common.py": "b36879fdbd5f213316be063fc8a0062310426caa4066a21c91c4f1a9b0c2252a",
+    "oracle_residual/prepare.py": "3d2dc9c7b0b664a6db602f631682264b26f8c93c297a8d31e1c0e59ade463ea6",
+    "oracle_residual/verify.py": "cc7e7ad270a3a53e4ce0c1c65457a1a3b4b89f812cce5524b91b979674e3a2fd",
+    "oracle_residual/pool.py": "ec9a7b9b66c81c1367e6d00c096c4d8f6220dbad0d4f042422db8d8160b79e9f",
+    "oracle_residual/aggregate.py": "68087ff17b28768802ae4d8cedf86c1a4123e57af463e6dd0ebf1354525c90cf",
+    "oracle_residual/bridge.py": "c9321e21e348dbad79168fc23ab2e77c8e0be3246af584a8604aa5ecb7910b94",
+    "oracle_residual/launch.py": "19a18b1abb43f1ebdcdceb2a6ed47fe41c07f34fd0e1c13c940c4d7ec8f0c342",
+    "rankone_residual/controls.py": "abd20876fbe1c3fa51d2c5ed1768e11a8ef391cce2f2e34cc0777931dd384747",
+    "fixed_kernel/verify_large.py": "a7df474f58763dd4a9ff9e85e1310fa72f54483c08163131eda8ee68485e2783",
+    "gauge_fix.py": "1098f8a01526c6ce6408b98b653c2ce45898eec7420af80ce0a17a9b535c15d1",
+    "rankone_residual/READY.json": "a72194668677f8b9e6031b6bf8436800d43d4fa92fa4280b4612775eb9d1dc4c",
+    "rankone_residual/controls.json": "77467239099c7e85e7ccc6343db1af074672d9535bc5e3b1402e5b57bd60b2fb",
+    "oracle_residual/vendor/full.py": "9c4c3f0520d1321d11121e9a0d501bb4bf60029cfacac8d058acf510b87bcec8",
+    "oracle_residual/vendor/sympl.py": "2087efa2868943faf64610cd379ee5032af3bf48beeea3982f069bc64a87bb93",
+    "oracle_residual/vendor/xstage.py": "2d232c44e97c6d6a00681eacfaf70d2a99a9ecbee15c8865afaa957184bd4ab3",
+    "oracle_residual/vendor/zstage.py": "05f099eac7141991d9198cf8910f08bd9b849ea7b5e1b0f09d4cd23477dcde42",
+    "oracle_residual/vendor/release16_cells.json": "181b27547b89c25c0ff783dc8ac9cb926e4d8b2d78e9631a8854780d4d114755",
+    "oracle_residual/external_paths.json": "1240c3e9281811183f6b677e2d37e543a2f6a790aa783c7cb747070abbc344e0",
+    "oracle_residual/PROOF.md": "715cd29478c89ecad46b46b0abc5721d7a067c52ff4ca3fd288f2edfb3a123ba",
+    "scheduler/research_oracle.py": "274c71de8207fb1181aa170e61c4a38d8ab976c4a0b31c5e752fd40d7350e6e7",
+    "oracle_residual/assignment.json": "b45ec667067f9717c2ec6efec180c558b3fc37b9c1a4e0616b96c7633a400460",
+    "oracle_residual/fixtures.json": "16108b6351530b0768afde626ebec8bde26e63dbd35cbdd72b81d3b9c48030f7"
+  },
+  "commands": [
+    [
+      "cc",
+      "-O3",
+      "-std=c11",
+      "-mcpu=native",
+      "/home/ubuntu/qcode1736-oracle-v1/project/kernel_z_compact/z_enum_compact.c",
+      "-o",
+      "/home/ubuntu/qcode1736-oracle-v1/project/oracle_residual/linux_compact"
+    ],
+    [
+      "cc",
+      "-O3",
+      "-std=c11",
+      "-mcpu=native",
+      "/home/ubuntu/qcode1736-oracle-v1/project/kernel_z_joint/z_enum_joint.c",
+      "-o",
+      "/home/ubuntu/qcode1736-oracle-v1/project/oracle_residual/linux_joint"
+    ]
+  ],
+  "compiler": "cc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0\nCopyright (C) 2021 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "runtime": {
+    "system": "Linux-6.8.0-1060-oracle-aarch64-with-glibc2.35",
+    "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]"
+  },
+  "records": [
+    {
+      "cls": 0,
+      "profile": 0,
+      "backend": "joint",
+      "mac_wall": 5.300124582998251,
+      "linux_wall": 5.859692177735269,
+      "status": "PASS",
+      "leaves": 45
+    },
+    {
+      "cls": 0,
+      "profile": 1,
+      "backend": "compact",
+      "mac_wall": 4.980148334001569,
+      "linux_wall": 6.387171068228781,
+      "status": "PASS",
+      "leaves": 4
+    },
+    {
+      "cls": 0,
+      "profile": 3,
+      "backend": "compact",
+      "mac_wall": 5.1942420409977785,
+      "linux_wall": 6.5634588319808245,
+      "status": "PASS",
+      "leaves": 0
+    },
+    {
+      "cls": 0,
+      "profile": 8,
+      "backend": "joint",
+      "mac_wall": 1.6441420410010323,
+      "linux_wall": 1.6379549968987703,
+      "status": "PASS",
+      "leaves": 31
+    },
+    {
+      "cls": 0,
+      "profile": 12,
+      "backend": "compact",
+      "mac_wall": 3.259398207999766,
+      "linux_wall": 3.852830482646823,
+      "status": "PASS",
+      "leaves": 0
+    },
+    {
+      "cls": 5,
+      "profile": 4,
+      "backend": "compact",
+      "mac_wall": 0.5427967089999584,
+      "linux_wall": 0.6383563401177526,
+      "status": "PASS",
+      "leaves": 1
+    },
+    {
+      "cls": 5,
+      "profile": 5,
+      "backend": "compact",
+      "mac_wall": 1.4843596249993425,
+      "linux_wall": 1.8434225358068943,
+      "status": "PASS",
+      "leaves": 8
+    },
+    {
+      "cls": 5,
+      "profile": 13,
+      "backend": "compact",
+      "mac_wall": 0.7730675829989195,
+      "linux_wall": 0.9416044726967812,
+      "status": "PASS",
+      "leaves": 0
+    }
+  ],
+  "positives": [
+    {
+      "q": 1,
+      "t": 0,
+      "hull": 1,
+      "cls": 0,
+      "profile": 0,
+      "status": "PASS",
+      "context": 0,
+      "identification_orbit": [
+        0
+      ],
+      "pin_leaves": {
+        "7": 1,
+        "6": 96,
+        "5": 23040
+      },
+      "M_rank": 13,
+      "logical_distance": 3,
+      "physical_words_checked": 1048576,
+      "isometry_attempt": 4
+    },
+    {
+      "q": 1,
+      "t": 0,
+      "hull": 1,
+      "cls": 0,
+      "profile": 1,
+      "status": "PASS",
+      "context": 0,
+      "identification_orbit": [
+        0
+      ],
+      "pin_leaves": {
+        "7": 1,
+        "6": 94,
+        "5": 22848
+      },
+      "M_rank": 13,
+      "logical_distance": 4,
+      "physical_words_checked": 1048576,
+      "isometry_attempt": 6
+    },
+    {
+      "q": 1,
+      "t": 0,
+      "hull": 1,
+      "cls": 0,
+      "profile": 2,
+      "status": "PASS",
+      "context": 0,
+      "identification_orbit": [
+        0
+      ],
+      "pin_leaves": {
+        "7": 1,
+        "6": 92,
+        "5": 22002
+      },
+      "M_rank": 13,
+      "logical_distance": 3,
+      "physical_words_checked": 1048576,
+      "isometry_attempt": 2
+    },
+    {
+      "q": 1,
+      "t": 0,
+      "hull": 1,
+      "cls": 0,
+      "profile": 3,
+      "status": "PASS",
+      "context": 0,
+      "identification_orbit": [
+        0
+      ],
+      "pin_leaves": {
+        "7": 1,
+        "6": 94,
+        "5": 22470
+      },
+      "M_rank": 13,
+      "logical_distance": 3,
+      "physical_words_checked": 1048576,
+      "isometry_attempt": 4
+    },
+    {
+      "q": 2,
+      "t": 2,
+      "hull": 1,
+      "cls": 0,
+      "profile": 8,
+      "status": "PASS",
+      "context": 0,
+      "identification_orbit": [
+        0
+      ],
+      "pin_leaves": {
+        "7": 1,
+        "6": 47,
+        "5": 5568
+      },
+      "M_rank": 12,
+      "logical_distance": 3,
+      "physical_words_checked": 1048576,
+      "isometry_attempt": 3
+    },
+    {
+      "q": 2,
+      "t": 2,
+      "hull": 1,
+      "cls": 0,
+      "profile": 12,
+      "status": "PASS",
+      "context": 0,
+      "identification_orbit": [
+        0
+      ],
+      "pin_leaves": {
+        "7": 1,
+        "6": 48,
+        "5": 5760
+      },
+      "M_rank": 12,
+      "logical_distance": 3,
+      "physical_words_checked": 1048576,
+      "isometry_attempt": 3
+    },
+    {
+      "q": 2,
+      "t": 0,
+      "hull": 3,
+      "cls": 5,
+      "profile": 4,
+      "status": "PASS",
+      "context": 3,
+      "identification_orbit": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "pin_leaves": {
+        "7": 1,
+        "6": 47,
+        "5": 5664
+      },
+      "M_rank": 12,
+      "logical_distance": 4,
+      "physical_words_checked": 1048576,
+      "isometry_attempt": 3
+    },
+    {
+      "q": 2,
+      "t": 0,
+      "hull": 3,
+      "cls": 5,
+      "profile": 5,
+      "status": "PASS",
+      "context": 5,
+      "identification_orbit": [
+        3,
+        5
+      ],
+      "pin_leaves": {
+        "7": 1,
+        "6": 47,
+        "5": 5712
+      },
+      "M_rank": 12,
+      "logical_distance": 3,
+      "physical_words_checked": 1048576,
+      "isometry_attempt": 2
+    },
+    {
+      "q": 2,
+      "t": 0,
+      "hull": 3,
+      "cls": 5,
+      "profile": 6,
+      "status": "PASS",
+      "context": 2,
+      "identification_orbit": [
+        2,
+        3
+      ],
+      "pin_leaves": {
+        "7": 1,
+        "6": 48,
+        "5": 5712
+      },
+      "M_rank": 12,
+      "logical_distance": 3,
+      "physical_words_checked": 1048576,
+      "isometry_attempt": 2
+    },
+    {
+      "q": 2,
+      "t": 0,
+      "hull": 3,
+      "cls": 5,
+      "profile": 9,
+      "status": "PASS",
+      "context": 2,
+      "identification_orbit": [
+        2,
+        4
+      ],
+      "pin_leaves": {
+        "7": 1,
+        "6": 48,
+        "5": 5760
+      },
+      "M_rank": 12,
+      "logical_distance": 3,
+      "physical_words_checked": 1048576,
+      "isometry_attempt": 2
+    },
+    {
+      "q": 2,
+      "t": 0,
+      "hull": 3,
+      "cls": 5,
+      "profile": 13,
+      "status": "PASS",
+      "context": 2,
+      "identification_orbit": [
+        0,
+        2
+      ],
+      "pin_leaves": {
+        "7": 1,
+        "6": 47,
+        "5": 5712
+      },
+      "M_rank": 12,
+      "logical_distance": 3,
+      "physical_words_checked": 1048576,
+      "isometry_attempt": 4
+    },
+    {
+      "q": 2,
+      "t": 0,
+      "hull": 3,
+      "cls": 5,
+      "profile": 16,
+      "status": "PASS",
+      "context": 3,
+      "identification_orbit": [
+        2,
+        3
+      ],
+      "pin_leaves": {
+        "7": 1,
+        "6": 47,
+        "5": 5616
+      },
+      "M_rank": 12,
+      "logical_distance": 3,
+      "physical_words_checked": 1048576,
+      "isometry_attempt": 4
+    }
+  ],
+  "binary_hashes": {
+    "oracle_residual/linux_compact": "a7d41e86d0ccfb1471ea205e699bc4b2ab3e1819d041aecc6a0fe67b8da1a782",
+    "oracle_residual/linux_joint": "208bb1a167ac22988a489087c73155c3697c09bb5104a60b2796d07cfd4724b8"
+  },
+  "scope": "Portable recompilation admission, eight complete Mac stream/counter matches and twelve genuine distance-three positives. No distance-six target result."
+}

@@ -1,0 +1,558 @@
+{
+  "status": "PASS_RELATIVE_TO_CERTIFIED_RELEASE_PARENTS",
+  "parent_dimension3": {
+    "multisets": 116280,
+    "feasible": 2171,
+    "classes": 32,
+    "star_certificate_sets_equal": true
+  },
+  "parents": [
+    {
+      "r": 0,
+      "parent": 0,
+      "deep_cosets": 0,
+      "labelled_extensions": 1,
+      "aut_order": 21
+    },
+    {
+      "r": 1,
+      "parent": 0,
+      "deep_cosets": 259,
+      "labelled_extensions": 777,
+      "aut_order": 2
+    },
+    {
+      "r": 1,
+      "parent": 1,
+      "deep_cosets": 247,
+      "labelled_extensions": 741,
+      "aut_order": 4
+    },
+    {
+      "r": 1,
+      "parent": 2,
+      "deep_cosets": 242,
+      "labelled_extensions": 726,
+      "aut_order": 16
+    },
+    {
+      "r": 1,
+      "parent": 3,
+      "deep_cosets": 251,
+      "labelled_extensions": 753,
+      "aut_order": 8
+    },
+    {
+      "r": 1,
+      "parent": 4,
+      "deep_cosets": 228,
+      "labelled_extensions": 684,
+      "aut_order": 144
+    },
+    {
+      "r": 1,
+      "parent": 5,
+      "deep_cosets": 212,
+      "labelled_extensions": 636,
+      "aut_order": 16
+    },
+    {
+      "r": 1,
+      "parent": 6,
+      "deep_cosets": 220,
+      "labelled_extensions": 660,
+      "aut_order": 4
+    },
+    {
+      "r": 1,
+      "parent": 7,
+      "deep_cosets": 202,
+      "labelled_extensions": 606,
+      "aut_order": 4
+    },
+    {
+      "r": 1,
+      "parent": 8,
+      "deep_cosets": 194,
+      "labelled_extensions": 582,
+      "aut_order": 4
+    },
+    {
+      "r": 1,
+      "parent": 9,
+      "deep_cosets": 210,
+      "labelled_extensions": 630,
+      "aut_order": 4
+    },
+    {
+      "r": 1,
+      "parent": 10,
+      "deep_cosets": 196,
+      "labelled_extensions": 588,
+      "aut_order": 8
+    },
+    {
+      "r": 1,
+      "parent": 11,
+      "deep_cosets": 222,
+      "labelled_extensions": 666,
+      "aut_order": 12
+    },
+    {
+      "r": 1,
+      "parent": 12,
+      "deep_cosets": 180,
+      "labelled_extensions": 540,
+      "aut_order": 144
+    },
+    {
+      "r": 1,
+      "parent": 13,
+      "deep_cosets": 174,
+      "labelled_extensions": 522,
+      "aut_order": 12
+    },
+    {
+      "r": 1,
+      "parent": 14,
+      "deep_cosets": 201,
+      "labelled_extensions": 603,
+      "aut_order": 2
+    },
+    {
+      "r": 1,
+      "parent": 15,
+      "deep_cosets": 196,
+      "labelled_extensions": 588,
+      "aut_order": 1
+    },
+    {
+      "r": 1,
+      "parent": 16,
+      "deep_cosets": 183,
+      "labelled_extensions": 549,
+      "aut_order": 2
+    },
+    {
+      "r": 1,
+      "parent": 17,
+      "deep_cosets": 214,
+      "labelled_extensions": 642,
+      "aut_order": 1
+    },
+    {
+      "r": 1,
+      "parent": 18,
+      "deep_cosets": 204,
+      "labelled_extensions": 612,
+      "aut_order": 12
+    },
+    {
+      "r": 1,
+      "parent": 19,
+      "deep_cosets": 201,
+      "labelled_extensions": 603,
+      "aut_order": 1
+    },
+    {
+      "r": 1,
+      "parent": 20,
+      "deep_cosets": 215,
+      "labelled_extensions": 645,
+      "aut_order": 2
+    },
+    {
+      "r": 1,
+      "parent": 21,
+      "deep_cosets": 206,
+      "labelled_extensions": 618,
+      "aut_order": 2
+    },
+    {
+      "r": 1,
+      "parent": 22,
+      "deep_cosets": 186,
+      "labelled_extensions": 558,
+      "aut_order": 1
+    },
+    {
+      "r": 1,
+      "parent": 23,
+      "deep_cosets": 211,
+      "labelled_extensions": 633,
+      "aut_order": 2
+    },
+    {
+      "r": 1,
+      "parent": 24,
+      "deep_cosets": 200,
+      "labelled_extensions": 600,
+      "aut_order": 2
+    },
+    {
+      "r": 1,
+      "parent": 25,
+      "deep_cosets": 213,
+      "labelled_extensions": 639,
+      "aut_order": 36
+    },
+    {
+      "r": 1,
+      "parent": 26,
+      "deep_cosets": 200,
+      "labelled_extensions": 600,
+      "aut_order": 4
+    },
+    {
+      "r": 1,
+      "parent": 27,
+      "deep_cosets": 204,
+      "labelled_extensions": 612,
+      "aut_order": 2
+    },
+    {
+      "r": 1,
+      "parent": 28,
+      "deep_cosets": 187,
+      "labelled_extensions": 561,
+      "aut_order": 2
+    },
+    {
+      "r": 1,
+      "parent": 29,
+      "deep_cosets": 187,
+      "labelled_extensions": 561,
+      "aut_order": 2
+    },
+    {
+      "r": 1,
+      "parent": 30,
+      "deep_cosets": 189,
+      "labelled_extensions": 567,
+      "aut_order": 4
+    },
+    {
+      "r": 1,
+      "parent": 31,
+      "deep_cosets": 217,
+      "labelled_extensions": 651,
+      "aut_order": 6
+    },
+    {
+      "r": 1,
+      "parent": 32,
+      "deep_cosets": 208,
+      "labelled_extensions": 624,
+      "aut_order": 4
+    },
+    {
+      "r": 1,
+      "parent": 33,
+      "deep_cosets": 192,
+      "labelled_extensions": 576,
+      "aut_order": 1
+    },
+    {
+      "r": 1,
+      "parent": 34,
+      "deep_cosets": 208,
+      "labelled_extensions": 624,
+      "aut_order": 2
+    },
+    {
+      "r": 1,
+      "parent": 35,
+      "deep_cosets": 192,
+      "labelled_extensions": 576,
+      "aut_order": 1
+    },
+    {
+      "r": 1,
+      "parent": 36,
+      "deep_cosets": 174,
+      "labelled_extensions": 522,
+      "aut_order": 12
+    },
+    {
+      "r": 1,
+      "parent": 37,
+      "deep_cosets": 176,
+      "labelled_extensions": 528,
+      "aut_order": 6
+    },
+    {
+      "r": 1,
+      "parent": 38,
+      "deep_cosets": 170,
+      "labelled_extensions": 510,
+      "aut_order": 4
+    },
+    {
+      "r": 1,
+      "parent": 39,
+      "deep_cosets": 172,
+      "labelled_extensions": 516,
+      "aut_order": 4
+    },
+    {
+      "r": 1,
+      "parent": 40,
+      "deep_cosets": 182,
+      "labelled_extensions": 546,
+      "aut_order": 8
+    },
+    {
+      "r": 1,
+      "parent": 41,
+      "deep_cosets": 184,
+      "labelled_extensions": 552,
+      "aut_order": 12
+    },
+    {
+      "r": 1,
+      "parent": 42,
+      "deep_cosets": 190,
+      "labelled_extensions": 570,
+      "aut_order": 7
+    },
+    {
+      "r": 2,
+      "parent": 0,
+      "deep_cosets": 1119,
+      "labelled_extensions": 617196,
+      "aut_order": 144
+    },
+    {
+      "r": 2,
+      "parent": 1,
+      "deep_cosets": 1094,
+      "labelled_extensions": 572736,
+      "aut_order": 64
+    },
+    {
+      "r": 2,
+      "parent": 2,
+      "deep_cosets": 1076,
+      "labelled_extensions": 538848,
+      "aut_order": 96
+    },
+    {
+      "r": 2,
+      "parent": 3,
+      "deep_cosets": 1115,
+      "labelled_extensions": 597960,
+      "aut_order": 48
+    },
+    {
+      "r": 2,
+      "parent": 4,
+      "deep_cosets": 1118,
+      "labelled_extensions": 603504,
+      "aut_order": 32
+    },
+    {
+      "r": 2,
+      "parent": 5,
+      "deep_cosets": 1087,
+      "labelled_extensions": 558240,
+      "aut_order": 16
+    },
+    {
+      "r": 2,
+      "parent": 6,
+      "deep_cosets": 1090,
+      "labelled_extensions": 562800,
+      "aut_order": 8
+    },
+    {
+      "r": 2,
+      "parent": 7,
+      "deep_cosets": 1072,
+      "labelled_extensions": 529044,
+      "aut_order": 8
+    },
+    {
+      "r": 2,
+      "parent": 8,
+      "deep_cosets": 1070,
+      "labelled_extensions": 523320,
+      "aut_order": 16
+    },
+    {
+      "r": 2,
+      "parent": 9,
+      "deep_cosets": 1054,
+      "labelled_extensions": 517548,
+      "aut_order": 8
+    },
+    {
+      "r": 2,
+      "parent": 10,
+      "deep_cosets": 1036,
+      "labelled_extensions": 486162,
+      "aut_order": 12
+    },
+    {
+      "r": 2,
+      "parent": 11,
+      "deep_cosets": 1076,
+      "labelled_extensions": 535524,
+      "aut_order": 16
+    },
+    {
+      "r": 2,
+      "parent": 12,
+      "deep_cosets": 1074,
+      "labelled_extensions": 530844,
+      "aut_order": 16
+    },
+    {
+      "r": 2,
+      "parent": 13,
+      "deep_cosets": 1074,
+      "labelled_extensions": 529728,
+      "aut_order": 32
+    },
+    {
+      "r": 2,
+      "parent": 14,
+      "deep_cosets": 1058,
+      "labelled_extensions": 522888,
+      "aut_order": 16
+    },
+    {
+      "r": 2,
+      "parent": 15,
+      "deep_cosets": 1038,
+      "labelled_extensions": 487704,
+      "aut_order": 8
+    },
+    {
+      "r": 2,
+      "parent": 16,
+      "deep_cosets": 1040,
+      "labelled_extensions": 491040,
+      "aut_order": 4
+    },
+    {
+      "r": 2,
+      "parent": 17,
+      "deep_cosets": 1060,
+      "labelled_extensions": 524712,
+      "aut_order": 32
+    },
+    {
+      "r": 2,
+      "parent": 18,
+      "deep_cosets": 1022,
+      "labelled_extensions": 460428,
+      "aut_order": 16
+    },
+    {
+      "r": 2,
+      "parent": 19,
+      "deep_cosets": 1038,
+      "labelled_extensions": 485664,
+      "aut_order": 16
+    },
+    {
+      "r": 2,
+      "parent": 20,
+      "deep_cosets": 1038,
+      "labelled_extensions": 485352,
+      "aut_order": 8
+    },
+    {
+      "r": 2,
+      "parent": 21,
+      "deep_cosets": 1020,
+      "labelled_extensions": 454740,
+      "aut_order": 8
+    },
+    {
+      "r": 2,
+      "parent": 22,
+      "deep_cosets": 1036,
+      "labelled_extensions": 481272,
+      "aut_order": 96
+    },
+    {
+      "r": 2,
+      "parent": 23,
+      "deep_cosets": 1020,
+      "labelled_extensions": 453768,
+      "aut_order": 32
+    },
+    {
+      "r": 2,
+      "parent": 24,
+      "deep_cosets": 1018,
+      "labelled_extensions": 483120,
+      "aut_order": 48
+    },
+    {
+      "r": 2,
+      "parent": 25,
+      "deep_cosets": 1020,
+      "labelled_extensions": 486024,
+      "aut_order": 16
+    },
+    {
+      "r": 2,
+      "parent": 26,
+      "deep_cosets": 1000,
+      "labelled_extensions": 454644,
+      "aut_order": 8
+    },
+    {
+      "r": 2,
+      "parent": 27,
+      "deep_cosets": 1000,
+      "labelled_extensions": 453648,
+      "aut_order": 16
+    },
+    {
+      "r": 2,
+      "parent": 28,
+      "deep_cosets": 1022,
+      "labelled_extensions": 486216,
+      "aut_order": 48
+    },
+    {
+      "r": 2,
+      "parent": 29,
+      "deep_cosets": 1002,
+      "labelled_extensions": 457128,
+      "aut_order": 8
+    },
+    {
+      "r": 2,
+      "parent": 30,
+      "deep_cosets": 982,
+      "labelled_extensions": 426456,
+      "aut_order": 8
+    },
+    {
+      "r": 2,
+      "parent": 31,
+      "deep_cosets": 962,
+      "labelled_extensions": 395772,
+      "aut_order": 168
+    }
+  ],
+  "children": 26299,
+  "labelled_mass_lhs": "1593099450132480",
+  "labelled_mass_rhs": "1593099450132480",
+  "seconds": 2.7818685829999907,
+  "hashes": {
+    "/Users/Brandon/Desktop/research/experimenting/qcode-open-entries/general-criterion/unified/suffix_mass_check/verify8.py": "01292c4586b5bbf2f07603e50a518c85b323a0c035bedf13275caa35b6aab34b",
+    "/Users/Brandon/Desktop/research/experimenting/qcode-open-entries/general-criterion/unified/suffix_mass_check/common.py": "7126582ad0c57d6e6c71bfdb5b91020fe06b789d7dd8f015c69afa103da42b44",
+    "/Users/Brandon/Desktop/research/experimenting/qcode-open-entries/general-criterion/unified/opus_parallel/suffix9_dimension5/cell_8_5.json": "96e4234fc0166cf6dade3c0eec16785a1c364289109c9d7061f369b00e295521",
+    "/Users/Brandon/Desktop/research/experimenting/qcode-open-entries/general-criterion/unified/opus_parallel/suffix9_dimension5/cells_d5_7_3.json": "73d30ffc479e093bf93957a9c2b4b8d00822d548add2dce62e183222af3300db",
+    "/Users/Brandon/Desktop/research/experimenting/qcode-open-entries/general-criterion/unified/opus_parallel/suffix9_dimension5/cells_d5_7_4.json": "0daa47e5065f98e1e8f2eaf7c4f8594d35c5e8ec9d56870275db357b72ca7362",
+    "/Users/Brandon/Desktop/research/experimenting/qcode-open-entries/general-criterion/unified/opus_parallel/suffix9_dimension5/cells_d5_7_5.json": "35a851117d86621d83db7b959f6aae6f91f940f14e6e7517a421bd68e7b87512",
+    "/Users/Brandon/Desktop/research/experimenting/qcode-open-entries/release16/census/cells.json": "181b27547b89c25c0ff783dc8ac9cb926e4d8b2d78e9631a8854780d4d114755",
+    "/Users/Brandon/Desktop/research/experimenting/qcode-open-entries/general-criterion/unified/model.py": "70806c8beb8a7b885c80f79fa89984b51839e4e9a9c3c24d794146190c8f9e84"
+  },
+  "scope": "Independent parent type enumeration, exhaustive physical coset minima, Fourier/direct labelled extension counts and a different star-graph certificate encoding; inherits certified release16 length7 dim4/5 parent completeness"
+}

@@ -1,0 +1,158 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "g": 1,
+      "trial": 0,
+      "pin": 3,
+      "columns": 12,
+      "leaves": 2,
+      "nodes": 13,
+      "mitm_tested": 4,
+      "mitm_pruned": 3,
+      "mitm_checked": 1,
+      "stream_sha256": "99d2f772b61d14643067ba72c6cfe2138cae1d0424bf12feeefae205a4eaa5e0"
+    },
+    {
+      "g": 1,
+      "trial": 0,
+      "pin": 4,
+      "columns": 12,
+      "leaves": 2,
+      "nodes": 10,
+      "mitm_tested": 1,
+      "mitm_pruned": 0,
+      "mitm_checked": 1,
+      "stream_sha256": "99d2f772b61d14643067ba72c6cfe2138cae1d0424bf12feeefae205a4eaa5e0"
+    },
+    {
+      "g": 1,
+      "trial": 1,
+      "pin": 3,
+      "columns": 14,
+      "leaves": 2,
+      "nodes": 10,
+      "mitm_tested": 3,
+      "mitm_pruned": 2,
+      "mitm_checked": 2,
+      "stream_sha256": "99d2f772b61d14643067ba72c6cfe2138cae1d0424bf12feeefae205a4eaa5e0"
+    },
+    {
+      "g": 1,
+      "trial": 1,
+      "pin": 4,
+      "columns": 14,
+      "leaves": 2,
+      "nodes": 8,
+      "mitm_tested": 1,
+      "mitm_pruned": 0,
+      "mitm_checked": 1,
+      "stream_sha256": "99d2f772b61d14643067ba72c6cfe2138cae1d0424bf12feeefae205a4eaa5e0"
+    },
+    {
+      "g": 1,
+      "trial": 2,
+      "pin": 3,
+      "columns": 16,
+      "leaves": 2,
+      "nodes": 11,
+      "mitm_tested": 1,
+      "mitm_pruned": 0,
+      "mitm_checked": 1,
+      "stream_sha256": "99d2f772b61d14643067ba72c6cfe2138cae1d0424bf12feeefae205a4eaa5e0"
+    },
+    {
+      "g": 1,
+      "trial": 2,
+      "pin": 4,
+      "columns": 16,
+      "leaves": 2,
+      "nodes": 11,
+      "mitm_tested": 1,
+      "mitm_pruned": 0,
+      "mitm_checked": 1,
+      "stream_sha256": "99d2f772b61d14643067ba72c6cfe2138cae1d0424bf12feeefae205a4eaa5e0"
+    },
+    {
+      "g": 3,
+      "trial": 0,
+      "pin": 3,
+      "columns": 12,
+      "leaves": 1,
+      "nodes": 7,
+      "mitm_tested": 1,
+      "mitm_pruned": 0,
+      "mitm_checked": 1,
+      "stream_sha256": "203888c5cf18ae9af36573dcf8f3cb6eae3302071b5531dcd0ac8603798e3b53"
+    },
+    {
+      "g": 3,
+      "trial": 0,
+      "pin": 4,
+      "columns": 12,
+      "leaves": 1,
+      "nodes": 7,
+      "mitm_tested": 1,
+      "mitm_pruned": 0,
+      "mitm_checked": 1,
+      "stream_sha256": "203888c5cf18ae9af36573dcf8f3cb6eae3302071b5531dcd0ac8603798e3b53"
+    },
+    {
+      "g": 3,
+      "trial": 1,
+      "pin": 3,
+      "columns": 14,
+      "leaves": 1,
+      "nodes": 7,
+      "mitm_tested": 1,
+      "mitm_pruned": 0,
+      "mitm_checked": 1,
+      "stream_sha256": "203888c5cf18ae9af36573dcf8f3cb6eae3302071b5531dcd0ac8603798e3b53"
+    },
+    {
+      "g": 3,
+      "trial": 1,
+      "pin": 4,
+      "columns": 14,
+      "leaves": 1,
+      "nodes": 7,
+      "mitm_tested": 1,
+      "mitm_pruned": 0,
+      "mitm_checked": 1,
+      "stream_sha256": "203888c5cf18ae9af36573dcf8f3cb6eae3302071b5531dcd0ac8603798e3b53"
+    },
+    {
+      "g": 3,
+      "trial": 2,
+      "pin": 3,
+      "columns": 16,
+      "leaves": 1,
+      "nodes": 11,
+      "mitm_tested": 3,
+      "mitm_pruned": 2,
+      "mitm_checked": 1,
+      "stream_sha256": "203888c5cf18ae9af36573dcf8f3cb6eae3302071b5531dcd0ac8603798e3b53"
+    },
+    {
+      "g": 3,
+      "trial": 2,
+      "pin": 4,
+      "columns": 16,
+      "leaves": 1,
+      "nodes": 9,
+      "mitm_tested": 1,
+      "mitm_pruned": 0,
+      "mitm_checked": 1,
+      "stream_sha256": "203888c5cf18ae9af36573dcf8f3cb6eae3302071b5531dcd0ac8603798e3b53"
+    }
+  ],
+  "scope": "Artificial distance tables, genuine known tags/Gram and retained Z tuples; these are not physical distance-six code constructions",
+  "hashes": {
+    "kernel_z_joint/verify_thresholds.py": "7267e752f7c26ef0e92892421f868b0fe5c7b8189a84fcee37c96eeedcecffa4",
+    "kernel_z_joint/z_enum_joint.c": "72a4c355d4f2681db51422952b421744a746c9f7adcd49b876530c4dfd126a69",
+    "kernel_z_joint/z_enum_joint": "1d20830b76a34e6946a53e4381a488c84d7d06636ac69e9271cf4ed342d05b72",
+    "fixed_kernel/z_enum_fixed": "08095d5f830addf7f3dd2780e2e0cdaa3d455564ea5ace7b1e4fb79b4e93830c",
+    "fixed_kernel_mitm4/z_enum_mitm4": "17e7d53fcf055f1a8686fdfacaba86f697239e241eac6e6ba36fece09c74e10c",
+    "fixed_kernel/large_verification.json": "155715c37d09e3f49054286020ac89bc86f4564f274a6181853f97ea9f7cebf3"
+  }
+}

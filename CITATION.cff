@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite the paper when using this work."
+type: article
+title: "Nonexistence of binary [[16,5,5]] and [[17,3,6]] stabilizer codes"
+authors:
+  - family-names: Li
+    given-names: Brandon
+doi: 10.5281/zenodo.23897639
+url: https://github.com/brandonlign/quantum
+version: "3.0"
+license: CC-BY-4.0

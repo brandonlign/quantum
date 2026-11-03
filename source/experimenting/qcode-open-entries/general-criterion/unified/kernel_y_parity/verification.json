@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "complete_mapsets": [
+    {
+      "parameters": [
+        8,
+        2,
+        3
+      ],
+      "q": 2,
+      "X_cases": 84,
+      "physical_maps": 168,
+      "old_nodes": 420,
+      "new_nodes": 420,
+      "old_seconds": 0.038509246998728486,
+      "new_seconds": 0.03904437400206007
+    },
+    {
+      "parameters": [
+        7,
+        1,
+        3
+      ],
+      "q": 1,
+      "X_cases": 360,
+      "physical_maps": 2880,
+      "old_nodes": 5040,
+      "new_nodes": 5040,
+      "old_seconds": 0.4890996629969777,
+      "new_seconds": 0.5232998709993808
+    },
+    {
+      "parameters": [
+        8,
+        2,
+        3
+      ],
+      "q": 2,
+      "X_cases": 40,
+      "physical_maps": 80,
+      "old_nodes": 920,
+      "new_nodes": 280,
+      "old_seconds": 0.02941008400011924,
+      "new_seconds": 0.03477282999938325
+    }
+  ],
+  "large": [
+    {
+      "parameters": [
+        17,
+        3,
+        3
+      ],
+      "g": 1,
+      "old_first_nodes": 15704,
+      "new_first_nodes": 8,
+      "new_seconds": 0.07956412499970611,
+      "physical_dual_minimum": 3
+    },
+    {
+      "parameters": [
+        17,
+        3,
+        3
+      ],
+      "g": 3,
+      "old_first_nodes": 1442,
+      "new_first_nodes": 8,
+      "new_seconds": 0.0816242500000044,
+      "physical_dual_minimum": 4
+    }
+  ],
+  "seconds": 2.9167122500002733,
+  "hashes": {
+    "kernel_y_parity/verify.py": "527453abefde269d565475a0ba68a488337d9e6feef344a8b6669b10ff2c5259",
+    "kernel_y_parity/solve.py": "6bcffab433a451a4492566f7302f23a106f11db2424abce729a500c891b056a7",
+    "kernel_y_parity/PROOF.md": "0eda01cfa1332a6c3bac2d4585abea4fc16ffa3ad3ca5bfb0605f46bda7f4047",
+    "fixed_kernel/solve.py": "ee8067c8cf8441bcca36b90016ec898b6b2c48b05247a69ec3fe4a8053ee44ba",
+    "fixed_kernel/common.py": "ba5dc5351fcab138c2b1e84f7f0a6b918c34e95384f694e533c672c281c210df",
+    "model.py": "70806c8beb8a7b885c80f79fa89984b51839e4e9a9c3c24d794146190c8f9e84",
+    "two_site.py": "85a46def6bba0fdcdf507262427ce772af4b69645c3c71d3d10ccf54cd74750a"
+  }
+}

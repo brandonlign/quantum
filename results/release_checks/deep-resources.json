@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "date": "2026-11-02",
+  "successful_attempt_elapsed_seconds": 7899.374260250013,
+  "prior_attempt_recorded_active_seconds": 2532.3345456670504,
+  "combined_recorded_active_seconds": 10431.708805917064,
+  "peak_rss_GiB": 3.012115478515625,
+  "workers_at_once": 1,
+  "residual_records_total": 2419796,
+  "records_verified_fresh_in_successful_attempt": 1772987,
+  "records_from_complete_prior_semantic_receipts": 646809,
+  "classes_verified": 32747,
+  "verification_errors": 0,
+  "cache_rejected_classes": 0,
+  "resume_rule": "Use a completed class only after reconstructing every expected task name in its original order and matching the receipt count and SHA256. All code/data input bytes must match the prior validated release. Never reuse partial classes or mismatched receipts.",
+  "input_binding": {
+    "status": "FULL_RELEASE_HASH_CHECK_PASS",
+    "verified_at_utc": "2026-11-02T13:14:25.319406+00:00",
+    "manifest_sha256": "e8aae6b7c15f478028b8d7f46852cc59eda11a3214684594191368814e3069ae",
+    "checksums_sha256": "ffcd289e29b1f2efa0f261003cc8e1c15d85a7bad42a627bf959361b48d62b0d",
+    "prior_runner_sha256": "dd6f1c25bb1fc837579f45844db73b3bccdccad88cb1c20381172e1beb4fae5c",
+    "prior_receipts_sha256": "b5f00fd478d4511b072ea4a4da962341f38145079f83c351a1b441f591544059",
+    "receipt_classes": 8812,
+    "receipt_records": 646809,
+    "prior_active_elapsed_seconds": 2532.3345456670504,
+    "guard_sha256": "a9318e9ff47b5d1e10090fe2921945edee62b4e346e9eaf8d1f22f4626d63ff2",
+    "hash_check": "check_release.py passed all120042 files after interruption; initial clean extraction also passed before attempt001.",
+    "reuse_rule": "Use a completed class only after reconstructing every expected task name in its original order and matching the receipt count and SHA256. All code/data input bytes must match the prior validated release. Never reuse partial classes or mismatched receipts."
+  },
+  "limits": {
+    "rss_bytes": 6442450944,
+    "wall_seconds": 26267,
+    "cpu_seconds": 26267,
+    "address_space_bytes": null,
+    "lower_priority": false,
+    "os_cpu_limit_applied": true
+  },
+  "guard_violations": 0,
+  "scope": "Complete saved-residual semantic validation across two attempts. The interrupted attempt produced complete class receipts; the resumed run reconstructed their expected task coverage and checked unchanged release hashes before reuse. Partial classes were rechecked. This was not an uninterrupted fresh execution of every semantic predicate in one process. Fresh searches remain separate.",
+  "resumed_runner_sha256": "c0f10d8b40667cc52632d67c43a9bff09f626fbf8707715b2ff2c76439283dff",
+  "resume_helper_sha256": "51e5b04e4252844cf08b65e0b089456e5d8eecb1c181823556e0933dbd066ace",
+  "guard_sha256": "a9318e9ff47b5d1e10090fe2921945edee62b4e346e9eaf8d1f22f4626d63ff2"
+}

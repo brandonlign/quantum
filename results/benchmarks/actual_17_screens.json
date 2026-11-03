@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "scope": "Recompute the actual q=3 branch screens on every physical kernel plane.\n\nCounts avoided fixed-kernel search tasks, not unmeasured runtime savings.\nClassification representatives and orbit partitions are the frozen inputs.\nEvery plane is regenerated from the radical and checked against that partition.\n",
+  "branches": [
+    {
+      "branch": "q3_t0_h5",
+      "shortened_code_classes": 118,
+      "local_types_per_unscreened_orbit": 1,
+      "physical_plane_counts": {
+        "three_light_words": 4726,
+        "remaining": 9969,
+        "rank_two_support_already_handled": 3595
+      },
+      "orbit_counts": {
+        "three_light_words": 3138,
+        "remaining": 7065,
+        "rank_two_support_already_handled": 2611
+      },
+      "search_tasks_before_screens_after_symmetry": 12814,
+      "search_tasks_after_screens": 7065,
+      "search_tasks_avoided": 5749,
+      "percent_search_tasks_avoided": 44.864991415639146,
+      "input_file": "rankone_recenter/plane_plan.json",
+      "input_sha256": "447b8b6e3ada54cafb7e014ccaa5a74165922e1db4085bdd5b0ec4fc63fdca80",
+      "every_physical_plane_regenerated_and_screen_recomputed": true
+    },
+    {
+      "branch": "q3_t2_h3",
+      "shortened_code_classes": 5995,
+      "local_types_per_unscreened_orbit": 5,
+      "physical_plane_counts": {
+        "three_light_words": 14018,
+        "remaining": 20664,
+        "rank_two_support_already_handled": 7283
+      },
+      "orbit_counts": {
+        "three_light_words": 13644,
+        "remaining": 20215,
+        "rank_two_support_already_handled": 7147
+      },
+      "search_tasks_before_screens_after_symmetry": 205030,
+      "search_tasks_after_screens": 101075,
+      "search_tasks_avoided": 103955,
+      "percent_search_tasks_avoided": 50.702336243476566,
+      "input_file": "fixed_kernel/hull3_plan.json",
+      "input_sha256": "928f0fcf6c6abf0bc45fb15e734f6a4951b8e3b024bb5b17a2f63dc4262141ee",
+      "every_physical_plane_regenerated_and_screen_recomputed": true
+    }
+  ],
+  "elapsed_seconds": 0.30466870800592005,
+  "source_sha256": "d3edc6402495fecdb664684fb4c9fbbfd38d8cfd6fb3185c0d0f9c017c57e8bd"
+}

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "complete_chunks": 12,
+  "backends": [
+    "compact",
+    "joint"
+  ],
+  "nodes": 10830523,
+  "hashes": {
+    "rankone_residual/verify_pool.py": "1c51680e1323d9cecd457edfa9c882d39572bdb224b8e773709d92d9805121c0",
+    "rankone_residual/pool.py": "4b4566e43334824c533f86b74cb2ed3349d486691a64bec572ec9127b91b2d98",
+    "rankone_residual/controls.json": "77467239099c7e85e7ccc6343db1af074672d9535bc5e3b1402e5b57bd60b2fb",
+    "rankone_residual/aggregate.py": "1d89b01de71496a0b98d3fd10a88b3a01336b342b3a551010381e2caecd4b566",
+    "rankone_residual/aggregation_verification.json": "0243593121f9c208000b8426a4397e9ba8fa391e8204c46a1108edcc8afd717f",
+    "rankone_residual/common.py": "350b2727699e832b9c5037e68c667223fae2f5c08780c9386809ea77fc187b27",
+    "rankone_residual/search.py": "1d67b799606107fd548d47633f0ef5e577708f924d837fd408b201baf217e1da",
+    "rankone_residual/PROOF.md": "4c8f8421f52a7b3465b038dc8fb526fe1118e988bd50192d1fe6ca54b860e27f"
+  }
+}

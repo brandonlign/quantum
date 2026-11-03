@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "scope": "Complete physical centralizer enumeration of both matching constructions.",
+  "records": [
+    {
+      "n": 16,
+      "k": 5,
+      "distance": 4,
+      "stabilizer_rank": 11,
+      "centralizer_rank": 21,
+      "centralizer_words_checked": 2097152,
+      "logical_word_witness": 15,
+      "source": "https://codetables.de/QECC.php?q=4&n=16&k=5"
+    },
+    {
+      "n": 17,
+      "k": 3,
+      "distance": 5,
+      "stabilizer_rank": 14,
+      "centralizer_rank": 20,
+      "centralizer_words_checked": 1048576,
+      "logical_word_witness": 8866,
+      "source": "https://codetables.de/QECC.php?q=4&n=17&k=3"
+    }
+  ],
+  "seconds": 0.3415382499806583
+}

@@ -1,0 +1,266 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "cls": 0,
+      "q": 1,
+      "t": 0,
+      "profile": 0,
+      "contexts": 1,
+      "old_seconds": 0.29165804100011883,
+      "new_seconds": 0.29049962499993853,
+      "warm_seconds": 5.1750001148320735e-05
+    },
+    {
+      "cls": 0,
+      "q": 1,
+      "t": 0,
+      "profile": 1,
+      "contexts": 1,
+      "old_seconds": 0.46814358399933553,
+      "new_seconds": 0.4521986250001646,
+      "warm_seconds": 6.316700091701932e-05
+    },
+    {
+      "cls": 0,
+      "q": 1,
+      "t": 0,
+      "profile": 2,
+      "contexts": 1,
+      "old_seconds": 0.3823691659999895,
+      "new_seconds": 0.36758220800038544,
+      "warm_seconds": 5.4042000556364655e-05
+    },
+    {
+      "cls": 0,
+      "q": 1,
+      "t": 0,
+      "profile": 3,
+      "contexts": 1,
+      "old_seconds": 5.381288915999903,
+      "new_seconds": 4.658583124999495,
+      "warm_seconds": 5.1790999350487255e-05
+    },
+    {
+      "cls": 0,
+      "q": 2,
+      "t": 2,
+      "profile": 8,
+      "contexts": 1,
+      "old_seconds": 0.26734633299929556,
+      "new_seconds": 0.16823037500034843,
+      "warm_seconds": 4.41250012954697e-05
+    },
+    {
+      "cls": 0,
+      "q": 2,
+      "t": 2,
+      "profile": 12,
+      "contexts": 1,
+      "old_seconds": 0.22231524999915564,
+      "new_seconds": 0.16468300000087766,
+      "warm_seconds": 0.00011458300105005037
+    },
+    {
+      "cls": 1,
+      "q": 1,
+      "t": 0,
+      "profile": 0,
+      "contexts": 1,
+      "old_seconds": 0.25935637499969744,
+      "new_seconds": 5.6958000641316175e-05,
+      "warm_seconds": 3.487499998300336e-05
+    },
+    {
+      "cls": 1,
+      "q": 1,
+      "t": 0,
+      "profile": 1,
+      "contexts": 1,
+      "old_seconds": 0.3852682910001022,
+      "new_seconds": 5.695899926649872e-05,
+      "warm_seconds": 3.5707998904399574e-05
+    },
+    {
+      "cls": 1,
+      "q": 1,
+      "t": 0,
+      "profile": 2,
+      "contexts": 1,
+      "old_seconds": 0.41903641700082517,
+      "new_seconds": 5.549999877985101e-05,
+      "warm_seconds": 3.6666999221779406e-05
+    },
+    {
+      "cls": 1,
+      "q": 1,
+      "t": 0,
+      "profile": 3,
+      "contexts": 1,
+      "old_seconds": 4.962245290998908,
+      "new_seconds": 6.495900015579537e-05,
+      "warm_seconds": 0.0001453749991924269
+    },
+    {
+      "cls": 1,
+      "q": 2,
+      "t": 2,
+      "profile": 8,
+      "contexts": 1,
+      "old_seconds": 0.154255583000122,
+      "new_seconds": 6.783299977541901e-05,
+      "warm_seconds": 4.070799877808895e-05
+    },
+    {
+      "cls": 1,
+      "q": 2,
+      "t": 2,
+      "profile": 12,
+      "contexts": 1,
+      "old_seconds": 0.23017533299935167,
+      "new_seconds": 5.020800017518923e-05,
+      "warm_seconds": 3.166599890391808e-05
+    },
+    {
+      "cls": 5,
+      "q": 2,
+      "t": 0,
+      "profile": 4,
+      "contexts": 6,
+      "old_seconds": 0.2827408329994796,
+      "new_seconds": 0.2645847080002568,
+      "warm_seconds": 4.920900028082542e-05
+    },
+    {
+      "cls": 5,
+      "q": 2,
+      "t": 0,
+      "profile": 5,
+      "contexts": 6,
+      "old_seconds": 0.25675908400080516,
+      "new_seconds": 0.21414554200055136,
+      "warm_seconds": 5.9250000049360096e-05
+    },
+    {
+      "cls": 5,
+      "q": 2,
+      "t": 0,
+      "profile": 6,
+      "contexts": 6,
+      "old_seconds": 0.21882541699960711,
+      "new_seconds": 0.23602758400011226,
+      "warm_seconds": 6.016600127622951e-05
+    },
+    {
+      "cls": 5,
+      "q": 2,
+      "t": 0,
+      "profile": 9,
+      "contexts": 6,
+      "old_seconds": 0.13753641699986474,
+      "new_seconds": 0.31168925000019954,
+      "warm_seconds": 6.112500159360934e-05
+    },
+    {
+      "cls": 5,
+      "q": 2,
+      "t": 0,
+      "profile": 13,
+      "contexts": 6,
+      "old_seconds": 0.20314291599970602,
+      "new_seconds": 0.24838145899957453,
+      "warm_seconds": 5.050000072515104e-05
+    },
+    {
+      "cls": 5,
+      "q": 2,
+      "t": 0,
+      "profile": 16,
+      "contexts": 6,
+      "old_seconds": 0.15237962500032154,
+      "new_seconds": 0.17753829200046312,
+      "warm_seconds": 4.829099998460151e-05
+    },
+    {
+      "cls": 10,
+      "q": 2,
+      "t": 0,
+      "profile": 4,
+      "contexts": 6,
+      "old_seconds": 0.21006908400158864,
+      "new_seconds": 5.329099985829089e-05,
+      "warm_seconds": 3.137500061711762e-05
+    },
+    {
+      "cls": 10,
+      "q": 2,
+      "t": 0,
+      "profile": 5,
+      "contexts": 6,
+      "old_seconds": 0.1686339579991909,
+      "new_seconds": 5.6417000450892374e-05,
+      "warm_seconds": 3.35830009134952e-05
+    },
+    {
+      "cls": 10,
+      "q": 2,
+      "t": 0,
+      "profile": 6,
+      "contexts": 6,
+      "old_seconds": 0.17121583400148666,
+      "new_seconds": 5.262500053504482e-05,
+      "warm_seconds": 3.3042000723071396e-05
+    },
+    {
+      "cls": 10,
+      "q": 2,
+      "t": 0,
+      "profile": 9,
+      "contexts": 6,
+      "old_seconds": 0.24030416599998716,
+      "new_seconds": 7.079199895088095e-05,
+      "warm_seconds": 4.562499998428393e-05
+    },
+    {
+      "cls": 10,
+      "q": 2,
+      "t": 0,
+      "profile": 13,
+      "contexts": 6,
+      "old_seconds": 0.2615005419993395,
+      "new_seconds": 5.2166000386932865e-05,
+      "warm_seconds": 3.1874998967396095e-05
+    },
+    {
+      "cls": 10,
+      "q": 2,
+      "t": 0,
+      "profile": 16,
+      "contexts": 6,
+      "old_seconds": 0.23949308299961558,
+      "new_seconds": 7.10420008545043e-05,
+      "warm_seconds": 4.508300116867758e-05
+    }
+  ],
+  "template_cache": {
+    "hits": 36,
+    "misses": 12,
+    "maxsize": 32,
+    "currsize": 12
+  },
+  "orbit_cache": {
+    "hits": 36,
+    "misses": 12,
+    "maxsize": 64,
+    "currsize": 12
+  },
+  "hashes": {
+    "kernel_context_cache/verify.py": "c7a03c9da95f1ec9551fa07e8674ccb9ef31a37033a95190f87d4c765e050a50",
+    "kernel_context_cache/common.py": "ad5ccf4b2c7a80828aa8f193e6b4e2373daf3488833ed28250fa64830031854e",
+    "kernel_context_cache/PROOF.md": "53808a4c88b9b4c96656160f4619fc916a8b8995b400baa873b875c75a888997",
+    "fixed_kernel/common.py": "ba5dc5351fcab138c2b1e84f7f0a6b918c34e95384f694e533c672c281c210df",
+    "model.py": "70806c8beb8a7b885c80f79fa89984b51839e4e9a9c3c24d794146190c8f9e84",
+    "kernel_case_plan/plan.json": "53f022c4746830ce02da54bb5a0cdb47863db4be6d004c8a52b7fccefea49bbc"
+  },
+  "scope": "Exact returned data and orbit equality; prefix-only setup cache, no extension exclusion"
+}

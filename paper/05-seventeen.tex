@@ -1,0 +1,379 @@
+\section{The seventeen-qubit exclusion}\label{sec:seventeen}
+
+Assume that \(S\leq V_{17}\) is a \(\qc{17,3,d\geq6}\)
+stabilizer, so \(\dim S=14\) and \(\dim S^\perp=20\).
+The proof first forces a weight-eight stabilizer word. Shortening on its
+support leaves nine coordinates, and the dimension bound below permits
+one rank-one local stabilizer type and four rank-two types. The rank-one
+type then splits into five kernel cases indexed by \((q,t,h)\).
+We use \emph{type} for the local stabilizer up to physical equivalence,
+\emph{kernel case} for these three invariants, and \emph{weight profile}
+for the pair \((A_6,A_7)\). A search part fixes a shortened code, kernels,
+and the remaining identification or syndrome data.
+
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}lXr@{}}\toprule
+Local type or kernel case&Exclusion&Shortened-code classes\\\midrule
+Rank two: \((6,6,8)\)&Counting leaves 48; extension tests&56\\
+Rank two: \((6,8,8)\)&Counting leaves 52; extension tests for each weight profile&56\\
+Rank two: \((7,7,8)\)&Counting leaves 52; extension tests&56\\
+Rank two: \((8,8,8)\)&Hull restrictions and fixed-kernel extension tests&56\\
+Rank one: \((q,t,h)=(1,0,1)\)&Fixed-kernel extension tests&26,752\\
+Rank one: \((2,2,1)\)&Fixed-kernel extension tests&26,752\\
+Rank one: \((2,0,3)\)&Fixed-kernel extension tests&5,995\\
+Rank one: \((3,2,3)\)&Recentering screen and fixed-kernel extension tests&5,995\\
+Rank one: \((3,0,5)\)&Recentering screen and binary projection filter&118\\\bottomrule
+\end{tabularx}
+\end{center}
+The repeated class lists in the rank-one rows are tested with different
+kernels. The table counts the full input classifications; the proofs
+below give the subsequent screens and search counts.
+
+\subsection{A forced support of size eight}
+
+\begin{proposition}[Exact enumerator consequences]\label{prop:17-enumerator}
+The hypothetical code is pure to distance six, contains a stabilizer word
+of weight eight, and satisfies
+\begin{equation}\label{eq:light-budget}
+ A_6+A_7\leq2.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The split-coset integer certificates for stabilizer weights one through
+five exclude all five possibilities without assuming purity. Hence
+\(A_1=\cdots=A_5=0\), which implies purity because the logical distance
+is at least six. With these zeros imposed, the ordinary enumerator system
+plus \(A_8=0\) has an exact infeasibility certificate with negative
+right-hand side \(-3,932,160\).
+
+For the last assertion, an integer combination of the ordinary
+MacWilliams and shadow relations gives
+\(32768(A_6+A_7)\leq65536\). Dividing by 32768 proves
+\eqref{eq:light-budget}. Appendix~\ref{app:ordinary17} gives the
+multipliers, row definitions, and sign conventions so that the identity
+can be checked directly.
+\end{proof}
+
+The following additive bound makes the forced support useful. It uses a
+parity property that is not visible in the first few nonnegative
+MacWilliams coefficients alone.
+
+\begin{lemma}[A nine-coordinate dimension bound]\label{lem:nine-bound}
+An additive code on nine sites with minimum distance at least six has
+binary dimension at most six.
+\end{lemma}
+\begin{proof}
+A code of larger dimension contains a dimension-seven subcode. Suppose
+\(|C|=128\), with nonzero weight counts \(A_6,A_7,A_8,A_9\) summing to
+127. The first three nonnegative dual MacWilliams coefficients give
+\[
+ A_7+2A_8+3A_9\leq102,\qquad
+ A_8+3A_9\geq75,\qquad
+ 3(A_7+A_8)-4A_9\geq17.
+\]
+The first two imply \(A_7\leq3A_9-48\), hence \(A_9\geq16\), and
+also \(A_7+A_8\leq27\). The third then gives \(A_9\leq16\).
+Equality forces
+\((A_6,A_7,A_8,A_9)=(84,0,27,16)\).
+
+On a binary additive space, weight parity is a quadratic form: its failure
+to be additive is the symplectic product in \eqref{eq:polar}.
+For a quadratic form \(\varepsilon\) on a \(c\)-dimensional binary space \(U\),
+define its Gauss sum by
+\[
+ G(\varepsilon)=\sum_{v\in U}(-1)^{\varepsilon(v)}.
+\]
+For weight parity, this is the number of even-weight words minus the
+number of odd-weight words. If the polar form has rank \(2\rho\), then
+\(G(\varepsilon)\) is zero or \(\pm2^{c-\rho}\). Indeed, squaring the sum and
+substituting \(y=x+z\) gives
+\[
+ G(\varepsilon)^2=2^c\sum_{z\in\rad(U)}(-1)^{\varepsilon(z)}.
+\]
+The restriction of \(\varepsilon\) to the radical is linear. The last sum is
+therefore zero if that restriction is nonzero, and otherwise equals
+\(|\rad(U)|=2^{c-2\rho}\). This proves the asserted possibilities.
+The forced distribution would instead give Gauss sum
+\(128-2\cdot16=96\). Since \(c=7\) and \(0\leq\rho\leq3\),
+the possible nonzero absolute values are \(128,64,32,16\), none of
+which is 96. This proves the bound.
+\end{proof}
+
+Choose a weight-eight stabilizer word \(p\), put \(T=\operatorname{supp}p\),
+and normalize \(p=Z^8\). Let \(R=S\cap V_T\), \(r=\dim R\).
+The shortened centralizer has length nine and dimension \(4+r\), so
+Lemma~\ref{lem:nine-bound} gives \(1\leq r\leq2\).
+
+If \(r=1\), then \(R=\langle Z^8\rangle\).
+If \(r=2\), choose \(\zeta\in R\setminus\langle p\rangle\).
+Let \(\alpha\) be the number of sites where \(\zeta\) has an \(X\)-component.
+It is even by commutation. Since both \(\zeta\) and \(\zeta+p\) have weight
+at least six, \(8+\alpha\geq12\), so \(\alpha\in\{4,6,8\}\).
+Phase maps fixing \(Z\) remove \(Y\) on those sites. On the other
+\(8-\alpha\) sites, let \(\beta\) count the \(Z\)'s of \(\zeta\).
+Then \(\alpha+\beta\geq6\) and \(8-\beta\geq6\).
+Replacing \(\zeta\) by \(\zeta+p\) exchanges \(\beta\) with \(8-\alpha-\beta\).
+Consequently \(\alpha=4\) forces \(\beta=2\); at \(\alpha=6\) we may take
+\(\beta=0\) or one; and \(\alpha=8\) forces \(\beta=0\).
+Site permutations now give the following list.
+
+\begin{center}
+\begin{tabular}{@{}clcc@{}}\toprule
+\(\dim R\)&Generators of \(R\)&Nonzero local weights&\(\dim C\)\\\midrule
+1&\(Z^8\)&8&5\\
+2&\(Z^8,\ XXXXZZII\)&6,6,8&6\\
+2&\(Z^8,\ XXXXXXII\)&6,8,8&6\\
+2&\(Z^8,\ XXXXXXZI\)&7,7,8&6\\
+2&\(Z^8,\ X^8\)&8,8,8&6\\\bottomrule
+\end{tabular}
+\end{center}
+
+This list covers every possible local stabilizer, with \(R=S\cap V_T\). The shortened-code
+classifications contain 32,865 dimension-five classes and 56
+dimension-six classes. Section~\ref{sec:computation} gives their completeness arguments.
+
+\subsection{The four rank-two types}
+
+For the types with local weights \((6,6,8)\) and \((7,7,8)\), the local
+plane contains two words of weight six or seven. Equality therefore
+holds in \eqref{eq:light-budget}.
+Every stabilizer word outside \(R\) has weight at least eight.
+For type \((6,8,8)\), the possible global profiles are
+\((A_6,A_7)=(1,0),(1,1),(2,0)\).
+After removing the known local weight-six word, the allowed counts outside \(R\) are \((0,0),(0,1),(1,0)\).
+These restrictions count distinct stabilizer words.
+
+The adapted \(Z\)-only quotient in each rank-two type has dimension six.
+Every nonzero class has minimum weight at most four, since addition of \(Z^8\)
+complements a \(Z\)-only word's support. The extension map \(M\) must be
+injective on this subspace at distance six. Classes of minimum weight one give the following necessary counting
+conditions: type \((6,6,8)\) requires four distinct labels of coset distance
+at least five, and the next two types require two. Of the 56 shortened-code
+classes, these tests leave 48, 52 and 52, respectively.
+
+\begin{proposition}[Mixed rank-two types]\label{prop:17-mixed}
+The three local types with weights \((6,6,8)\), \((6,8,8)\), and
+\((7,7,8)\) admit no extension to the hypothetical code.
+\end{proposition}
+\begin{proof}[Computer-assisted proof]
+For each remaining shortened code and allowed pair \((A_6,A_7)\),
+enumerate every
+eligible first syndrome image and every compatible independent tuple of
+six \(Z\)-only images. For each tuple, solve every complementary-image
+assignment, including all diagonal freedom, using
+\(\Gamma=MJM^\tr\) and all distance inequalities in the original coordinates.
+Completed maps must also have the prescribed numbers of weight-six and
+weight-seven words outside \(R\). The equations and pruning conditions
+are given in
+Appendix~\ref{app:search}.
+
+The complete records contain 641 first-image cases for type \((6,6,8)\),
+650 for \((7,7,8)\), and 1,950 for the three profiles of \((6,8,8)\).
+Every case is exhausted with no accepted completion. For the first type,
+no complete assignment to the six \(Z\)-only images passes the
+necessary conditions. The physical six-site
+permutation reduction used in the latter two searches preserves every
+complete extension; its argument is in Appendix~\ref{app:symmetry}.
+The counting conditions and the completed searches together cover all
+56 shortened-code classes in each applicable profile.
+\end{proof}
+
+For the full plane \(R=\langle Z^8,X^8\rangle\), the local
+centralizer has additional structure. Every coset outside \(R\) in the
+local centralizer has four words, each of weight at least six, whose
+total weight is 24. All four weights are six. The full
+local centralizer \(H=S^\perp\cap V_T\) is even and isotropic.
+Its quotient \(K=H/R\) is an isotropic logical subspace, so \(q\leq3\).
+The identities of Proposition~\ref{prop:kernel} give
+\[
+ h=2q,\qquad \dim N=q.
+\]
+The dimension-six shortened-code classification has hull distribution
+\(h=0,2,6\) with 15, 33 and 8 classes; no hull-four class occurs.
+Only \(q=0,1,3\) remain.
+
+\begin{proposition}[Full rank-two plane]\label{prop:17-plane}
+The local type \(R=\langle Z^8,X^8\rangle\) admits no extension.
+\end{proposition}
+\begin{proof}[Computer-assisted proof]
+For \(q=1\), a word complementary to \(R\) has two occurrences of
+each Pauli letter; site permutations give one local type \(H\).
+For \(q=3\), every local \(H\) contains a dimension-four subcode
+containing \(R\). The complete eight-site distance-six dimension-four
+classification contains three isotropic classes with a full-support plane.
+Testing all 256 normalizer cosets for each gives one dimension-five
+local \(H\) type containing \(R\). In both cases \(R\) consists of
+the three nonzero full-support words, so physical equivalences preserve
+the plane as a whole.
+
+For every shortened-code class, enumerate every \(q\)-space
+\(N\leq\rad(P)\), up to verified physical suffix automorphisms.
+A space with more than two words of weight six or seven violates
+\eqref{eq:light-budget} and is excluded directly. The remaining cases
+have 63 \(N\)-orbits for \(q=1\), and 164 for \(q=3\).
+All identifications between the quotient radical and the local kernel
+radical are considered, modulo physical prefix equivalence. For \(q=3\),
+the induced physical group on \(K\) has order 21. Its action on
+the 168 identifications is free: an invertible identification fixed by
+an element forces that element to be the identity. There are therefore
+eight orbits, each of size 21. There are \(63+164\cdot8=1375\) extension problems with fixed
+kernels and radical identifications, covering all 41 nonzero-hull
+shortened-code classes. The \(N\)-orbits are obtained by enumerating all three lines
+in each hull-two space and all 1,395 three-dimensional subspaces in each
+hull-six space. The recorded orbits form a disjoint partition of these
+sets; their sizes sum to three or 1,395 for each shortened code.
+The search exhausts all assignments to the \(Z\)-only basis images.
+For each of the 2,960 surviving tuples, exhaustive search finds no
+assignment to the complementary images.
+
+For the 15 hull-zero shortened-code classes, the verification considers
+every admissible pair \((A_6,A_7)\), including \(A_6=A_7=0\) and the
+cases with larger minimum stabilizer weight. These are covered by
+separate profile exclusions or by completed extension searches with
+72,827 first-image cases. The verification program checks both sets of
+records and their coverage of the allowed pairs. Together these cover all
+56 shortened-code classes and all allowed global profiles.
+\end{proof}
+
+\subsection{The five rank-one kernel cases}
+
+It remains to exclude \(R=\langle Z^8\rangle\), with \(a=14\),
+\(b=13\). The shortened code has binary dimension five.
+
+\begin{lemma}[A three-dimensional kernel bound]\label{lem:qthree}
+The extension kernel has dimension \(q\leq3\).
+\end{lemma}
+\begin{proof}
+Proposition~\ref{prop:griesmer} gives \(q\leq4\). If \(q=4\), the
+local centralizer \(H=S^\perp\cap V_T\) has dimension five and
+32 words. The additive mean-weight bound is
+\(\sum_{w\in H}\wt(w)\leq8\cdot32\cdot3/4=192\).
+There are 30 words outside \(R\), each of weight at least six, and
+\(Z^8\) has weight eight. If \(O\) words have odd weight, this gives
+\(\sum\wt(w)\geq188+O\), so \(O\leq4\).
+
+Weight parity is a quadratic form on \(\F^5\). A nonzero such form
+has at least eight ones: the Gauss-sum formula used in
+Lemma~\ref{lem:nine-bound} bounds its positive nontrivial sum by 16,
+while a nonzero linear form has sum zero. Parity vanishes on
+\(H\), making \(H\) isotropic by \eqref{eq:polar}.
+But \(H\cap S=R\), so \(H/R\) embeds as a four-dimensional
+isotropic subspace of the six-dimensional logical symplectic space.
+Its maximum isotropic dimension is three, a contradiction.
+\end{proof}
+
+Here \(h=2q-t-1\geq0\) forces \(q\geq1\). The restricted rank
+\(t\) is even and satisfies \(0\leq t\leq q\); also
+\(h\leq\dim C=5\) and \(q-t/2\leq3\).
+Together with \(q\leq3\), these conditions give exactly five possibilities.
+In each case \(\dim N=q-1\):
+\begin{center}
+\begin{tabular}{@{}ccccc@{}}\toprule
+\(q\)&\(t\)&Hull dimension \(h\)&\(\dim N\)&Classes of \(C\)\\\midrule
+1&0&1&0&26,752\\
+2&2&1&1&26,752\\
+2&0&3&1&5,995\\
+3&2&3&2&5,995\\
+3&0&5&2&118\\\bottomrule
+\end{tabular}
+\end{center}
+The repeated shortened-code lists correspond to different kernels and
+must each be tested. Their union consists of all 32,865 classes.
+
+\subsection{Prescribing both kernels}
+
+Fix an exact \(N\leq\rad(P)\) of the required dimension. The map
+\(\tau\) descends to an injective isometry
+\[
+ P/N\longrightarrow K^\perp_E.
+\]
+Its domain has dimension \(14-q\) and radical dimension \(g=q-t\).
+The radical maps isomorphically to \(\rad(K)\). The complete local
+prefix classifications, with the full-support radical word \(p\)
+distinguished, have the following numbers of types:
+\[
+ \begin{array}{c|ccccc}
+ (q,t)&(1,0)&(2,2)&(2,0)&(3,2)&(3,0)\\\hline
+ \#(H,p)&4&2&6&5&7.
+ \end{array}
+\]
+Here \(H=S^\perp\cap V_T\) is the local centralizer, so
+\(H/R=K\). A marked pair \((H,p)\) records both this local space
+and the chosen weight-eight stabilizer word. An identification of
+radicals is a linear isomorphism between the radical of \(P/N\) and
+\(\rad(K)\); it specifies where those commuting directions go.
+The marked local classifications are checked independently by direct normalized enumeration for
+\(q=1\), and by every ordered one-coordinate lift of the complete
+seven-site parent classifications for \(q=2,3\). Distinguishing \(p\) prevents
+equating local spaces whose chosen weight-eight words are inequivalent.
+
+For a fixed local \(H\), every radical identification is considered.
+There are \(|\mathrm{GL}(g,2)|=1,1,6,168\) possibilities for
+\(g=0,1,2,3\), respectively. Physical automorphism orbits reduce these
+choices without dropping extensions. For each representative, the search
+assigns the seven independent \(Z\)-images and completes all seven
+complementary images. It enforces the identification, commutation,
+kernel equations, and physical distance constraints.
+Appendix~\ref{app:fixedkernel} proves that these equations force
+\(\ker M=K\) and \(\ker\tau=N\).
+
+The isotropic \(q=3,h=5\) case also admits a necessary binary
+projection filter without choosing a particular local \(H\).
+For a basis \(c_1,c_2,c_3\) of \(\rad(P/N)\), tag each physical
+prefix site by its three \(X\)-evaluations. Every nonzero tag-functional
+must have even support of size at least four, since the corresponding
+kernel class has minimum weight at least six. All tag-count multisets satisfying
+this condition are enumerated. This is a relaxation of complete local
+kernel classification and is sufficient for that case's search.
+
+\begin{proposition}[Complete rank-one exclusion]\label{prop:17-rankone}
+None of the five rank-one kernel cases admits an extension.
+\end{proposition}
+\begin{proof}[Computer-assisted proof]
+Every possible \(N\) is enumerated as a subspace of the radical of
+\(P\), up to physical automorphisms of the shortened code.
+Inequality~\eqref{eq:light-budget} excludes spaces with three words of
+weight six or seven.
+Before taking orbits, the five rows of the preceding table have
+\(1,1,7,7,155\) choices of \(N\) per shortened code, respectively:
+these are the Gaussian binomial counts for subspaces of the indicated
+dimensions. Orbit lists partition these explicit finite sets.
+A further screen may use the already excluded rank-two types: if a
+weight-eight word of \(N\) has another independent word of \(N\)
+supported inside its support, then recentering on that word gives a
+rank-two local stabilizer, covered by Propositions~\ref{prop:17-mixed}
+and \ref{prop:17-plane}. All other \(N\)'s proceed to search.
+
+For \((q,t,h)=(3,0,5)\), 5,749 \(N\)-orbits are screened and the
+remaining 7,065 have completed searches over the \(Z\)-only images
+and all complementary images, with no extension found. This covers all 118 shortened-code classes.
+For \((3,2,3)\), 20,791 \(N\)-orbits are screened and 20,215 are
+searched against each of the five distinguished local types, giving
+101,075 completed fixed-\(H,N\) cases. This covers all 5,995 shortened-code
+classes in that case.
+
+The remaining cases \((1,0,1),(2,2,1),(2,0,3)\) cover 32,747 distinct
+shortened-code classes. For the last case all seven radical lines are included
+before quotienting by physical suffix symmetry. Every distinguished local
+type, radical identification, and eligible first syndrome image is included.
+The 2,419,796 completed search records cover these cases. For every
+assignment to the \(Z\)-only images that passes the necessary tests,
+exhaustive search excludes all assignments to the complementary images.
+
+Some local types give identical necessary searches over the \(Z\)-only
+images. These enumerations are shared, but the complementary-image search
+is performed separately for each type. Appendix~\ref{app:evidence}
+specifies how this reuse and the different implementations are checked.
+\end{proof}
+
+\subsection{Completion of the proof}
+
+Proposition~\ref{prop:17-enumerator} applies to every hypothetical code,
+including one initially assumed degenerate. Lemma~\ref{lem:nine-bound}
+and the explicit local normal forms reduce it to the five types listed
+above. Their shortened-code classifications are complete. The rank-two types are
+excluded by Propositions~\ref{prop:17-mixed} and \ref{prop:17-plane};
+the rank-one type is exhausted by Lemma~\ref{lem:qthree}, the five kernel
+cases, and Proposition~\ref{prop:17-rankone}.
+This proves the second assertion of Theorem~\ref{thm:main}.
+

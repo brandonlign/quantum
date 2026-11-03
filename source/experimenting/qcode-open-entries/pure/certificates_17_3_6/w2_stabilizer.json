@@ -1,0 +1,258 @@
+{
+ "name": "w2_stabilizer",
+ "code": "[[17,3,6]]",
+ "description": "S contains a weight-2 word (WLOG Z^2)",
+ "blocks": [
+  {
+   "sites": 2,
+   "generators": [
+    "ZZ"
+   ],
+   "variables": "coset_patterns",
+   "patterns": [
+    [
+     [
+      0,
+      0,
+      2
+     ],
+     2
+    ],
+    [
+     [
+      0,
+      2,
+      0
+     ],
+     1
+    ],
+    [
+     [
+      1,
+      0,
+      1
+     ],
+     1
+    ]
+   ]
+  }
+ ],
+ "suffix_sites": 15,
+ "weight_assumptions": [],
+ "weight_ge_assumptions": [],
+ "expected": {
+  "columns": 48,
+  "nu_rhs": -5324800,
+  "positive_residuals": 22
+ },
+ "certificate": [
+  {
+   "type": "unit",
+   "multiplier": -68567040
+  },
+  {
+   "type": "total",
+   "multiplier": 3860
+  },
+  {
+   "type": "low",
+   "cell": [
+    0,
+    1
+   ],
+   "multiplier": 1900
+  },
+  {
+   "type": "low",
+   "cell": [
+    0,
+    2
+   ],
+   "multiplier": 801
+  },
+  {
+   "type": "low",
+   "cell": [
+    0,
+    3
+   ],
+   "multiplier": 323
+  },
+  {
+   "type": "low",
+   "cell": [
+    0,
+    4
+   ],
+   "multiplier": 91
+  },
+  {
+   "type": "low",
+   "cell": [
+    0,
+    5
+   ],
+   "multiplier": 25
+  },
+  {
+   "type": "low",
+   "cell": [
+    1,
+    0
+   ],
+   "multiplier": 1220
+  },
+  {
+   "type": "low",
+   "cell": [
+    1,
+    1
+   ],
+   "multiplier": 513
+  },
+  {
+   "type": "low",
+   "cell": [
+    1,
+    2
+   ],
+   "multiplier": 211
+  },
+  {
+   "type": "low",
+   "cell": [
+    1,
+    3
+   ],
+   "multiplier": 59
+  },
+  {
+   "type": "low",
+   "cell": [
+    1,
+    4
+   ],
+   "multiplier": 17
+  },
+  {
+   "type": "low",
+   "cell": [
+    2,
+    0
+   ],
+   "multiplier": 225
+  },
+  {
+   "type": "low",
+   "cell": [
+    2,
+    1
+   ],
+   "multiplier": 99
+  },
+  {
+   "type": "low",
+   "cell": [
+    2,
+    2
+   ],
+   "multiplier": 27
+  },
+  {
+   "type": "low",
+   "cell": [
+    2,
+    3
+   ],
+   "multiplier": 9
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    0,
+    0
+   ],
+   "multiplier": 280
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    0,
+    2
+   ],
+   "multiplier": 98
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    0,
+    3
+   ],
+   "multiplier": 4
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    0,
+    4
+   ],
+   "multiplier": 18
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    1,
+    0
+   ],
+   "multiplier": 400
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    1,
+    1
+   ],
+   "multiplier": 274
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    1,
+    2
+   ],
+   "multiplier": 52
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    1,
+    3
+   ],
+   "multiplier": 34
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    2,
+    0
+   ],
+   "multiplier": 450
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    2,
+    1
+   ],
+   "multiplier": 100
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    2,
+    2
+   ],
+   "multiplier": 50
+  }
+ ]
+}

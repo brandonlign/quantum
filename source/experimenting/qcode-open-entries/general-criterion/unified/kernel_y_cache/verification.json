@@ -1,0 +1,297 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "name": "small_0",
+      "old_seconds": 0.0010114579999935813,
+      "new_seconds": 0.0006768330003978917,
+      "status": "COMPLETE",
+      "nodes": 5,
+      "solutions": 2
+    },
+    {
+      "name": "small_1",
+      "old_seconds": 0.0006523339998238953,
+      "new_seconds": 0.0005606249997072155,
+      "status": "COMPLETE",
+      "nodes": 5,
+      "solutions": 2
+    },
+    {
+      "name": "small_2",
+      "old_seconds": 0.0006216660003701691,
+      "new_seconds": 0.0004943749991070945,
+      "status": "COMPLETE",
+      "nodes": 5,
+      "solutions": 2
+    },
+    {
+      "name": "small_3",
+      "old_seconds": 0.0006053750003047753,
+      "new_seconds": 0.0004928329999529524,
+      "status": "COMPLETE",
+      "nodes": 5,
+      "solutions": 2
+    },
+    {
+      "name": "small_4",
+      "old_seconds": 0.0006041670003469335,
+      "new_seconds": 0.00048645799870428164,
+      "status": "COMPLETE",
+      "nodes": 5,
+      "solutions": 2
+    },
+    {
+      "name": "small_5",
+      "old_seconds": 0.0006259170004341286,
+      "new_seconds": 0.0004970000009052455,
+      "status": "COMPLETE",
+      "nodes": 5,
+      "solutions": 2
+    },
+    {
+      "name": "small_6",
+      "old_seconds": 0.0006005420000292361,
+      "new_seconds": 0.0004868750002060551,
+      "status": "COMPLETE",
+      "nodes": 5,
+      "solutions": 2
+    },
+    {
+      "name": "small_7",
+      "old_seconds": 0.0006177500017656712,
+      "new_seconds": 0.0005237499990471406,
+      "status": "COMPLETE",
+      "nodes": 5,
+      "solutions": 2
+    },
+    {
+      "name": "positive17_g1",
+      "old_seconds": 0.10815879199981282,
+      "new_seconds": 0.09714345800057345,
+      "status": "FOUND",
+      "nodes": 8,
+      "solutions": 1
+    },
+    {
+      "name": "positive17_g3",
+      "old_seconds": 0.13397837499906018,
+      "new_seconds": 0.10430962499958696,
+      "status": "FOUND",
+      "nodes": 8,
+      "solutions": 1
+    },
+    {
+      "name": "target_leaf_0",
+      "old_seconds": 0.029063500000120257,
+      "new_seconds": 0.0017132090015365975,
+      "status": "COMPLETE",
+      "nodes": 0,
+      "solutions": 0
+    },
+    {
+      "name": "target_leaf_1",
+      "old_seconds": 0.024885791000997415,
+      "new_seconds": 0.0016885830009414349,
+      "status": "COMPLETE",
+      "nodes": 0,
+      "solutions": 0
+    },
+    {
+      "name": "target_leaf_2",
+      "old_seconds": 0.021241417000055662,
+      "new_seconds": 0.0016717500002414454,
+      "status": "COMPLETE",
+      "nodes": 0,
+      "solutions": 0
+    },
+    {
+      "name": "target_leaf_3",
+      "old_seconds": 0.023605207999935374,
+      "new_seconds": 0.0017092079997382825,
+      "status": "COMPLETE",
+      "nodes": 0,
+      "solutions": 0
+    },
+    {
+      "name": "target_leaf_4",
+      "old_seconds": 0.02295020800011116,
+      "new_seconds": 0.0018373750008322531,
+      "status": "COMPLETE",
+      "nodes": 0,
+      "solutions": 0
+    },
+    {
+      "name": "target_leaf_5",
+      "old_seconds": 0.023883207999460865,
+      "new_seconds": 0.0025157919990306254,
+      "status": "COMPLETE",
+      "nodes": 0,
+      "solutions": 0
+    },
+    {
+      "name": "target_leaf_6",
+      "old_seconds": 0.027035041000999627,
+      "new_seconds": 0.0023793749987817137,
+      "status": "COMPLETE",
+      "nodes": 0,
+      "solutions": 0
+    },
+    {
+      "name": "target_leaf_7",
+      "old_seconds": 0.02911912499985192,
+      "new_seconds": 0.002657000000908738,
+      "status": "COMPLETE",
+      "nodes": 0,
+      "solutions": 0
+    },
+    {
+      "name": "target_leaf_8",
+      "old_seconds": 0.034615749998920364,
+      "new_seconds": 0.002217457998995087,
+      "status": "COMPLETE",
+      "nodes": 0,
+      "solutions": 0
+    },
+    {
+      "name": "target_leaf_9",
+      "old_seconds": 0.028601166000953526,
+      "new_seconds": 0.0018654579998838017,
+      "status": "COMPLETE",
+      "nodes": 0,
+      "solutions": 0
+    },
+    {
+      "name": "target_leaf_10",
+      "old_seconds": 0.021252874999845517,
+      "new_seconds": 0.0017924589992617257,
+      "status": "COMPLETE",
+      "nodes": 0,
+      "solutions": 0
+    },
+    {
+      "name": "target_leaf_11",
+      "old_seconds": 0.02679095799976494,
+      "new_seconds": 0.00237241700051527,
+      "status": "COMPLETE",
+      "nodes": 0,
+      "solutions": 0
+    },
+    {
+      "name": "target_leaf_12",
+      "old_seconds": 0.031451207998543396,
+      "new_seconds": 0.0017933340004674392,
+      "status": "COMPLETE",
+      "nodes": 0,
+      "solutions": 0
+    },
+    {
+      "name": "target_leaf_13",
+      "old_seconds": 0.028589707999344682,
+      "new_seconds": 0.002996166000230005,
+      "status": "COMPLETE",
+      "nodes": 0,
+      "solutions": 0
+    },
+    {
+      "name": "target_leaf_14",
+      "old_seconds": 0.03382466699986253,
+      "new_seconds": 0.0022341670010064263,
+      "status": "COMPLETE",
+      "nodes": 0,
+      "solutions": 0
+    },
+    {
+      "name": "target_leaf_15",
+      "old_seconds": 0.03326162499979546,
+      "new_seconds": 0.0022688330009259516,
+      "status": "COMPLETE",
+      "nodes": 0,
+      "solutions": 0
+    },
+    {
+      "name": "target_leaf_16",
+      "old_seconds": 0.02844883400030085,
+      "new_seconds": 0.001637749999645166,
+      "status": "COMPLETE",
+      "nodes": 0,
+      "solutions": 0
+    },
+    {
+      "name": "target_leaf_17",
+      "old_seconds": 0.026428582999869832,
+      "new_seconds": 0.0022160000007716008,
+      "status": "COMPLETE",
+      "nodes": 0,
+      "solutions": 0
+    },
+    {
+      "name": "target_leaf_18",
+      "old_seconds": 0.029889457999161095,
+      "new_seconds": 0.0024836669999785954,
+      "status": "COMPLETE",
+      "nodes": 0,
+      "solutions": 0
+    },
+    {
+      "name": "target_leaf_19",
+      "old_seconds": 0.027854583000589628,
+      "new_seconds": 0.0016422080007032491,
+      "status": "COMPLETE",
+      "nodes": 0,
+      "solutions": 0
+    },
+    {
+      "name": "target_leaf_20",
+      "old_seconds": 0.02297004200045194,
+      "new_seconds": 0.0025259590001951437,
+      "status": "COMPLETE",
+      "nodes": 0,
+      "solutions": 0
+    },
+    {
+      "name": "target_leaf_21",
+      "old_seconds": 0.029618124999615247,
+      "new_seconds": 0.001802374999897438,
+      "status": "COMPLETE",
+      "nodes": 0,
+      "solutions": 0
+    },
+    {
+      "name": "target_leaf_22",
+      "old_seconds": 0.023450542001228314,
+      "new_seconds": 0.0020520830003079027,
+      "status": "COMPLETE",
+      "nodes": 0,
+      "solutions": 0
+    },
+    {
+      "name": "target_leaf_23",
+      "old_seconds": 0.022424999999202555,
+      "new_seconds": 0.0018692079993343214,
+      "status": "COMPLETE",
+      "nodes": 0,
+      "solutions": 0
+    }
+  ],
+  "cache_info": {
+    "hits": 34,
+    "misses": 2,
+    "maxsize": 8,
+    "currsize": 2
+  },
+  "seconds": 5.525353666000228,
+  "scope": "Exact complete-output/node equality; bounded native generation provides individual target Z leaves, not a full target-tree exclusion",
+  "hashes": {
+    "kernel_y_cache/verify.py": "e36f5580977a4b8959f24006c3ee1dd25e203f5c4ef56dc4ccf17b78da50701d",
+    "kernel_y_cache/build.py": "8f7feaceb92902e19f052cadcff7873f7d825c8b2ff9952136e1d79cce4ccd2b",
+    "kernel_y_cache/solve.py": "3c82ca896d416d2ba50b466f5d2601bde9972a8450992583d0fece3872f4cefb",
+    "kernel_y_cache/PROOF.md": "9a175f5c4905adf63fae9fcf60da11d5926b823480a78bdcd3508828586430e1",
+    "kernel_y_parity/solve.py": "6bcffab433a451a4492566f7302f23a106f11db2424abce729a500c891b056a7",
+    "kernel_y_parity/verification.json": "e7fc429acb5b08eef11a91b47f6175c8beb634ca90559b94b22364c00545a63e",
+    "fixed_kernel/common.py": "ba5dc5351fcab138c2b1e84f7f0a6b918c34e95384f694e533c672c281c210df",
+    "two_site.py": "85a46def6bba0fdcdf507262427ce772af4b69645c3c71d3d10ccf54cd74750a",
+    "model.py": "70806c8beb8a7b885c80f79fa89984b51839e4e9a9c3c24d794146190c8f9e84",
+    "kernel_z_joint/z_enum_joint": "1d20830b76a34e6946a53e4381a488c84d7d06636ac69e9271cf4ed342d05b72"
+  }
+}

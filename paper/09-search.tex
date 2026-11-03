@@ -1,0 +1,256 @@
+\section{The finite extension searches}\label{app:search}
+
+\subsection{Enumeration of the extension maps}
+
+For each classified shortened code, the following procedure is applied.
+The local quotient has a fixed physical symplectic basis of size \(2\mu\).
+The search first chooses the images of one isotropic half of this basis,
+then chooses the images of its symplectic partners. In matrix notation
+these two groups of columns are \(X\) and \(Y\). A partial assignment
+is discarded only when it already violates a necessary condition; every
+assignment that survives is extended through all remaining allowed values.
+\begin{enumerate}[label=\arabic*.]
+\item Enumerate the permitted local kernels \(K\), shortened-code
+kernels \(N\), and radical identifications, retaining representatives
+under the physical groups specified below.
+\item Assign the \(\mu\) images \(X\) one at a time. Test all newly
+determined linear combinations, the kernel evaluations, and the
+necessary partial-rank and weight-count conditions.
+\item For a complete \(X\), transform the Gram matrix as in
+\eqref{eq:Y-normal}. Reject it if the lower-right block is nonzero.
+\item Enumerate the remaining free entries of \(U\), including its
+diagonal. Test the kernel equations and every complementary mask
+against its full distance domain \(\mathcal D_x\).
+\item Reconstruct each completed map in the original physical coordinates
+and test the required stabilizer weight counts. Save any survivor.
+\end{enumerate}
+The sixteen-qubit relaxation omits the Gram and prescribed-kernel tests
+and assigns all basis images using only the distance inequalities.
+Every genuine extension occurs in the classified domain, passes the
+necessary partial tests, and is retained by the physical symmetry
+reductions. If no completed assignment passes the final tests, no
+genuine extension exists. A survivor of the sixteen-qubit relaxation
+would require a separate commutation check.
+
+\subsection{Coset distances from physical words}
+
+Using a parity-check basis of \(C\), compute the syndrome of each word
+\(w\in V_f\) and minimize \(\wt(w)\) for each syndrome.
+Equivalently, construct the Cayley graph of \(W/C\) whose edges add
+one nonzero Pauli at one site, and use breadth-first search from zero.
+A path of length \(u\) gives a physical word of weight at most \(u\),
+while a word of weight \(v\) gives a path of length \(v\). Therefore
+the two procedures compute the same exact coset minimum. Rank checks
+verify that the syndrome kernel is \(C\).
+
+\subsection{Completing a partial extension}
+
+Write \(\dim E=2\mu\), choose a symplectic basis, and write \(M=[X\ Y]\),
+where \(X\) contains images of classes represented using only the letters
+\(I\) and \(Z\). We call these the \(Z\)-only classes. Every nonzero \(Z\)-only
+class has minimum weight below the target distance in the searches that use this
+normal form. Its image cannot vanish, so \(X\) has rank \(\mu\).
+Complete its columns to an invertible syndrome basis \(B_X\), and put
+\[
+ X'=B_X^{-1}X=\begin{bmatrix}I_\mu\\0\end{bmatrix},\quad
+ Y'=B_X^{-1}Y=\begin{bmatrix}U\\L\end{bmatrix},\quad
+ \Gamma'=B_X^{-1}\Gamma B_X^{-\tr}.
+\]
+The compatibility equation is
+\begin{equation}\label{eq:Y-normal}
+ \Gamma'=\begin{bmatrix}U+U^\tr&L^\tr\\L&0\end{bmatrix}.
+\end{equation}
+The lower-right block must vanish; \(L\) is fixed; and
+\(U+U^\tr\) fixes each off-diagonal pair sum while leaving every
+diagonal free. For \(\mu=6\), there are 21 binary free entries before
+distance and kernel constraints.
+
+For each nonzero complementary mask \(x\), form the domain
+\[
+ \mathcal D_x=\{u\in\F^\mu:\delta(B_X(z+u,Lx))+
+                       c_R(z,x)\geq d\text{ for every }z\in\F^\mu\}.
+\]
+Here \(x\) is a binary coefficient vector selecting a sum of the
+complementary basis vectors, while \(z\) selects a sum of the first
+basis vectors. The matrix \(L\) is already fixed. For a proposed value
+\(Ux=u\), the displayed test checks all words with those complementary
+coefficients, by letting \(z\) run over \(\F^\mu\).
+The remaining exact constraints are \(Ux\in\mathcal D_x\) for all
+\(x\ne0\), together with \eqref{eq:Y-normal} and any prescribed
+kernel equations. A finite traversal of all allowed entries of \(U\)
+therefore enumerates every completion. Consistency tests on pairs of assignments prune the domains. The final
+check uses every mask, including those of size greater than two.
+
+For a fixed kernel vector with coordinates \((z,x)\), the additional
+equation is \(Xz+Yx=0\); in this normal form it reads
+\(Ux=z\), \(Lx=0\). The implementation retains the resulting affine
+freedom and exhausts all completions for each retained assignment to
+\(X\).
+
+\subsection{Partial rank and exact profile tests}
+
+After assigning \(j\) \(Z\)-only images, let \(\mathcal U_j\) be their common
+annihilator in the coefficient space of \(P\). Restricting
+\(\Gamma=XY^\tr+YX^\tr\) to \(\mathcal U_j\) makes the assigned terms vanish.
+Only \(\mu-j\) pairs remain, so the restricted rank is at most
+\(2(\mu-j)\): each remaining pair contributes a matrix
+\(uv^\tr+vu^\tr\) of rank at most two. This is a necessary partial-depth test, with a zero
+annihilator block at full depth.
+
+We also use the weight distribution of the reconstructed stabilizer.
+For a coefficient vector \(a\), write
+\(v(a)=\sum a_iv_i\) and
+\(e(a)=JM^\tr a=(Y^\tr a,X^\tr a)\). Its words are
+\begin{equation}\label{eq:physical-S}
+ (\widetilde e(a)+r,v(a)),\qquad a\in\F^b,\ r\in R.
+\end{equation}
+All pairs \((a,r)\) give distinct physical words, since the suffix basis
+is independent. The words with \(a=0\) are \(R\).
+This remains true when \(\Gamma\) is singular.
+
+At full \(X\), for \(a\in\Ann(X)\), compatibility gives
+\(\Gamma a=X(Y^\tr a)\). Independence of \(X\) determines
+\(Y^\tr a\) uniquely when it exists. Every translate with such a coefficient can then be counted exactly.
+The estimates below are used only for the other coefficients, so each
+word is counted once. At completed \(M\),
+all words in \eqref{eq:physical-S} are counted exactly and the required
+profile equality is checked. No inversion of a singular \(\Gamma\)
+is used.
+
+For the remaining coefficients, we obtain lower bounds on the number
+of weight-six and weight-seven words as follows.
+For a fixed nonzero coefficient \(a\), let \(\mathcal P_a\) contain
+every prefix representative that any completion of the current partial
+map could assign to \(v(a)\). A nonempty superset is sufficient; if
+there are no possible prefixes, the partial assignment has no completion.
+Define
+\[
+ U_a=\wt(v(a))+\max_{v\in\mathcal P_a}\min_{r\in R}\wt(v+r).
+\]
+The order of the maximum and minimum is important. For each possible
+prefix, first take its least weight modulo \(R\); then take the
+largest value any completion could achieve. Even this best possible
+completion cannot make the corresponding coset heavier than \(U_a\).
+For every completion, the minimum weight in the corresponding
+\(R\)-coset is at most \(U_a\). In the pure distance-six setting,
+\(U_a\leq7\)
+therefore guarantees at least one word of weight six or seven, and
+\(U_a\leq6\) guarantees a weight-six word. Distinct coefficients
+give disjoint cosets by \eqref{eq:physical-S}, so these guaranteed
+counts may be added. If they exceed the allowed counts outside \(R\),
+no completion exists. The same argument applies to bounds on individual
+translates. Because the maximization uses a superset of the possible
+prefixes, it can weaken the rejection test but cannot remove a valid
+completion. Exact profile equalities are tested only after the whole
+map is assigned.
+
+\subsection{Exact prescribed kernels}\label{app:fixedkernel}
+
+For fixed \(N\subseteq\rad(P)\), work in \(\bar P=P/N\).
+Let its alternating matrix be \(\bar\Gamma\). A genuine extension
+gives an injective isometry \(\tau:\bar P\to K^\perp\).
+Let \(g=q-t\); fix every isomorphism from \(\rad(\bar P)\)
+to \(\rad(K)\). Relative to chosen bases, this specifies evaluations
+of the \(Z\)-only image columns against every radical coefficient.
+The coordinate labels given by these \(g\) radical evaluations span
+\(\F^g\). A site permutation makes the first \(g\) labels
+independent. The same permutation is applied to the local quotient
+basis and its table of coset minimum weights.
+
+Subtract suitable combinations of those first \(g\) image columns
+to obtain vectors \(T_i\in\im\bar\Gamma\), and make the same
+subtractions from the physical prefix vectors. When \(t=2\), project
+the latter off a fixed symplectic pair spanning the nondegenerate
+part of \(K\). Call the resulting vectors \(e_i\).
+For any solution \(c_i\) of \(\bar\Gamma c_i=T_i\), compatibility
+requires
+\[
+ c_i^\tr T_j=\langle e_i,e_j\rangle.
+\]
+Changing \(c_i\) by a radical vector does not alter the left-hand
+side. These equations, all radical evaluations, and all \(Z\)-only
+weight inequalities are necessary conditions during the search over
+\(X\). Every retained assignment is then tested by the complete search
+over \(Y\).
+
+The final completion enforces \(M(K)=0\) and the full Gram equation.
+The prescribed radical identification also fixes the values of
+\(X^\tr\) on \(\rad(P)\). Its kernel there is \(N\):
+on \(\rad(P)/N\) it is the identification with \(\rad(K)\),
+followed by projection onto the second half of the local coordinates.
+That projection is injective on \(K\), because a nonzero element in
+its kernel would be a \(Z\)-only class of weight less than \(d\).
+The following argument shows why these conditions give the prescribed
+kernels exactly.
+
+Identify \(P\) with its coefficient space \(\F^b\), so its radical
+is \(\ker\Gamma\), and write \(\tau=JM^\tr\).
+If \(\tau c=0\), the Gram equation gives \(\Gamma c=0\);
+also \(X^\tr c=0\). The prescribed radical evaluations therefore
+give \(c\in N\). Conversely, if \(c\in N\), then
+\(\Gamma c=0\) and \(X^\tr c=0\). Expanding the Gram equation,
+\[
+ 0=\Gamma c=X(Y^\tr c)+Y(X^\tr c)=X(Y^\tr c).
+\]
+The columns of \(X\) are independent, so \(Y^\tr c=0\).
+\(\tau c=0\), proving \(\ker\tau=N\). Finally,
+\[
+ \rank M=\rank\tau=b-\dim N=2\mu-q,
+ \qquad \dim\ker M=q.
+\]
+Since \(K\subseteq\ker M\) and \(\dim K=q\), we obtain
+\(\ker M=K\). Requiring containment of the prescribed subspaces
+therefore suffices here because the radical conditions also fix the
+dimensions; larger kernels cannot pass these tests.
+
+\subsection{Physical symmetry and joint normalization}\label{app:symmetry}
+
+The symmetry reductions use site permutations and local permutations
+of the nonzero Pauli letters. These preserve both the symplectic form
+and the minimum weights in the original coordinates.
+
+A physical suffix automorphism acts on coefficient vectors by \(G_{\rm coef}\):
+\(g(v(a))=v(G_{\rm coef}a)\). Its syndrome action is \(G_{\rm syn}=G_{\rm coef}^{-\tr}\), since
+\(\sigma(gw)=G_{\rm coef}^{-\tr}\sigma(w)\). \(M\mapsto G_{\rm syn}M\), and
+\(G_{\rm syn}\Gamma G_{\rm syn}^\tr=\Gamma\). This contragredient action is essential
+when \(\Gamma\) is singular. Every generator is checked on physical
+words, coset distances, and the corresponding form.
+
+Outer prefix automorphisms may reduce radical identifications if they
+preserve the local space and distinguished local stabilizer. Inside a
+fixed identification, only actions fixing its radical classes are used.
+Suffix actions likewise preserve the specified \(C,N\) and radical
+identification. These restrictions ensure that both actions preserve
+the set of extensions with the prescribed kernels and identification.
+
+Choose a lexicographically least \emph{whole} \(Z\)-only tuple in a
+joint orbit of those prefix and suffix actions. It is lexicographically minimal under the prefix action,
+and its first label is least in its suffix orbit. Otherwise one of the
+actions would reduce the same whole tuple. Imposing both conditions
+therefore retains a representative of every joint orbit, even when the
+two actions do not commute. No uniqueness of a joint canonical form
+is required.
+
+For the mixed six-site permutation reduction, the fixed first image is
+unchanged and the other images are differences from an anchor among six
+points. Physical permutations reorder and reanchor these points. A
+lexicographically least full tuple is increasing and no translated
+anchor tuple is smaller. The search assigns points in increasing order,
+so its current tuple is a fixed initial segment of every completion of
+that branch. Under a change of anchor, adding future points can only
+decrease the initial entries of the sorted translated list. If the
+already assigned points give a smaller initial segment after translation,
+every completion has a physically equivalent tuple smaller
+than itself. Such a branch cannot contain the least representative and
+can be discarded.
+The same physical action is transported to the complementary basis,
+including its possible shear. Optional relaxed complementary-domain
+filters that are not invariant under reanchoring are disabled in that
+search; the complete \(Y\)-test is retained.
+
+The full-plane eight-site reduction uses the corresponding physical
+eight-point action and verifies it on the full quotient basis.
+All first-label orbit lists explicitly record every eligible label and
+its orbit membership. Each list is divided into consecutive blocks
+of at most 64 labels. Searching every block covers every
+eligible first image.

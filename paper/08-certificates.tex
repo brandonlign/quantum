@@ -1,0 +1,159 @@
+\section{Exact weight-enumerator certificates}\label{app:certificates}
+
+This appendix specifies the necessary linear systems used for the
+low-weight reductions. The certificate files contain their integer
+multipliers and all case assumptions. The checker rebuilds the columns
+from physical Pauli cosets.
+
+\subsection{Split transforms and the affine shadow}
+
+The ordinary weight enumerator records only total weight. A split
+enumerator also records which coordinate blocks contain the nonidentity
+letters. This is needed when a specified stabilizer word or subgroup
+occupies one block. The formulas below are the MacWilliams and shadow
+identities applied separately to each block.
+
+Partition the physical coordinates into blocks of sizes
+\(n_1,\ldots,n_s\). Let \(A^{\rm split}_{\mathbf i}\) count stabilizer words with
+split weight \(\mathbf i=(i_1,\ldots,i_s)\). Put \(B=|S|=2^{n-k}\), and
+\[
+ \mathcal{K}_j^{\ell}(w)=\sum_{u=\max(0,j-\ell+w)}^{\min(j,w)}
+          (-1)^u3^{j-u}\binom wu\binom{\ell-w}{j-u}.
+\]
+Character orthogonality gives the centralizer count
+\[
+ |\{v\in S^\perp:\operatorname{splitwt}(v)=\mathbf j\}|
+ =B^{-1}\mathcal T_{\mathbf j},\quad
+ \mathcal T_{\mathbf j}=\sum_{\mathbf i}
+       \left(\prod_\ell \mathcal{K}_{j_\ell}^{n_\ell}(i_\ell)\right)A^{\rm split}_{\mathbf i}.
+\]
+The character identity behind this formula is
+\[
+ \mathbf 1_{v\in S^\perp}=B^{-1}\sum_{s\in S}(-1)^{\langle v,s\rangle}.
+\]
+The sum is \(B\) when every word of \(S\) commutes with \(v\),
+and zero otherwise. Summing it over words of a fixed split weight
+produces the products of Krawtchouk polynomials above. This explains why
+the transformed coefficients count actual centralizer words.
+On an isotropic stabilizer the parity function is linear, by
+\eqref{eq:polar}. The affine set
+\[
+ \mathcal A=\{v:\langle v,s\rangle=\wt(s)\bmod2
+                          \text{ for every }s\in S\}
+\]
+is a nonempty coset of \(S^\perp\), since every linear functional on
+\(S\) extends to the ambient space. Character orthogonality gives its
+split weight counts as \(B^{-1}\widehat{\mathcal T}_{\mathbf j}\), where
+\[
+ \widehat{\mathcal T}_{\mathbf j}=\sum_{\mathbf i}(-1)^{\sum i_\ell}
+       \left(\prod_\ell \mathcal{K}_{j_\ell}^{n_\ell}(i_\ell)\right)A^{\rm split}_{\mathbf i}.
+\]
+Both transforms are nonnegative. Centralizer inclusion and distance give
+\[
+ \mathcal T_{\mathbf j}\geq BA^{\rm split}_{\mathbf j},\qquad
+ \mathcal T_{\mathbf j}=BA^{\rm split}_{\mathbf j}\quad(1\leq\textstyle\sum j_\ell<d).
+\]
+These statements hold without assuming purity.
+
+\subsection{Coset-pattern columns}
+
+If a specified isotropic subgroup \(R_i\) lies on block \(i\), enumerate
+every coset of \(R_i\) in \(R_i^\perp\). Its pattern
+\(p=(p_0,\ldots,p_{n_i})\) counts words at each physical weight.
+Let \(y\geq0\) count stabilizer cosets aggregated by their block
+patterns and suffix weight. Then a split count is the corresponding
+linear combination of products of the \(p_j\)'s.
+With no prescribed subgroup a block may instead use the split counts
+themselves as variables. Every actual stabilizer containing the prescribed
+subgroups gives such nonnegative variables, since it is closed under their
+addition. The model need not reconstruct a linear code from an arbitrary
+feasible point; only necessity is used.
+
+The row families are:
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}lX@{}}\toprule
+Row&Definition\\\midrule
+Unit&\(A^{\rm split}_{\mathbf0}=1\).\\
+Total&\(\sum A^{\rm split}_{\mathbf i}=B\).\\
+Low distance&\(\mathcal T_{\mathbf j}-BA^{\rm split}_{\mathbf j}=0\), \(1\leq\sum j_\ell<d\).\\
+Inclusion&\(BA^{\rm split}_{\mathbf j}-\mathcal T_{\mathbf j}\leq0\).\\
+Centralizer&\(-\mathcal T_{\mathbf j}\leq0\).\\
+Shadow&\(-\widehat{\mathcal T}_{\mathbf j}\leq0\).\\
+Weight assumptions&\(\sum_{\sum i_\ell=w}A^{\rm split}_{\mathbf i}=A_w\), or its explicitly assumed lower bound.\\
+Coset relations&A specified linear relation valid separately on every physical pattern.\\\bottomrule
+\end{tabularx}
+\end{center}
+The checker verifies each coset relation against the regenerated patterns.
+No property of a later shortened code is inserted into these reductions.
+The variables may be allowed to take nonnegative real values. This
+enlarges the set of possible enumerators, so infeasibility of the
+resulting linear system still excludes every actual code. Integrality
+is used separately in the explicitly stated parity and counting steps.
+
+\subsection{The sign convention}
+
+Write the system as \(Ez=b\), \(Gz\leq g\), \(z\geq0\).
+A certificate consists of arbitrary integer equality multipliers \(\nu\)
+and nonnegative integer inequality multipliers \(\lambda\) with
+\[
+ c=\nu E+\lambda G\geq0,\qquad \nu b+\lambda g<0.
+\]
+The condition \(c\geq0\) is checked coordinate by coordinate: since
+all variables in \(z\) are nonnegative, it makes \(cz\geq0\).
+Equality rows may be multiplied by either sign; inequality rows need
+nonnegative multipliers so their directions are preserved.
+For a feasible \(z\), one would have
+\(0\leq cz\leq\nu b+\lambda g<0\), a contradiction.
+The checker tests every coefficient column and the negative right-hand side
+with exact integers. The multipliers may be found by numerical optimization; the certificate
+is checked using integer arithmetic alone.
+
+\subsection{The seventeen-qubit ordinary identity}\label{app:ordinary17}
+
+For the bound on \(A_6+A_7\) in Proposition~\ref{prop:17-enumerator},
+write \(\mathcal{K}_j(w)=\mathcal{K}_j^{17}(w)\) and let \(B=2^{14}\). The low-weight rows are
+\(\sum_w \mathcal{K}_j(w)A_w-BA_j=0\) for \(1\leq j\leq5\), and let the
+shadow rows be \(-\sum_w(-1)^w\mathcal{K}_j(w)A_w\leq0\).
+Combine the unit row \(A_0=1\) with multiplier \(-1,835,008\),
+the total row with multiplier 116, the five low-weight rows with
+\((60,25,11,3,1)\), the five pure-zero rows with
+\((-851968,-278528,-507904,-147456,-180224)\), and the shadow rows
+\(j=0,\ldots,4\) with \((88,32,18,4,2)\).
+The result is
+\(32768(A_6+A_7)\leq65536\).
+Every coefficient identity is checked independently in the repository.
+
+\subsection{Main certificate inventory}
+
+The repository groups certificates by target parameters. ``Columns'' means
+the number of nonnegative variables in the expanded system.
+
+\begin{center}\small
+\begin{tabular}{@{}llrr@{}}\toprule
+Code&Case&Columns&Negative right-hand side\\\midrule
+\(\qc{16,5,5}\)&Weight 1&16&\(-11,520\)\\
+&Weight 2&45&\(-374,784\)\\
+&Weight 3&42&\(-5,662,720\)\\
+&Weight 4, \(A_4\geq2\)&78&\(-7,294,976\)\\
+&Weight 5, \(A_1=\cdots=A_4=0\)&72&\(-8,192\)\\
+&Minimum stabilizer weight at least 10&17&\(-61,440\)\\\midrule
+\(\qc{17,3,6}\)&Weight 1&17&\(-786,432\)\\
+&Weight 2&48&\(-5,324,800\)\\
+&Weight 3&45&\(-442,368\)\\
+&Weight 4&84&\(-81,920\)\\
+&Weight 5&78&\(-114,688\)\\
+&Pure, \(A_8=0\)&18&\(-3,932,160\)\\\bottomrule
+\end{tabular}
+\end{center}
+
+The extra seventeen-qubit certificate excluding minimum stabilizer weight
+at least nine is also replayed, but is not needed for the forced-weight-eight
+route once the \(A_8=0\) certificate has been used. The thirteen simple
+local weight-count certificates express the local plane's necessary
+weight-six or weight-seven counts; their inequalities are already visible
+in Section~\ref{sec:seventeen}.
+
+The fourteen-qubit bundle contains the overlap and rank-three certificates
+of Proposition~\ref{prop:14-local}, with its original standalone checker.
+The ordinary fourteen-qubit identities and the sixteen-qubit parity
+congruence are also replayed separately.

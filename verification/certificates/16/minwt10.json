@@ -1,0 +1,143 @@
+{
+ "name": "minwt10",
+ "code": "[[16,5,5]]",
+ "description": "A1..A9 = 0 (stabilizer minimum weight >= 10)",
+ "blocks": [],
+ "suffix_sites": 16,
+ "weight_assumptions": [
+  [
+   1,
+   0
+  ],
+  [
+   2,
+   0
+  ],
+  [
+   3,
+   0
+  ],
+  [
+   4,
+   0
+  ],
+  [
+   5,
+   0
+  ],
+  [
+   6,
+   0
+  ],
+  [
+   7,
+   0
+  ],
+  [
+   8,
+   0
+  ],
+  [
+   9,
+   0
+  ]
+ ],
+ "weight_ge_assumptions": [],
+ "expected": {
+  "columns": 17,
+  "nu_rhs": -61440,
+  "positive_residuals": 3
+ },
+ "certificate": [
+  {
+   "type": "unit",
+   "multiplier": 798720
+  },
+  {
+   "type": "total",
+   "multiplier": -420
+  },
+  {
+   "type": "low",
+   "cell": [
+    1
+   ],
+   "multiplier": -240
+  },
+  {
+   "type": "low",
+   "cell": [
+    2
+   ],
+   "multiplier": -67
+  },
+  {
+   "type": "low",
+   "cell": [
+    3
+   ],
+   "multiplier": -18
+  },
+  {
+   "type": "low",
+   "cell": [
+    4
+   ],
+   "multiplier": -3
+  },
+  {
+   "type": "weight",
+   "w": 1,
+   "value": 0,
+   "multiplier": 78720
+  },
+  {
+   "type": "weight",
+   "w": 2,
+   "value": 0,
+   "multiplier": 257024
+  },
+  {
+   "type": "weight",
+   "w": 3,
+   "value": 0,
+   "multiplier": 225216
+  },
+  {
+   "type": "weight",
+   "w": 4,
+   "value": 0,
+   "multiplier": 159744
+  },
+  {
+   "type": "weight",
+   "w": 5,
+   "value": 0,
+   "multiplier": 98560
+  },
+  {
+   "type": "weight",
+   "w": 6,
+   "value": 0,
+   "multiplier": 53760
+  },
+  {
+   "type": "weight",
+   "w": 7,
+   "value": 0,
+   "multiplier": 25920
+  },
+  {
+   "type": "weight",
+   "w": 8,
+   "value": 0,
+   "multiplier": 10240
+  },
+  {
+   "type": "weight",
+   "w": 9,
+   "value": 0,
+   "multiplier": 2688
+  }
+ ]
+}

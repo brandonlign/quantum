@@ -1,0 +1,246 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "parameters": [
+        8,
+        0,
+        3
+      ],
+      "m": 4,
+      "H": [
+        240,
+        15
+      ],
+      "C": [
+        240,
+        15
+      ],
+      "N": [
+        240,
+        15
+      ],
+      "context_index": 0,
+      "small_columns": [
+        8,
+        4,
+        1,
+        2
+      ],
+      "model_columns": [
+        6,
+        5,
+        40,
+        48
+      ],
+      "S": [
+        24585,
+        40970,
+        49164,
+        1680,
+        2720,
+        3264,
+        3840,
+        61440
+      ],
+      "physical_dual_minimum": 4,
+      "words_checked": 256,
+      "scope": "Genuine distance-three control only"
+    },
+    {
+      "parameters": [
+        9,
+        1,
+        3
+      ],
+      "m": 4,
+      "H": [
+        197,
+        53,
+        15
+      ],
+      "C": [
+        201,
+        402,
+        773,
+        554
+      ],
+      "N": [
+        606,
+        347,
+        201
+      ],
+      "context_index": 0,
+      "small_columns": [
+        4,
+        5,
+        1,
+        2
+      ],
+      "model_columns": [
+        18,
+        13,
+        45,
+        32
+      ],
+      "S": [
+        167049,
+        93322,
+        253964,
+        49296,
+        218144,
+        245952,
+        185600,
+        7680
+      ],
+      "physical_dual_minimum": 3,
+      "words_checked": 1024,
+      "scope": "Genuine distance-three control only"
+    },
+    {
+      "parameters": [
+        12,
+        2,
+        3
+      ],
+      "m": 6,
+      "H": [
+        2141,
+        1118,
+        963,
+        63
+      ],
+      "C": [
+        2141,
+        1118,
+        963,
+        63
+      ],
+      "N": [
+        4032,
+        63
+      ],
+      "context_index": 0,
+      "small_columns": [
+        13,
+        2,
+        16,
+        20,
+        1,
+        10,
+        46,
+        34
+      ],
+      "model_columns": [
+        6,
+        29,
+        210,
+        222,
+        18,
+        29,
+        187,
+        175
+      ],
+      "S": [
+        15443233,
+        2664994,
+        12659748,
+        15805480,
+        15929136,
+        12681792,
+        12684672,
+        5451776,
+        5292032,
+        16515072
+      ],
+      "physical_dual_minimum": 3,
+      "words_checked": 16384,
+      "scope": "Genuine distance-three control only"
+    },
+    {
+      "parameters": [
+        17,
+        3,
+        3
+      ],
+      "m": 8,
+      "H": [
+        35667,
+        20026,
+        10013,
+        7540,
+        255
+      ],
+      "C": [
+        131359,
+        16128,
+        1388,
+        187394,
+        6051,
+        217099
+      ],
+      "N": [
+        131359,
+        14956,
+        1388
+      ],
+      "context_index": 80,
+      "small_columns": [
+        64,
+        128,
+        256,
+        3,
+        143,
+        413,
+        225,
+        386,
+        72,
+        340,
+        416,
+        36
+      ],
+      "model_columns": [
+        3354,
+        1529,
+        976,
+        3724,
+        1380,
+        3680,
+        1536,
+        128,
+        1667,
+        3712,
+        158,
+        2188
+      ],
+      "S": [
+        1675627137,
+        17169678978,
+        11595192964,
+        10631024776,
+        7728829072,
+        9825458848,
+        3540290240,
+        11625042688,
+        2330463232,
+        522985472,
+        2948874240,
+        1040252928,
+        5273157632,
+        5296357376
+      ],
+      "physical_dual_minimum": 3,
+      "words_checked": 1048576,
+      "scope": "Genuine distance-three control only"
+    }
+  ],
+  "seconds": 0.28438924999954907,
+  "hashes": {
+    "rank2_kernel/controls.py": "0d4015a6eff9235fe760a73bdf5f9b2bbc2735f4f99e9e2a9f789223ecae8c25",
+    "rank2_kernel/common.py": "3527959be00624482b5582f1c6809d05198d583496a731159119962fbc33bf49",
+    "rank2_kernel/prefix.json": "a7e0156612569bc811921ff8f47197ec9e1ad02b5a136b058b519dff031cddba",
+    "model.py": "70806c8beb8a7b885c80f79fa89984b51839e4e9a9c3c24d794146190c8f9e84",
+    "fixed_kernel/verify_large.py": "a7df474f58763dd4a9ff9e85e1310fa72f54483c08163131eda8ee68485e2783",
+    "suffix9_classes.json": "ce819d8706fc8b4e2328e3a4471ac994a91eb7f37a9239c7b7fc99ef9a39b720"
+  }
+}

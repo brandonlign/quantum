@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+search/phisearch
+search/phisearch2
+search/phisearch3

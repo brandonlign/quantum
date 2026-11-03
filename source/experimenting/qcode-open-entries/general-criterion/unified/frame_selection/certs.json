@@ -1,0 +1,62 @@
+{
+ "A6>=3": {
+  "cert": true,
+  "msg": "nu.rhs=-1"
+ },
+ "A7>=3": {
+  "cert": true,
+  "msg": "nu.rhs=-1"
+ },
+ "A8<=119": {
+  "cert": true,
+  "msg": "nu.rhs=-1"
+ },
+ "contain6>=0": {
+  "cert": false,
+  "msg": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+ },
+ "contain6>=1": {
+  "cert": false,
+  "msg": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+ },
+ "contain6>=2": {
+  "cert": false,
+  "msg": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+ },
+ "contain6>=3": {
+  "cert": false,
+  "msg": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+ },
+ "contain6>=4": {
+  "cert": false,
+  "msg": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+ },
+ "contain6>=5": {
+  "cert": false,
+  "msg": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+ },
+ "contain6>=6": {
+  "cert": false,
+  "msg": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+ },
+ "contain6>=7": {
+  "cert": false,
+  "msg": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+ },
+ "contain6>=8": {
+  "cert": true,
+  "msg": "nu.rhs=-1"
+ },
+ "contain7>=0": {
+  "cert": false,
+  "msg": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+ },
+ "contain7>=1": {
+  "cert": false,
+  "msg": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+ },
+ "contain7>=2": {
+  "cert": true,
+  "msg": "nu.rhs=-1"
+ }
+}

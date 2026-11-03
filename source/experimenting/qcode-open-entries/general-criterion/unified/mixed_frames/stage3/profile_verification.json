@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "certificates": 13,
+  "log": "PASS profile00_frame668.json: 260 columns, 2 multiplier rows, 38 positive residuals, nu.rhs = -2\nPASS profile01_frame668.json: 260 columns, 2 multiplier rows, 38 positive residuals, nu.rhs = -2\nPASS profile02_frame668.json: 260 columns, 2 multiplier rows, 38 positive residuals, nu.rhs = -2\nPASS profile10_frame668.json: 260 columns, 2 multiplier rows, 38 positive residuals, nu.rhs = -1\nPASS profile11_frame668.json: 260 columns, 2 multiplier rows, 38 positive residuals, nu.rhs = -1\nPASS profile00_frame688.json: 180 columns, 2 multiplier rows, 26 positive residuals, nu.rhs = -1\nPASS profile01_frame688.json: 180 columns, 2 multiplier rows, 26 positive residuals, nu.rhs = -1\nPASS profile02_frame688.json: 180 columns, 2 multiplier rows, 26 positive residuals, nu.rhs = -1\nPASS profile00_frame778.json: 220 columns, 2 multiplier rows, 55 positive residuals, nu.rhs = -2\nPASS profile01_frame778.json: 220 columns, 2 multiplier rows, 55 positive residuals, nu.rhs = -1\nPASS profile10_frame778.json: 220 columns, 2 multiplier rows, 55 positive residuals, nu.rhs = -2\nPASS profile11_frame778.json: 220 columns, 2 multiplier rows, 55 positive residuals, nu.rhs = -1\nPASS profile20_frame778.json: 220 columns, 2 multiplier rows, 55 positive residuals, nu.rhs = -2\n",
+  "global_weight_sum_identity_residual": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "rhs": 65536,
+  "bundle_sha256": "f7e19286798990c005046e9a3accfe49f4d470a9f1dfa107086c2e0e1c8cd223",
+  "checker_sha256": "8edd4d7e449073f13d48cfe292a555d0c964a4b66434070414f8282654b0db3c"
+}

@@ -1,0 +1,36 @@
+{
+  "status": "PASS_TRANSITIVE_SAVED_PROVENANCE",
+  "reports": [
+    "kernel_case_plan/plan.json",
+    "suffix_mass_check/verification8.json",
+    "suffix_mass_check/verification9.json"
+  ],
+  "hashes": {
+    "kernel_case_plan/prepare.py": "95fa5b723d03bbe6b3633141932f4ab3e10e01bed8c8b1b252330d7fc31618aa",
+    "opus_parallel/suffix9_dimension5/suffix9_dim5.json": "c683f1aaa89baf858027d88f76eca3b95cf4afafa469069d9e8df0e9219b83eb",
+    "kernel_capacity/profiles.json": "d44e8d01fa0c68924546a9aa21a8e80b3dc19233e6580d14b1bbffa5f06e10fc",
+    "kernel_capacity/prepare.py": "fc36a1244d0dbafe2bd2b229b1882e9f73fd1e2a4a778f6b1af2fbc103b09c9e",
+    "suffix_mass_check/common.py": "7126582ad0c57d6e6c71bfdb5b91020fe06b789d7dd8f015c69afa103da42b44",
+    "m8r1/suffix_symmetries.py": "6b6f53f038fae2ffa5f71b77ebccd27fb204c8cc4ff7a9aa729b919de8b0d9d4",
+    "model.py": "70806c8beb8a7b885c80f79fa89984b51839e4e9a9c3c24d794146190c8f9e84",
+    "r1_column/Q4_KERNEL.md": "219bc6cc318fc75b2af7c54cc43f5dac0fdc5bad233944d27496d43ecad4f8cb",
+    "kernel_case_plan/plan.json": "53f022c4746830ce02da54bb5a0cdb47863db4be6d004c8a52b7fccefea49bbc",
+    "gauge_prefix_candidates.json": "11a027dedd6e54f6c41f07fb0b9d9c65970f46abd9505f761ec4d2a0a9dfa4f2",
+    "gauge_rankone_h5/all_critical_dim4.json": "740dbd1d8841dfc1376c6c3a90096df5ae9577453d3108e59ff052c35b3ab9f7",
+    "opus_parallel/suffix9_dimension5/cells_d5_7_3.json": "73d30ffc479e093bf93957a9c2b4b8d00822d548add2dce62e183222af3300db",
+    "suffix_mass_check/verify8.py": "01292c4586b5bbf2f07603e50a518c85b323a0c035bedf13275caa35b6aab34b",
+    "opus_parallel/suffix9_dimension5/cell_8_5.json": "96e4234fc0166cf6dade3c0eec16785a1c364289109c9d7061f369b00e295521",
+    "opus_parallel/suffix9_dimension5/cells_d5_7_4.json": "0daa47e5065f98e1e8f2eaf7c4f8594d35c5e8ec9d56870275db357b72ca7362",
+    "opus_parallel/suffix9_dimension5/cells_d5_7_5.json": "35a851117d86621d83db7b959f6aae6f91f940f14e6e7517a421bd68e7b87512",
+    "/Users/Brandon/Desktop/research/experimenting/qcode-open-entries/release16/census/cells.json": "181b27547b89c25c0ff783dc8ac9cb926e4d8b2d78e9631a8854780d4d114755",
+    "suffix_mass_check/verification8.json": "6d9e944343ed492d4fdd899e97f28f9aa5cdb2952faf895a7b1b7b357ea7c66f",
+    "suffix_mass_check/verify9.py": "7ef77b993c1655db0debbc0d6da6b103b626c6ca30605c39f25181c1445715b4",
+    "suffix_mass_check/verification9.json": "541984130109edb4726c69ad4872a044934e266211824bf6640a5da61e71d7b3",
+    "kernel_case_plan/provenance.py": "2fcc4902a3fde4eb20a6fe1a9a212537b850d302b75439b92e854435ec443e0d",
+    "kernel_case_plan/PROOF.md": "894c5bdc825ddc8512f380aec50859b18f896e2df29269bfe5ddfd98074cb856",
+    "suffix_mass_check/PROOF.md": "aa396d5e4997ea5eeeb77a51422e598b635b5dc5a410902615e681b364f0415f",
+    "opus_workers/residual_plan_audit/AUDIT.md": "9026ef80f33251c7ae45e3616a57d25ff1c9738796c58378eb818668d5cdbdc9",
+    "opus_workers/suffix_mass_audit/AUDIT.md": "5c7c3f9877dfa2329c804c5d418724f6501c69fea10a1c661998f427cb650b1c"
+  },
+  "scope": "Verifies saved source/report digest closure; inherits explicitly documented certified parent completeness. No new classification or quantum extension exclusion."
+}

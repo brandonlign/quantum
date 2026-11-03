@@ -1,0 +1,73 @@
+{
+ "name": "w1_stabilizer",
+ "code": "[[16,5,5]]",
+ "description": "S contains a weight-1 word (WLOG Z)",
+ "blocks": [
+  {
+   "sites": 1,
+   "generators": [
+    "Z"
+   ],
+   "variables": "coset_patterns",
+   "patterns": [
+    [
+     [
+      1,
+      1
+     ],
+     1
+    ]
+   ]
+  }
+ ],
+ "suffix_sites": 15,
+ "weight_assumptions": [],
+ "weight_ge_assumptions": [],
+ "expected": {
+  "columns": 16,
+  "nu_rhs": -11520,
+  "positive_residuals": 11
+ },
+ "certificate": [
+  {
+   "type": "unit",
+   "multiplier": -349440
+  },
+  {
+   "type": "total",
+   "multiplier": 165
+  },
+  {
+   "type": "low",
+   "cell": [
+    0,
+    4
+   ],
+   "multiplier": 1
+  },
+  {
+   "type": "low",
+   "cell": [
+    1,
+    1
+   ],
+   "multiplier": 36
+  },
+  {
+   "type": "low",
+   "cell": [
+    1,
+    2
+   ],
+   "multiplier": 14
+  },
+  {
+   "type": "low",
+   "cell": [
+    1,
+    3
+   ],
+   "multiplier": 4
+  }
+ ]
+}

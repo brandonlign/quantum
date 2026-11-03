@@ -1,0 +1,117 @@
+{
+ "name": "w1_stabilizer",
+ "code": "[[17,3,6]]",
+ "description": "S contains a weight-1 word (WLOG Z^1)",
+ "blocks": [
+  {
+   "sites": 1,
+   "generators": [
+    "Z"
+   ],
+   "variables": "coset_patterns",
+   "patterns": [
+    [
+     [
+      1,
+      1
+     ],
+     1
+    ]
+   ]
+  }
+ ],
+ "suffix_sites": 16,
+ "weight_assumptions": [],
+ "weight_ge_assumptions": [],
+ "expected": {
+  "columns": 17,
+  "nu_rhs": -786432,
+  "positive_residuals": 7
+ },
+ "certificate": [
+  {
+   "type": "total",
+   "multiplier": -48
+  },
+  {
+   "type": "low",
+   "cell": [
+    0,
+    2
+   ],
+   "multiplier": 36
+  },
+  {
+   "type": "low",
+   "cell": [
+    0,
+    5
+   ],
+   "multiplier": 1
+  },
+  {
+   "type": "low",
+   "cell": [
+    1,
+    0
+   ],
+   "multiplier": 224
+  },
+  {
+   "type": "low",
+   "cell": [
+    1,
+    1
+   ],
+   "multiplier": 85
+  },
+  {
+   "type": "low",
+   "cell": [
+    1,
+    3
+   ],
+   "multiplier": 14
+  },
+  {
+   "type": "low",
+   "cell": [
+    1,
+    4
+   ],
+   "multiplier": 4
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    1,
+    0
+   ],
+   "multiplier": 32
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    1,
+    1
+   ],
+   "multiplier": 18
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    1,
+    2
+   ],
+   "multiplier": 4
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    1,
+    3
+   ],
+   "multiplier": 2
+  }
+ ]
+}

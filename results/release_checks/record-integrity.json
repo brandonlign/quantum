@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "stored_payloads_size_and_CRC_checked": 2792460,
+  "materialized_legacy_records_SHA256_checked": 3179,
+  "residual_manifest_SHA256_matches": 2419796,
+  "residual_classes": 32747,
+  "uncompressed_bytes_checked": 19864981466,
+  "source_aggregate_sha256": "9aeae1ae01235e42ee92d1f854346c0ea7d8c2c281c3a264e23ed26df89083d0",
+  "completed_record_statuses": {
+    "EXCLUDED_SLICE_CHUNK": 2419796
+  },
+  "elapsed_seconds": 187.48390033305623,
+  "scope": "Check every archived payload and every hash in the frozen residual manifest.\n\nThis is a complete archival integrity/status check. It is distinct from the\nmathematical per-record reconstruction performed by verify.py --deep.\n"
+}

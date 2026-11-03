@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "scope": "Fresh exhaustive coordinate lifts and physical cosets; completeness conditional on the 43 stated seven-site parents.",
+  "parent_classes": 43,
+  "ordered_coordinate_maps": 11008,
+  "minimum6_lifts": 861,
+  "dimension4_classes": 28,
+  "dimension4_with_full_support_word": 15,
+  "critical_dimension4_gram_rank_counts": {
+    "0": 6,
+    "2": 9
+  },
+  "dimension4_full_plane_classes": 3,
+  "normalizer_cosets_per_parent": 256,
+  "minimum6_dimension5_extensions": 2,
+  "dimension5_full_plane_classes": 1,
+  "parent_sha256": "0cfcb6993559c78e61cf878a18d254587e5d625bc0a1dfe54f4046bfdb5782e8",
+  "source_sha256": "947c843565c4ea50fc6f152812ca2ea68603b4e52f84ff3c8ea54f01ae1917b5",
+  "seconds": 0.16163624997716397
+}

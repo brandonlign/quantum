@@ -1,0 +1,76 @@
+{
+  "status": "PASS_RELATIVE_TO_H4_CENSUS",
+  "prefix": {
+    "0": [
+      {
+        "H": [
+          65280,
+          255
+        ]
+      }
+    ],
+    "1": [
+      {
+        "H": [
+          52239,
+          13071,
+          255
+        ]
+      }
+    ],
+    "2": [
+      {
+        "source_index": 1,
+        "H": [
+          36460,
+          27677,
+          7537,
+          255
+        ]
+      },
+      {
+        "source_index": 6,
+        "H": [
+          35613,
+          25452,
+          6001,
+          255
+        ]
+      },
+      {
+        "source_index": 12,
+        "H": [
+          35613,
+          21364,
+          10089,
+          255
+        ]
+      }
+    ],
+    "3": [
+      {
+        "H": [
+          35667,
+          20026,
+          10013,
+          7540,
+          255
+        ],
+        "parent_indices": [
+          12,
+          12
+        ]
+      }
+    ]
+  },
+  "valid_H5_extensions": 2,
+  "seconds": 0.004426041999977315,
+  "scope": "Local H candidates only, not target constructions or exclusions",
+  "hashes": {
+    "rank2_kernel/prepare.py": "3e48e4fe866ed3505d4e8979990b7cae28f7aa000768b158fe3106c14a7964f9",
+    "rank2_kernel/PREFIX.md": "e2249289bdc455d4d9cd8c702e36c7bd36b8629ab45fe2a2dd3d2615bebbd9cc",
+    "gauge_rankone_h5/all_critical_dim4.json": "740dbd1d8841dfc1376c6c3a90096df5ae9577453d3108e59ff052c35b3ab9f7",
+    "model.py": "70806c8beb8a7b885c80f79fa89984b51839e4e9a9c3c24d794146190c8f9e84",
+    "suffix_mass_check/common.py": "7126582ad0c57d6e6c71bfdb5b91020fe06b789d7dd8f015c69afa103da42b44"
+  }
+}

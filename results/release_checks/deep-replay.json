@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "script": "quantum-extension/verification/verify_evidence.py",
+  "deep": true,
+  "record_payloads_read": 4979891,
+  "elapsed_seconds": 7899.360448542051,
+  "scope": "Original mathematical verifier and source bytes unchanged. Historical absolute file reads relocated; original search-record bytes supplied from an indexed store with size/CRC checks. This revalidates saved computations; it does not rerun every original search."
+}

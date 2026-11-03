@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "scope": "Complete fresh full-plane subspace and radical-identification orbits, conditional on the 56 shortened-code representatives and local classification.",
+  "counts": {
+    "q1_remaining": 63,
+    "q3_screened": 1051,
+    "q3_remaining": 164
+  },
+  "classes": 56,
+  "nonzero_hull_classes": 41,
+  "radical_identifications": 168,
+  "physical_quotient_group_order": 21,
+  "identification_orbits": 8,
+  "identification_orbit_sizes": [
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21
+  ],
+  "seconds": 0.30351983406580985
+}

@@ -1,0 +1,289 @@
+{
+ "name": "w4_A4ge2",
+ "code": "[[16,5,5]]",
+ "description": "S contains ZZZZ and A4 >= 2",
+ "blocks": [
+  {
+   "sites": 4,
+   "generators": [
+    "ZZZZ"
+   ],
+   "variables": "coset_patterns",
+   "patterns": [
+    [
+     [
+      0,
+      0,
+      0,
+      0,
+      2
+     ],
+     8
+    ],
+    [
+     [
+      0,
+      0,
+      0,
+      2,
+      0
+     ],
+     24
+    ],
+    [
+     [
+      0,
+      0,
+      1,
+      0,
+      1
+     ],
+     24
+    ],
+    [
+     [
+      0,
+      0,
+      2,
+      0,
+      0
+     ],
+     3
+    ],
+    [
+     [
+      0,
+      1,
+      0,
+      1,
+      0
+     ],
+     4
+    ],
+    [
+     [
+      1,
+      0,
+      0,
+      0,
+      1
+     ],
+     1
+    ]
+   ]
+  }
+ ],
+ "suffix_sites": 12,
+ "weight_assumptions": [],
+ "weight_ge_assumptions": [
+  [
+   4,
+   2
+  ]
+ ],
+ "expected": {
+  "columns": 78,
+  "nu_rhs": -7294976,
+  "positive_residuals": 48
+ },
+ "certificate": [
+  {
+   "type": "unit",
+   "multiplier": -185212928
+  },
+  {
+   "type": "total",
+   "multiplier": 98136
+  },
+  {
+   "type": "low",
+   "cell": [
+    0,
+    1
+   ],
+   "multiplier": 24073
+  },
+  {
+   "type": "low",
+   "cell": [
+    0,
+    2
+   ],
+   "multiplier": 16539
+  },
+  {
+   "type": "low",
+   "cell": [
+    0,
+    3
+   ],
+   "multiplier": 3587
+  },
+  {
+   "type": "low",
+   "cell": [
+    0,
+    4
+   ],
+   "multiplier": 1493
+  },
+  {
+   "type": "low",
+   "cell": [
+    1,
+    0
+   ],
+   "multiplier": 7063
+  },
+  {
+   "type": "low",
+   "cell": [
+    1,
+    1
+   ],
+   "multiplier": 5669
+  },
+  {
+   "type": "low",
+   "cell": [
+    1,
+    2
+   ],
+   "multiplier": 967
+  },
+  {
+   "type": "low",
+   "cell": [
+    1,
+    3
+   ],
+   "multiplier": 500
+  },
+  {
+   "type": "low",
+   "cell": [
+    2,
+    0
+   ],
+   "multiplier": 1403
+  },
+  {
+   "type": "low",
+   "cell": [
+    2,
+    1
+   ],
+   "multiplier": 353
+  },
+  {
+   "type": "low",
+   "cell": [
+    2,
+    2
+   ],
+   "multiplier": 37
+  },
+  {
+   "type": "low",
+   "cell": [
+    3,
+    0
+   ],
+   "multiplier": 673
+  },
+  {
+   "type": "low",
+   "cell": [
+    3,
+    1
+   ],
+   "multiplier": 158
+  },
+  {
+   "type": "low",
+   "cell": [
+    4,
+    0
+   ],
+   "multiplier": 313
+  },
+  {
+   "type": "weight_ge",
+   "w": 4,
+   "value": 2,
+   "multiplier": 11532288
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    0,
+    1
+   ],
+   "multiplier": 2216
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    1,
+    0
+   ],
+   "multiplier": 4162
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    1,
+    2
+   ],
+   "multiplier": 208
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    1,
+    3
+   ],
+   "multiplier": 68
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    2,
+    0
+   ],
+   "multiplier": 740
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    2,
+    1
+   ],
+   "multiplier": 1182
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    2,
+    2
+   ],
+   "multiplier": 146
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    3,
+    0
+   ],
+   "multiplier": 1906
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    4,
+    2
+   ],
+   "multiplier": 144
+  }
+ ]
+}

@@ -1,0 +1,137 @@
+{
+  "status": "PASS",
+  "physical": [
+    {
+      "parameters": [
+        8,
+        2,
+        3
+      ],
+      "contexts": [
+        {
+          "g": 0,
+          "t": 2,
+          "Z": 84,
+          "Z_orbits": 14,
+          "prefix_group": 6
+        }
+      ],
+      "physical_maps": 168,
+      "reference_Z_cases": 624,
+      "site_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "parameters": [
+        7,
+        1,
+        3
+      ],
+      "contexts": [
+        {
+          "g": 1,
+          "t": 0,
+          "Z": 360,
+          "Z_orbits": 90,
+          "prefix_group": 4
+        }
+      ],
+      "physical_maps": 2880,
+      "reference_Z_cases": 3264,
+      "site_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "parameters": [
+        8,
+        2,
+        3
+      ],
+      "contexts": [
+        {
+          "g": 2,
+          "t": 0,
+          "Z": 8,
+          "Z_orbits": 4,
+          "prefix_group": 2
+        },
+        {
+          "g": 2,
+          "t": 0,
+          "Z": 8,
+          "Z_orbits": 4,
+          "prefix_group": 2
+        },
+        {
+          "g": 2,
+          "t": 0,
+          "Z": 8,
+          "Z_orbits": 4,
+          "prefix_group": 2
+        },
+        {
+          "g": 2,
+          "t": 0,
+          "Z": 4,
+          "Z_orbits": 2,
+          "prefix_group": 2
+        },
+        {
+          "g": 2,
+          "t": 0,
+          "Z": 8,
+          "Z_orbits": 4,
+          "prefix_group": 2
+        },
+        {
+          "g": 2,
+          "t": 0,
+          "Z": 4,
+          "Z_orbits": 2,
+          "prefix_group": 2
+        }
+      ],
+      "physical_maps": 80,
+      "reference_Z_cases": 624,
+      "site_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    }
+  ],
+  "artificial": [
+    {
+      "g": 3,
+      "t": 0,
+      "identifications": 168,
+      "leaves_per_context": 1
+    },
+    {
+      "g": 1,
+      "t": 2,
+      "identifications": 1,
+      "leaves_per_context": 24
+    }
+  ],
+  "seconds": 46.94203208299996,
+  "hashes": {
+    "fixed_kernel/verify_generic.py": "bce9879d62df0d5656d2db77cd2c14d563d93f36f349eebe54c40645615694ab",
+    "fixed_kernel/common.py": "ba5dc5351fcab138c2b1e84f7f0a6b918c34e95384f694e533c672c281c210df",
+    "fixed_kernel/solve.py": "ee8067c8cf8441bcca36b90016ec898b6b2c48b05247a69ec3fe4a8053ee44ba",
+    "fixed_kernel/z_enum_fixed.c": "3a81bf4a8eb212fa0dab80deeaaaff1eb3a013989464ab018c90dca95894a119",
+    "fixed_kernel/z_enum_fixed": "08095d5f830addf7f3dd2780e2e0cdaa3d455564ea5ace7b1e4fb79b4e93830c",
+    "model.py": "70806c8beb8a7b885c80f79fa89984b51839e4e9a9c3c24d794146190c8f9e84",
+    "mixed_frames/fixed_z.py": "7dc07c70552955f8eb599525d26e6fb094fba704cc6826f4cc88559752380161",
+    "fixed_suffix_search.py": "bd65c4af329442fcbd08305cdd1a1c631f7dc6df6a5325689d613c0cdfd321e1"
+  }
+}

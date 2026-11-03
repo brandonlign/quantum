@@ -1,0 +1,154 @@
+{
+ "name": "w2_stabilizer",
+ "code": "[[16,5,5]]",
+ "description": "S contains a weight-2 word (WLOG ZZ)",
+ "blocks": [
+  {
+   "sites": 2,
+   "generators": [
+    "ZZ"
+   ],
+   "variables": "coset_patterns",
+   "patterns": [
+    [
+     [
+      0,
+      0,
+      2
+     ],
+     2
+    ],
+    [
+     [
+      0,
+      2,
+      0
+     ],
+     1
+    ],
+    [
+     [
+      1,
+      0,
+      1
+     ],
+     1
+    ]
+   ]
+  }
+ ],
+ "suffix_sites": 14,
+ "weight_assumptions": [],
+ "weight_ge_assumptions": [],
+ "expected": {
+  "columns": 45,
+  "nu_rhs": -374784,
+  "positive_residuals": 30
+ },
+ "certificate": [
+  {
+   "type": "unit",
+   "multiplier": -3741696
+  },
+  {
+   "type": "total",
+   "multiplier": 1644
+  },
+  {
+   "type": "low",
+   "cell": [
+    0,
+    1
+   ],
+   "multiplier": 221
+  },
+  {
+   "type": "low",
+   "cell": [
+    0,
+    2
+   ],
+   "multiplier": 193
+  },
+  {
+   "type": "low",
+   "cell": [
+    0,
+    3
+   ],
+   "multiplier": 33
+  },
+  {
+   "type": "low",
+   "cell": [
+    0,
+    4
+   ],
+   "multiplier": 15
+  },
+  {
+   "type": "low",
+   "cell": [
+    1,
+    0
+   ],
+   "multiplier": -57
+  },
+  {
+   "type": "low",
+   "cell": [
+    1,
+    1
+   ],
+   "multiplier": 77
+  },
+  {
+   "type": "low",
+   "cell": [
+    1,
+    2
+   ],
+   "multiplier": 1
+  },
+  {
+   "type": "low",
+   "cell": [
+    1,
+    3
+   ],
+   "multiplier": 6
+  },
+  {
+   "type": "low",
+   "cell": [
+    2,
+    0
+   ],
+   "multiplier": -27
+  },
+  {
+   "type": "low",
+   "cell": [
+    2,
+    1
+   ],
+   "multiplier": 3
+  },
+  {
+   "type": "low",
+   "cell": [
+    2,
+    2
+   ],
+   "multiplier": 3
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    2,
+    1
+   ],
+   "multiplier": 24
+  }
+ ]
+}

@@ -1,0 +1,223 @@
+{
+ "name": "s5_4_1_weight_three",
+ "section": "5.4.1",
+ "description": "R = <ZZZ>",
+ "blocks": [
+  {
+   "sites": 3,
+   "generators": [
+    "ZZZ"
+   ],
+   "variables": "coset_patterns",
+   "patterns": [
+    [
+     [
+      0,
+      0,
+      1,
+      1
+     ],
+     12
+    ],
+    [
+     [
+      0,
+      1,
+      1,
+      0
+     ],
+     3
+    ],
+    [
+     [
+      1,
+      0,
+      0,
+      1
+     ],
+     1
+    ]
+   ]
+  }
+ ],
+ "suffix_sites": 11,
+ "certificate": [
+  {
+   "type": "total",
+   "multiplier": -11
+  },
+  {
+   "type": "low",
+   "cell": [
+    0,
+    1
+   ],
+   "multiplier": 32
+  },
+  {
+   "type": "low",
+   "cell": [
+    0,
+    2
+   ],
+   "multiplier": 12
+  },
+  {
+   "type": "low",
+   "cell": [
+    0,
+    3
+   ],
+   "multiplier": 10
+  },
+  {
+   "type": "low",
+   "cell": [
+    0,
+    4
+   ],
+   "multiplier": 2
+  },
+  {
+   "type": "low",
+   "cell": [
+    1,
+    0
+   ],
+   "multiplier": 40
+  },
+  {
+   "type": "low",
+   "cell": [
+    1,
+    3
+   ],
+   "multiplier": 4
+  },
+  {
+   "type": "low",
+   "cell": [
+    2,
+    1
+   ],
+   "multiplier": 20
+  },
+  {
+   "type": "low",
+   "cell": [
+    2,
+    2
+   ],
+   "multiplier": 12
+  },
+  {
+   "type": "low",
+   "cell": [
+    3,
+    0
+   ],
+   "multiplier": 40
+  },
+  {
+   "type": "cnonneg",
+   "cell": [
+    0,
+    1
+   ],
+   "multiplier": 22
+  },
+  {
+   "type": "cnonneg",
+   "cell": [
+    0,
+    2
+   ],
+   "multiplier": 5
+  },
+  {
+   "type": "cnonneg",
+   "cell": [
+    0,
+    3
+   ],
+   "multiplier": 8
+  },
+  {
+   "type": "cnonneg",
+   "cell": [
+    0,
+    4
+   ],
+   "multiplier": 1
+  },
+  {
+   "type": "cnonneg",
+   "cell": [
+    1,
+    3
+   ],
+   "multiplier": 4
+  },
+  {
+   "type": "cnonneg",
+   "cell": [
+    2,
+    0
+   ],
+   "multiplier": 31
+  },
+  {
+   "type": "cnonneg",
+   "cell": [
+    2,
+    1
+   ],
+   "multiplier": 20
+  },
+  {
+   "type": "cnonneg",
+   "cell": [
+    2,
+    2
+   ],
+   "multiplier": 11
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    1,
+    0
+   ],
+   "multiplier": 2
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    2,
+    0
+   ],
+   "multiplier": 7
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    2,
+    2
+   ],
+   "multiplier": 1
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    3,
+    0
+   ],
+   "multiplier": 2
+  }
+ ],
+ "expected": {
+  "columns": 36,
+  "nu_rhs": -22528,
+  "positive_residuals": 5
+ }
+}

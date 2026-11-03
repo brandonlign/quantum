@@ -1,0 +1,168 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "parameters": [
+        17,
+        3,
+        3
+      ],
+      "hull": 3,
+      "q": 3,
+      "t": 2,
+      "g": 1,
+      "cls": 5,
+      "N": [
+        126365,
+        123562
+      ],
+      "H": [
+        33132,
+        24603,
+        4749,
+        3322
+      ],
+      "known_columns": [
+        5169,
+        2162,
+        2596,
+        8000,
+        1176,
+        4144,
+        608,
+        1184,
+        6176,
+        3072,
+        3578,
+        6517,
+        5632,
+        4507
+      ],
+      "found_columns": [
+        5169,
+        5683,
+        2929,
+        7701,
+        7052,
+        4453,
+        821,
+        1184,
+        6176,
+        3072,
+        3578,
+        6517,
+        5632,
+        4507
+      ],
+      "physical_generators": [
+        10149773441,
+        5362778242,
+        13553221764,
+        14167867528,
+        8526020752,
+        2730229920,
+        15579824320,
+        12577767680,
+        12563890688,
+        3435185152,
+        16592259072,
+        294195200,
+        3525615616,
+        33423360
+      ],
+      "dual_minimum": 3,
+      "physical_words_checked": 1048576,
+      "Z_leaves": 1,
+      "Y_nodes": 15704,
+      "isometry_attempt": 1
+    },
+    {
+      "parameters": [
+        17,
+        3,
+        3
+      ],
+      "hull": 5,
+      "q": 3,
+      "t": 0,
+      "g": 3,
+      "cls": 150,
+      "N": [
+        131359,
+        3880
+      ],
+      "H": [
+        34839,
+        16686,
+        12683,
+        1970
+      ],
+      "known_columns": [
+        6594,
+        2867,
+        7230,
+        3192,
+        354,
+        3685,
+        3489,
+        6174,
+        3200,
+        4266,
+        6258,
+        1427,
+        772,
+        3342
+      ],
+      "found_columns": [
+        2211,
+        7337,
+        7230,
+        2691,
+        1945,
+        7940,
+        3489,
+        6174,
+        3200,
+        4266,
+        6258,
+        1427,
+        772,
+        3342
+      ],
+      "physical_generators": [
+        14516232321,
+        5746000002,
+        8882512004,
+        13153353864,
+        4243611792,
+        16147021984,
+        16884261056,
+        13651960064,
+        3006857728,
+        493175808,
+        234956800,
+        6675501056,
+        2864021504,
+        33423360
+      ],
+      "dual_minimum": 4,
+      "physical_words_checked": 1048576,
+      "Z_leaves": 1,
+      "Y_nodes": 1442,
+      "isometry_attempt": 4
+    }
+  ],
+  "seconds": 21.79159958299988,
+  "scope": "Distance-three positive controls ONLY, not [[17,3,6]] constructions or exclusions",
+  "hashes": {
+    "fixed_kernel/verify_large.py": "a7df474f58763dd4a9ff9e85e1310fa72f54483c08163131eda8ee68485e2783",
+    "fixed_kernel/common.py": "ba5dc5351fcab138c2b1e84f7f0a6b918c34e95384f694e533c672c281c210df",
+    "fixed_kernel/solve.py": "ee8067c8cf8441bcca36b90016ec898b6b2c48b05247a69ec3fe4a8053ee44ba",
+    "fixed_kernel/verify_generic.py": "bce9879d62df0d5656d2db77cd2c14d563d93f36f349eebe54c40645615694ab",
+    "fixed_kernel/z_enum_fixed.c": "3a81bf4a8eb212fa0dab80deeaaaff1eb3a013989464ab018c90dca95894a119",
+    "fixed_kernel/z_enum_fixed": "08095d5f830addf7f3dd2780e2e0cdaa3d455564ea5ace7b1e4fb79b4e93830c",
+    "model.py": "70806c8beb8a7b885c80f79fa89984b51839e4e9a9c3c24d794146190c8f9e84",
+    "opus_parallel/suffix9_dimension5/suffix9_dim5.json": "c683f1aaa89baf858027d88f76eca3b95cf4afafa469069d9e8df0e9219b83eb",
+    "kernel_capacity/profiles.json": "d44e8d01fa0c68924546a9aa21a8e80b3dc19233e6580d14b1bbffa5f06e10fc"
+  }
+}

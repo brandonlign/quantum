@@ -1,0 +1,55 @@
+PASS s5_3_weight_two.json: 39 columns, 23 multiplier rows, 17 positive residuals, nu.rhs = -2571108352
+PASS s5_4_1_weight_three.json: 36 columns, 22 multiplier rows, 5 positive residuals, nu.rhs = -22528
+PASS s5_4_2_bell.json: 55 columns, 39 multiplier rows, 17 positive residuals, nu.rhs = -320017816092672
+PASS s5_4_3_five_site.json: 90 columns, 38 multiplier rows, 42 positive residuals, nu.rhs = -52501014528
+PASS s5_4_4_six_site_crossed.json: 126 columns, 27 multiplier rows, 78 positive residuals, nu.rhs = -22212608
+PASS s5_4_4_six_site_same_letter.json: 117 columns, 25 multiplier rows, 75 positive residuals, nu.rhs = -8820736
+PASS s5_6_rank_three_common.json: 135 columns, 33 multiplier rows, 83 positive residuals, nu.rhs = -9031680
+PASS s5_6_rank_three_one.json: 296 columns, 33 multiplier rows, 157 positive residuals, nu.rhs = -61440
+PASS s5_6_rank_three_triangle.json: 240 columns, 32 multiplier rows, 151 positive residuals, nu.rhs = -86470656
+PASS s5_6_rank_three_two.json: 300 columns, 34 multiplier rows, 205 positive residuals, nu.rhs = -20484096
+PASS s5_7_disjoint.json: 648 columns, 111 multiplier rows, 403 positive residuals, nu.rhs = -125829120
+ALL 11 SECTION 5 CERTIFICATES PASS
+checking 6 files
+PASS minwt10.json: 17 columns, 15 multiplier rows, 3 positive residuals, nu.rhs = -61440
+PASS w1_stabilizer.json: 16 columns, 6 multiplier rows, 11 positive residuals, nu.rhs = -11520
+PASS w2_stabilizer.json: 45 columns, 14 multiplier rows, 30 positive residuals, nu.rhs = -374784
+PASS w3_stabilizer.json: 42 columns, 15 multiplier rows, 28 positive residuals, nu.rhs = -5662720
+PASS w4_A4ge2.json: 78 columns, 26 multiplier rows, 48 positive residuals, nu.rhs = -7294976
+PASS w5_pure.json: 72 columns, 24 multiplier rows, 32 positive residuals, nu.rhs = -8192
+ALL 6 CERTIFICATES PASS
+checking 7 files
+PASS forced_weight8.json: 18 columns, 18 multiplier rows, 1 positive residuals, nu.rhs = -3932160
+PASS minwt9.json: 18 columns, 19 multiplier rows, 0 positive residuals, nu.rhs = -2195456
+PASS w1_stabilizer.json: 17 columns, 11 multiplier rows, 7 positive residuals, nu.rhs = -786432
+PASS w2_stabilizer.json: 48 columns, 27 multiplier rows, 22 positive residuals, nu.rhs = -5324800
+PASS w3_stabilizer.json: 45 columns, 25 multiplier rows, 20 positive residuals, nu.rhs = -442368
+PASS w4_stabilizer.json: 84 columns, 36 multiplier rows, 35 positive residuals, nu.rhs = -81920
+PASS w5_stabilizer.json: 78 columns, 31 multiplier rows, 35 positive residuals, nu.rhs = -114688
+ALL 7 CERTIFICATES PASS
+checking 13 files
+PASS profile00_frame668.json: 260 columns, 2 multiplier rows, 38 positive residuals, nu.rhs = -2
+PASS profile00_frame688.json: 180 columns, 2 multiplier rows, 26 positive residuals, nu.rhs = -1
+PASS profile00_frame778.json: 220 columns, 2 multiplier rows, 55 positive residuals, nu.rhs = -2
+PASS profile01_frame668.json: 260 columns, 2 multiplier rows, 38 positive residuals, nu.rhs = -2
+PASS profile01_frame688.json: 180 columns, 2 multiplier rows, 26 positive residuals, nu.rhs = -1
+PASS profile01_frame778.json: 220 columns, 2 multiplier rows, 55 positive residuals, nu.rhs = -1
+PASS profile02_frame668.json: 260 columns, 2 multiplier rows, 38 positive residuals, nu.rhs = -2
+PASS profile02_frame688.json: 180 columns, 2 multiplier rows, 26 positive residuals, nu.rhs = -1
+PASS profile10_frame668.json: 260 columns, 2 multiplier rows, 38 positive residuals, nu.rhs = -1
+PASS profile10_frame778.json: 220 columns, 2 multiplier rows, 55 positive residuals, nu.rhs = -2
+PASS profile11_frame668.json: 260 columns, 2 multiplier rows, 38 positive residuals, nu.rhs = -1
+PASS profile11_frame778.json: 220 columns, 2 multiplier rows, 55 positive residuals, nu.rhs = -1
+PASS profile20_frame778.json: 220 columns, 2 multiplier rows, 55 positive residuals, nu.rhs = -2
+ALL 13 CERTIFICATES PASS
+PASS: 15/15 exact formal columns; no-purity low-weight inequality
+A1=A3=0; A2<=2; A4<=3,2,0 for A2=0,1,2 respectively
+EXACT SHADOW-PARITY CERTIFICATE PASS
+Krawtchouk coefficient identities: 15/15 weights
+Only H3,H4 have residue 2048 modulo 4096; all affine-shadow integer coefficients vanish modulo 4096
+Identity: H3 + H4 is odd for every binary [[14,3,d>=5]] stabilizer
+Together with unconditional H3=0 and 0<=H4<=3: H4 in {1,3}
+All calculations use exact Python integers.
+PASS sixteen-qubit parity: A1+A2+A3+A4 is even
+PASS seventeen-qubit profile: A6+A7 <= 2 under purity
+PASS: 37 exact certificates and four ordinary identities

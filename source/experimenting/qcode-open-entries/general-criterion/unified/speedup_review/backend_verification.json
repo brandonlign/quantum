@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "fixtures": [
+    {
+      "rank": false,
+      "domains": false,
+      "plain_leaves": 20160,
+      "canonical_leaves": 840,
+      "plain_nodes": 22906,
+      "canonical_nodes": 1486
+    },
+    {
+      "rank": false,
+      "domains": true,
+      "plain_leaves": 20160,
+      "canonical_leaves": 840,
+      "plain_nodes": 22906,
+      "canonical_nodes": 1486
+    },
+    {
+      "rank": true,
+      "domains": false,
+      "plain_leaves": 20160,
+      "canonical_leaves": 840,
+      "plain_nodes": 22906,
+      "canonical_nodes": 1486
+    },
+    {
+      "rank": true,
+      "domains": true,
+      "plain_leaves": 20160,
+      "canonical_leaves": 840,
+      "plain_nodes": 22906,
+      "canonical_nodes": 1486
+    }
+  ],
+  "physical_controls": [
+    {
+      "n": 6,
+      "d": 3,
+      "solutions": 8,
+      "exact_profile": true
+    },
+    {
+      "n": 14,
+      "frame": "688",
+      "d": 2,
+      "original": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "representative": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "exact_profile": true
+    }
+  ],
+  "target_checks": [
+    {
+      "index": 0,
+      "hull": 2,
+      "disabled_equal": true,
+      "limit": true
+    },
+    {
+      "index": 7,
+      "hull": 0,
+      "disabled_equal": true,
+      "limit": true
+    },
+    {
+      "index": 12,
+      "hull": 6,
+      "disabled_equal": true,
+      "limit": true
+    }
+  ],
+  "seconds": 1.7329642919976322,
+  "backend_sha256": "1af8ac0f5cfd95a34ab8724362114ff5046a286172ede888b53694c4fff5c263",
+  "source_sha256": "e11967736d2d59f7a57a55a9d35838d93ac6c14a049fba2026c32f6d2808da9a"
+}

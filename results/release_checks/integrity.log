@@ -1,0 +1,43 @@
+Assignment keys ['status', 'local', 'remote']
+Additional materialized legacy manifest records 3179
+Verified 100000 payloads; 100000 residual manifest hashes; 26 s
+Verified 200000 payloads; 200000 residual manifest hashes; 42 s
+Verified 300000 payloads; 300000 residual manifest hashes; 55 s
+Verified 400000 payloads; 400000 residual manifest hashes; 68 s
+Verified 500000 payloads; 500000 residual manifest hashes; 82 s
+Verified 600000 payloads; 600000 residual manifest hashes; 96 s
+Verified 700000 payloads; 700000 residual manifest hashes; 111 s
+Verified 800000 payloads; 800000 residual manifest hashes; 124 s
+Verified 900000 payloads; 900000 residual manifest hashes; 127 s
+Verified 1000000 payloads; 1000000 residual manifest hashes; 131 s
+Verified 1100000 payloads; 1100000 residual manifest hashes; 134 s
+Verified 1200000 payloads; 1200000 residual manifest hashes; 138 s
+Verified 1300000 payloads; 1300000 residual manifest hashes; 141 s
+Verified 1400000 payloads; 1400000 residual manifest hashes; 145 s
+Verified 1500000 payloads; 1500000 residual manifest hashes; 149 s
+Verified 1600000 payloads; 1600000 residual manifest hashes; 152 s
+Verified 1700000 payloads; 1700000 residual manifest hashes; 156 s
+Verified 1800000 payloads; 1800000 residual manifest hashes; 159 s
+Verified 1900000 payloads; 1900000 residual manifest hashes; 163 s
+Verified 2000000 payloads; 2000000 residual manifest hashes; 166 s
+Verified 2100000 payloads; 2100000 residual manifest hashes; 170 s
+Verified 2200000 payloads; 2121496 residual manifest hashes; 171 s
+Verified 2300000 payloads; 2121496 residual manifest hashes; 171 s
+Verified 2400000 payloads; 2121496 residual manifest hashes; 172 s
+Verified 2500000 payloads; 2124158 residual manifest hashes; 172 s
+Verified 2600000 payloads; 2224158 residual manifest hashes; 177 s
+Verified 2700000 payloads; 2324158 residual manifest hashes; 182 s
+{
+  "status": "PASS",
+  "stored_payloads_size_and_CRC_checked": 2792460,
+  "materialized_legacy_records_SHA256_checked": 3179,
+  "residual_manifest_SHA256_matches": 2419796,
+  "residual_classes": 32747,
+  "uncompressed_bytes_checked": 19864981466,
+  "source_aggregate_sha256": "9aeae1ae01235e42ee92d1f854346c0ea7d8c2c281c3a264e23ed26df89083d0",
+  "completed_record_statuses": {
+    "EXCLUDED_SLICE_CHUNK": 2419796
+  },
+  "elapsed_seconds": 187.48390033305623,
+  "scope": "Check every archived payload and every hash in the frozen residual manifest.\n\nThis is a complete archival integrity/status check. It is distinct from the\nmathematical per-record reconstruction performed by verify.py --deep.\n"
+}

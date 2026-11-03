@@ -1,0 +1,201 @@
+\section{Restrictions on extension kernels}\label{sec:obstructions}
+
+We derive necessary conditions from the kernel and image of the extension
+map. Throughout this section, \(S\) is a stabilizer with
+\(S\cap V_T=R\), \(S^\perp\cap W=C\), and extension map \(M\).
+Every nonzero kernel element represents a logical operator supported on
+\(T\).
+There are two kernels to distinguish. The kernel \(K=\ker M\) records
+logical operators supported on \(T\). The kernel \(N=\ker\tau\)
+records stabilizer words supported on the complementary coordinates:
+their projected local class is zero, and an element of \(R\) removes
+the remaining local representative. The hull identities below relate
+these two kinds of local information.
+
+\begin{proposition}[Kernel and hull identities]\label{prop:kernel}
+For an extension, put \(K=\ker M\), \(q=\dim K\), and let \(t\) be the
+rank of the symplectic form restricted to \(K\). Then
+\begin{align}
+ \rank\Gamma&=a-2q+t,&
+ h&=b-a+2q-t,\label{eq:hull}\\
+ N:=\ker\tau&\subseteq\rad(P),&
+ \dim N&=b-a+q.\label{eq:N}
+\end{align}
+Every nonzero \(e\in K\) has \(\cost(e)\geq d(S)\), even without
+purity. Moreover \(q-t/2\leq k\).
+\end{proposition}
+\begin{proof}
+The adjoint map has image \(K^\perp_E\), of dimension \(a-q\).
+To see this directly, \(e\) annihilates \(\im\tau\) if and only
+if \(\langle e,\tau(x)\rangle=0\) for every \(x\in P\), or
+equivalently \(Me=0\). Nondegeneracy of \(E\) then gives
+\(\im\tau=K^\perp_E\).
+The radical of its restricted form is \(K\cap K^\perp\), of dimension
+\(q-t\) by rank--nullity on the restricted form. Pullback along the surjection \(P\to K^\perp\) leaves
+the form rank unchanged, giving \(a-q-(q-t)\). Subtracting from \(b\)
+gives \eqref{eq:hull}. The map \(\tau\) has rank \(a-q\), giving
+\eqref{eq:N}; a vector in its kernel pairs trivially with all of \(P\).
+
+For \(e\ne0\) in \(K\), a prefix representative with zero suffix lies
+in \(S^\perp\). It cannot lie in \(S\), because \(S\cap V_T=R\).
+Its minimum weight is at least the logical distance. The space
+\(K\) embeds in the \(2k\)-dimensional nondegenerate logical space
+\(S^\perp/S\). A subspace of dimension \(q\) and form rank \(t\)
+has an isotropic subspace of dimension \(q-t/2\); that dimension is at
+most \(k\).
+\end{proof}
+
+\subsection{Counting cosets of small weight}
+
+Let \(Q=\im M\). The syndrome subspace \(Q\) is naturally
+\(N^\perp_W/C\): these are precisely the suffix classes annihilating
+\(N=\ker\tau\). The map \(M\) induces a bijection \(E/K\to Q\).
+For \(\eta\in E/K\), put
+\(\kappa(\eta)=\min_{e\in\eta}\cost(e)\).
+\(\kappa(\eta)\) is the least weight available among all local
+classes that have the same suffix image. If that suffix image has small
+minimum weight, every one of its possible local partners must compensate
+with a sufficiently large weight. Counting these partners gives the next
+inequality.
+
+\begin{proposition}[Coset-counting inequality]\label{prop:capacity}
+In the localized setting of Theorem~\ref{thm:extension}, for
+\(0\leq j<d\),
+\begin{equation}\label{eq:capacity}
+ |\{0\ne u\in Q:\delta(u)\leq j\}|
+ \leq |\{0\ne\eta\in E/K:\kappa(\eta)\geq d-j\}|.
+\end{equation}
+If every nonzero class in \(E\) has minimum weight below \(d\), then
+\[
+ K=0,\quad h=b-a,\quad N=\rad(P),\quad Q=\im\Gamma.
+\]
+\end{proposition}
+\begin{proof}
+For a fixed \(\eta\), all its members have the same syndrome image.
+Minimizing \eqref{eq:exact} over them gives
+\(\kappa(\eta)+\delta(M\eta)\geq d\).
+Each nonzero syndrome class of minimum weight at most \(j\) therefore
+corresponds to a distinct nonzero coset in \(E/K\) whose minimum weight
+is at least \(d-j\). This proves the inequality.
+The minimum-weight hypothesis and Proposition~\ref{prop:kernel} imply
+\(K=0\). Then \eqref{eq:hull} and \eqref{eq:N} give the remaining
+statements, with \(\im\Gamma=(\ker\Gamma)^\perp\) in syndrome
+coordinates.
+\end{proof}
+
+Violation of \eqref{eq:capacity} excludes an extension without enumerating
+the matrices \(M\). The inequality alone is not sufficient for existence.
+
+\subsection{A binary bound for a rank-one local stabilizer}
+
+\begin{proposition}[Kernel projection bound]\label{prop:griesmer}
+Suppose \(R=\langle Z^m\rangle\) and \(d>\lfloor m/2\rfloor\).
+The physical \(X\)-projection maps \(K\) injectively to an even binary
+linear code of length \(m\), dimension \(q\), and distance at least
+\(\Delta=2(d-\lfloor m/2\rfloor)\). Consequently,
+\begin{equation}\label{eq:griesmer}
+ m\geq\sum_{i=0}^{q-1}\left\lceil\frac{\Delta}{2^i}\right\rceil.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Adding \(Z^m\) leaves the \(X\)-mask unchanged, so this projection is
+well defined on \(E\). Commutation with \(Z^m\) makes its weight
+\(w\) even. If \(z\) counts \(Z\)-letters off that mask, then
+\[
+ \cost(e)=w+\min(z,m-w-z)\leq\lfloor m/2\rfloor+w/2.
+\]
+A nonzero class represented by a \(Z\)-only word has minimum weight at most \(\lfloor m/2\rfloor\),
+so cannot lie in \(K\). This proves injectivity, and
+\(\cost(e)\geq d\) gives \(w\geq\Delta\).
+The last inequality is the binary Griesmer bound applied to that projected
+code. For completeness, choose a minimum-weight binary word of weight
+\(w\). Puncturing its support leaves a code of dimension one less and
+distance at least \(\lceil w/2\rceil\): the two representatives of a
+nontrivial quotient class have weight sum equal to \(w\) plus twice
+their common suffix weight, and each has weight at least \(w\).
+Only zero and the chosen word can lie wholly in that support. Induction
+gives the stated sum.
+\end{proof}
+
+The binary Griesmer bound applies to the projected kernel. For \(m=8,d=6\), it gives \(q\leq4\).
+Section~\ref{sec:seventeen} sharpens this to three using parity and the
+logical symplectic dimension.
+
+\subsection{Balanced local planes and redundancy}
+
+When the local stabilizer is generated by two full-support words, the
+minimum-weight condition determines the symbol counts of every nonzero
+kernel class. This gives the following restriction.
+
+\begin{theorem}[Balanced-plane obstruction]\label{thm:balanced}
+Suppose \(S\cap V_T=R=\langle X^m,Z^m\rangle\), where \(m=4\omega\),
+\(\omega\geq1\), and \(d(S)\geq3\omega\). Then \(2^q\leq m\).
+If \(\omega\) is even, \(K\) is isotropic. If \(\omega\) is odd, then
+\(q\leq2\), with restricted form rank zero for \(q\leq1\) and two
+for \(q=2\). In particular,
+\[
+ \begin{array}{ll}
+ n-k\geq2m-2-\lfloor\log_2m\rfloor,&\omega\text{ even},\\
+ n-k\geq2m-4,&\omega\text{ odd}.
+ \end{array}
+\]
+No purity assumption is needed.
+\end{theorem}
+\begin{proof}
+For a word on \(T\), let \(n_I,n_X,n_Y,n_Z\) be its four symbol
+counts. Addition of \(R\) permutes the four counts, so the minimum
+weight modulo \(R\) is \(m-\max n_L\leq3m/4\). A nonzero kernel class has minimum weight
+at least \(3\omega\); hence every count is \(\omega\). All four words in that
+class have weight \(3\omega\).
+
+Let \(\widetilde{K}\) be the preimage of \(K\) in \(R_T^\perp\), and put
+\(L=|\widetilde{K}|=2^{q+2}\). Its weight enumerator is
+\(1+(L-4)z^{3m/4}+3z^m\). The second MacWilliams coefficient of its
+dual equals
+\[
+ \frac{6m^2}{L}-\frac{3m}{2}.
+\]
+This coefficient counts weight-two words in the dual code. It is
+nonnegative, so \(L\leq4m\), or \(2^q\leq m\).
+
+The Pauli parity function \(\varepsilon(v)=\wt(v)\bmod2\) satisfies
+\begin{equation}\label{eq:polar}
+ \varepsilon(u+v)=\varepsilon(u)+\varepsilon(v)+\langle u,v\rangle.
+\end{equation}
+If \(\omega\) is even, all words of \(\widetilde{K}\) are even, so \(\widetilde{K}\), and hence
+\(K\), is isotropic. If \(\omega\) is odd, two distinct nonzero kernel
+classes pair to one, since the three representatives involved have odd
+weight. Three independent classes would contradict bilinearity:
+\(\langle u,v+w\rangle=1+1=0\), although the same rule requires one.
+\(q\leq2\), with the asserted ranks.
+
+Here \(a=2m-4\), \(b=n-k-2\). In the even case,
+\(\rank M=a-q\leq b\) gives \(n-k\geq2m-2-q\).
+In the odd case, the smallest possible \(\rank\Gamma=a-2q+t\)
+is \(a-2\), so \(b\geq a-2\), giving the second bound.
+\end{proof}
+
+For example, the specified local plane on twelve coordinates at distance
+at least nine requires \(n-k\geq20\). The hypothesis fixes the entire stabilizer supported on those twelve
+coordinates; the conclusion applies to codes with that local structure.
+
+\subsection{Choosing a tractable support}
+
+\begin{proposition}[Support selection]\label{prop:support}
+Let \(B(f,d)\) be an upper bound on the binary dimension of an additive
+length-\(f\), minimum-distance-\(d\) code. If the stabilizer of a pure
+\(\qc{n,k,d}\) code contains a nonzero word with support \(T\),
+where \(|T|=m\), then \(r=\dim(S\cap V_T)\) satisfies
+\[
+ 1\leq r\leq B(n-m,d)-n-k+2m.
+\]
+\end{proposition}
+\begin{proof}
+The shortened centralizer has dimension \(n+k-2m+r\) by
+Theorem~\ref{thm:extension}'s projection argument, and distance at least
+\(d\) by purity. Apply the additive dimension bound.
+\end{proof}
+
+The selected word need not have minimum stabilizer weight. This freedom
+is useful when an exact enumerator certificate forces a particular weight
+whose complement is already classifiable.

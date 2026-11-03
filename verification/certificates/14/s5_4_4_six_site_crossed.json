@@ -1,0 +1,401 @@
+{
+ "name": "s5_4_4_six_site_crossed",
+ "section": "5.4.4",
+ "description": "R = <ZZZZII, XXIIXX>",
+ "blocks": [
+  {
+   "sites": 6,
+   "generators": [
+    "ZZZZII",
+    "XXIIXX"
+   ],
+   "variables": "coset_patterns",
+   "patterns": [
+    [
+     [
+      0,
+      0,
+      0,
+      0,
+      0,
+      4,
+      0
+     ],
+     32
+    ],
+    [
+     [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      3
+     ],
+     16
+    ],
+    [
+     [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      2
+     ],
+     32
+    ],
+    [
+     [
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      1
+     ],
+     40
+    ],
+    [
+     [
+      0,
+      0,
+      0,
+      0,
+      4,
+      0,
+      0
+     ],
+     16
+    ],
+    [
+     [
+      0,
+      0,
+      0,
+      1,
+      0,
+      3,
+      0
+     ],
+     48
+    ],
+    [
+     [
+      0,
+      0,
+      0,
+      2,
+      0,
+      2,
+      0
+     ],
+     32
+    ],
+    [
+     [
+      0,
+      0,
+      0,
+      3,
+      0,
+      1,
+      0
+     ],
+     4
+    ],
+    [
+     [
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      2
+     ],
+     8
+    ],
+    [
+     [
+      0,
+      0,
+      1,
+      0,
+      2,
+      0,
+      1
+     ],
+     16
+    ],
+    [
+     [
+      0,
+      0,
+      1,
+      0,
+      3,
+      0,
+      0
+     ],
+     5
+    ],
+    [
+     [
+      0,
+      0,
+      2,
+      0,
+      1,
+      0,
+      1
+     ],
+     2
+    ],
+    [
+     [
+      0,
+      1,
+      0,
+      1,
+      0,
+      2,
+      0
+     ],
+     4
+    ],
+    [
+     [
+      1,
+      0,
+      0,
+      0,
+      2,
+      0,
+      1
+     ],
+     1
+    ]
+   ]
+  }
+ ],
+ "suffix_sites": 8,
+ "certificate": [
+  {
+   "type": "unit",
+   "multiplier": -311595008
+  },
+  {
+   "type": "total",
+   "multiplier": 141300
+  },
+  {
+   "type": "low",
+   "cell": [
+    0,
+    1
+   ],
+   "multiplier": 49068
+  },
+  {
+   "type": "low",
+   "cell": [
+    0,
+    2
+   ],
+   "multiplier": 31368
+  },
+  {
+   "type": "low",
+   "cell": [
+    0,
+    3
+   ],
+   "multiplier": 8874
+  },
+  {
+   "type": "low",
+   "cell": [
+    0,
+    4
+   ],
+   "multiplier": 3996
+  },
+  {
+   "type": "low",
+   "cell": [
+    1,
+    0
+   ],
+   "multiplier": 34240
+  },
+  {
+   "type": "low",
+   "cell": [
+    1,
+    1
+   ],
+   "multiplier": 22408
+  },
+  {
+   "type": "low",
+   "cell": [
+    1,
+    2
+   ],
+   "multiplier": 5964
+  },
+  {
+   "type": "low",
+   "cell": [
+    1,
+    3
+   ],
+   "multiplier": 2878
+  },
+  {
+   "type": "low",
+   "cell": [
+    2,
+    0
+   ],
+   "multiplier": 16112
+  },
+  {
+   "type": "low",
+   "cell": [
+    2,
+    1
+   ],
+   "multiplier": 3054
+  },
+  {
+   "type": "low",
+   "cell": [
+    2,
+    2
+   ],
+   "multiplier": 1760
+  },
+  {
+   "type": "low",
+   "cell": [
+    3,
+    0
+   ],
+   "multiplier": 2808
+  },
+  {
+   "type": "low",
+   "cell": [
+    3,
+    1
+   ],
+   "multiplier": 1086
+  },
+  {
+   "type": "low",
+   "cell": [
+    4,
+    0
+   ],
+   "multiplier": 1300
+  },
+  {
+   "type": "incl",
+   "cell": [
+    6,
+    0
+   ],
+   "multiplier": 888
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    0,
+    1
+   ],
+   "multiplier": 8280
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    0,
+    2
+   ],
+   "multiplier": 1614
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    1,
+    0
+   ],
+   "multiplier": 5584
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    1,
+    1
+   ],
+   "multiplier": 2839
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    1,
+    3
+   ],
+   "multiplier": 337
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    2,
+    0
+   ],
+   "multiplier": 2732
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    2,
+    2
+   ],
+   "multiplier": 674
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    3,
+    1
+   ],
+   "multiplier": 1455
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    4,
+    0
+   ],
+   "multiplier": 1792
+  },
+  {
+   "type": "shadow",
+   "cell": [
+    6,
+    0
+   ],
+   "multiplier": 444
+  }
+ ],
+ "expected": {
+  "columns": 126,
+  "nu_rhs": -22212608,
+  "positive_residuals": 78
+ }
+}

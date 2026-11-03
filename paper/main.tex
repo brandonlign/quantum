@@ -1,0 +1,77 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.95in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,longtable,tabularx,array}
+\usepackage{enumitem,microtype,xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\hypersetup{pdftitle={Nonexistence of binary [[16,5,5]] and [[17,3,6]] stabilizer codes},pdfauthor={Brandon Li}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 1pt minus 1pt}
+\setlength{\emergencystretch}{2em}
+\setlist{nosep,leftmargin=*}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\F}{\mathbb F_2}
+\newcommand{\qc}[1]{[\![#1]\!]}
+\newcommand{\wt}{\operatorname{wt}}
+\newcommand{\cost}{c_R}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\rad}{\operatorname{rad}}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\Ann}{\operatorname{Ann}}
+\newcommand{\Span}{\operatorname{span}}
+\newcommand{\Hull}{\operatorname{Hull}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\tr}{\mathsf T}
+\newcommand{\pathcode}[1]{{\small\nolinkurl{#1}}}
+\title{Nonexistence of binary \(\qc{16,5,5}\) and
+\(\qc{17,3,6}\) stabilizer codes}
+\author{Brandon Li\\[0.2em]\normalsize Independent researcher, Great Neck, New York\\
+\normalsize\href{mailto:brandon.li.gn@gmail.com}{brandon.li.gn@gmail.com}}
+\date{31 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We prove that binary stabilizer codes with parameters \(\qc{16,5,5}\)
+and \(\qc{17,3,6}\) do not exist, including degenerate codes.
+Together with known constructions, these results determine the optimal
+minimum distances \(d_{\max}(16,5)=4\) and \(d_{\max}(17,3)=5\).
+Both proofs use one method.
+We prove a necessary-and-sufficient extension criterion that expresses
+commutation and minimum distance through a linear map between quotient
+spaces, and a relative-distance version covering arbitrary degeneracy.
+We derive kernel and hull identities, a coset-counting obstruction, and
+a redundancy bound for a specified balanced local stabilizer.
+To apply the method, we first use weight-enumerator identities to restrict
+the stabilizer on a small set of coordinates. We then classify the possible
+shortened centralizers and exclude their extensions to the full coordinate set.
+The sixteen-qubit proof excludes extensions of 3,957 classified additive
+codes. For seventeen qubits, a forced weight-eight word and a
+quadratic-form argument reduce the proof to five local stabilizer types
+on eight coordinates. Complete classifications and exhaustive extension
+searches exclude all five types.
+\end{abstract}
+\textbf{Keywords:} quantum error correction; stabilizer codes; additive codes;
+coset distance; symplectic geometry; computer-assisted proof.
+
+\clearpage
+\input{01-introduction}
+\input{02-extension}
+\input{03-obstructions}
+\input{06-fourteen}
+\input{04-sixteen}
+\input{05-seventeen}
+\input{07-computation}
+\input{12-conclusion}
+\appendix
+\input{08-certificates}
+\input{09-search}
+\input{10-evidence}
+\input{references}
+\end{document}

@@ -1,0 +1,39 @@
+{
+  "status": "PASS_COMPLETE_SELECTED_CLASS_REPLAYS",
+  "selected_classes": 8,
+  "record_hash_count": 1059,
+  "records": [
+    {
+      "cls": 0,
+      "records_checked": 32
+    },
+    {
+      "cls": 5,
+      "records_checked": 245
+    },
+    {
+      "cls": 28739,
+      "records_checked": 38
+    },
+    {
+      "cls": 28740,
+      "records_checked": 224
+    },
+    {
+      "cls": 28741,
+      "records_checked": 38
+    },
+    {
+      "cls": 28744,
+      "records_checked": 239
+    },
+    {
+      "cls": 32863,
+      "records_checked": 36
+    },
+    {
+      "cls": 32864,
+      "records_checked": 207
+    }
+  ]
+}

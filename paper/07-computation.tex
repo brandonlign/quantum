@@ -1,0 +1,224 @@
+\section{Classification and computational proof}\label{sec:computation}
+
+\subsection{Physical equivalence and graph certificates}\label{sec:classification}
+
+The equivalence group on \(\ell\) Pauli sites is
+\(G_\ell=S_\ell\ltimes\mathrm{GL}(2,2)^\ell\), of order
+\(\ell!6^\ell\). A local invertible map permutes the three nonzero
+letters, and over \(\F\) every such permutation is symplectic.
+It preserves physical weight, commutation, hull dimension, and coset
+distance. One representative per orbit is enough.
+Two codes in the same orbit differ only by a relabeling of coordinates
+and Pauli letters, so an extension exists for one if and only if a
+correspondingly relabeled extension exists for the other. An orbit is
+one equivalence class, and \(\Aut C\) is the subgroup fixing a code
+\(C\). Orbit--stabilizer gives \(|G_\ell|/|\Aut C|\)
+distinct labeled copies of that code.
+Labeled means that the coordinate positions and the three nonidentity
+Pauli letters at each coordinate are fixed.
+
+One graph representation has a vertex for each codeword,
+three letter vertices per coordinate, and a coordinate vertex joined to
+its three letters. Each codeword vertex is joined to the letter it uses
+at each nonzero coordinate. Codeword, letter, and coordinate vertices
+have separate colors.
+A color-preserving graph isomorphism gives exactly a site permutation and
+local letter permutations carrying the code to the other code.
+Conversely, every physical equivalence induces a graph isomorphism.
+The permutation on word vertices is forced by their incidences, so there
+is no additional graph-automorphism kernel. Canonical graph certificates
+and automorphism orders are computed with nauty \cite{nauty}.
+Here a canonical graph certificate is a representation that is the same
+exactly for isomorphic colored graphs. It recognizes duplicate code
+classes; it is different from an infeasibility certificate for an
+enumerator system.
+The original census uses a second encoding with letter triangles rather
+than coordinate vertices. The two encodings are compared using the same code generators.
+
+\subsection{Completeness by extension and incidence}
+
+We use both shortening and puncturing. Shortening restricts to the
+words that are zero in a coordinate before deleting it; puncturing
+deletes the coordinate from every word.
+
+For lengthening a distance-\(d\) code by one coordinate, let the new
+coordinate image have binary rank \(\rho\in\{0,1,2\}\). Its zero-symbol
+shortening is a parent \(P\) whose dimension is lower by \(\rho\).
+The extension is specified by a \(\rho\)-space in the old Pauli quotient
+modulo \(P\), with every nonzero coset minimum at least \(d-1\).
+The new nonzero symbol adds one unit of weight. Rank one has three
+possible nonzero output letters; rank two has six output isomorphisms.
+These exhaust all children, because every child has a unique shortening
+at the last physical coordinate.
+The reason for counting labeled children as well as equivalence classes
+is completeness. Producing pairwise inequivalent codes gives a lower
+bound on the number of classes. A complete parent list lets us count
+every possible child before identifying equivalences. If the listed
+child orbits account for that entire count, none is missing.
+
+Let \(\mathcal L_\rho(P)\) be the set of \(\rho\)-dimensional subspaces
+\(U\leq V_\ell/P\) whose nonzero cosets have minimum weight at least
+\(d-1\). Put
+\[
+ e_0(P)=1,\qquad e_1(P)=3|\mathcal L_1(P)|,\qquad
+ e_2(P)=6|\mathcal L_2(P)|.
+\]
+The factors three and six count the injections \(\beta:U\to\F^2\).
+Each pair \((U,\beta)\) defines the child
+\(\{(p+\widetilde u,\beta u):p\in P,u\in U\}\), independently
+of the chosen representatives \(\widetilde u\).
+Conversely, shortening a child at its last coordinate recovers \(P\),
+and the remaining cosets recover \((U,\beta)\). Each labeled child
+therefore occurs exactly once. For a fixed child dimension \(c\), the
+parents in the following sum have dimension \(c-\rho\), and the
+children have dimension \(c\). Orbit--stabilizer counting gives
+\begin{equation}\label{eq:lengthening-mass}
+ \sum_{\rho,P}\frac{\ell!6^\ell}{|\Aut P|}\,e_\rho(P)
+ =\sum_D\frac{(\ell+1)!6^{\ell+1}}{|\Aut D|}
+\end{equation}
+The sum over \(P\) uses one representative of every parent class of
+dimension \(c-\rho\) and minimum distance at least \(d\); the sum
+over \(D\) uses the listed child classes of dimension \(c\) and
+minimum distance at least \(d\).
+The left-hand side counts all labeled extensions of the complete parent
+lists. The right-hand side counts the disjoint orbits of the listed children. Each child is checked individually for rank, distance, and
+distinct canonical certificate. Equality, together with complete parents,
+leaves no room for a missing orbit. Completeness follows inductively from the parent lists.
+
+For the sixteen-qubit application, the lengthening induction starts with
+the zero code on four coordinates and retains every parent dimension
+that can reach the target. The base is complete because a nonzero word
+on four coordinates cannot have weight five. The four required classifications have the
+following masses \(\sum_C |G_\ell|/|\Aut C|\):
+\begin{center}\small
+\begin{tabular}{@{}rrrr@{}}\toprule
+\(\ell\)&Binary dimension&Classes&Labeled mass\\\midrule
+7&4&43&21,776,221,440\\
+8&6&1,579&98,005,190,492,160\\
+9&8&2,298&7,958,195,288,064,000\\
+10&10&37&2,333,060,795,842,560\\\bottomrule
+\end{tabular}
+\end{center}
+The same induction gives no codes in the three larger-dimension sets
+used in Lemma~\ref{lem:16-rankone}. The source release includes
+\pathcode{verification/release16/census/check_cells.py}, which reconstructs these classifications,
+checks the mass identity at every step, and compares the resulting
+canonical certificates with the representatives used in the searches.
+
+The seventeen-qubit classifications start from an elementary base.
+For a binary dimension-three code, each coordinate map
+\(\F^3\to\F^2\) is determined up to local output equivalence by its
+row space. There are fifteen row spaces of dimension at most two:
+one zero space, seven lines, and seven planes.
+Every multiset of seven such types is tested, giving
+\(\binom{21}{7}=116280\) possibilities. Exactly 2,171 meet the
+dimension and distance-five conditions; their physical graph certificates
+give 32 classes. This establishes the complete seven-site dimension-three
+classification directly.
+
+Higher-dimensional supercodes supply another incidence check. Each
+dimension-\((c+1)\) binary code has \(2^{c+1}-1\) hyperplanes.
+Its dimension-\(c\) parent extensions correspond to nonzero quotient
+cosets of minimum weight at least \(d\). Counting parent/supercode
+incidences gives the following identity, where \(e(P)\) is the number
+of those nonzero cosets:
+\begin{equation}\label{eq:incidence}
+ \sum_P\frac{|G_\ell|}{|\Aut P|}\,e(P)
+ =(2^{c+1}-1)\sum_D\frac{|G_\ell|}{|\Aut D|}.
+\end{equation}
+The repository also checks the equality separately for each parent orbit
+by identifying every hyperplane of every listed child. This prevents
+incorrect per-class counts from canceling in a grand total.
+
+Using \eqref{eq:incidence}, the 32 dimension-three parents prove the
+43-class seven-site dimension-four list complete; those prove the
+one-class dimension-five list complete. The three parent dimensions
+then prove the 26,299-class eight-site dimension-five distance-five list
+complete through \eqref{eq:lengthening-mass}. Its labeled mass is
+\(1,593,099,450,132,480\).
+
+Finally, puncturing any nine-site dimension-five distance-six code
+preserves dimension and gives one of those eight-site parents: a
+nonzero puncture kernel would be a weight-one word. The new coordinate
+is a pair of binary linear forms on \(\F^5\). All 1,024 ordered pairs
+are tested per parent. A lift is valid if and only if every parent word
+of weight five receives a nonzero new symbol. The unrestricted valid
+pairs number 1,791,031, and local output equivalence gives 299,175
+canonical lifts. Their complete physical certificate set contains
+32,865 classes, with hull counts \(26752,5995,118\) at hull dimensions
+one, three, five.
+
+The nine-site dimension-six classification is independently checked by
+\eqref{eq:incidence} from those dimension-five classes. Each child has
+63 hyperplanes. The incidence count is
+\(4,332,624,025,927,680\); the 56 listed child orbits have total labeled
+mass \(68,771,809,935,360\), exactly the former number divided by 63.
+All 3,528 hyperplanes are identified, and the equality is checked
+pointwise across all 32,865 parents. These checks establish completeness of the classifications used in the
+seventeen-qubit extension proof.
+
+\subsection{The local code classifications}\label{sec:local-classifications}
+
+The local centralizer codes used in Section~\ref{sec:seventeen} are
+obtained by puncturing and lifting. Puncturing an eight-coordinate code of minimum
+distance six preserves its binary dimension and gives a seven-coordinate
+code of minimum distance at least five. For dimension four, the 43 parent
+classes above suffice. Testing all \(2^8=256\) ordered pairs
+of linear forms per parent gives 861 valid lifts and 28 equivalence
+classes. Fifteen classes contain a word of weight eight; six of these
+are isotropic. Exactly three contain a full-support plane. Writing
+\(B\) for each of these three codes, we test all 256 cosets in
+\(B^\perp/B\). In total, two cosets have
+minimum weight six, and the resulting dimension-five codes form one
+equivalence class. This supplies the local code needed in
+Proposition~\ref{prop:17-plane}.
+
+For the rank-one case, a code \(H\) of dimension \(q+1\) is marked
+by a full-support word \(p\in\rad(H)\). At \(q=1\), normalize
+\(p=Z^8\) and test every possible second generator, modulo addition
+of \(p\). At \(q=2,3\), lift every seven-coordinate parent of dimension
+three or four and mark every full-support radical word. The complete
+parent lists have 32 and 43 classes. The marked physical graph
+certificates give, respectively, four types at \((q,t)=(1,0)\),
+six and two at \((2,0),(2,2)\), and seven and five at
+\((3,0),(3,2)\). Marking \(p\) means giving its word vertex a
+separate color. An isomorphism must preserve the selected word.
+The repository includes a fresh coordinate-lift checker for
+the full-plane classifications; the complete marked-code check is
+identified in Appendix~\ref{app:evidence}.
+
+\subsection{Extension computations}
+
+For each shortened code, the search computes all coset minimum weights
+and enumerates the extension maps in the domain established by the
+preceding reductions. In the seventeen-qubit cases, it first assigns the
+images of a totally isotropic half of the local quotient and then solves
+for every complementary image. The Gram equation determines part of the
+latter assignment; all remaining entries, including diagonal entries,
+are searched. Appendix~\ref{app:search} gives the equations, pruning
+conditions, and symmetry arguments.
+
+The computation is divided by shortened-code class, local kernel,
+radical identification, and first syndrome image. A case is excluded
+only when every part has been exhausted and no extension satisfies the
+required equations and weights. Interrupted computations are rerun to
+completion. The verification programs reconstruct this decomposition
+and check the completion records for every expected part.
+
+\subsection{Implementation checks}
+
+Known \(\qc{5,1,3}\), \(\qc{16,4,5}\), and \(\qc{16,1,6}\)
+codes provide positive tests. Seventeen-coordinate \(\qc{17,3,3}\)
+examples additionally test prescribed local kernels, shortened-code
+kernels, and singular Gram matrices. Their stabilizers and centralizers
+are constructed explicitly; ranks, commutation, and minimum distance are
+checked by enumeration.
+
+The complementary-image algorithm is compared with direct enumeration
+on small examples, including assignments with nonzero diagonal entries.
+For the mixed rank-two cases, these comparisons cover 189,860 tuples
+in 1,804 fixed-tuple and distance-threshold instances. Separate C
+implementations are compared on common inputs. Tests with deliberately
+incomplete or inconsistent records check that these cannot be accepted
+as complete exclusions. The reproducibility appendix gives the precise
+scope of each verification command.

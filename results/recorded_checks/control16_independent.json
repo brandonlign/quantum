@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "physical_parameters": [
+    16,
+    4,
+    5
+  ],
+  "stabilizer_rank": 12,
+  "centralizer_rank": 20,
+  "minimum_stabilizer_weight": 6,
+  "suffix_dimension": 9,
+  "search": "FOUND nodes=136",
+  "scope": "Independent Pauli-space reconstruction and quotient BFS; no project proof modules imported."
+}

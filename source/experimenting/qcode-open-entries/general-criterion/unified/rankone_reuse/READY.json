@@ -1,0 +1,33 @@
+{
+  "status": "READY_FOR_RESIDUAL_REUSE_SWEEP",
+  "backend_policy": "joint-auto",
+  "maximum_search_workers": 8,
+  "legacy_folder": "rankone_residual/runs",
+  "new_folder": "rankone_reuse/runs",
+  "hashes": {
+    "rankone_reuse/common.py": "7e4984dc91ddea6acea4c7affe6441d27b1fb53c965d687f29c187d631d589d0",
+    "rankone_reuse/PROOF.md": "8241a9c02f77c95209bfaabc05f66a52f8defdadc239e243b98f568a4bfd85e3",
+    "rankone_reuse/verify_engine.py": "aa7fcc00dd6c3a5a40372a908ce36479a6b9ed1b7dfcbd719100df4ff93e2509",
+    "rankone_reuse/engine_verification.json": "0a86ec377372128bec689d570fecfcd3d9045819917ab0506a72e6f308613b12",
+    "rankone_reuse/pool.py": "a581de6bb7ffd0a35e5e1d30229f72097e8c9b763b886c75f5eed65abe4e5ad5",
+    "rankone_reuse/records.py": "307c63755c39a18d0faf034b7c2819c81c2cd5173d53d7d616fcdfd77789e87c",
+    "rankone_reuse/aggregate.py": "ca6f834fafaa60ae7102edeb9353b42a3e47bfe3b6212c64290f2f80f1b26f4a",
+    "rankone_reuse/verify_integration.py": "4a03405156bdd4c8298e279d4472b9ccc8b8c9d8ab44e04dc91040e848cd34eb",
+    "rankone_reuse/integration_verification.json": "4560c3a5424043ef469db04adf73c2769aec1077ba30e7674894689cbb770568",
+    "scheduler/research_reuse.py": "4b5d6f3a55688ec4c3eef82d8da12a63bc45c5068a00dea7a101dd2140531c12",
+    "rankone_residual/READY.json": "a72194668677f8b9e6031b6bf8436800d43d4fa92fa4280b4612775eb9d1dc4c",
+    "suffix6_mass_check/run.py": "1af63c224b66e60a49b2d4c1f3798d9ee5d80c15fbb3154654c0418a661d306d",
+    "suffix6_mass_check/count.cpp": "14e4c299109ed3669fb1ad2292cfe3357698adc384f7dcb35a476a9e49c0af23",
+    "suffix6_mass_check/count": "8a99f50ba6fa72a12483a33f4f303579d7ff4daa250bf643b1421378b17ec43f",
+    "suffix6_mass_check/PROOF.md": "21a808222bf19e27ae5cfb1105c76ec554bcb4b772a849326286e08ce6507600",
+    "suffix6_mass_check/verification.json": "1754e76580056b5586ff2fdf6d8314485ceb04d2e7d4cfc2c92e0bfa4a140de6"
+  },
+  "validation": {
+    "engine_complete_pairs": 4,
+    "integration_complete_chunks": 8,
+    "rejected_corruptions": 9,
+    "new_producer_source_and_paired_target": true,
+    "classification_C6_pointwise_mass": true
+  },
+  "scope": "Exact stream reuse only; target and global residual coverage remain open until strict aggregation."
+}

@@ -1,0 +1,121 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "parameters": [
+        8,
+        2,
+        3
+      ],
+      "context": 0,
+      "plain": 84,
+      "joint_pruned": 7,
+      "joint_orbits": 3,
+      "eligible": 11,
+      "first_orbits": 3
+    },
+    {
+      "parameters": [
+        7,
+        1,
+        3
+      ],
+      "context": 0,
+      "plain": 360,
+      "joint_pruned": 34,
+      "joint_orbits": 5,
+      "eligible": 10,
+      "first_orbits": 2
+    },
+    {
+      "parameters": [
+        8,
+        2,
+        3
+      ],
+      "context": 0,
+      "plain": 8,
+      "joint_pruned": 3,
+      "joint_orbits": 3,
+      "eligible": 4,
+      "first_orbits": 3
+    },
+    {
+      "parameters": [
+        8,
+        2,
+        3
+      ],
+      "context": 1,
+      "plain": 8,
+      "joint_pruned": 2,
+      "joint_orbits": 2,
+      "eligible": 2,
+      "first_orbits": 1
+    },
+    {
+      "parameters": [
+        8,
+        2,
+        3
+      ],
+      "context": 2,
+      "plain": 8,
+      "joint_pruned": 3,
+      "joint_orbits": 3,
+      "eligible": 4,
+      "first_orbits": 3
+    },
+    {
+      "parameters": [
+        8,
+        2,
+        3
+      ],
+      "context": 3,
+      "plain": 4,
+      "joint_pruned": 1,
+      "joint_orbits": 1,
+      "eligible": 2,
+      "first_orbits": 1
+    },
+    {
+      "parameters": [
+        8,
+        2,
+        3
+      ],
+      "context": 4,
+      "plain": 8,
+      "joint_pruned": 2,
+      "joint_orbits": 2,
+      "eligible": 2,
+      "first_orbits": 1
+    },
+    {
+      "parameters": [
+        8,
+        2,
+        3
+      ],
+      "context": 5,
+      "plain": 4,
+      "joint_pruned": 1,
+      "joint_orbits": 1,
+      "eligible": 2,
+      "first_orbits": 1
+    }
+  ],
+  "seconds": 0.11342087499997433,
+  "scope": "Complete small-tree combined group-orbit coverage, no target exclusions",
+  "hashes": {
+    "fixed_kernel/verify_joint.py": "a7a52d854549d1ff5d4e01a8749b99ccdc9e914da3a01663e22acd7b9589dabc",
+    "fixed_kernel/symmetry.py": "616e8ed3349304b5e949642bc3471f1734d87b02806776a93acc28a86936f66e",
+    "fixed_kernel/common.py": "ba5dc5351fcab138c2b1e84f7f0a6b918c34e95384f694e533c672c281c210df",
+    "fixed_kernel/verify_generic.py": "bce9879d62df0d5656d2db77cd2c14d563d93f36f349eebe54c40645615694ab",
+    "fixed_kernel/z_enum_fixed.c": "3a81bf4a8eb212fa0dab80deeaaaff1eb3a013989464ab018c90dca95894a119",
+    "fixed_kernel/z_enum_fixed": "08095d5f830addf7f3dd2780e2e0cdaa3d455564ea5ace7b1e4fb79b4e93830c",
+    "m8r1/suffix_symmetries.py": "6b6f53f038fae2ffa5f71b77ebccd27fb204c8cc4ff7a9aa729b919de8b0d9d4",
+    "gauge_rankone_h5/common.py": "6d343b0a51fa9ccfb33513b53990378681eb8fd3868f40bc55994257f3790cec"
+  }
+}

@@ -1,0 +1,893 @@
+{
+  "status": "PASS",
+  "scope": "Complete matched extension problems: full-map baseline versus exact pruning.\n\nThis measures small, fully exhausted instances of the paper's general model.\nIt does not extrapolate their speedups to the 16/17-qubit proof searches.\n",
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "repeats": 9,
+  "cases": [
+    {
+      "name": "five_qubits_d2",
+      "parameters": {
+        "n": 5,
+        "k": 1,
+        "target_distance": 2,
+        "local_sites": 4,
+        "R": [
+          240,
+          15
+        ],
+        "C": [],
+        "domain_dimension": 4,
+        "syndrome_dimension": 2
+      },
+      "all_possible_maps": 256,
+      "prefix_cost_histogram": {
+        "0": 1,
+        "2": 9,
+        "3": 6
+      },
+      "variants": [
+        {
+          "variant": "full_map_baseline",
+          "seconds": 0.0012577499728649855,
+          "nodes": 256,
+          "complete_maps_tested": 256,
+          "solutions": 120,
+          "solution_sha256": "ceb38896c90926e72f646764c3f2aee638bfb382b679f1474963af8a50c65b75",
+          "seconds_repetitions": [
+            0.0012570839608088136,
+            0.0012291669845581055,
+            0.001223333994857967,
+            0.0012717499630525708,
+            0.0013397920411080122,
+            0.0013174579944461584,
+            0.0012305419659242034,
+            0.0012309170560911298,
+            0.0012577499728649855
+          ],
+          "median_seconds": 0.0012570839608088136
+        },
+        {
+          "variant": "kernel_only",
+          "seconds": 0.0014507920714095235,
+          "nodes": 341,
+          "complete_maps_tested": 256,
+          "solutions": 120,
+          "solution_sha256": "ceb38896c90926e72f646764c3f2aee638bfb382b679f1474963af8a50c65b75",
+          "seconds_repetitions": [
+            0.0015712499152868986,
+            0.0015528330113738775,
+            0.001562291057780385,
+            0.0015848330222070217,
+            0.0015654999297112226,
+            0.0015553750563412905,
+            0.0015869169728830457,
+            0.0014825420221313834,
+            0.0014507920714095235
+          ],
+          "median_seconds": 0.001562291057780385
+        },
+        {
+          "variant": "kernel_and_distance",
+          "seconds": 0.0017870839219540358,
+          "nodes": 341,
+          "complete_maps_tested": 256,
+          "solutions": 120,
+          "solution_sha256": "ceb38896c90926e72f646764c3f2aee638bfb382b679f1474963af8a50c65b75",
+          "seconds_repetitions": [
+            0.0016252499772235751,
+            0.0016670000040903687,
+            0.0017574590165168047,
+            0.0017218329012393951,
+            0.001689624972641468,
+            0.0017111659981310368,
+            0.0017039160011336207,
+            0.0017522081034258008,
+            0.0017870839219540358
+          ],
+          "median_seconds": 0.0017111659981310368
+        },
+        {
+          "variant": "all_structural_tests",
+          "seconds": 0.0014171670190989971,
+          "nodes": 200,
+          "complete_maps_tested": 120,
+          "partial_Gram_rank_rejections": 1,
+          "remaining_Gram_rank_rejections": 120,
+          "solutions": 120,
+          "solution_sha256": "ceb38896c90926e72f646764c3f2aee638bfb382b679f1474963af8a50c65b75",
+          "seconds_repetitions": [
+            0.0013618329539895058,
+            0.0014177500270307064,
+            0.0014294590801000595,
+            0.0014151249779388309,
+            0.0014986669411882758,
+            0.0014242089819163084,
+            0.0014172920491546392,
+            0.0014165421016514301,
+            0.0014171670190989971
+          ],
+          "median_seconds": 0.0014172920491546392
+        }
+      ],
+      "accepted_maps_checked_as_physical_Pauli_spaces": 120,
+      "all_variants_identical_solution_sets": true
+    },
+    {
+      "name": "five_qubits_d3",
+      "parameters": {
+        "n": 5,
+        "k": 1,
+        "target_distance": 3,
+        "local_sites": 4,
+        "R": [
+          240,
+          15
+        ],
+        "C": [],
+        "domain_dimension": 4,
+        "syndrome_dimension": 2
+      },
+      "all_possible_maps": 256,
+      "prefix_cost_histogram": {
+        "0": 1,
+        "2": 9,
+        "3": 6
+      },
+      "variants": [
+        {
+          "variant": "full_map_baseline",
+          "seconds": 0.0006034999387338758,
+          "nodes": 256,
+          "complete_maps_tested": 256,
+          "solutions": 12,
+          "solution_sha256": "55aef2a300978542352ca4a4e1050accc2523d9982e1e82e6405f27ebd492e4c",
+          "seconds_repetitions": [
+            0.0006087920628488064,
+            0.0005660000024363399,
+            0.0005666249198839068,
+            0.0005754160229116678,
+            0.0006003329763188958,
+            0.0006017499836161733,
+            0.000601625069975853,
+            0.0006028750212863088,
+            0.0006034999387338758
+          ],
+          "median_seconds": 0.000601625069975853
+        },
+        {
+          "variant": "kernel_only",
+          "seconds": 0.00011295895092189312,
+          "nodes": 34,
+          "complete_maps_tested": 12,
+          "kernel_rejections": 55,
+          "solutions": 12,
+          "solution_sha256": "55aef2a300978542352ca4a4e1050accc2523d9982e1e82e6405f27ebd492e4c",
+          "seconds_repetitions": [
+            0.00013062497600913048,
+            0.00011579098645597696,
+            0.00011408294085413218,
+            0.00011366698890924454,
+            0.00011499994434416294,
+            0.00011370808351784945,
+            0.0001141249667853117,
+            0.00011545803863555193,
+            0.00011295895092189312
+          ],
+          "median_seconds": 0.0001141249667853117
+        },
+        {
+          "variant": "kernel_and_distance",
+          "seconds": 0.00012429198250174522,
+          "nodes": 34,
+          "complete_maps_tested": 12,
+          "kernel_rejections": 55,
+          "solutions": 12,
+          "solution_sha256": "55aef2a300978542352ca4a4e1050accc2523d9982e1e82e6405f27ebd492e4c",
+          "seconds_repetitions": [
+            0.0001289999345317483,
+            0.0001252919901162386,
+            0.00012474996037781239,
+            0.0001252919901162386,
+            0.00012458302080631256,
+            0.00012429198250174522,
+            0.0001241669524461031,
+            0.0001242499565705657,
+            0.00012429198250174522
+          ],
+          "median_seconds": 0.00012458302080631256
+        },
+        {
+          "variant": "all_structural_tests",
+          "seconds": 0.00016583292745053768,
+          "nodes": 34,
+          "complete_maps_tested": 12,
+          "kernel_rejections": 55,
+          "solutions": 12,
+          "solution_sha256": "55aef2a300978542352ca4a4e1050accc2523d9982e1e82e6405f27ebd492e4c",
+          "seconds_repetitions": [
+            0.0001836669398471713,
+            0.0001676660031080246,
+            0.00016620801761746407,
+            0.0001664579613134265,
+            0.00016550009604543447,
+            0.00016641593538224697,
+            0.00016545900143682957,
+            0.00016579206567257643,
+            0.00016583292745053768
+          ],
+          "median_seconds": 0.00016620801761746407
+        }
+      ],
+      "accepted_maps_checked_as_physical_Pauli_spaces": 12,
+      "all_variants_identical_solution_sets": true
+    },
+    {
+      "name": "five_qubits_d4_impossible",
+      "parameters": {
+        "n": 5,
+        "k": 1,
+        "target_distance": 4,
+        "local_sites": 4,
+        "R": [
+          240,
+          15
+        ],
+        "C": [],
+        "domain_dimension": 4,
+        "syndrome_dimension": 2
+      },
+      "all_possible_maps": 256,
+      "prefix_cost_histogram": {
+        "0": 1,
+        "2": 9,
+        "3": 6
+      },
+      "variants": [
+        {
+          "variant": "full_map_baseline",
+          "seconds": 0.0003915000706911087,
+          "nodes": 256,
+          "complete_maps_tested": 256,
+          "solutions": 0,
+          "solution_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "seconds_repetitions": [
+            0.0003977499436587095,
+            0.00039045908488333225,
+            0.00038925011176615953,
+            0.00038833299186080694,
+            0.0003898750292137265,
+            0.00039075000677257776,
+            0.0003909169463440776,
+            0.00039312499575316906,
+            0.0003915000706911087
+          ],
+          "median_seconds": 0.00039075000677257776
+        },
+        {
+          "variant": "kernel_only",
+          "seconds": 2.037500962615013e-05,
+          "nodes": 10,
+          "complete_maps_tested": 0,
+          "kernel_rejections": 31,
+          "solutions": 0,
+          "solution_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "seconds_repetitions": [
+            3.3125048503279686e-05,
+            2.1832995116710663e-05,
+            2.0666979253292084e-05,
+            2.0333915017545223e-05,
+            2.01669754460454e-05,
+            2.050003968179226e-05,
+            2.008303999900818e-05,
+            2.0249979570508003e-05,
+            2.037500962615013e-05
+          ],
+          "median_seconds": 2.037500962615013e-05
+        },
+        {
+          "variant": "kernel_and_distance",
+          "seconds": 3.3329706639051437e-06,
+          "nodes": 1,
+          "complete_maps_tested": 0,
+          "kernel_rejections": 1,
+          "distance_rejections": 3,
+          "solutions": 0,
+          "solution_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "seconds_repetitions": [
+            8.167000487446785e-06,
+            3.374996595084667e-06,
+            3.6660348996520042e-06,
+            3.4580007195472717e-06,
+            3.625056706368923e-06,
+            3.2919924706220627e-06,
+            3.4170225262641907e-06,
+            3.2080570235848427e-06,
+            3.3329706639051437e-06
+          ],
+          "median_seconds": 3.4170225262641907e-06
+        },
+        {
+          "variant": "all_structural_tests",
+          "seconds": 1.2919772416353226e-06,
+          "nodes": 0,
+          "complete_maps_tested": 0,
+          "root_hull_rejections": 1,
+          "solutions": 0,
+          "solution_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "seconds_repetitions": [
+            1.195794902741909e-05,
+            3.0830269679427147e-06,
+            1.625041477382183e-06,
+            1.2920936569571495e-06,
+            1.334003172814846e-06,
+            1.249951310455799e-06,
+            1.1670636013150215e-06,
+            1.208973117172718e-06,
+            1.2919772416353226e-06
+          ],
+          "median_seconds": 1.2920936569571495e-06
+        }
+      ],
+      "accepted_maps_checked_as_physical_Pauli_spaces": 0,
+      "all_variants_identical_solution_sets": true
+    },
+    {
+      "name": "six_qubits_d3",
+      "parameters": {
+        "n": 6,
+        "k": 0,
+        "target_distance": 3,
+        "local_sites": 4,
+        "R": [
+          240,
+          15
+        ],
+        "C": [],
+        "domain_dimension": 4,
+        "syndrome_dimension": 4
+      },
+      "all_possible_maps": 65536,
+      "prefix_cost_histogram": {
+        "0": 1,
+        "2": 9,
+        "3": 6
+      },
+      "variants": [
+        {
+          "variant": "full_map_baseline",
+          "seconds": 0.2785993330180645,
+          "nodes": 65536,
+          "complete_maps_tested": 65536,
+          "solutions": 720,
+          "solution_sha256": "2c3330b6a01335a2dacfe83a75c17788785aab04a6a30b81cf95f2874938e88f",
+          "seconds_repetitions": [
+            0.28188741696067154,
+            0.28119800006970763,
+            0.2815218329196796,
+            0.28114991704933345,
+            0.36691537499427795,
+            0.32843083410989493,
+            0.28739762504119426,
+            0.27391354099381715,
+            0.2785993330180645
+          ],
+          "median_seconds": 0.2815218329196796
+        },
+        {
+          "variant": "kernel_only",
+          "seconds": 0.21799570904113352,
+          "nodes": 38866,
+          "complete_maps_tested": 35700,
+          "kernel_rejections": 11791,
+          "solutions": 720,
+          "solution_sha256": "2c3330b6a01335a2dacfe83a75c17788785aab04a6a30b81cf95f2874938e88f",
+          "seconds_repetitions": [
+            0.21866412507370114,
+            0.21758187492378056,
+            0.2375785409240052,
+            0.2252636250341311,
+            0.22020174993667752,
+            0.2205844579730183,
+            0.22463970899116248,
+            0.22556954098399729,
+            0.21799570904113352
+          ],
+          "median_seconds": 0.2205844579730183
+        },
+        {
+          "variant": "kernel_and_distance",
+          "seconds": 0.24011129094287753,
+          "nodes": 38866,
+          "complete_maps_tested": 35700,
+          "kernel_rejections": 11791,
+          "solutions": 720,
+          "solution_sha256": "2c3330b6a01335a2dacfe83a75c17788785aab04a6a30b81cf95f2874938e88f",
+          "seconds_repetitions": [
+            0.23753554094582796,
+            0.23686383396852762,
+            0.2373302080668509,
+            0.28087637503631413,
+            0.2381717920070514,
+            0.2368526669451967,
+            0.2375378330470994,
+            0.23648162500467151,
+            0.24011129094287753
+          ],
+          "median_seconds": 0.23753554094582796
+        },
+        {
+          "variant": "all_structural_tests",
+          "seconds": 0.03754679101984948,
+          "nodes": 1546,
+          "complete_maps_tested": 720,
+          "kernel_rejections": 3091,
+          "remaining_Gram_rank_rejections": 8460,
+          "partial_Gram_rank_rejections": 120,
+          "solutions": 720,
+          "solution_sha256": "2c3330b6a01335a2dacfe83a75c17788785aab04a6a30b81cf95f2874938e88f",
+          "seconds_repetitions": [
+            0.03853770799469203,
+            0.03787316696252674,
+            0.037804082967340946,
+            0.03764770901761949,
+            0.03746712498832494,
+            0.03800195793155581,
+            0.03743275010492653,
+            0.037607750040479004,
+            0.03754679101984948
+          ],
+          "median_seconds": 0.03764770901761949
+        }
+      ],
+      "accepted_maps_checked_as_physical_Pauli_spaces": 720,
+      "all_variants_identical_solution_sets": true
+    },
+    {
+      "name": "six_qubits_d4",
+      "parameters": {
+        "n": 6,
+        "k": 0,
+        "target_distance": 4,
+        "local_sites": 4,
+        "R": [
+          240,
+          15
+        ],
+        "C": [],
+        "domain_dimension": 4,
+        "syndrome_dimension": 4
+      },
+      "all_possible_maps": 65536,
+      "prefix_cost_histogram": {
+        "0": 1,
+        "2": 9,
+        "3": 6
+      },
+      "variants": [
+        {
+          "variant": "full_map_baseline",
+          "seconds": 0.13319937500637025,
+          "nodes": 65536,
+          "complete_maps_tested": 65536,
+          "solutions": 72,
+          "solution_sha256": "c6016a5f30f3ae0b2b83cfa4a8b23c1e11d5d7a82c9672fea9a1e75d61006684",
+          "seconds_repetitions": [
+            0.1328457499621436,
+            0.14000474999193102,
+            0.13387270900420845,
+            0.13364520797040313,
+            0.13384454103652388,
+            0.13397804193664342,
+            0.13917774998117238,
+            0.13319795799907297,
+            0.13319937500637025
+          ],
+          "median_seconds": 0.13384454103652388
+        },
+        {
+          "variant": "kernel_only",
+          "seconds": 0.0675307500641793,
+          "nodes": 22906,
+          "complete_maps_tested": 20160,
+          "kernel_rejections": 21031,
+          "solutions": 72,
+          "solution_sha256": "c6016a5f30f3ae0b2b83cfa4a8b23c1e11d5d7a82c9672fea9a1e75d61006684",
+          "seconds_repetitions": [
+            0.06824012496508658,
+            0.06788470793981105,
+            0.06781912501901388,
+            0.06782816699706018,
+            0.06791912496555597,
+            0.06769458390772343,
+            0.06768245797138661,
+            0.06762670900207013,
+            0.0675307500641793
+          ],
+          "median_seconds": 0.06781912501901388
+        },
+        {
+          "variant": "kernel_and_distance",
+          "seconds": 0.0016912920400500298,
+          "nodes": 190,
+          "complete_maps_tested": 72,
+          "kernel_rejections": 739,
+          "distance_rejections": 960,
+          "solutions": 72,
+          "solution_sha256": "c6016a5f30f3ae0b2b83cfa4a8b23c1e11d5d7a82c9672fea9a1e75d61006684",
+          "seconds_repetitions": [
+            0.0017032499890774488,
+            0.0016948330448940396,
+            0.0016951250145211816,
+            0.0016995840705931187,
+            0.001698541920632124,
+            0.0017015829216688871,
+            0.001699417014606297,
+            0.001691124984063208,
+            0.0016912920400500298
+          ],
+          "median_seconds": 0.001698541920632124
+        },
+        {
+          "variant": "all_structural_tests",
+          "seconds": 0.002096832962706685,
+          "nodes": 190,
+          "complete_maps_tested": 72,
+          "kernel_rejections": 739,
+          "distance_rejections": 960,
+          "solutions": 72,
+          "solution_sha256": "c6016a5f30f3ae0b2b83cfa4a8b23c1e11d5d7a82c9672fea9a1e75d61006684",
+          "seconds_repetitions": [
+            0.0021392080234363675,
+            0.00209445902146399,
+            0.0020931249018758535,
+            0.002080957987345755,
+            0.002088624984025955,
+            0.002091167028993368,
+            0.0020880409283563495,
+            0.002094542025588453,
+            0.002096832962706685
+          ],
+          "median_seconds": 0.0020931249018758535
+        }
+      ],
+      "accepted_maps_checked_as_physical_Pauli_spaces": 72,
+      "all_variants_identical_solution_sets": true
+    },
+    {
+      "name": "six_qubits_d5_impossible",
+      "parameters": {
+        "n": 6,
+        "k": 0,
+        "target_distance": 5,
+        "local_sites": 4,
+        "R": [
+          240,
+          15
+        ],
+        "C": [],
+        "domain_dimension": 4,
+        "syndrome_dimension": 4
+      },
+      "all_possible_maps": 65536,
+      "prefix_cost_histogram": {
+        "0": 1,
+        "2": 9,
+        "3": 6
+      },
+      "variants": [
+        {
+          "variant": "full_map_baseline",
+          "seconds": 0.11131095804739743,
+          "nodes": 65536,
+          "complete_maps_tested": 65536,
+          "solutions": 0,
+          "solution_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "seconds_repetitions": [
+            0.11077012505847961,
+            0.11053029203321785,
+            0.1107774160336703,
+            0.11167341691907495,
+            0.11103945900686085,
+            0.11085000005550683,
+            0.11096662504132837,
+            0.11179195891600102,
+            0.11131095804739743
+          ],
+          "median_seconds": 0.11096662504132837
+        },
+        {
+          "variant": "kernel_only",
+          "seconds": 0.06191116606350988,
+          "nodes": 22906,
+          "complete_maps_tested": 20160,
+          "kernel_rejections": 21031,
+          "solutions": 0,
+          "solution_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "seconds_repetitions": [
+            0.06090100004803389,
+            0.06073416699655354,
+            0.06110654107760638,
+            0.060884291073307395,
+            0.06080191698856652,
+            0.0615835830103606,
+            0.062350041000172496,
+            0.06103650003205985,
+            0.06191116606350988
+          ],
+          "median_seconds": 0.06103650003205985
+        },
+        {
+          "variant": "kernel_and_distance",
+          "seconds": 9.666080586612225e-06,
+          "nodes": 1,
+          "complete_maps_tested": 0,
+          "kernel_rejections": 1,
+          "distance_rejections": 15,
+          "solutions": 0,
+          "solution_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "seconds_repetitions": [
+            1.2791948392987251e-05,
+            1.008401159197092e-05,
+            9.917072020471096e-06,
+            9.624985978007317e-06,
+            9.582960046827793e-06,
+            9.582960046827793e-06,
+            9.458977729082108e-06,
+            9.584007784724236e-06,
+            9.666080586612225e-06
+          ],
+          "median_seconds": 9.624985978007317e-06
+        },
+        {
+          "variant": "all_structural_tests",
+          "seconds": 5.291076377034187e-06,
+          "nodes": 0,
+          "complete_maps_tested": 0,
+          "root_capacity_rejections": 1,
+          "solutions": 0,
+          "solution_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "seconds_repetitions": [
+            1.3542012311518192e-05,
+            6.458023563027382e-06,
+            5.583977326750755e-06,
+            5.458947271108627e-06,
+            5.500041879713535e-06,
+            5.250098183751106e-06,
+            5.334033630788326e-06,
+            5.332985892891884e-06,
+            5.291076377034187e-06
+          ],
+          "median_seconds": 5.458947271108627e-06
+        }
+      ],
+      "accepted_maps_checked_as_physical_Pauli_spaces": 0,
+      "all_variants_identical_solution_sets": true
+    },
+    {
+      "name": "seven_qubits_d3",
+      "parameters": {
+        "n": 7,
+        "k": 1,
+        "target_distance": 3,
+        "local_sites": 4,
+        "R": [
+          240,
+          15
+        ],
+        "C": [
+          56,
+          7
+        ],
+        "domain_dimension": 4,
+        "syndrome_dimension": 4
+      },
+      "all_possible_maps": 65536,
+      "prefix_cost_histogram": {
+        "0": 1,
+        "2": 9,
+        "3": 6
+      },
+      "variants": [
+        {
+          "variant": "full_map_baseline",
+          "seconds": 0.27294145803898573,
+          "nodes": 65536,
+          "complete_maps_tested": 65536,
+          "solutions": 720,
+          "solution_sha256": "38d8b5b21072086cb382dca35cf905965c5e6a1fc2080b57ca6aa58e254c1deb",
+          "seconds_repetitions": [
+            0.2726503750309348,
+            0.2715341669972986,
+            0.2739239999791607,
+            0.2753692918922752,
+            0.2753787499386817,
+            0.27450083300936967,
+            0.2739287499571219,
+            0.27449812495615333,
+            0.27294145803898573
+          ],
+          "median_seconds": 0.2739287499571219
+        },
+        {
+          "variant": "kernel_only",
+          "seconds": 0.2255714579951018,
+          "nodes": 38866,
+          "complete_maps_tested": 35700,
+          "kernel_rejections": 11791,
+          "solutions": 720,
+          "solution_sha256": "38d8b5b21072086cb382dca35cf905965c5e6a1fc2080b57ca6aa58e254c1deb",
+          "seconds_repetitions": [
+            0.21723712503444403,
+            0.21716991707216948,
+            0.21774095809087157,
+            0.21736191702075303,
+            0.21629937493707985,
+            0.21797200001310557,
+            0.21940833295229822,
+            0.21882816695142537,
+            0.2255714579951018
+          ],
+          "median_seconds": 0.21774095809087157
+        },
+        {
+          "variant": "kernel_and_distance",
+          "seconds": 0.23772820900194347,
+          "nodes": 38866,
+          "complete_maps_tested": 35700,
+          "kernel_rejections": 11791,
+          "solutions": 720,
+          "solution_sha256": "38d8b5b21072086cb382dca35cf905965c5e6a1fc2080b57ca6aa58e254c1deb",
+          "seconds_repetitions": [
+            0.24067216599360108,
+            0.24399808305315673,
+            0.24248870799783617,
+            0.24043191608507186,
+            0.23972958303056657,
+            0.24030891701113433,
+            0.23962137498892844,
+            0.23824950004927814,
+            0.23772820900194347
+          ],
+          "median_seconds": 0.24030891701113433
+        },
+        {
+          "variant": "all_structural_tests",
+          "seconds": 0.03808233398012817,
+          "nodes": 1546,
+          "complete_maps_tested": 720,
+          "kernel_rejections": 3091,
+          "remaining_Gram_rank_rejections": 8460,
+          "partial_Gram_rank_rejections": 120,
+          "solutions": 720,
+          "solution_sha256": "38d8b5b21072086cb382dca35cf905965c5e6a1fc2080b57ca6aa58e254c1deb",
+          "seconds_repetitions": [
+            0.03807241702452302,
+            0.03800916695035994,
+            0.03802187507972121,
+            0.0383078339509666,
+            0.038038708036765456,
+            0.0372997090453282,
+            0.03766629204619676,
+            0.03805566707160324,
+            0.03808233398012817
+          ],
+          "median_seconds": 0.038038708036765456
+        }
+      ],
+      "accepted_maps_checked_as_physical_Pauli_spaces": 720,
+      "all_variants_identical_solution_sets": true
+    },
+    {
+      "name": "six_qubits_one_suffix_generator_d2",
+      "parameters": {
+        "n": 6,
+        "k": 1,
+        "target_distance": 2,
+        "local_sites": 4,
+        "R": [
+          240,
+          15
+        ],
+        "C": [
+          12
+        ],
+        "domain_dimension": 4,
+        "syndrome_dimension": 3
+      },
+      "all_possible_maps": 4096,
+      "prefix_cost_histogram": {
+        "0": 1,
+        "2": 9,
+        "3": 6
+      },
+      "variants": [
+        {
+          "variant": "full_map_baseline",
+          "seconds": 0.02073212491814047,
+          "nodes": 4096,
+          "complete_maps_tested": 4096,
+          "solutions": 480,
+          "solution_sha256": "d07882b0ee76a403d609a74d37f84a769409290d032b123ec8e3e47f8ea505bc",
+          "seconds_repetitions": [
+            0.02093820902518928,
+            0.020868291961960495,
+            0.02083816600497812,
+            0.020822999998927116,
+            0.020764874992892146,
+            0.020771874929778278,
+            0.02083012496586889,
+            0.02082249999511987,
+            0.02073212491814047
+          ],
+          "median_seconds": 0.020822999998927116
+        },
+        {
+          "variant": "kernel_only",
+          "seconds": 0.024124333984218538,
+          "nodes": 4681,
+          "complete_maps_tested": 4096,
+          "solutions": 480,
+          "solution_sha256": "d07882b0ee76a403d609a74d37f84a769409290d032b123ec8e3e47f8ea505bc",
+          "seconds_repetitions": [
+            0.023793915985152125,
+            0.02383991703391075,
+            0.023771833046339452,
+            0.023814499960280955,
+            0.02398579102009535,
+            0.023861874942667782,
+            0.023968709050677717,
+            0.024087000056169927,
+            0.024124333984218538
+          ],
+          "median_seconds": 0.023861874942667782
+        },
+        {
+          "variant": "kernel_and_distance",
+          "seconds": 0.02611941599752754,
+          "nodes": 4681,
+          "complete_maps_tested": 4096,
+          "solutions": 480,
+          "solution_sha256": "d07882b0ee76a403d609a74d37f84a769409290d032b123ec8e3e47f8ea505bc",
+          "seconds_repetitions": [
+            0.026399583090096712,
+            0.026125291944481432,
+            0.02635362499859184,
+            0.026604666956700385,
+            0.027063083020038903,
+            0.026685249991714954,
+            0.0265859579667449,
+            0.026436374988406897,
+            0.02611941599752754
+          ],
+          "median_seconds": 0.026436374988406897
+        },
+        {
+          "variant": "all_structural_tests",
+          "seconds": 0.012817749986425042,
+          "nodes": 948,
+          "complete_maps_tested": 480,
+          "partial_Gram_rank_rejections": 13,
+          "remaining_Gram_rank_rejections": 2784,
+          "solutions": 480,
+          "solution_sha256": "d07882b0ee76a403d609a74d37f84a769409290d032b123ec8e3e47f8ea505bc",
+          "seconds_repetitions": [
+            0.012976625002920628,
+            0.012962791020981967,
+            0.012852999963797629,
+            0.013009415939450264,
+            0.012795999995432794,
+            0.01281695906072855,
+            0.012744667008519173,
+            0.012772499932907522,
+            0.012817749986425042
+          ],
+          "median_seconds": 0.012817749986425042
+        }
+      ],
+      "accepted_maps_checked_as_physical_Pauli_spaces": 480,
+      "all_variants_identical_solution_sets": true
+    }
+  ],
+  "source_sha256": "83daeb78f118cce57cd42fa124d57ac88a7de7132765338aed67f6370c4b2b8b"
+}

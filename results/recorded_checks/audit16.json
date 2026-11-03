@@ -1,0 +1,287 @@
+{
+  "scope": "Independent evaluation audit; imports no project proof modules.\n\nChecks all saved suffix codebooks and terminal-log coverage. Reconstructs coset\ndistances by BFS on the quotient Cayley graph, then builds physical prefix\nconstraints directly for a bounded fresh replay of the compiled searches.\nThis does not reclassify the suffix cells or rerun every long search.\n",
+  "cells": {
+    "6": {
+      "classes": 37,
+      "all_dimensions_and_distances_pass": true,
+      "primary_logged_records": 37,
+      "second_logged_records": 37
+    },
+    "7": {
+      "classes": 2298,
+      "all_dimensions_and_distances_pass": true,
+      "primary_logged_records": 2299,
+      "second_logged_records": 2299
+    },
+    "8": {
+      "classes": 1579,
+      "all_dimensions_and_distances_pass": true,
+      "primary_logged_records": 1580,
+      "second_logged_records": 1579
+    },
+    "9": {
+      "classes": 43,
+      "all_dimensions_and_distances_pass": true,
+      "primary_logged_records": 43,
+      "second_logged_records": 43
+    }
+  },
+  "fresh_searches": [
+    {
+      "m": 6,
+      "class": 0,
+      "status": "NONE nodes=1",
+      "input_sha256": "d5ad39abe35c272e2984977efc1e8e1099b523fd3e64c6bec0ed98fed1d6d01e"
+    },
+    {
+      "m": 6,
+      "class": 1,
+      "status": "NONE nodes=2",
+      "input_sha256": "87380ae95fb549b132055c7ed8e2957e4d1963eeed909758d6b59b493256657f"
+    },
+    {
+      "m": 6,
+      "class": 2,
+      "status": "NONE nodes=1",
+      "input_sha256": "ce537aa98adb0c5f407327503bdc81863e055d853fddf95b4b5389bcbe11c601"
+    },
+    {
+      "m": 6,
+      "class": 3,
+      "status": "NONE nodes=5",
+      "input_sha256": "7f02f0d963b54ff59d2f3d5cf65455949a31d2794193ce69502d3e346b932fa0"
+    },
+    {
+      "m": 6,
+      "class": 4,
+      "status": "NONE nodes=1",
+      "input_sha256": "0312928eb5beeaa9f675daefda7e1c00415eab997d10eb6fadfeea200b083ec3"
+    },
+    {
+      "m": 6,
+      "class": 5,
+      "status": "NONE nodes=1",
+      "input_sha256": "dfff3baddd042794fd4d14c7d0dec34a88a0c6f46fe171223030b53881d1a19b"
+    },
+    {
+      "m": 6,
+      "class": 6,
+      "status": "NONE nodes=1",
+      "input_sha256": "3672d41a559d3e57e6190dbcec490005dc359fb026595bde9a8c7822815cad67"
+    },
+    {
+      "m": 6,
+      "class": 7,
+      "status": "NONE nodes=1",
+      "input_sha256": "0fb5e93101c8f5d2d9c8de25ed235f3e4790c88b937358252f484611f394cb4a"
+    },
+    {
+      "m": 6,
+      "class": 8,
+      "status": "NONE nodes=1",
+      "input_sha256": "d848fe9120db6b689a169516b8ed679852312b5018029b38b1e9bb62006baedc"
+    },
+    {
+      "m": 6,
+      "class": 9,
+      "status": "NONE nodes=10",
+      "input_sha256": "882eaf312347858d9c6ccaeccc7c3555f946c5fb07d0f3110dd54116c16777db"
+    },
+    {
+      "m": 6,
+      "class": 10,
+      "status": "NONE nodes=1",
+      "input_sha256": "aef15dbbbeefb8e0cfc921ac3d89fc25a941ad1144d75ce95660585966b32aea"
+    },
+    {
+      "m": 6,
+      "class": 11,
+      "status": "NONE nodes=5",
+      "input_sha256": "0d7a01acfdc458e9c7f10ce369e2063634bc64c724db30b7fb4e0967d014e7df"
+    },
+    {
+      "m": 6,
+      "class": 12,
+      "status": "NONE nodes=1",
+      "input_sha256": "ac796b1b208fc6cd10a648b310ba261053f3eb194c6b625cd3dedb2dafaef5ee"
+    },
+    {
+      "m": 6,
+      "class": 13,
+      "status": "NONE nodes=1",
+      "input_sha256": "f51b566149a97fdfcfa93594de0bcc226de9b6dc2fa1b00c812ba714fca2fb20"
+    },
+    {
+      "m": 6,
+      "class": 14,
+      "status": "NONE nodes=1",
+      "input_sha256": "b24e2dbec59519ade1ac73e3fdd15b1633f92825025008c0f30acf4a910c8bb6"
+    },
+    {
+      "m": 6,
+      "class": 15,
+      "status": "NONE nodes=1",
+      "input_sha256": "c4361a0d9bea7257e10ddc0344fe06898e97663723c38500757c0a6790390af9"
+    },
+    {
+      "m": 6,
+      "class": 16,
+      "status": "NONE nodes=7",
+      "input_sha256": "adc0b04ba06f7290c44dbfa49dbdcd892f920ca87aaa899630f7eb6a3c0959b0"
+    },
+    {
+      "m": 6,
+      "class": 17,
+      "status": "NONE nodes=1",
+      "input_sha256": "2bcd556b9ca2a36cc5c3fef8e9d9766ce43c32b5e9a18823b001d2e249ec4573"
+    },
+    {
+      "m": 6,
+      "class": 18,
+      "status": "NONE nodes=1",
+      "input_sha256": "0a9f1cde43841a6e23d07d47414bc3e5718ca4a3b549535ecc6a87f971b8bb39"
+    },
+    {
+      "m": 6,
+      "class": 19,
+      "status": "NONE nodes=2",
+      "input_sha256": "c3f7d9c0cf2e60d91145c3d469f68efe0dcbd8206e2dd2242e231b95392dec3b"
+    },
+    {
+      "m": 6,
+      "class": 20,
+      "status": "NONE nodes=4",
+      "input_sha256": "b6c99c2b14cf6d464849173b87bede75a67948e8ff667e81c10eaa6e3c1ed209"
+    },
+    {
+      "m": 6,
+      "class": 21,
+      "status": "NONE nodes=1",
+      "input_sha256": "e9a8471e01a599a92b57079df3962cb64fa7cf28a569c5c5e6ca231c64e01b91"
+    },
+    {
+      "m": 6,
+      "class": 22,
+      "status": "NONE nodes=1",
+      "input_sha256": "fef1233fcb6362ad495510a6cd3e6667c7b218194468e1fb7f4518ecf53fa0bd"
+    },
+    {
+      "m": 6,
+      "class": 23,
+      "status": "NONE nodes=10",
+      "input_sha256": "2ef30fd5bbf94d7ae6aa7c423a94f658b6cdd62d0148856fa6ea0c3cb6865e83"
+    },
+    {
+      "m": 6,
+      "class": 24,
+      "status": "NONE nodes=2",
+      "input_sha256": "6f1086d1c061a5eb7cebc3d3d425a1253d7bc2a323c074d6beba97e409e68465"
+    },
+    {
+      "m": 6,
+      "class": 25,
+      "status": "NONE nodes=2",
+      "input_sha256": "83980a262e3ffef2b173c5de7cf3fc9b9151a7d7131d942b50a8fd99f9f0f742"
+    },
+    {
+      "m": 6,
+      "class": 26,
+      "status": "NONE nodes=2",
+      "input_sha256": "0ee1974118121cc3d2c22c638e62016777b50e6c03b4844399e0a1bd4330e7f9"
+    },
+    {
+      "m": 6,
+      "class": 27,
+      "status": "NONE nodes=1",
+      "input_sha256": "b2143c8d83c2b74a0e49c14e84f95977d54f445b279644fbcecbac42feb436a1"
+    },
+    {
+      "m": 6,
+      "class": 28,
+      "status": "NONE nodes=5",
+      "input_sha256": "9d9023ca1ae055fce4600829fc2bce9df186d156d5e04639ac8ac198c10a7ffd"
+    },
+    {
+      "m": 6,
+      "class": 29,
+      "status": "NONE nodes=2",
+      "input_sha256": "4cae17efaa459d16e5c4b7d5b47782a57fbdb9acea97bdfd2c8caaa40bea2d40"
+    },
+    {
+      "m": 6,
+      "class": 30,
+      "status": "NONE nodes=1",
+      "input_sha256": "e98125702bb7d53d1c7db33efadded778141c3bd8c483af05c7d7ee7eff2bb9b"
+    },
+    {
+      "m": 6,
+      "class": 31,
+      "status": "NONE nodes=10",
+      "input_sha256": "6709abdb964c40540eb694a6da5c2571c34d086c3faf667f9a8c89b16de68a17"
+    },
+    {
+      "m": 6,
+      "class": 32,
+      "status": "NONE nodes=1",
+      "input_sha256": "3e0c623dd1f069c0e23be8cec484925717c60e5381808f2b31ef68bbfac6678d"
+    },
+    {
+      "m": 6,
+      "class": 33,
+      "status": "NONE nodes=5",
+      "input_sha256": "cc563b447925167e4ca58a093f848b92702eeecfef8d5403d46e891c14988f47"
+    },
+    {
+      "m": 6,
+      "class": 34,
+      "status": "NONE nodes=4",
+      "input_sha256": "c19c7e72f6d258acac618a1660def9328625760d7aa303b12b611485b9fcb906"
+    },
+    {
+      "m": 6,
+      "class": 35,
+      "status": "NONE nodes=2",
+      "input_sha256": "e6a84f11951e0b2e6ec7a09698b09e4c98a7591e3cb29b15964f85a2fbb6f307"
+    },
+    {
+      "m": 6,
+      "class": 36,
+      "status": "NONE nodes=5",
+      "input_sha256": "b437a51d60ae9f0d6d57e4da7019216437ad090442eb045f53be64168255715a"
+    },
+    {
+      "m": 7,
+      "class": 0,
+      "status": "NONE nodes=169",
+      "input_sha256": "8578a88b1cb467d4d46bb5d38efb60c698e215ff6d55d1d247fe06e195ce1501"
+    },
+    {
+      "m": 7,
+      "class": 979,
+      "status": "NONE nodes=168353",
+      "input_sha256": "1dd870908ccbfe5327a7f26ad2ccb41a2c57cc3e1ae31378d9ee3a9c7626e6c4"
+    },
+    {
+      "m": 7,
+      "class": 2297,
+      "status": "NONE nodes=688",
+      "input_sha256": "f4c031dd71a00b7a1cd7f650a5877d42d2615890d2f0c69962976f2afdbabd5e"
+    },
+    {
+      "m": 8,
+      "class": 0,
+      "status": "NONE nodes=8643178",
+      "input_sha256": "6a466e51d8e0a85ae98a81e554185d579aa6a8d1fb454042acc3991f09474822"
+    },
+    {
+      "m": 8,
+      "class": 1578,
+      "status": "NONE nodes=1139466",
+      "input_sha256": "0e0a447b66110c1833559eb0a41e6231c40450133a8d40d4e1f21f3336249c10"
+    }
+  ],
+  "primary_terminal_log_coverage": 3957,
+  "second_terminal_log_coverage": 3957,
+  "elapsed_seconds": 15.314811791991815,
+  "status": "PASS"
+}

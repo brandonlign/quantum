@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "parameters": [
+        8,
+        0,
+        3
+      ],
+      "q": 0,
+      "prefix_group": 6,
+      "suffix_slice_group": 36,
+      "eligible": 15,
+      "first_orbits": 2,
+      "physical_dual_minimum": 4,
+      "known_positive_transported": true
+    },
+    {
+      "parameters": [
+        9,
+        1,
+        3
+      ],
+      "q": 1,
+      "prefix_group": 2,
+      "suffix_slice_group": 6,
+      "eligible": 4,
+      "first_orbits": 2,
+      "physical_dual_minimum": 3,
+      "known_positive_transported": true
+    },
+    {
+      "parameters": [
+        12,
+        2,
+        3
+      ],
+      "q": 2,
+      "prefix_group": 2,
+      "suffix_slice_group": 2,
+      "eligible": 16,
+      "first_orbits": 10,
+      "physical_dual_minimum": 3,
+      "known_positive_transported": true
+    },
+    {
+      "parameters": [
+        17,
+        3,
+        3
+      ],
+      "q": 3,
+      "prefix_group": 8,
+      "suffix_slice_group": 3,
+      "eligible": 64,
+      "first_orbits": 24,
+      "physical_dual_minimum": 3,
+      "known_positive_transported": true
+    }
+  ],
+  "seconds": 0.5619275830003971,
+  "hashes": {
+    "rank2_kernel/verify_symmetry.py": "21f3a1c53b8fcad294dbecbda89a371341b55b23d3d95877635ec34c4c507924",
+    "rank2_kernel/common.py": "3527959be00624482b5582f1c6809d05198d583496a731159119962fbc33bf49",
+    "rank2_kernel/symmetry.py": "b1f15ff2159cdfbff282983a48b1bb65f612c102b6373c09bb25574dca8052ae",
+    "rank2_kernel/solve.py": "f092806765d4a23e42bc1c294bb22eb14e3ae795767ef07ba9b67809c1993b31",
+    "rank2_kernel/verify_z.py": "fec2efd734beae275a006faf656eae6e1f1a3c3796c61ac6e18b66c19f55858c",
+    "rank2_kernel/controls.json": "108c96ec80704a347ea1d605c8df569712aa14addfabdc89292cf0d0c0eb4464",
+    "rank2_kernel_backend/z_enum_cost.c": "464820c4b18733a94404fa1de37cd09e4f9014801581768426658aa27c45e790",
+    "rank2_kernel_backend/z_enum_cost": "552905e659a0386c1e03134b9ca21790c4076269a0c752b34342b0b9018d750d",
+    "m8r1/suffix_symmetries.py": "6b6f53f038fae2ffa5f71b77ebccd27fb204c8cc4ff7a9aa729b919de8b0d9d4"
+  }
+}

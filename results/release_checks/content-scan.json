@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "pdf_hashes_unchanged": true,
+  "manuscript_diff_unchanged": true,
+  "acknowledgment_unchanged": true,
+  "scan_matches": [
+    {
+      "path": "results/recorded_checks/frame-888.json",
+      "matched_terms": [
+        "1846"
+      ]
+    },
+    {
+      "path": "results/recorded_checks/rankone-q3-hull3.json",
+      "matched_terms": [
+        "1846"
+      ]
+    },
+    {
+      "path": "source/experimenting/qcode-open-entries/general-criterion/unified/speedup_review/manifest.json",
+      "matched_terms": [
+        "1846"
+      ]
+    },
+    {
+      "path": "source/experimenting/qcode-open-entries/general-criterion/unified/kernel_z_joint/verification.json",
+      "matched_terms": [
+        "1846"
+      ]
+    },
+    {
+      "path": "source/experimenting/qcode-open-entries/general-criterion/unified/parent_mass_check/verification.json",
+      "matched_terms": [
+        "1846"
+      ]
+    },
+    {
+      "path": "source/experimenting/qcode-open-entries/general-criterion/unified/oracle_residual/assignment.json",
+      "matched_terms": [
+        "1846"
+      ]
+    },
+    {
+      "path": "source/experimenting/qcode-open-entries/general-criterion/unified/opus_parallel/suffix9_dimension5/cells_d5_7_5.json",
+      "matched_terms": [
+        "1846"
+      ]
+    }
+  ],
+  "classification": "All matches were literal numeric 1846 inside scientific arrays/record identifiers, not 18-qubit project files.",
+  "curated_docs_scanned": [
+    "README.md",
+    "REPRODUCING.md",
+    "LICENSES.md",
+    "source/README.md",
+    "verification/README.md"
+  ],
+  "frozen_whitespace_note": "The byte-preserved sol_workers/F_stage3_audit.md has original trailing whitespace; leave it unchanged."
+}

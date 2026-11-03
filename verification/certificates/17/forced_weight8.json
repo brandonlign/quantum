@@ -1,0 +1,155 @@
+{
+  "name": "pure17_without_weight8",
+  "code": "[[17,3,6]]",
+  "description": "Pure stabilizer with A1..A5=0 and A8=0 is impossible.",
+  "blocks": [],
+  "suffix_sites": 17,
+  "weight_assumptions": [
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      5,
+      0
+    ],
+    [
+      8,
+      0
+    ]
+  ],
+  "weight_ge_assumptions": [],
+  "expected": {
+    "columns": 18,
+    "nu_rhs": -3932160,
+    "positive_residuals": 1
+  },
+  "certificate": [
+    {
+      "type": "unit",
+      "multiplier": -6881280
+    },
+    {
+      "type": "total",
+      "multiplier": 180
+    },
+    {
+      "type": "low",
+      "cell": [
+        1
+      ],
+      "multiplier": 140
+    },
+    {
+      "type": "low",
+      "cell": [
+        2
+      ],
+      "multiplier": 65
+    },
+    {
+      "type": "low",
+      "cell": [
+        3
+      ],
+      "multiplier": 39
+    },
+    {
+      "type": "low",
+      "cell": [
+        4
+      ],
+      "multiplier": 11
+    },
+    {
+      "type": "low",
+      "cell": [
+        5
+      ],
+      "multiplier": 5
+    },
+    {
+      "type": "weight",
+      "w": 1,
+      "value": 0,
+      "multiplier": -6881280
+    },
+    {
+      "type": "weight",
+      "w": 2,
+      "value": 0,
+      "multiplier": -1228800
+    },
+    {
+      "type": "weight",
+      "w": 3,
+      "value": 0,
+      "multiplier": -2801664
+    },
+    {
+      "type": "weight",
+      "w": 4,
+      "value": 0,
+      "multiplier": -311296
+    },
+    {
+      "type": "weight",
+      "w": 5,
+      "value": 0,
+      "multiplier": -901120
+    },
+    {
+      "type": "weight",
+      "w": 8,
+      "value": 0,
+      "multiplier": 32768
+    },
+    {
+      "type": "shadow",
+      "cell": [
+        0
+      ],
+      "multiplier": 840
+    },
+    {
+      "type": "shadow",
+      "cell": [
+        1
+      ],
+      "multiplier": 320
+    },
+    {
+      "type": "shadow",
+      "cell": [
+        2
+      ],
+      "multiplier": 150
+    },
+    {
+      "type": "shadow",
+      "cell": [
+        3
+      ],
+      "multiplier": 36
+    },
+    {
+      "type": "shadow",
+      "cell": [
+        4
+      ],
+      "multiplier": 14
+    }
+  ]
+}

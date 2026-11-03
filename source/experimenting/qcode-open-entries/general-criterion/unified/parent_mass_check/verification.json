@@ -1,0 +1,508 @@
+{
+  "status": "PASS_COMPLETE_7_SITE_D5_PARENTS_FROM_TYPES",
+  "dimension3_type_enumeration": {
+    "multisets": 116280,
+    "feasible": 2171,
+    "classes": 32,
+    "star_certificate_sets_equal": true
+  },
+  "transitions": [
+    {
+      "parent_dimension": 3,
+      "child_dimension": 4,
+      "parent_classes": 32,
+      "child_classes": 43,
+      "incidence": 326643321600,
+      "child_physical_mass": 21776221440,
+      "every_parent_pointwise_incidence_matches": true,
+      "hyperplanes_enumerated": 645
+    },
+    {
+      "parent_dimension": 4,
+      "child_dimension": 5,
+      "parent_classes": 43,
+      "child_classes": 1,
+      "incidence": 2082723840,
+      "child_physical_mass": 67184640,
+      "every_parent_pointwise_incidence_matches": true,
+      "hyperplanes_enumerated": 31
+    }
+  ],
+  "records": {
+    "3": [
+      {
+        "cls": 0,
+        "orbit_size": 9797760,
+        "automorphisms": 144,
+        "extensions": 135
+      },
+      {
+        "cls": 1,
+        "orbit_size": 22044960,
+        "automorphisms": 64,
+        "extensions": 172
+      },
+      {
+        "cls": 2,
+        "orbit_size": 14696640,
+        "automorphisms": 96,
+        "extensions": 160
+      },
+      {
+        "cls": 3,
+        "orbit_size": 29393280,
+        "automorphisms": 48,
+        "extensions": 236
+      },
+      {
+        "cls": 4,
+        "orbit_size": 44089920,
+        "automorphisms": 32,
+        "extensions": 240
+      },
+      {
+        "cls": 5,
+        "orbit_size": 88179840,
+        "automorphisms": 16,
+        "extensions": 164
+      },
+      {
+        "cls": 6,
+        "orbit_size": 176359680,
+        "automorphisms": 8,
+        "extensions": 172
+      },
+      {
+        "cls": 7,
+        "orbit_size": 176359680,
+        "automorphisms": 8,
+        "extensions": 166
+      },
+      {
+        "cls": 8,
+        "orbit_size": 88179840,
+        "automorphisms": 16,
+        "extensions": 172
+      },
+      {
+        "cls": 9,
+        "orbit_size": 176359680,
+        "automorphisms": 8,
+        "extensions": 96
+      },
+      {
+        "cls": 10,
+        "orbit_size": 117573120,
+        "automorphisms": 12,
+        "extensions": 90
+      },
+      {
+        "cls": 11,
+        "orbit_size": 88179840,
+        "automorphisms": 16,
+        "extensions": 172
+      },
+      {
+        "cls": 12,
+        "orbit_size": 88179840,
+        "automorphisms": 16,
+        "extensions": 176
+      },
+      {
+        "cls": 13,
+        "orbit_size": 44089920,
+        "automorphisms": 32,
+        "extensions": 184
+      },
+      {
+        "cls": 14,
+        "orbit_size": 88179840,
+        "automorphisms": 16,
+        "extensions": 96
+      },
+      {
+        "cls": 15,
+        "orbit_size": 176359680,
+        "automorphisms": 8,
+        "extensions": 102
+      },
+      {
+        "cls": 16,
+        "orbit_size": 352719360,
+        "automorphisms": 4,
+        "extensions": 96
+      },
+      {
+        "cls": 17,
+        "orbit_size": 44089920,
+        "automorphisms": 32,
+        "extensions": 114
+      },
+      {
+        "cls": 18,
+        "orbit_size": 88179840,
+        "automorphisms": 16,
+        "extensions": 90
+      },
+      {
+        "cls": 19,
+        "orbit_size": 88179840,
+        "automorphisms": 16,
+        "extensions": 96
+      },
+      {
+        "cls": 20,
+        "orbit_size": 176359680,
+        "automorphisms": 8,
+        "extensions": 102
+      },
+      {
+        "cls": 21,
+        "orbit_size": 176359680,
+        "automorphisms": 8,
+        "extensions": 96
+      },
+      {
+        "cls": 22,
+        "orbit_size": 14696640,
+        "automorphisms": 96,
+        "extensions": 118
+      },
+      {
+        "cls": 23,
+        "orbit_size": 44089920,
+        "automorphisms": 32,
+        "extensions": 114
+      },
+      {
+        "cls": 24,
+        "orbit_size": 29393280,
+        "automorphisms": 48,
+        "extensions": 28
+      },
+      {
+        "cls": 25,
+        "orbit_size": 88179840,
+        "automorphisms": 16,
+        "extensions": 28
+      },
+      {
+        "cls": 26,
+        "orbit_size": 176359680,
+        "automorphisms": 8,
+        "extensions": 30
+      },
+      {
+        "cls": 27,
+        "orbit_size": 88179840,
+        "automorphisms": 16,
+        "extensions": 28
+      },
+      {
+        "cls": 28,
+        "orbit_size": 29393280,
+        "automorphisms": 48,
+        "extensions": 41
+      },
+      {
+        "cls": 29,
+        "orbit_size": 176359680,
+        "automorphisms": 8,
+        "extensions": 29
+      },
+      {
+        "cls": 30,
+        "orbit_size": 176359680,
+        "automorphisms": 8,
+        "extensions": 29
+      },
+      {
+        "cls": 31,
+        "orbit_size": 8398080,
+        "automorphisms": 168,
+        "extensions": 24
+      }
+    ],
+    "4": [
+      {
+        "cls": 0,
+        "orbit_size": 705438720,
+        "automorphisms": 2,
+        "extensions": 2
+      },
+      {
+        "cls": 1,
+        "orbit_size": 352719360,
+        "automorphisms": 4,
+        "extensions": 0
+      },
+      {
+        "cls": 2,
+        "orbit_size": 88179840,
+        "automorphisms": 16,
+        "extensions": 0
+      },
+      {
+        "cls": 3,
+        "orbit_size": 176359680,
+        "automorphisms": 8,
+        "extensions": 0
+      },
+      {
+        "cls": 4,
+        "orbit_size": 9797760,
+        "automorphisms": 144,
+        "extensions": 0
+      },
+      {
+        "cls": 5,
+        "orbit_size": 88179840,
+        "automorphisms": 16,
+        "extensions": 0
+      },
+      {
+        "cls": 6,
+        "orbit_size": 352719360,
+        "automorphisms": 4,
+        "extensions": 0
+      },
+      {
+        "cls": 7,
+        "orbit_size": 352719360,
+        "automorphisms": 4,
+        "extensions": 0
+      },
+      {
+        "cls": 8,
+        "orbit_size": 352719360,
+        "automorphisms": 4,
+        "extensions": 0
+      },
+      {
+        "cls": 9,
+        "orbit_size": 352719360,
+        "automorphisms": 4,
+        "extensions": 0
+      },
+      {
+        "cls": 10,
+        "orbit_size": 176359680,
+        "automorphisms": 8,
+        "extensions": 0
+      },
+      {
+        "cls": 11,
+        "orbit_size": 117573120,
+        "automorphisms": 12,
+        "extensions": 0
+      },
+      {
+        "cls": 12,
+        "orbit_size": 9797760,
+        "automorphisms": 144,
+        "extensions": 0
+      },
+      {
+        "cls": 13,
+        "orbit_size": 117573120,
+        "automorphisms": 12,
+        "extensions": 0
+      },
+      {
+        "cls": 14,
+        "orbit_size": 705438720,
+        "automorphisms": 2,
+        "extensions": 0
+      },
+      {
+        "cls": 15,
+        "orbit_size": 1410877440,
+        "automorphisms": 1,
+        "extensions": 0
+      },
+      {
+        "cls": 16,
+        "orbit_size": 705438720,
+        "automorphisms": 2,
+        "extensions": 0
+      },
+      {
+        "cls": 17,
+        "orbit_size": 1410877440,
+        "automorphisms": 1,
+        "extensions": 0
+      },
+      {
+        "cls": 18,
+        "orbit_size": 117573120,
+        "automorphisms": 12,
+        "extensions": 0
+      },
+      {
+        "cls": 19,
+        "orbit_size": 1410877440,
+        "automorphisms": 1,
+        "extensions": 0
+      },
+      {
+        "cls": 20,
+        "orbit_size": 705438720,
+        "automorphisms": 2,
+        "extensions": 0
+      },
+      {
+        "cls": 21,
+        "orbit_size": 705438720,
+        "automorphisms": 2,
+        "extensions": 0
+      },
+      {
+        "cls": 22,
+        "orbit_size": 1410877440,
+        "automorphisms": 1,
+        "extensions": 0
+      },
+      {
+        "cls": 23,
+        "orbit_size": 705438720,
+        "automorphisms": 2,
+        "extensions": 0
+      },
+      {
+        "cls": 24,
+        "orbit_size": 705438720,
+        "automorphisms": 2,
+        "extensions": 0
+      },
+      {
+        "cls": 25,
+        "orbit_size": 39191040,
+        "automorphisms": 36,
+        "extensions": 0
+      },
+      {
+        "cls": 26,
+        "orbit_size": 352719360,
+        "automorphisms": 4,
+        "extensions": 0
+      },
+      {
+        "cls": 27,
+        "orbit_size": 705438720,
+        "automorphisms": 2,
+        "extensions": 0
+      },
+      {
+        "cls": 28,
+        "orbit_size": 705438720,
+        "automorphisms": 2,
+        "extensions": 0
+      },
+      {
+        "cls": 29,
+        "orbit_size": 705438720,
+        "automorphisms": 2,
+        "extensions": 0
+      },
+      {
+        "cls": 30,
+        "orbit_size": 352719360,
+        "automorphisms": 4,
+        "extensions": 0
+      },
+      {
+        "cls": 31,
+        "orbit_size": 235146240,
+        "automorphisms": 6,
+        "extensions": 2
+      },
+      {
+        "cls": 32,
+        "orbit_size": 352719360,
+        "automorphisms": 4,
+        "extensions": 0
+      },
+      {
+        "cls": 33,
+        "orbit_size": 1410877440,
+        "automorphisms": 1,
+        "extensions": 0
+      },
+      {
+        "cls": 34,
+        "orbit_size": 705438720,
+        "automorphisms": 2,
+        "extensions": 0
+      },
+      {
+        "cls": 35,
+        "orbit_size": 1410877440,
+        "automorphisms": 1,
+        "extensions": 0
+      },
+      {
+        "cls": 36,
+        "orbit_size": 117573120,
+        "automorphisms": 12,
+        "extensions": 0
+      },
+      {
+        "cls": 37,
+        "orbit_size": 235146240,
+        "automorphisms": 6,
+        "extensions": 0
+      },
+      {
+        "cls": 38,
+        "orbit_size": 352719360,
+        "automorphisms": 4,
+        "extensions": 0
+      },
+      {
+        "cls": 39,
+        "orbit_size": 352719360,
+        "automorphisms": 4,
+        "extensions": 0
+      },
+      {
+        "cls": 40,
+        "orbit_size": 176359680,
+        "automorphisms": 8,
+        "extensions": 0
+      },
+      {
+        "cls": 41,
+        "orbit_size": 117573120,
+        "automorphisms": 12,
+        "extensions": 0
+      },
+      {
+        "cls": 42,
+        "orbit_size": 201553920,
+        "automorphisms": 7,
+        "extensions": 1
+      }
+    ],
+    "5": [
+      {
+        "cls": 0,
+        "orbit_size": 67184640,
+        "automorphisms": 21,
+        "extensions": 0
+      }
+    ]
+  },
+  "seconds": 1.0841418340005475,
+  "hashes": {
+    "opus_parallel/suffix9_dimension5/cells_d5_7_3.json": "73d30ffc479e093bf93957a9c2b4b8d00822d548add2dce62e183222af3300db",
+    "opus_parallel/suffix9_dimension5/cells_d5_7_4.json": "0daa47e5065f98e1e8f2eaf7c4f8594d35c5e8ec9d56870275db357b72ca7362",
+    "opus_parallel/suffix9_dimension5/cells_d5_7_5.json": "35a851117d86621d83db7b959f6aae6f91f940f14e6e7517a421bd68e7b87512",
+    "parent_mass_check/run.py": "62f266fe125e4e08f923d1b0c3a1470cba0ff74351e3584e608e7fcfb0bbd515",
+    "parent_mass_check/PROOF.md": "96f75dd80d58edf06415f50558b5d174fdfd13f9604d1db278cf9a1d3ed8519f",
+    "suffix_mass_check/verify8.py": "01292c4586b5bbf2f07603e50a518c85b323a0c035bedf13275caa35b6aab34b",
+    "suffix_mass_check/common.py": "7126582ad0c57d6e6c71bfdb5b91020fe06b789d7dd8f015c69afa103da42b44",
+    "model.py": "70806c8beb8a7b885c80f79fa89984b51839e4e9a9c3c24d794146190c8f9e84",
+    "mixed_frames/frames.py": "5bb4b67b50444dfa10731922919a334ab811cdbb4c52064cf28a0c9f9dd9231d"
+  },
+  "scope": "Complete 7-site dimensions 3,4,5 distance-at-least-five additive-code cells from exhaustive coordinate types and exact pointwise incidence; no release-census completeness assumption, no quantum extension exclusion"
+}

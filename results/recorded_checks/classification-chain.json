@@ -1,0 +1,57 @@
+{
+  "status": "PASS_EXHAUSTIVE_SUFFIX_CLASSIFICATION_CHAIN",
+  "cells": [
+    {
+      "sites": 7,
+      "dimension": 3,
+      "distance": 5,
+      "classes": 32
+    },
+    {
+      "sites": 7,
+      "dimension": 4,
+      "distance": 5,
+      "classes": 43
+    },
+    {
+      "sites": 7,
+      "dimension": 5,
+      "distance": 5,
+      "classes": 1
+    },
+    {
+      "sites": 8,
+      "dimension": 5,
+      "distance": 5,
+      "classes": 26299
+    },
+    {
+      "sites": 9,
+      "dimension": 5,
+      "distance": 6,
+      "classes": 32865
+    },
+    {
+      "sites": 9,
+      "dimension": 6,
+      "distance": 6,
+      "classes": 56
+    }
+  ],
+  "inherited_release_parent_completeness_discharged": true,
+  "dependencies": [
+    "parent_mass_check/verification.json",
+    "suffix_mass_check/verification8.json",
+    "suffix_mass_check/verification9.json",
+    "suffix6_mass_check/verification.json"
+  ],
+  "hashes": {
+    "parent_mass_check/verification.json": "9911d8bad6b5f3d318244cfd4f304659e3ff230dcc1ee9b1028d436e8dad7c1b",
+    "suffix_mass_check/verification8.json": "6d9e944343ed492d4fdd899e97f28f9aa5cdb2952faf895a7b1b7b357ea7c66f",
+    "suffix_mass_check/verification9.json": "541984130109edb4726c69ad4872a044934e266211824bf6640a5da61e71d7b3",
+    "suffix6_mass_check/verification.json": "1754e76580056b5586ff2fdf6d8314485ceb04d2e7d4cfc2c92e0bfa4a140de6",
+    "parent_mass_check/verify_chain.py": "3c37fcb90377507f313152b89736d7477413a4573655b5c750ecb46243b8f22d",
+    "parent_mass_check/CHAIN.md": "2fcda2e61d48c1e4c48dbd0993212ec7f24020788861124efb91387b87e4eef1"
+  },
+  "scope": "Exhaustive additive-code classification coverage, using independent coordinate types, pointwise incidences, lengthening mass and complete puncture lifts. This supplies classification premises only; [[17,3,6]] extension coverage and final theorem review remain open."
+}

@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "scope": "Exhaustive finite sanity check of the expanded exact-kernel argument, not a proof of the large code exclusions.",
+  "matrices": 56854,
+  "cases": [
+    {
+      "half_dimension": 1,
+      "syndrome_dimension": 1,
+      "matrices": 2
+    },
+    {
+      "half_dimension": 1,
+      "syndrome_dimension": 2,
+      "matrices": 12
+    },
+    {
+      "half_dimension": 1,
+      "syndrome_dimension": 3,
+      "matrices": 56
+    },
+    {
+      "half_dimension": 1,
+      "syndrome_dimension": 4,
+      "matrices": 240
+    },
+    {
+      "half_dimension": 2,
+      "syndrome_dimension": 2,
+      "matrices": 96
+    },
+    {
+      "half_dimension": 2,
+      "syndrome_dimension": 3,
+      "matrices": 2688
+    },
+    {
+      "half_dimension": 2,
+      "syndrome_dimension": 4,
+      "matrices": 53760
+    }
+  ],
+  "identities": [
+    "ker(M^T)=ker(Gamma) intersect ker(X^T) for independent columns of X",
+    "tau(rad(P))=rad(ker M)",
+    "rank-nullity for both kernels"
+  ],
+  "worked_local_coset_minimum_weight": 1,
+  "source_sha256": "184b5a9316dc7abb246542381010a19bd4970300e6ae7eed9bf78d5742285063",
+  "seconds": 0.9762819999887142
+}

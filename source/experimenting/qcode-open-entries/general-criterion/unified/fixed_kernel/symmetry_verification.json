@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "physical_identification_arcs_checked": 80,
+  "identification_orbits": {
+    "orbits": [
+      {
+        "representative": 0,
+        "members": [
+          0,
+          1
+        ]
+      },
+      {
+        "representative": 2,
+        "members": [
+          2,
+          4
+        ]
+      },
+      {
+        "representative": 3,
+        "members": [
+          3,
+          5
+        ]
+      }
+    ],
+    "physical_group_order": 8
+  },
+  "all_GL_contexts": 6,
+  "S8_group": 40320,
+  "S8_canonical_retained": true,
+  "S8_noncanonical_rejected": true,
+  "seconds": 3.1223971249999067,
+  "hashes": {
+    "fixed_kernel/verify_symmetry.py": "317e6503176aa2a3b269b05970d95cb50bb8d4ed5f6234a9dbd1c952b3f0e302",
+    "fixed_kernel/common.py": "ba5dc5351fcab138c2b1e84f7f0a6b918c34e95384f694e533c672c281c210df",
+    "fixed_kernel/verify_generic.py": "bce9879d62df0d5656d2db77cd2c14d563d93f36f349eebe54c40645615694ab",
+    "fixed_kernel/z_enum_fixed.c": "3a81bf4a8eb212fa0dab80deeaaaff1eb3a013989464ab018c90dca95894a119",
+    "fixed_kernel/z_enum_fixed": "08095d5f830addf7f3dd2780e2e0cdaa3d455564ea5ace7b1e4fb79b4e93830c",
+    "model.py": "70806c8beb8a7b885c80f79fa89984b51839e4e9a9c3c24d794146190c8f9e84"
+  }
+}

@@ -1,0 +1,35 @@
+certificates_16 ALL 6 CERTIFICATES PASS
+certificates_17 ALL 7 CERTIFICATES PASS
+profile_identity {'coefficient': 32768, 'rhs': 65536, 'conclusion': 'A6+A7 <= 2'}
+frame_count_certificates 13
+classification_chain [{'sites': 7, 'dimension': 3, 'distance': 5, 'classes': 32}, {'sites': 7, 'dimension': 4, 'distance': 5, 'classes': 43}, {'sites': 7, 'dimension': 5, 'distance': 5, 'classes': 1},
+prefix_mass_check/verification.json {'status': 'PASS_COMPLETE_LOCAL_KERNEL_CLASSES_AND_CAPACITIES', 'current_hashes': 10}
+kernel_case_plan/provenance.json {'status': 'PASS_TRANSITIVE_SAVED_PROVENANCE', 'current_hashes': 25}
+weight8_audit/audit.json {'status': 'PASS', 'current_hashes': 0}
+mixed_frames/stage3/profile_verification.json {'status': 'PASS', 'current_hashes': 0}
+frame_668 {'candidate_classes': 48, 'verified_roots': 641, 'Z_leaves': 0}
+frame-778.json {'cases': 52, 'verified_roots': 650}
+frame-688.json {'cases': 156, 'verified_roots': 1950}
+frame_888 {'classes': 56, 'new_slices': 1375, 'new_Y_leaves_rejected': 2960, 'legacy_hull0_verified_roots': 72827}
+rankone-q3-hull5.json {'closed_classes': 118, 'counts': {'SCREENED': 5749, 'EXCLUDED_FIXED_N': 7065}}
+rankone-q3-hull3.json {'closed_classes': 5995, 'counts': {'SCREENED': 20791, 'EXCLUDED_FIXED_N': 20215}}
+residual_saved_coverage {'classes': 32747, 'records': 2419796, 'report_sha256': '9aeae1ae01235e42ee92d1f854346c0ea7d8c2c281c3a264e23ed26df89083d0', 'source_fingerprints_current': True}
+fresh_residual_class 0 32
+fresh_residual_class 5 245
+fresh_residual_class 28739 38
+fresh_residual_class 28740 224
+fresh_residual_class 28741 38
+fresh_residual_class 28744 239
+fresh_residual_class 32863 36
+fresh_residual_class 32864 207
+residual_fresh_check {'deep': False, 'classes': 8, 'records': 1059}
+rank_one_case_exhaustiveness {'suffix_classes': 32865, 'hulls': {1: 26752, 3: 5995, 5: 118}, 'kernel_branches': [[1, 0, 1], [2, 2, 1], [2, 0, 3], [3, 2, 3], [3, 0, 5]]}
+UNIFIED EVIDENCE AUDIT PASS
+{
+  "status": "PASS",
+  "script": "quantum-extension/verification/verify_evidence.py",
+  "deep": false,
+  "record_payloads_read": 147439,
+  "elapsed_seconds": 66.08871541707776,
+  "scope": "Original mathematical verifier and source bytes unchanged. Historical absolute file reads relocated; original search-record bytes supplied from an indexed store with size/CRC checks. This revalidates saved computations; it does not rerun every original search."
+}

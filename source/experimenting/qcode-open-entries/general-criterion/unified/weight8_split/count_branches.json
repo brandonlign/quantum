@@ -1,0 +1,10 @@
+{
+ "A6>=3": true,
+ "A7>=3": true,
+ "00_m8": false,
+ "01_m7": false,
+ "02_m7": false,
+ "10_m6": false,
+ "11_m6": false,
+ "20_m6": false
+}

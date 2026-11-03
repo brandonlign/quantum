@@ -1,0 +1,27 @@
+{
+  "source_archive": "codex-research-20261019-001.zip",
+  "source_prefix": "experimenting/qcode-open-entries/general-criterion/unified/",
+  "compression": "Original raw ZIP compressed payloads, unchanged; size and CRC verified on reading",
+  "files": 2792460,
+  "uncompressed_bytes": 19842513274,
+  "compressed_payload_bytes": 8853946428,
+  "groups": {
+    "rankone_reuse/runs/": {
+      "files": 2121496,
+      "uncompressed_bytes": 16225831537,
+      "compressed_payload_bytes": 7289506253
+    },
+    "mixed_frames/stage4/": {
+      "files": 375842,
+      "uncompressed_bytes": 759232559,
+      "compressed_payload_bytes": 326327592
+    },
+    "oracle_residual/runs/": {
+      "files": 295122,
+      "uncompressed_bytes": 2857449178,
+      "compressed_payload_bytes": 1238112583
+    }
+  },
+  "database_bytes": 11212378112,
+  "elapsed_seconds": 171.37871945800725
+}

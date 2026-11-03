@@ -1,0 +1,105 @@
+\section{A supporting application: fourteen qubits}\label{sec:fourteen}
+
+We apply the kernel and coset-counting conditions to fourteen qubits.
+The existence question is Research Problem 1 of Ball, Centelles, and Huber
+\cite{ball}.
+The parameter conclusion was previously announced by Singh
+\cite{singh}. We give a hull-and-coset proof as an application of the
+extension criterion. This example shows that the kernel conditions can exclude extensions
+without enumerating their matrices, even when the code is degenerate.
+
+\begin{proposition}[Fourteen-qubit local reduction]\label{prop:14-local}
+A hypothetical \(\qc{14,3,d\geq5}\) code has exactly one nonzero
+stabilizer word of weight at most four. That word has weight four.
+\end{proposition}
+\begin{proof}
+The ordinary enumerator/shadow identity in the repository gives
+\[
+ 11685888A_1+1345536A_2+4681728A_3+989184A_4\leq3336192.
+\]
+Integrality implies \(A_1=A_3=0\), \(A_2\leq2\), \(A_4\leq3\).
+A further exact congruence gives \(A_3+A_4\equiv1\pmod2\), hence
+\(A_4\in\{1,3\}\). It is obtained from the total row, low-weight
+MacWilliams rows, and signed shadow equalities with multipliers
+\[
+ (1,-2,-6,-17,-95;\ -20,-24,1108,246)
+\]
+in the order total; low rows one through four; shadow equalities zero
+through three. Modulo 4096 only the coefficients of \(A_3,A_4\)
+survive, both equal to 2048, and the right-hand side is 2048.
+
+An exact split-coset certificate excludes a weight-two stabilizer word.
+For distinct commuting weight-four words, let \(\iota\) be their support
+intersection size and \(u\) the number of different letters on that
+intersection. Then \(u\) is even and their sum has weight \(8-2\iota+u\).
+All cases with \(\iota\geq2\) are excluded as follows:
+\begin{center}\small
+\begin{tabular}{@{}ccl@{}}\toprule
+\(\iota\)&\(u\)&Obstruction\\\midrule
+4&2&Their sum has weight two.\\
+4&4&Certificate for \(\langle XXXX,ZZZZ\rangle\).\\
+3&0&Their sum has weight two.\\
+3&2&Certificate for \(\langle XXZZI,ZZZIZ\rangle\).\\
+2&0&Certificate for \(\langle ZZZZII,ZZIIZZ\rangle\).\\
+2&2&Certificate for \(\langle ZZZZII,XXIIXX\rangle\).\\\bottomrule
+\end{tabular}
+\end{center}
+If \(\iota=4,u=0\), the words are identical. Distinct weight-four
+words intersect in at most one site, with equal letters there. All such
+words may be made \(Z\)-only by one consistent local Clifford map.
+
+If \(A_4=3\), the three words are independent: the sum of two has weight
+six or eight, never four. Their three supports have pairwise intersection
+sizes zero or one. The intersection graph has zero, one, two, or three
+edges; when it has three, either the intersections are distinct or there
+is one common site. These give exactly five support geometries. Their
+union sizes are 12, 11, 10, 9, and 10, respectively. Exact rank-three
+coset certificates exclude each geometry, with the disjoint one using
+three four-site blocks and a two-site suffix. All include the already
+proved zeros and the assumption \(A_4=3\). The data are in \pathcode{verification/certificates/14/}, with the
+standalone checker \pathcode{verification/check_certificates14.py}. \(A_4=1\), proving the assertion.
+\end{proof}
+
+Normalize the unique short word to \(p=Z^4\), let \(T\) be its support,
+and put \(R=\langle p\rangle\). No other local stabilizer word is
+possible, since all words on \(T\) have weight at most four.
+The extension theorem applies with localized degeneracy, even though the
+code is not pure. Here
+\[
+ a=6,\quad b=10,\quad C\leq V_{10},\quad\dim C=10,\quad d(C)\geq5.
+\]
+Every class in \(E\) has minimum weight at most four, forcing \(K=0\). Thus
+\(\dim\Hull(C)=b-a=4\) by Proposition~\ref{prop:capacity}.
+
+The minimum weights of the 64 classes in \(E\) have the distribution
+\begin{center}
+\begin{tabular}{@{}lccccc@{}}\toprule
+Minimum weight&0&1&2&3&4\\\midrule
+Classes&1&4&27&24&8\\\bottomrule
+\end{tabular}
+\end{center}
+To obtain it directly, group commuting words by their even \(X\)-mask.
+The zero mask contributes \(1,4,3\) classes of minimum weight zero, one, and two.
+Each of the six weight-two masks contributes four classes of minimum weight two
+and four of minimum weight three. The full mask contributes eight classes of
+minimum weight four. With \(J_C=\Hull(C)\), the coset-counting inequalities on
+\(J_C^\perp/C\) become
+\[
+ \#\{u\ne0:\delta(u)\leq1\}\leq8,\quad
+ \#\{u\ne0:\delta(u)\leq2\}\leq32,\quad
+ \#\{u\ne0:\delta(u)\leq3\}\leq59.
+\]
+
+There are 37 physical equivalence classes of additive
+\((10,2^{10},\geq5)_4\) codes \cite{dodeca}.
+Their hull dimensions have multiplicities
+\(0:7,\ 2:14,\ 4:12,\ 6:2,\ 8:2\).
+25 classes fail the hull requirement. Every one of the remaining
+12 violates at least one of the three coset-counting inequalities, as verified
+by enumerating physical suffix words and their cosets. No matrix-entry
+search is needed at this final step.
+This excludes \(\qc{14,3,5}\); the known \(\qc{14,3,4}\)
+construction gives \(d_{\max}(14,3)=4\).
+
+The sixteen-qubit \(m=6\) case uses the same 37 ten-coordinate codes,
+with a larger local quotient and different coset minimum weights.

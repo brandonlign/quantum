@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "hashes": {
+    "mixed_frames/__init__.py": "ce37c7ae87306b6385c01d0e61f5cc3dba00a639815f77e03aa16a8cc40a7967",
+    "mixed_frames/capacity_certificate.json": "d85a0409b6c1b80c8fe97fdd9f53be1857ae0981780d405200dfc02add2e8159",
+    "mixed_frames/enumerate_z.py": "4fea08466b37763be18aa07c474fec6d9ad5485961b4b2509a63a69e6e6ff89c",
+    "mixed_frames/fixed_z.py": "7dc07c70552955f8eb599525d26e6fb094fba704cc6826f4cc88559752380161",
+    "mixed_frames/frames.py": "5bb4b67b50444dfa10731922919a334ab811cdbb4c52064cf28a0c9f9dd9231d",
+    "mixed_frames/stage2/common.py": "f16f4e5e99d560a779c3ce3dcdef6981ca0d07c7da3b93be3c90e407d3eda902",
+    "mixed_frames/stage2/enumerate_z": "39165cd713409e4c706d7548a60036004604200d162e45b4f193096416283900",
+    "mixed_frames/stage2/enumerate_z.cpp": "37ecde4dc6a829166e37cbb18225d7c18cef9d6438276c87d57b7afd6f03e5e2",
+    "mixed_frames/stage2/reference.py": "60178d422b73d001207b0306fa9f844743b0fdfd1ae1c4f3ea4a77cc0657709c",
+    "mixed_frames/stage2/run.py": "6366a03e239134b6f4d688b52a9aee5be5b0ab8729ae6d49224fba10ca4252ee",
+    "mixed_frames/stage2/verify.py": "1917607d059edb050ba149fb3488d12fb0cbf4f0bdc6e949b127e93091c0ebfe",
+    "mixed_frames/suffix_tables.json": "935c8dd0664ddee49023660fe3b7bfefff53d4fcafb96e7e96680eb8dd1d680a",
+    "mixed_frames/suffix_tables.py": "81577c42e07cd6abdffb7c781e8c28d87f664cfe94ff1afedb3604566f007bdc",
+    "mixed_frames/verify.py": "05108e7213e1dc01bd0753c445448b993a6cc6354c225d6788c9ebc5332fd055",
+    "model.py": "70806c8beb8a7b885c80f79fa89984b51839e4e9a9c3c24d794146190c8f9e84",
+    "suffix9_classes.json": "ce819d8706fc8b4e2328e3a4471ac994a91eb7f37a9239c7b7fc99ef9a39b720",
+    "weight8_split/frame_count_certificates.json": "f7e19286798990c005046e9a3accfe49f4d470a9f1dfa107086c2e0e1c8cd223",
+    "fast778/common.py": "9652ac896d3cf98914f43e9cddd157cd3ee4dce787bb5fc668b74065f3c45abe",
+    "fast778/run.py": "4406f74a7bc1a117a995025ef26669645b4a570644bc1665f389ecd50d14aaf6",
+    "fast778/verify_pipeline.py": "fd92d7364654c9697d98ed1e11d110bee51548b4a0e1761cb4af08562f4edec1",
+    "fast778/verify.py": "c59ee4e4192ead95c5203d3be1d346bcebcbcdf1d2f0838214d25b42bfbf04e4",
+    "fast778/PROOF.md": "91a9da62e0d84e723c255fea961016e53792261f55355b494591f576846f81d7",
+    "speedup_review/enumerate_688": "1af8ac0f5cfd95a34ab8724362114ff5046a286172ede888b53694c4fff5c263",
+    "speedup_review/enumerate_688.cpp": "e11967736d2d59f7a57a55a9d35838d93ac6c14a049fba2026c32f6d2808da9a",
+    "mixed_frames/stage3/common.py": "bc0f818065ec63373ff4e099a7ee37c7124b8fd1de51cfc786d2ac6027cc943c",
+    "mixed_frames/stage3/run.py": "15c1902ecd9a282256df66175fea3a04ebf5854d4ff4744f2cf66c65ff6423a3",
+    "mixed_frames/stage3/frames.py": "f1c8df97141c767304cc3e31625643a6245157548ba3f8c5daa1d280dfd7a376",
+    "speedup_review/PROOF.md": "ecfa96fac333b114a979da30f2181827f4a9826ebd31517f9b4b8b91df98014a",
+    "speedup_review/verify_688_symmetry.py": "9f283f6bc98d7be8bf8e9677cb0a89a7ae884fcbb85e2c46f259e191cacb5b21"
+  },
+  "quotient_checks": 20480,
+  "positive": {
+    "parameters": [
+      14,
+      0,
+      2
+    ],
+    "original": [
+      1,
+      2,
+      34,
+      18,
+      10,
+      6
+    ],
+    "representative": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32
+    ],
+    "exact_profile": true
+  }
+}
