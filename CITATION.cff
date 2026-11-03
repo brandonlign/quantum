@@ -5,7 +5,8 @@ title: "Nonexistence of binary [[16,5,5]] and [[17,3,6]] stabilizer codes"
 authors:
   - family-names: Li
     given-names: Brandon
-doi: 10.5281/zenodo.23897639
+doi: 10.5281/zenodo.23874369
 url: https://github.com/brandonlign/quantum
-version: "3.0"
+version: "4.0"
+date-released: 2026-11-02
 license: CC-BY-4.0

@@ -2,7 +2,7 @@
 
 Paper, code and verification for binary [[16,5,5]] and [[17,3,6]] stabilizer codes.
 
-[Paper](paper/main.pdf) · [Preprint](https://doi.org/10.5281/zenodo.23874369) · [Evidence](https://doi.org/10.5281/zenodo.23897639) · [Run instructions](REPRODUCING.md)
+[Paper](paper/main.pdf) · [Preprint](https://doi.org/10.5281/zenodo.23874369) · [Evidence](https://doi.org/10.5281/zenodo.23904905) · [Run instructions](REPRODUCING.md)
 
 - `paper/` — PDF and LaTeX source.
 - `verification/` — certificates and standalone checks.

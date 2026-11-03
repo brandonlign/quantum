@@ -25,7 +25,7 @@ Expect PASS. Run classification before orbits. Reports go to `audit/` and
 ## Full evidence
 
 Download the code and evidence archives from
-[Zenodo](https://doi.org/10.5281/zenodo.23897639). Extract them together in a
+[Zenodo](https://doi.org/10.5281/zenodo.23904905). Extract them together in a
 separate directory and run these commands from that release's root:
 
 ```sh
@@ -43,6 +43,10 @@ python3.12 -m venv .venv
 The database belongs at `source/evidence/search_records.sqlite`. These commands
 validate saved computations. Deep replay can take several hours.
 Original archive inventories and uncompressed reports are included in the release.
+
+Saved labels such as `CONDITIONALLY_COMPLETE` describe a branch whose exclusion
+depends on the recorded classifications and symmetry coverage; the full
+saved-evidence verifier checks those premises and combines the branches.
 
 ## Fresh searches
 
