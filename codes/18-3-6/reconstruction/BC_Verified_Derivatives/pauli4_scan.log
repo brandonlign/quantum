@@ -1,0 +1,6 @@
+MATCH mask 4328808577 A7 16 D6 564 B 1 C 0
+MATCH mask 8607273026 A7 12 D6 564 B 0 C 1
+BOUNDED_STOP after 86085 of247860 masks
+DONE tested 86085 minS7 468 valid_distance6 2 B_style 1 C_style 1 smallS 4738 smallN 119666
+A7 12 valid_count 1
+A7 16 valid_count 1

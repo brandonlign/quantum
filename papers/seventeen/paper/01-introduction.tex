@@ -1,0 +1,198 @@
+\section{Introduction}
+
+An \(\qc{n,k,d}\) quantum code uses \(n\) physical qubits to store
+\(k\) logical qubits. Its distance \(d\) is the smallest number of
+qubits on which a Pauli operator can act nontrivially on the encoded
+information while commuting with every stabilizer. Distance measures
+the weight of the smallest undetected logical error. A code of distance
+\(d\) corrects arbitrary errors on up to \(\lfloor(d-1)/2\rfloor\)
+qubits. Both distance five and distance six correct two-qubit errors;
+distance six also detects errors of weight five.
+
+For fixed numbers of physical and logical qubits, determining the largest
+possible minimum distance is a basic problem in quantum coding theory.
+Constructions give lower bounds, while weight-enumerator identities and
+other general bounds give upper bounds. When these differ by one, the
+remaining existence question may depend on structure that an ordinary
+weight enumerator does not record.
+
+Let \(d_{\max}(n,k)\) denote the largest minimum distance of a binary
+stabilizer code encoding \(k\) logical qubits into \(n\) physical qubits.
+We prove the following nonexistence result.
+\begin{theorem}\label{thm:main}
+There is no binary stabilizer code with parameters
+\(\qc{17,3,d\geq6}\). Hence
+\[
+ d_{\max}(17,3)=5.
+\]
+The conclusion holds for both pure and degenerate stabilizer codes.
+\end{theorem}
+The matching \(\qc{17,3,5}\) construction is listed in Grassl's tables
+\cite{grassl}; it extends a \(\qc{15,3,5}\) code by two coordinates.
+Its distance is checked by complete centralizer enumeration
+(Section~\ref{sec:verification}). The exclusion closes the distance
+interval \(5\)--\(6\) at \((n,k)=(17,3)\).
+The same method excludes \(\qc{16,5,5}\); that proof is given separately.
+
+\subsection{Outline of the method}
+
+The proof begins by forcing a stabilizer word whose support leaves few
+enough complementary coordinates for a complete classification. Let
+\(T\) be that support and \(R\) the entire stabilizer supported on
+\(T\). To shorten the centralizer on \(T\), retain only its words that
+are identity on every coordinate of \(T\), then delete those coordinates.
+Call the resulting additive code \(C\).
+Every centralizer word has a component on \(T\) and a component on its
+complement. Once the first component is fixed modulo \(R\), the second
+belongs to a single coset of \(C\). The possible codes can be
+described by linear maps between quotient spaces.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[>=Stealth,
+ proofbox/.style={draw=black!60,fill=black!4,rounded corners=1pt,
+ text width=4.25cm,minimum height=1.05cm,align=center,font=\small},
+ node distance=0.65cm and 0.7cm]
+\node[proofbox] (assume) {Assume the code exists};
+\node[proofbox,right=of assume] (force) {Force a weight-eight stabilizer word};
+\node[proofbox,right=of force] (split) {Split the qubits on its support};
+\node[proofbox,below=of split] (classify) {Classify the shortened codes};
+\node[proofbox,left=of classify] (test) {Test every extension map};
+\node[proofbox,left=of test] (none) {No map, so no code};
+\draw[->] (assume)--(force);
+\draw[->] (force)--(split);
+\draw[->] (split)--(classify);
+\draw[->] (classify)--(test);
+\draw[->] (test)--(none);
+\end{tikzpicture}
+\caption{The structural reduction and the finite extension test.}
+\label{fig:proof-flow}
+\end{figure}
+
+A coset of a subspace consists of all vectors obtained by adding its
+members to one fixed vector. The quotient is the vector space of these
+cosets: it treats two vectors as equivalent when their difference lies
+in that subspace. Here this identifies local Pauli words that differ by
+a stabilizer supported on the selected coordinates.
+
+Put \(E=R_T^\perp/R\). Write \(c_R(e)\) for the minimum weight of a
+representative of \(e\in E\), and write \(\delta(u)\) for the minimum
+weight of a coset \(u\) of \(C\). In suitable coordinates, an extension
+is described by a binary matrix \(M\) satisfying
+\begin{equation}\label{eq:intro-criterion}
+ \Gamma=MJM^\tr,\qquad c_R(e)+\delta(Me)\geq d\quad(e\ne0).
+\end{equation}
+Here \(J\) is the symplectic matrix on \(E\), and \(\Gamma\) is the
+Gram matrix of a basis of \(C^\perp\). The first equation is the
+commutation condition. The second states that the least weight in each
+corresponding pair of cosets is at least \(d\).
+Theorem~\ref{thm:extension} proves that these conditions are necessary
+and sufficient when \(d(C)\geq d\) and every stabilizer word of weight
+below \(d\) lies in \(R\); this holds for pure codes.
+
+For example, suppose \(R=\langle ZZZZ\rangle\) on four coordinates.
+Here \(I\) denotes the identity and \(Z\) a nonidentity Pauli letter.
+The local class \(ZIII+R=\{ZIII,IZZZ\}\) has minimum weight one.
+If its image under \(M\) had coset minimum weight three, the two
+parts could be combined into a centralizer word of weight four outside
+\(R\). In the setting of Theorem~\ref{thm:extension}, this rules out
+distance five. The inequality in \eqref{eq:intro-criterion} makes this
+test for every local class at once.
+
+Every nonzero element of \(\ker M\) represents a logical operator
+supported entirely on \(T\). The weights and symplectic products of
+these operators restrict the hull \(C\cap C^\perp\) of the shortened
+code. These restrictions divide the problem into cases with prescribed
+kernels, before any extension matrix is enumerated.
+
+For seventeen qubits, exact weight-enumerator certificates show that a
+hypothetical code is pure and has a stabilizer word of weight eight.
+A quadratic-form argument bounds the binary dimension of the shortened
+nine-coordinate code by six. It follows that there are just five
+possible local stabilizers \(R\): one of rank one and four of rank two.
+The rank-one type has five admissible kernel cases, determined by the
+kernel dimension, restricted symplectic rank, and shortened-code hull.
+These restrictions reduce the remaining problem to complete
+classifications on nine coordinates and finite extension searches.
+
+\subsection{Map of the proof}\label{sec:map}
+
+Table~\ref{tab:map} lists every case of the proof, the argument that
+excludes it, the size of the corresponding finite computation, and the
+place where it is handled. We use \emph{type} for the local stabilizer
+\(R\) up to physical equivalence, labeled by its nonzero weights;
+\emph{kernel case} for the invariants \((q,t,h)\) of
+Section~\ref{sec:rank-one}; and \emph{weight profile} for the pair
+\((A_6,A_7)\) of stabilizer weight counts.
+
+\begin{table}[htbp]
+\centering\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{3.15cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{3.55cm}l@{}}\toprule
+Case&How it is excluded&Classes or cases&Where\\\midrule
+Stabilizer words of weight \(1\)--\(5\)&Split-coset integer certificates; purity follows&5 certificates&Prop.~\ref{prop:17-enumerator}\\
+No weight-eight word&Integer certificate with \(A_8=0\)&1 certificate&Prop.~\ref{prop:17-enumerator}\\
+Local rank \(r\geq3\)&Nine-coordinate dimension bound&None&Lemma~\ref{lem:nine-bound}\\
+Shortened codes&Complete classifications&32,865 classes (dim.~5); 56 classes (dim.~6)&Section~\ref{sec:classification}\\\midrule
+Rank two, \((6,6,8)\)&Counting leaves 48 of 56; no \(Z\)-only tuple passes&641 first-image cases&Prop.~\ref{prop:17-mixed}\\
+Rank two, \((6,8,8)\)&Counting leaves 52 of 56; searches for each weight profile&1,950 first-image cases&Prop.~\ref{prop:17-mixed}\\
+Rank two, \((7,7,8)\)&Counting leaves 52 of 56; extension searches&650 first-image cases&Prop.~\ref{prop:17-mixed}\\
+Rank two, \((8,8,8)\), hull \(2,6\)&Hull identities; fixed-kernel searches, \(q=1,3\)&41 classes; 1,375 fixed-kernel problems&Prop.~\ref{prop:17-plane}\\
+Rank two, \((8,8,8)\), hull \(0\)&Profile exclusions and extension searches&15 classes; 72,827 first-image cases&Prop.~\ref{prop:17-plane}\\\midrule
+Rank one, \(q=4\)&Parity and isotropy&None&Lemma~\ref{lem:qthree}\\
+Rank one, \((1,0,1)\), \((2,2,1)\), \((2,0,3)\)&Fixed-kernel extension searches&32,747 classes; 2,419,796 records&Prop.~\ref{prop:17-rankone}\\
+Rank one, \((3,2,3)\)&Recentering screen; fixed-kernel searches&5,995 classes; 101,075 cases&Prop.~\ref{prop:17-rankone}\\
+Rank one, \((3,0,5)\)&Recentering screen; binary projection filter; searches&118 classes; 7,065 searched \(N\)-orbits&Prop.~\ref{prop:17-rankone}\\\bottomrule
+\end{tabularx}
+\caption{The cases of the proof of Theorem~\ref{thm:main}. The four
+rank-two types use the 56 dimension-six shortened-code classes; the
+rank-one kernel cases use the dimension-five classes of hull dimension
+one, three, and five.}
+\label{tab:map}
+\end{table}
+
+\subsection{Previous work}
+
+The symplectic representation of stabilizer codes and the MacWilliams and
+shadow identities are standard \cite{crss,rains}. Gundersen et al.
+\cite{puncturing} describe puncturing directly in symplectic and stabilizer
+matrix notation. Complementary symplectic projections are treated in
+\cite{anticodes}; related subspace constructions appear in the use of
+Goursat's lemma for subsystem codes \cite{goursat} and in
+entanglement-assisted error correction \cite{catalytic}.
+Our extension criterion uses this linear algebra while retaining the
+minimum weights in the original coordinate blocks. Its role here is to
+derive the kernel and hull restrictions and to specify the finite
+problems used in the nonexistence proof.
+
+Classification by extension and the use of automorphism groups are also
+established methods \cite{kaski}. We give completeness checks for the
+classifications needed here. Earlier quantum nonexistence proofs
+combining structural reductions and finite searches include the
+\(\qc{13,5,4}\) result of Bierbrauer et al. \cite{bierbrauer}.
+Related geometric methods for purity and local structure are developed
+in \cite{geometry}. Singh \cite{singh} announced the nonexistence of
+\(\qc{14,3,5}\) codes, including degenerate codes, and Lai \cite{lai},
+Section~VII-C1, also proves it.
+
+The semidefinite-programming bounds with rational certificates in
+\cite{sdp}, Table~1, leave code-space dimension \(K=8\) possible at
+\((n,d)=(17,6)\): their displayed interval is \(4\leq K\leq8\).
+Lai \cite{lai} develops refined weight-enumerator and structural tests.
+His Table~II records the intermediate candidate counts, and
+Section~VII-D leaves seven candidate distributions for
+\(\qc{17,3,6}\), so the case remained open. Theorem~\ref{thm:main}
+excludes these codes through complete shortened-code classifications and
+extension tests.
+
+\subsection{Organization}
+
+Section~\ref{sec:extension} proves the extension criterion, and
+Section~\ref{sec:restrictions} derives the kernel and hull identities.
+Section~\ref{sec:forced} proves purity, forces the weight-eight word, and
+lists the five local types. Section~\ref{sec:classification} proves that
+the shortened-code and local-code classifications are complete.
+Section~\ref{sec:search} describes the search for extension maps, and
+Sections~\ref{sec:rank-two} and \ref{sec:rank-one} exclude the rank-two
+and rank-one types. Section~\ref{sec:verification} describes the
+computational data and its checks.

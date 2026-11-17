@@ -1,0 +1,24 @@
+{
+  "source_url": "https://biblio.telecom-paristech.fr/cgi-bin/download.cgi?id=9892",
+  "institutional_record": "https://biblio.telecom-paristech.fr/cgi-bin/display.cgi?id=9892",
+  "publication": "IEEE TIT45(7),2495\u20132498 (November1999)",
+  "printed_page": 2496,
+  "PDF_page_index": 1,
+  "sha256": "9e9f47adf47e625563ca7f2c3f279d6ceb47a1cdf55a05c22ce36acc14f67395",
+  "rows": [
+    "111111000000000000",
+    "001011100000101000",
+    "001001011000110000",
+    "011100000100110000",
+    "011010000000011100",
+    "011001001010001000",
+    "001000001100101010",
+    "001000001100010101",
+    "011000000111000100",
+    "110000101000000000",
+    "000000001000110001",
+    "000000010100001001"
+  ],
+  "exact_equality_to_preprint_audit_rows": true,
+  "verification": "Text extracted with pdftotext -layout and visually checked against rendered final page2496. Mathematical independent reviewer audit applies because all twelve rows are identical."
+}

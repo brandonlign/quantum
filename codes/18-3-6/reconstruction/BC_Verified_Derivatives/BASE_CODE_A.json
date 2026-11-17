@@ -1,0 +1,34 @@
+{
+  "n": 18,
+  "k": 3,
+  "d": 6,
+  "encoding": "x | (z << 18)",
+  "rows": [
+    26277347457,
+    59444428930,
+    52902924420,
+    3136815240,
+    10548711568,
+    27939967136,
+    16496890048,
+    63874044160,
+    21506327040,
+    66477130752,
+    15987673088,
+    20945838080,
+    51785547776,
+    16911630336,
+    66846720
+  ],
+  "independent_full_normalizer_check": {
+    "rank_S": 15,
+    "rank_N": 21,
+    "enumerated_N": 2097152,
+    "no_weights_1_through_5": true,
+    "weight6_N": 588,
+    "weight6_S": 4,
+    "weight6_logical": 584,
+    "weight6_logical_witness": 34359939617
+  },
+  "provenance": "Complete B29 right position1121/rightID4653, high8 left42; independently checked by audit_c9_obstruction. Exact historical row identity not established."
+}

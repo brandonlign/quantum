@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "convention": "site 0 first; X bits 0..16, Z bits 17..33",
+  "logical_pairs": [
+    {
+      "X": {
+        "integer": 1887436801,
+        "pauli": "XIIIIIZIIIIZZZIII",
+        "weight": 5
+      },
+      "Z": {
+        "integer": 8065646656,
+        "pauli": "IIIIIZYIIIIIZZZZI",
+        "weight": 6
+      }
+    },
+    {
+      "X": {
+        "integer": 3305111554,
+        "pauli": "IXIIIIIZIZIIIZZII",
+        "weight": 5
+      },
+      "Z": {
+        "integer": 9600761985,
+        "pauli": "XIIIIZIXIZZZZIIIZ",
+        "weight": 8
+      }
+    },
+    {
+      "X": {
+        "integer": 2852126724,
+        "pauli": "IIXIIIIIZIZIZIZII",
+        "weight": 5
+      },
+      "Z": {
+        "integer": 2420113666,
+        "pauli": "IXIIIZIIXIIZIIZII",
+        "weight": 5
+      }
+    },
+    {
+      "X": {
+        "integer": 9529458698,
+        "pauli": "IXIXIIIIIIZZZIIIZ",
+        "weight": 6
+      },
+      "Z": {
+        "integer": 956302593,
+        "pauli": "XIIIIIIZXIYZZIIII",
+        "weight": 6
+      }
+    },
+    {
+      "X": {
+        "integer": 13220446235,
+        "pauli": "XXIXXIIIIZIZIIIZZ",
+        "weight": 8
+      },
+      "Z": {
+        "integer": 956301959,
+        "pauli": "XXXIIIIYIXZZZIIII",
+        "weight": 8
+      }
+    }
+  ],
+  "scope": "One valid logical basis, not weight-minimized or a claimed optimal encoder."
+}

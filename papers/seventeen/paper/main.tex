@@ -1,0 +1,69 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.95in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,longtable,tabularx,array}
+\usepackage{enumitem,microtype,xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\hypersetup{pdftitle={Nonexistence of [[17,3,6]] Binary Stabilizer Codes},pdfauthor={Brandon Li}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 1pt minus 1pt}
+\setlength{\emergencystretch}{2em}
+\setlist{nosep,leftmargin=*}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\F}{\mathbb F_2}
+\newcommand{\qc}[1]{[\![#1]\!]}
+\newcommand{\wt}{\operatorname{wt}}
+\newcommand{\cost}{c_R}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\rad}{\operatorname{rad}}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\Ann}{\operatorname{Ann}}
+\newcommand{\Span}{\operatorname{span}}
+\newcommand{\Hull}{\operatorname{Hull}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\tr}{\mathsf T}
+\newcommand{\pathcode}[1]{{\small\nolinkurl{#1}}}
+\title{Nonexistence of \texorpdfstring{\(\qc{17,3,6}\)}{[[17,3,6]]} Binary Stabilizer Codes}
+\author{Brandon Li\\[0.2em]\normalsize John L. Miller Great Neck North High School, Great Neck, New York\\
+\normalsize\href{mailto:brandon.li.gn@gmail.com}{brandon.li.gn@gmail.com}}
+\date{16 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We prove that no binary stabilizer code with parameters \(\qc{17,3,6}\)
+exists, including degenerate codes. Together with a known
+\(\qc{17,3,5}\) construction, this determines the optimal minimum
+distance \(d_{\max}(17,3)=5\).
+Exact weight-enumerator certificates show that a hypothetical code is
+pure and contains a stabilizer word of weight eight. A quadratic-form
+argument bounds the dimension of the shortened code on the nine
+complementary coordinates, which leaves five local stabilizer types on
+the support of that word: one of rank one and four of rank two.
+An extension criterion expresses commutation and minimum distance
+through a linear map between quotient spaces, and its kernel and hull
+identities split the rank-one type into five kernel cases.
+Complete classifications of the shortened and local codes, together
+with exhaustive searches for extension maps, exclude every case.
+\end{abstract}
+\textbf{Keywords:} quantum error correction; stabilizer codes; additive codes;
+coset distance; symplectic geometry; computer-assisted proof.
+
+\input{01-introduction}
+\input{02-extension}
+\input{03-restrictions}
+\input{04-forced-support}
+\input{05-classification}
+\input{06-search}
+\input{07-rank-two}
+\input{08-rank-one}
+\input{09-verification}
+\input{10-conclusion}
+\input{references}
+\end{document}

@@ -1,0 +1,6 @@
+weight 1 errors 54 zero_syndrome 0
+weight 2 errors 1377 zero_syndrome 0
+weight 3 errors 22032 zero_syndrome 0
+weight 4 errors 247860 zero_syndrome 0
+weight 5 errors 2082024 zero_syndrome 0
+PASS all physical errors of weights 1 through 5 have nonzero syndrome; witness has zero syndrome

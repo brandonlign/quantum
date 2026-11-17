@@ -1,0 +1,9 @@
+{
+  "decimal": 34359939617,
+  "pauli": "XIIIIXIIIXIIXIIIXY",
+  "weight": 6,
+  "encoding": "x | (z << 18)",
+  "site_order": "Sites 0 through 17, left to right",
+  "commutes_with_all_generators": true,
+  "outside_stabilizer": true
+}

@@ -1,0 +1,23 @@
+{
+  "local_coset_tables_checked": true,
+  "all_1023_nonzero_cost_inequalities_pass": true,
+  "map_linear_and_bijective": true,
+  "reconstructed_stabilizer_rows_match": true,
+  "raw15": [
+    26277347457,
+    59444428930,
+    52902924420,
+    3136815240,
+    10548711568,
+    27939967136,
+    16496890048,
+    63874044160,
+    21506327040,
+    66477130752,
+    15987673088,
+    20945838080,
+    51785547776,
+    16911630336,
+    66846720
+  ]
+}

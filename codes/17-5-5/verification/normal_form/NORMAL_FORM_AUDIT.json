@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "conjugacy_basis_checks": 68,
+  "original_stabilizer_rows_matched": 12,
+  "all_transformed_codewords_matched": 4096,
+  "rank": 12,
+  "isotropic": true,
+  "seed_paulis": "IIZXYIYXIZIIZYIII",
+  "group_order": 60,
+  "generator_and_product_orders": [
+    2,
+    3,
+    5
+  ],
+  "group_identification": "faithful even-permutation action on five sites, hence A5",
+  "site_orbits": [
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    [
+      12,
+      13,
+      14,
+      15,
+      16
+    ]
+  ],
+  "orbit_size": 30,
+  "orbit_weights": [
+    8
+  ],
+  "orbit_span_equals_transformed_code": true,
+  "nontrivial_local_maps_b": [
+    14,
+    16
+  ],
+  "stabilizer_enumerator": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    30,
+    0,
+    720,
+    0,
+    1344,
+    0,
+    1680,
+    0,
+    321,
+    0
+  ],
+  "scope": "Equivalent binary monomial presentation only; no new code/family/full automorphism claim or phase-consistent unitary A5 claim."
+}

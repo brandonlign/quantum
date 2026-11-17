@@ -1,0 +1,27 @@
+== 1. Farkas certificates (Proposition 2; exact integers, standard library only)
+checking 6 files
+PASS minwt10.json: 17 columns, 15 multiplier rows, 3 positive residuals, nu.rhs = -61440
+PASS w1_stabilizer.json: 16 columns, 6 multiplier rows, 11 positive residuals, nu.rhs = -11520
+PASS w2_stabilizer.json: 45 columns, 14 multiplier rows, 30 positive residuals, nu.rhs = -374784
+PASS w3_stabilizer.json: 42 columns, 15 multiplier rows, 28 positive residuals, nu.rhs = -5662720
+PASS w4_A4ge2.json: 78 columns, 26 multiplier rows, 48 positive residuals, nu.rhs = -7294976
+PASS w5_pure.json: 72 columns, 24 multiplier rows, 32 positive residuals, nu.rhs = -8192
+ALL 6 CERTIFICATES PASS
+== 2. Parity congruence (Lemma 3)
+=> 2048*A4 ≡ 0 (mod 4096)  =>  A4 ≡ 0 (mod 2)
+== 4. Build the C searches
+== 5. Positive controls on the existing [[16,4,5]] code (all must be FOUND/True)
+C control on [[16,4,5]]: FOUND nodes=25 sols=1 (must be FOUND)
+C control on [[16,4,5]]: FOUND nodes=20 (must be FOUND)
+C control on [[16,4,5]]: FOUND nodes=12 (must be FOUND)
+SAT control on [[16,4,5]]: True (must be True)
+symmetry-broken SAT control on [[16,4,5]] (r=11, m=6): True (must be True)
+== 6. m=6 and m=7: full DFS (no symmetry reduction) and SAT (with Lemma 9)
+m=6: 37 classes, survivors []
+m=7: 2298 classes, survivors []
+survivors []
+== 7. Spot checks m=8 (DFS) and m=9 (DFS with Lemma 9; a few minutes each)
+m=8 class 0: NONE nodes=8643178
+m=8 class 1578: NONE nodes=1139466
+m=9 class 42: NONE nodes=94166238
+REPLAY OK

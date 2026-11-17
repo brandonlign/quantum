@@ -1,0 +1,136 @@
+{
+  "status": "PASS",
+  "publication": {
+    "title": "On Binary Constructions of Quantum Codes",
+    "authors": [
+      "Gerard Cohen",
+      "Sylvia Encheva",
+      "Simon Litsyn"
+    ],
+    "journal": "IEEE Transactions on Information Theory",
+    "volume": 45,
+    "issue": 7,
+    "pages": "2495\u20132498",
+    "year": 1999,
+    "DOI": "10.1109/18.796389",
+    "public_final_PDF_url": "https://biblio.telecom-paristech.fr/cgi-bin/download.cgi?id=9892",
+    "PDF_bytes": 128437,
+    "PDF_SHA256": "9e9f47adf47e625563ca7f2c3f279d6ceb47a1cdf55a05c22ce36acc14f67395",
+    "inspected_page": 2496,
+    "PDF_page_index_zero_based": 1
+  },
+  "final_printed_rows": [
+    "111111000000000000",
+    "001011100000101000",
+    "001001011000110000",
+    "011100000100110000",
+    "011010000000011100",
+    "011001001010001000",
+    "001000001100101010",
+    "001000001100010101",
+    "011000000111000100",
+    "110000101000000000",
+    "000000001000110001",
+    "000000010100001001"
+  ],
+  "first_nine": {
+    "dimension": 9,
+    "minimum_nonzero_distance": 6,
+    "weight_enumerator": {
+      "0": 1,
+      "6": 102,
+      "8": 153,
+      "10": 153,
+      "12": 102,
+      "18": 1
+    },
+    "Euclidean_Gram_rows": [
+      250,
+      501,
+      490,
+      469,
+      427,
+      343,
+      175,
+      351,
+      190
+    ],
+    "Euclidean_Gram_rank": 8,
+    "Euclidean_Gram_pivot_columns_zero_based": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "radical_coefficient_basis": [
+      471
+    ],
+    "radical_dimension": 1,
+    "maximum_totally_isotropic_dimension": 5
+  },
+  "full_twelve": {
+    "dimension": 12,
+    "minimum_nonzero_distance": 4,
+    "weight_enumerator": {
+      "0": 1,
+      "4": 105,
+      "6": 571,
+      "8": 1371,
+      "10": 1371,
+      "12": 571,
+      "14": 105,
+      "18": 1
+    },
+    "Euclidean_Gram_rows": [
+      250,
+      4085,
+      4074,
+      3029,
+      4011,
+      3415,
+      687,
+      1887,
+      2750,
+      1502,
+      2742,
+      1342
+    ],
+    "Euclidean_Gram_rank": 10,
+    "Euclidean_Gram_pivot_columns_zero_based": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      9,
+      10
+    ],
+    "radical_coefficient_basis": [
+      471,
+      3762
+    ],
+    "radical_dimension": 2,
+    "maximum_totally_isotropic_dimension": 7
+  },
+  "first_two_overlap_positions_one_based": [
+    3,
+    5,
+    6
+  ],
+  "theorem_condition": "Theorem 1 requires C^perp subseteq C and C subseteq Cprime. At length 18 and dimension 9, the first condition forces self-duality.",
+  "conclusion": "The FINAL published extension matrix has no 9-dimensional totally isotropic subcode. Therefore its displayed data do not satisfy the hypothesis of the theorem invoked for Example 1. The same displayed-data obstruction persists from the preprint into the final article.",
+  "limits": "This does not establish the absence of a later erratum, exclude other constructions, invalidate all results in the article, or settle priority.",
+  "optional_direct_final_PDF_check": {
+    "SHA256_match": true,
+    "all_twelve_extracted_rows_match": true,
+    "page": 2496
+  },
+  "all_twelve_rows_identical_to_preprint_audit": true
+}

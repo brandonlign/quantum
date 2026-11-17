@@ -1,0 +1,203 @@
+=== Independent full normalizer/stabilizer enumerations ===
+{
+  "status": "PASS",
+  "parameters": "pure [[18,3,6]]",
+  "rank_S": 15,
+  "rank_normalizer": 21,
+  "normalizer_words_enumerated": 2097152,
+  "minimum_normalizer_weight": 6,
+  "logical_distance": 6,
+  "explicit_weight6_logical": 34359939617,
+  "stabilizer_enumerator": {
+    "0": 1,
+    "6": 4,
+    "8": 130,
+    "9": 480,
+    "10": 1436,
+    "11": 2688,
+    "12": 4312,
+    "13": 6464,
+    "14": 7260,
+    "15": 5760,
+    "16": 2981,
+    "17": 992,
+    "18": 260
+  },
+  "normalizer_enumerator": {
+    "0": 1,
+    "6": 588,
+    "7": 2144,
+    "8": 8538,
+    "9": 28960,
+    "10": 79436,
+    "11": 171968,
+    "12": 300808,
+    "13": 417344,
+    "14": 445700,
+    "15": 357856,
+    "16": 201501,
+    "17": 70304,
+    "18": 12004
+  },
+  "logical_enumerator": {
+    "6": 584,
+    "7": 2144,
+    "8": 8408,
+    "9": 28480,
+    "10": 78000,
+    "11": 169280,
+    "12": 296496,
+    "13": 410880,
+    "14": 438440,
+    "15": 352096,
+    "16": 198520,
+    "17": 69312,
+    "18": 11744
+  },
+  "all_19_MacWilliams_coefficients_match": true
+}
+{
+  "status": "PASS",
+  "parameters": "pure [[18,3,6]]",
+  "rank_S": 15,
+  "rank_normalizer": 21,
+  "normalizer_words_enumerated": 2097152,
+  "minimum_normalizer_weight": 6,
+  "logical_distance": 6,
+  "explicit_weight6_logical": 34359943556,
+  "stabilizer_enumerator": {
+    "0": 1,
+    "7": 16,
+    "8": 102,
+    "9": 504,
+    "10": 1436,
+    "11": 2688,
+    "12": 4288,
+    "13": 6416,
+    "14": 7416,
+    "15": 5680,
+    "16": 2905,
+    "17": 1080,
+    "18": 236
+  },
+  "normalizer_enumerator": {
+    "0": 1,
+    "6": 564,
+    "7": 2240,
+    "8": 8298,
+    "9": 29312,
+    "10": 79396,
+    "11": 171648,
+    "12": 300776,
+    "13": 417280,
+    "14": 446748,
+    "15": 357056,
+    "16": 201005,
+    "17": 71040,
+    "18": 11788
+  },
+  "logical_enumerator": {
+    "6": 564,
+    "7": 2224,
+    "8": 8196,
+    "9": 28808,
+    "10": 77960,
+    "11": 168960,
+    "12": 296488,
+    "13": 410864,
+    "14": 439332,
+    "15": 351376,
+    "16": 198100,
+    "17": 69960,
+    "18": 11552
+  },
+  "all_19_MacWilliams_coefficients_match": true
+}
+{
+  "status": "PASS",
+  "parameters": "pure [[18,3,6]]",
+  "rank_S": 15,
+  "rank_normalizer": 21,
+  "normalizer_words_enumerated": 2097152,
+  "minimum_normalizer_weight": 6,
+  "logical_distance": 6,
+  "explicit_weight6_logical": 34359939617,
+  "stabilizer_enumerator": {
+    "0": 1,
+    "7": 12,
+    "8": 114,
+    "9": 508,
+    "10": 1392,
+    "11": 2712,
+    "12": 4344,
+    "13": 6360,
+    "14": 7392,
+    "15": 5724,
+    "16": 2901,
+    "17": 1068,
+    "18": 240
+  },
+  "normalizer_enumerator": {
+    "0": 1,
+    "6": 564,
+    "7": 2208,
+    "8": 8394,
+    "9": 29344,
+    "10": 79044,
+    "11": 171840,
+    "12": 301224,
+    "13": 416832,
+    "14": 446556,
+    "15": 357408,
+    "16": 200973,
+    "17": 70944,
+    "18": 11820
+  },
+  "logical_enumerator": {
+    "6": 564,
+    "7": 2196,
+    "8": 8280,
+    "9": 28836,
+    "10": 77652,
+    "11": 169128,
+    "12": 296880,
+    "13": 410472,
+    "14": 439164,
+    "15": 351684,
+    "16": 198072,
+    "17": 69876,
+    "18": 11580
+  },
+  "all_19_MacWilliams_coefficients_match": true
+}
+=== Local gluing, quotient dual forms and exact reconstruction ===
+{
+  "local_coset_tables_checked": true,
+  "all_1023_nonzero_cost_inequalities_pass": true,
+  "map_linear_and_bijective": true,
+  "reconstructed_stabilizer_rows_match": true,
+  "raw15": [
+    26277347457,
+    59444428930,
+    52902924420,
+    3136815240,
+    10548711568,
+    27939967136,
+    16496890048,
+    63874044160,
+    21506327040,
+    66477130752,
+    15987673088,
+    20945838080,
+    51785547776,
+    16911630336,
+    66846720
+  ]
+}
+left {'local_rank': 4, 'marked_rank': 2, 'local_Gram_rank': 0, 'dual_Gram_rows': [2, 1, 8, 4, 32, 16, 128, 64, 0, 0], 'dual_lifts': [24702, 20552, 24596, 20498, 3, 16920, 12, 18442, 13141, 15462], 'local_enumerator': {0: 1, 6: 12, 8: 3}}
+right {'local_rank': 7, 'marked_rank': 3, 'local_Gram_rank': 2, 'dual_Gram_rows': [2, 1, 8, 4, 32, 16, 128, 64, 0, 0], 'dual_lifts': [812934, 594171, 91366, 70425, 619650, 865104, 88022, 283146, 88037, 29831], 'local_enumerator': {0: 1, 6: 38, 7: 16, 8: 47, 9: 16, 10: 10}}
+nonzero_coset_minimum_sums {6: 261, 7: 333, 8: 337, 9: 73, 10: 19}
+=== Exact binary transvections and Hermitian phases ===
+B {'v': 4328808577, 'v_string': 'YIIIIIIYIIIIIXYIII', 'correction': 17435, 'correction_string': 'XXIXXIIIIIXIIIXIII', 'bare_negative_rows_one_based': [9, 12]}
+C {'v': 8607273026, 'v_string': 'IYIIIIYIIIIIXIIYII', 'correction': 280636, 'correction_string': 'ZIXXXXIIIIIXIIXIII', 'bare_negative_rows_one_based': [3, 4, 5]}
+PASS: all three codes, gluing, complete enumerations, MacWilliams transforms, witnesses, transformations and phases.

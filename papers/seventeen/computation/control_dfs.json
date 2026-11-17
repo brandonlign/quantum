@@ -1,0 +1,58 @@
+[
+ {
+  "cls": 0,
+  "hull": 1,
+  "prefix": [
+   27,
+   45,
+   71,
+   115,
+   142
+  ],
+  "completions": 1549,
+  "dfs_seconds": 0.2,
+  "brute_seconds": 32.2
+ },
+ {
+  "cls": 1,
+  "hull": 1,
+  "prefix": [
+   23,
+   43,
+   77,
+   114,
+   172
+  ],
+  "completions": 2215,
+  "dfs_seconds": 0.2,
+  "brute_seconds": 30.1
+ },
+ {
+  "cls": 5,
+  "hull": 3,
+  "prefix": [
+   23,
+   43,
+   78,
+   122,
+   155
+  ],
+  "completions": 1932,
+  "dfs_seconds": 0.2,
+  "brute_seconds": 32.1
+ },
+ {
+  "cls": 150,
+  "hull": 5,
+  "prefix": [
+   23,
+   43,
+   78,
+   122,
+   154
+  ],
+  "completions": 705,
+  "dfs_seconds": 0.1,
+  "brute_seconds": 32.4
+ }
+]

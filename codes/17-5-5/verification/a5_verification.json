@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "group_order": 60,
+  "identification": "faithful action as all even permutations on five sites, hence A5",
+  "orbit_size": 30,
+  "orbit_weight": 8,
+  "span_rank": 12,
+  "same_code": true,
+  "scope": "An explicit A5 subgroup and orbit construction; not a full automorphism-group classification."
+}

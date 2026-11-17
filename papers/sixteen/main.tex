@@ -1,0 +1,739 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,tabularx,enumitem,microtype,xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\hypersetup{pdftitle={No binary [[16,5,5]] stabilizer code exists},pdfauthor={Brandon Li}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 1pt minus 1pt}
+\setlength{\emergencystretch}{2em}
+\setlength{\belowcaptionskip}{6pt}
+\setlist{nosep,leftmargin=*}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\F}{\mathbb F_2}
+\newcommand{\qc}[1]{[\![#1]\!]}
+\newcommand{\wt}{\operatorname{wt}}
+\newcommand{\cost}{c}
+\newcommand{\Sh}{\mathrm{Sh}}
+\newcommand{\tr}{\mathsf T}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\pathcode}[1]{{\small\nolinkurl{#1}}}
+
+\title{No binary \(\qc{16,5,5}\) stabilizer code exists}
+\author{Brandon Li\\[0.2em]
+\normalsize John L. Miller Great Neck North High School, Great Neck, New York\\
+\normalsize\href{mailto:brandon.li.gn@gmail.com}{brandon.li.gn@gmail.com}}
+\date{November 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We prove that no binary stabilizer code with parameters \(\qc{16,5,5}\)
+exists, pure or degenerate. Together with a known \(\qc{16,5,4}\) code,
+this gives \(d_{\max}(16,5)=4\) and closes an open entry of Grassl's
+tables. Exact integer certificates for split weight enumerators and a
+congruence modulo \(4096\) show that a hypothetical code is pure and that
+its stabilizer has minimum weight \(m\in\{6,7,8,9\}\). We then
+shorten the centralizer on the support of a minimum-weight stabilizer
+word. The shortened code belongs to one of four complete
+classifications, with 37, 2,298, 1,579 and 43 classes, and the code
+induces a linear map from a small local space to the cosets of the
+shortened code that must satisfy a simple weight condition. A complete
+search, carried out by two independent implementations for each case,
+shows that no class admits such a map.
+\end{abstract}
+
+\textbf{Keywords:} quantum error correction; stabilizer codes; additive
+codes; nonexistence; shortening; computer-assisted proof.
+
+%=====================================================================
+\section{Introduction}\label{sec:intro}
+
+An \(\qc{n,k,d}\) quantum code uses \(n\) physical qubits to store \(k\)
+logical qubits. Its minimum distance \(d\) is the smallest number of
+qubits on which a Pauli operator can act nontrivially on the encoded
+information while commuting with every stabilizer. A code of distance
+\(d\) corrects arbitrary errors on up to \(\lfloor (d-1)/2\rfloor\)
+qubits. Let \(d_{\max}(n,k)\) be the largest minimum distance of a binary
+stabilizer code with \(n\) physical and \(k\) logical qubits.
+Grassl's tables \cite{grassl} record the best known lower and upper bounds
+on \(d_{\max}(n,k)\). For \((n,k)=(16,5)\) they list a \(\qc{16,5,4}\)
+code, obtained by extending a \(\qc{14,5,4}\) code by two coordinates,
+while the linear-programming bound allows distance five. So before this
+work \(4\leq d_{\max}(16,5)\leq5\).
+
+\begin{theorem}\label{thm:main}
+There is no binary stabilizer code with parameters \(\qc{16,5,d}\) for
+any \(d\geq5\). Hence \(d_{\max}(16,5)=4\).
+\end{theorem}
+
+The theorem covers pure and degenerate codes alike: purity is proved in
+Section~\ref{sec:purity}, not assumed. It concerns stabilizer (additive)
+codes; nonadditive codes are outside its scope.
+
+\paragraph{Previous work.}
+The symplectic description of stabilizer codes and the MacWilliams and
+shadow identities are standard \cite{crss,rains}. The
+semidefinite-programming bounds of Angl\`es Munn\'e and Huber
+\cite{sdp}, which apply to all codes, give \(32\leq K\leq 42\) for the
+code-space dimension at \((n,d)=(16,5)\) in their Table~1, so
+\(K=2^5=32\) remains possible. Lai \cite{lai} develops refined
+weight-enumerator tests; his Section~VII-D leaves 27 candidate weight
+distributions for \(\qc{16,5,5}\). Our proof uses the classification of
+small additive codes of distance five by Grassl, Krotov, Sok and
+Sol\'e \cite{dodeca}. Earlier nonexistence proofs
+combining structural reductions with finite searches include the
+\(\qc{13,5,4}\) result of Bierbrauer et al.~\cite{bierbrauer}.
+The same extension method also shows that no \(\qc{17,3,6}\) code
+exists; that proof is given separately.
+
+\paragraph{Outline of the proof.}
+Suppose a \(\qc{16,5,{\geq}5}\) code exists. Exact certificates for split
+weight enumerators, plus a parity congruence, show that the code is pure
+to distance five and that its stabilizer has minimum weight
+\(m\in\{6,7,8,9\}\) (Section~\ref{sec:purity}). Take a stabilizer word
+\(p\) of weight \(m\) and its support \(T\). The stabilizer words
+supported on \(T\) are only \(0\) and \(p\), and the centralizer
+words supported off \(T\) form a small additive code \(C\) from a
+complete list of 3,957 classes (Section~\ref{sec:shorten}). The rest of
+the centralizer is described by a linear map \(M\) from a local
+quotient space to the cosets of \(C\); every nonzero element and its
+image must have total weight at least five (Section~\ref{sec:map}).
+A complete search shows that no class admits such a map
+(Section~\ref{sec:search}). Figure~\ref{fig:flow} summarizes the steps.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[>=Stealth,
+ box/.style={draw=black!60,fill=black!4,rounded corners=1pt,
+ text width=4.1cm,minimum height=1.05cm,align=center,font=\small},
+ node distance=0.5cm and 0.45cm]
+\node[box] (a) {Pure; minimum stabilizer weight \(m\in\{6,7,8,9\}\)};
+\node[box,right=of a] (b) {Shorten on a weight-\(m\) word:\\ \(C\) is one of \(3{,}957\) classes};
+\node[box,right=of b] (c) {The code gives a linear map \(M\) with a weight condition};
+\node[box,below=of c] (d) {Complete search: no class admits such a map};
+\node[box,left=of d] (e) {No \(\qc{16,5,{\geq}5}\) code};
+\draw[->] (a)--(b); \draw[->] (b)--(c); \draw[->] (c)--(d); \draw[->] (d)--(e);
+\end{tikzpicture}
+\caption{Structure of the proof.}
+\label{fig:flow}
+\end{figure}
+
+%=====================================================================
+\section{Preliminaries}\label{sec:prelim}
+
+\paragraph{Pauli space.}
+All vector spaces are over \(\F\). We write
+\[
+ V_n=\F^{2n}=\{(x\mid z):x,z\in\F^n\},\qquad
+ \langle (x\mid z),(x'\mid z')\rangle=x\cdot z'+z\cdot x'.
+\]
+At each coordinate the pairs \((0,0),(1,0),(0,1),(1,1)\) represent the
+Pauli letters \(I,X,Z,Y\); vector addition represents multiplication of
+Pauli operators up to phase, and the symplectic product is \(0\) for
+commuting and \(1\) for anticommuting operators. The weight
+\(\wt(x\mid z)\) is the number of coordinates whose letter is not \(I\).
+We write \(\varepsilon(v)=\wt(v)\bmod 2\).
+
+\paragraph{Stabilizer codes.}
+A subspace is isotropic if all its symplectic products vanish. A binary
+\(\qc{n,k}\) stabilizer code is an isotropic subspace \(S\leq V_n\) of
+dimension \(n-k\); its centralizer is \(S^\perp\), of dimension \(n+k\),
+and contains \(S\). For \(k>0\) its minimum distance is
+\(d=\min\{\wt(v):v\in S^\perp\setminus S\}\). The code is \emph{pure to
+distance \(\delta\)} if every nonzero word of \(S^\perp\) has weight at
+least \(\delta\). For a code of distance at least \(\delta\), this is the
+same as saying that no nonzero stabilizer word has weight below
+\(\delta\). We call the elements of \(S\) stabilizer words and write
+\(A_w\) for the number of stabilizer words of weight \(w\).
+
+\paragraph{Additive codes.}
+An additive code of length \(\ell\) is any subspace \(C\leq V_\ell\),
+not necessarily isotropic. It is an \((\ell,2^c,{\geq}\delta)_4\) code if
+\(\dim C=c\), so that \(C\) has \(2^c\) words over the four-letter
+Pauli alphabet, and every nonzero word has weight at least \(\delta\).
+Two additive codes are \emph{equivalent} if a permutation of coordinates
+followed by an invertible \(\F\)-linear map of \(\F^2\) at each coordinate
+carries one to the other. Since \(\mathrm{GL}(2,2)\) permutes the three
+nonzero letters and equals \(\mathrm{Sp}(2,2)\), these maps preserve both
+weight and the symplectic form. On stabilizer codes they are the local
+Clifford operations together with qubit permutations, and they map an
+\(\qc{n,k,d}\) code to an \(\qc{n,k,d}\) code with the same weight
+enumerator. In particular, any stabilizer word of weight \(w\) can be
+moved to \(Z^w=Z\otimes\cdots\otimes Z\) on the first \(w\) qubits.
+
+\paragraph{Supports and shortening.}
+For a set \(T\) of coordinates, \(V_T\leq V_n\) denotes the words that
+are \(I\) outside \(T\), and \(W=V_{T^c}\) the words that are \(I\) on
+\(T\); so \(V_n=V_T\oplus W\). We write \(\pi_T\) for restriction to
+\(T\) and treat \(W\) as \(V_{n-|T|}\) when convenient.
+
+\begin{lemma}[Weight parity]\label{lem:parity-linear}
+For all \(u,v\in V_n\),
+\(\varepsilon(u+v)=\varepsilon(u)+\varepsilon(v)+\langle u,v\rangle\).
+In particular \(\varepsilon\) is linear on every isotropic subspace.
+\end{lemma}
+\begin{proof}
+It suffices to check one coordinate, with letters \(\alpha,\beta\in\F^2\).
+If \(\alpha=0\) or \(\beta=0\), both sides vanish. If \(\alpha=\beta\ne0\),
+the left side is \(1+1+0\equiv0\) and \(\langle\alpha,\alpha\rangle=0\).
+If \(\alpha\ne\beta\) are both nonzero, the left side is \(1+1+1\equiv1\),
+and two distinct nonidentity Pauli letters anticommute.
+\end{proof}
+
+\begin{lemma}[Shortening]\label{lem:shorten}
+Let \(S\) be an \(\qc{n,k}\) code that is pure to distance \(\delta\).
+Let \(T\) be a set of \(m\) coordinates, \(R=S\cap V_T\) and
+\(r=\dim R\). Then \(\pi_T(S^\perp)=R^\perp\cap V_T\), and
+\(C=S^\perp\cap W\) is an additive \((n-m,2^{n+k-2m+r},{\geq}\delta)_4\)
+code.
+\end{lemma}
+\begin{proof}
+A word \(u\in V_T\) is orthogonal to \(\pi_T(S^\perp)\) if and only if it
+is orthogonal to \(S^\perp\), that is, \(u\in S\cap V_T=R\). Hence the
+annihilator of \(\pi_T(S^\perp)\) inside \(V_T\) is \(R\), so
+\(\pi_T(S^\perp)=R^\perp\cap V_T\), of dimension \(2m-r\). The kernel of
+\(\pi_T\) on \(S^\perp\) is \(C\), so \(\dim C=(n+k)-(2m-r)\). Nonzero
+words of \(C\) are nonzero words of \(S^\perp\), so they have weight at
+least \(\delta\).
+\end{proof}
+
+%=====================================================================
+\section{Purity and the minimum stabilizer weight}\label{sec:purity}
+
+Throughout, \(S\) denotes a hypothetical \(\qc{16,5,{\geq}5}\) code, so
+\(|S|=2^{11}=2048\). This section proves that \(S\) is pure to distance
+five and that its minimum nonzero weight \(m\) satisfies
+\(6\leq m\leq 9\).
+
+\paragraph{Split enumerators.}
+Suppose \(S\) contains a word of weight \(w\in\{1,\ldots,5\}\). After a
+local Clifford operation it is \(r=Z^w\) on the block \(B\) of the first
+\(w\) qubits; put \(f=16-w\) and \(R=\langle r\rangle\leq S\). Each coset
+\(s+R\subseteq S\) has a fixed restriction to the other \(f\) qubits, of
+some weight \(b\), and its restriction to \(B\) is a coset of \(R\)
+inside \(R^\perp\cap V_B\). The \emph{pattern} of that local coset is
+\(P=(P_0,\ldots,P_w)\), where \(P_a\) counts its two elements of weight
+\(a\). Let \(\mathcal P_w\) be the set of patterns of all cosets of \(R\)
+in \(R^\perp\cap V_B\). The variable \(x_{P,b}\geq0\) counts the cosets
+of \(R\) in \(S\) with pattern \(P\) and outside weight \(b\). The
+split enumerator
+\[
+ H_{a,b}=\sum_{P}P_a\,x_{P,b}
+\]
+counts the words of \(S\) with weight \(a\) on \(B\) and \(b\) outside.
+For the last case below there is no block: \(w=0\), \(f=16\), and the
+variables are \(x_b=A_b\).
+
+With the quaternary Krawtchouk polynomials
+\(K^\ell_a(i)=[u^a]\,(1+3u)^{\ell-i}(1-u)^i\), put
+\[
+ T_{a,b}=\sum_{a',b'}K^w_a(a')K^f_b(b')H_{a',b'},\qquad
+ \Sigma_{a,b}=\sum_{a',b'}(-1)^{a'+b'}K^w_a(a')K^f_b(b')H_{a',b'}.
+\]
+The character identity \(\mathbf 1[v\in S^\perp]=2^{-11}\sum_{s\in S}
+(-1)^{\langle v,s\rangle}\), summed over all \(v\) of split weight
+\((a,b)\), shows that \(T_{a,b}/2^{11}\) is the number of centralizer
+words of split weight \((a,b)\) (the split MacWilliams identity). By
+Lemma~\ref{lem:parity-linear}, \(\varepsilon\) is a linear functional on
+\(S\), so the \emph{shadow}
+\(\{v:\langle v,s\rangle=\varepsilon(s)\text{ for all }s\in S\}\) is a
+coset of \(S^\perp\). The same computation with
+\((-1)^{\langle v,s\rangle+\varepsilon(s)}\) shows that
+\(\Sigma_{a,b}/2^{11}\) counts its words of split weight \((a,b)\)
+\cite{rains}.
+
+\paragraph{The linear systems.}
+Every \(\qc{16,5,{\geq}5}\) code containing \(r\) satisfies:
+\begin{enumerate}[label=(\roman*)]
+\item \(H_{0,0}=1\) and \(\sum_{a,b}H_{a,b}=2^{11}\);
+\item \(T_{a,b}=2^{11}H_{a,b}\) for \(1\leq a+b\leq4\), because every
+ centralizer word of weight at most four is a stabilizer word;
+\item \(\Sigma_{a,b}\geq0\) for all \(a,b\);
+\item the hypotheses of the case being treated, of the form
+ \(\sum_{a+b=j}H_{a,b}=0\) or \(\sum_{a+b=4}H_{a,b}\geq2\).
+\end{enumerate}
+These hold without assuming purity. The constraint \(H_{0,0}=1\) also
+encodes \(r\in S\): the only coset of \(R\) in \(R^\perp\cap V_B\) that
+contains a weight-zero word is \(R=\{I^w,Z^w\}\) itself, so its pattern
+is the only one with \(P_0>0\), and \(H_{0,0}=1\) forces exactly one
+coset of \(S\) with that pattern and outside weight \(0\), namely \(R\).
+Write the system as \(Ex=e\),
+\(Gx\leq g\), \(x\geq0\). An \emph{infeasibility certificate} is a pair of
+integer multiplier vectors \(\nu\) (any signs) and \(\lambda\geq0\) such
+that the combined row \(c=\nu E+\lambda G\) has every coefficient
+\(c\geq0\) while \(\nu e+\lambda g<0\). A feasible \(x\) would give
+\(0\leq cx\leq \nu e+\lambda g<0\), which is impossible. Checking a
+certificate needs only exact integer arithmetic, however the multipliers
+were found.
+
+\begin{proposition}\label{prop:certs}
+Each of the following cases has an infeasibility certificate, so none
+of them occurs for a \(\qc{16,5,{\geq}5}\) code:
+\begin{enumerate}[label=(\alph*)]
+\item \(S\) contains a word of weight \(1\), \(2\) or \(3\);
+\item \(S\) contains a word of weight \(4\) and \(A_4\geq2\);
+\item \(A_1=\cdots=A_4=0\) and \(S\) contains a word of weight \(5\);
+\item \(A_1=\cdots=A_9=0\).
+\end{enumerate}
+\end{proposition}
+
+There are six certificates, listed in Table~\ref{tab:certs}. The checker
+rebuilds every row from its label, recomputes the patterns
+\(\mathcal P_w\) by enumerating \(R^\perp\cap V_B\), and verifies both
+sign conditions in exact integer arithmetic.
+
+\begin{table}[h!]
+\centering\small
+\caption{The six infeasibility certificates. ``Columns'' is the number
+of variables, ``rows'' the number of rows with a nonzero multiplier, and
+the last column is \(\nu e+\lambda g\). In case (d) there is no block,
+and the 17 variables are \(A_0,\ldots,A_{16}\).}\label{tab:certs}
+\begin{tabular}{@{}llrrr@{}}\toprule
+Case&Assumption&Columns&Rows&Right-hand side\\\midrule
+(a)&\(S\ni Z\)&16&6&\(-11{,}520\)\\
+(a)&\(S\ni ZZ\)&45&14&\(-374{,}784\)\\
+(a)&\(S\ni Z^3\)&42&15&\(-5{,}662{,}720\)\\
+(b)&\(S\ni Z^4\), \(A_4\geq2\)&78&26&\(-7{,}294{,}976\)\\
+(c)&\(S\ni Z^5\), \(A_1=\cdots=A_4=0\)&72&24&\(-8{,}192\)\\
+(d)&\(A_1=\cdots=A_9=0\)&17&15&\(-61{,}440\)\\\bottomrule
+\end{tabular}
+\end{table}
+
+Proposition~\ref{prop:certs}(b) leaves the possibility \(A_4=1\). An
+integer congruence excludes it.
+
+\begin{lemma}[Parity]\label{lem:parity}
+For any \(\qc{16,5,{\geq}5}\) code, \(A_1+A_2+A_3+A_4\) is even.
+\end{lemma}
+\begin{proof}
+Write \(K_j=K^{16}_j\) and let \(\Sh_j\) be the number of shadow words of
+weight \(j\), a nonnegative integer. The following identities hold:
+\(\Delta_0:=\sum_wA_w=2048\); for \(1\leq j\leq 4\),
+\(\Delta_j:=\sum_wK_j(w)A_w-2048A_j=0\), by (ii); and for all \(j\),
+\(\Omega_j:=\sum_w(-1)^wK_j(w)A_w-2048\,\Sh_j=0\). Consider
+\[
+ L=-740\Delta_0-265\Delta_1-81\Delta_2-19\Delta_3-3\Delta_4
+   +80\Omega_0+10\Omega_1-2\Omega_3 .
+\]
+Its value is \(-740\cdot2048=-1{,}515{,}520\equiv0\pmod{4096}\). Expanding,
+the coefficients \(c_0,\ldots,c_{16}\) of \(A_0,\ldots,A_{16}\) are
+\[
+ \begin{aligned}
+ &(-860160,\,-30720,\,-264192,\,-227328,\,-178176,\\
+ &\ \ -102400,\,-61440,\,-28672,\,-12288,\,-4096,\,0,\ldots,0),
+ \end{aligned}
+\]
+and the coefficients of \(\Sh_0,\Sh_1,\Sh_3\) are
+\(-163840,-20480,4096\). Modulo \(4096\) all of these vanish except
+\(c_1,c_2,c_3,c_4\), each congruent to \(2048\). Reducing modulo \(4096\)
+gives \(2048(A_1+A_2+A_3+A_4)\equiv0\).
+\end{proof}
+
+\begin{corollary}\label{cor:pure}
+A \(\qc{16,5,{\geq}5}\) code is pure to distance five, and the minimum
+weight \(m\) of its nonzero stabilizer words satisfies \(6\leq m\leq9\).
+\end{corollary}
+\begin{proof}
+Proposition~\ref{prop:certs}(a) gives \(A_1=A_2=A_3=0\), and (b) gives
+\(A_4\leq1\); by Lemma~\ref{lem:parity}, \(A_4\) is even, so \(A_4=0\).
+Thus no nonzero stabilizer word has weight at most four, while every word
+of \(S^\perp\setminus S\) has weight at least five; the code is pure to
+distance five. Then (c) excludes \(m=5\) and (d) excludes \(m\geq10\).
+\end{proof}
+
+%=====================================================================
+\section{Shortening on a minimum-weight word}\label{sec:shorten}
+
+Let \(m\in\{6,7,8,9\}\) be the minimum stabilizer weight. Choose a stabilizer word
+\(p\) of weight \(m\) with support \(T\). After a local Clifford
+operation and a qubit permutation, \(T=\{0,\ldots,m-1\}\) and
+\(p=Z^m\). Put \(W=V_{T^c}\), of length \(f=16-m\).
+
+\begin{lemma}\label{lem:rankone}
+The only stabilizer words supported on \(T\) are \(0\) and \(p\):
+\(S\cap V_T=\langle p\rangle\).
+\end{lemma}
+\begin{proof}
+Let \(r=\dim(S\cap V_T)\) and suppose \(r\geq2\). By
+Corollary~\ref{cor:pure} and Lemma~\ref{lem:shorten}, \(S^\perp\cap W\)
+is an additive \((16-m,2^{21-2m+r},{\geq}5)_4\) code. Any subspace of it of
+dimension \(23-2m\) is a
+\[
+ (10,2^{11},{\geq}5)_4,\qquad (9,2^{9},{\geq}5)_4,\qquad\text{or}\qquad
+ (8,2^{7},{\geq}5)_4
+\]
+code, for \(m=6,7,8\) respectively. No additive codes with these
+parameters exist \cite{dodeca}. The lengthening census described below
+confirms that these three sets are empty.
+
+For \(m=9\), let \(q\in S\cap V_T\) be independent of \(p\). Both
+\(q\) and \(q+p\) are nonzero stabilizer words supported on \(T\), so by
+minimality of \(m\) both have weight nine. Hence on every qubit of \(T\)
+the letter of \(q\) is neither \(I\) nor \(Z\), that is, it is \(X\)
+or \(Y\). Then \(q\) anticommutes with \(Z\) on all nine qubits, so
+\(\langle q,p\rangle=1\), contradicting isotropy of \(S\).
+\end{proof}
+
+By Lemmas~\ref{lem:shorten} and \ref{lem:rankone}, the shortened
+centralizer
+\[
+ C=S^\perp\cap W
+\]
+is an additive \((16-m,2^{22-2m},{\geq}5)_4\) code. Its symplectic
+complement \(C^\perp\) inside \(W\) has dimension
+\(2(16-m)-(22-2m)=10\) for every \(m\). Fix a basis \(v_1,\ldots,v_{10}\)
+of \(C^\perp\) and define the \emph{syndrome}
+\(\sigma(w)=(\langle v_1,w\rangle,\ldots,\langle v_{10},w\rangle)\in\F^{10}\)
+of \(w\in W\). Its kernel is \(C\), so \(\sigma\) identifies the quotient
+\(W/C\) with \(\F^{10}\). For a syndrome \(u\), let
+\[
+ \delta(u)=\min\{\wt(w):w\in W,\ \sigma(w)=u\}
+\]
+be the minimum weight of the corresponding coset of \(C\). Thus
+\(\delta(0)=0\), and \(\delta\) is a table of \(1024\) values computed
+from \(C\) alone.
+
+\paragraph{The classifications.}
+Applying an equivalence of additive codes to the coordinates of \(W\)
+changes \(S\) into another \(\qc{16,5,{\geq}5}\) code with the same \(T\)
+and \(p\) and with \(C\) replaced by an equivalent code. So we may assume
+that \(C\) is one fixed representative of its equivalence class.
+Grassl, Krotov, Sok and Sol\'e \cite[Table~1]{dodeca} count the classes
+of the four relevant families (Table~\ref{tab:classes}). They publish
+counts, not representatives, so we rebuilt representatives by a
+lengthening census and checked completeness with an orbit--stabilizer
+identity.
+
+\begin{table}[h!]
+\centering\small
+\caption{The shortened codes. Classes are equivalence classes of
+\((16-m,2^{22-2m},{\geq}5)_4\) codes; the mass is
+\(\sum_C \ell!\,6^\ell/|\Aut C|\), the number of labeled codes, at
+length \(\ell=16-m\).}\label{tab:classes}
+\begin{tabular}{@{}cccrr@{}}\toprule
+\(m\)&Length \(\ell\)&Binary dimension&Classes&Labeled mass\\\midrule
+6&10&10&37&2,333,060,795,842,560\\
+7&9&8&2,298&7,958,195,288,064,000\\
+8&8&6&1,579&98,005,190,492,160\\
+9&7&4&43&21,776,221,440\\\bottomrule
+\end{tabular}
+\end{table}
+
+The equivalence group at length \(\ell\) is
+\(S_\ell\ltimes\mathrm{GL}(2,2)^\ell\), of order \(\ell!\,6^\ell\), and
+\(\Aut C\) is the stabilizer of \(C\) in it, so a class contains
+\(\ell!\,6^\ell/|\Aut C|\) labeled codes. Every labeled
+\((\ell+1,2^c,{\geq}5)_4\) code \(D\) has a unique shortening \(P\) at its
+last coordinate (the words that are \(I\) there, with that coordinate
+deleted). \(P\) is an \((\ell,2^{c-\rho},{\geq}5)_4\) code, where
+\(\rho\in\{0,1,2\}\) is the dimension of the projection of \(D\) onto
+the last coordinate. Conversely, \(D\) is determined by \(P\), a
+\(\rho\)-dimensional subspace \(U\) of \(V_\ell/P\) whose nonzero cosets
+all have minimum weight at least four, and one of the \(1,3,6\)
+injections \(U\to\F^2\) (for \(\rho=0,1,2\)). Writing
+\(\mathrm{ext}_\rho(P)\) for the number of such choices, double counting
+gives
+\begin{equation}\label{eq:mass}
+ \sum_{\rho=0}^{2}\sum_{P}\frac{\ell!\,6^\ell}{|\Aut P|}\,
+ \mathrm{ext}_\rho(P)
+ =\sum_{D}\frac{(\ell+1)!\,6^{\ell+1}}{|\Aut D|},
+\end{equation}
+where \(P\) runs over the parent classes of dimension \(c-\rho\) and
+\(D\) over the listed child classes of dimension \(c\). The left side
+counts all labeled children of the complete parent lists; the right side
+counts the labeled codes in the listed classes. Each listed child is
+checked for dimension, distance, and a distinct canonical graph
+certificate (computed with nauty \cite{nauty}). Equality therefore leaves
+no room for a missing class. The census starts from the zero code on
+four coordinates, which is complete because no nonzero word of length
+four has weight five, and checks \eqref{eq:mass} at every step. It
+reproduces the four counts in Table~\ref{tab:classes}, and it finds the
+\((10,2^{11})\), \((9,2^9)\) and \((8,2^7)\) families of
+Lemma~\ref{lem:rankone} empty. Class numbers below refer to the order of
+the representatives in the data file \pathcode{cells.json}, counted from
+zero.
+
+%=====================================================================
+\section{The extension map}\label{sec:map}
+
+The local operators on \(T\) that commute with \(p\), taken modulo \(p\),
+form the space
+\[
+ E=(p^\perp\cap V_T)/\langle p\rangle,\qquad \dim E=2m-2.
+\]
+For \(e\in E\) let \(\cost(e)\) be the minimum weight of a representative:
+\(\cost(v+\langle p\rangle)=\min\{\wt(v),\wt(v+p)\}\).
+
+\begin{lemma}[Extension map]\label{lem:map}
+For \(v\in p^\perp\cap V_T\), the set
+\(\{w\in W:v+w\in S^\perp\}\) is a coset of \(C\). The resulting map
+induces a linear map \(M:E\to W/C=\F^{10}\) such that
+\begin{equation}\label{eq:adm}
+ \cost(e)+\delta(Me)\geq5\qquad\text{for every nonzero }e\in E.
+\end{equation}
+\end{lemma}
+\begin{proof}
+By Lemmas~\ref{lem:shorten} and \ref{lem:rankone},
+\(\pi_T(S^\perp)=p^\perp\cap V_T\), so for each such \(v\) the set is
+nonempty; it is a coset of the kernel \(C\) of \(\pi_T\) on
+\(S^\perp\). It depends linearly on \(v\) because \(S^\perp\) is a
+subspace, and \(v=p\) gives the coset \(C\) itself, since
+\(p\in S\subseteq S^\perp\). So the map descends to \(E\). If
+\(e\neq0\), every representative \(v\) of \(e\) and every \(w\) in the
+coset \(Me\) give a nonzero centralizer word \(v+w\). By purity
+(Corollary~\ref{cor:pure}), \(\wt(v)+\wt(w)\geq5\). Minimizing over
+\(v\) and \(w\) gives \eqref{eq:adm}.
+\end{proof}
+
+Condition \eqref{eq:adm} depends on \(C\) only through the table
+\(\delta\). Only elements with \(\cost(e)\leq4\) impose a constraint,
+namely that \(Me\) avoid the syndromes with \(\delta<5-\cost(e)\).
+A converse also holds: together with a commutation condition
+\(MJM^\tr=\Gamma\), where \(J\) is the symplectic form of \(E\) and
+\(\Gamma\) the Gram matrix of \(v_1,\ldots,v_{10}\), the inequalities
+\eqref{eq:adm} characterize the codes with the given \(T\), \(p\) and
+\(C\). We need only the necessary direction in Lemma~\ref{lem:map}, and
+we do not use the commutation condition: showing that no linear map
+satisfies a set of necessary conditions is enough.
+
+\paragraph{A basis of \(E\).}
+Write \(Z_i\) and \(X_i\) for the single-qubit operators on qubit
+\(i\in T\), and use the anchor \(a=m-1\). The classes of
+\[
+ Z_0,\ldots,Z_{m-2},\qquad X_0X_a,\ldots,X_{m-2}X_a
+\]
+form a basis of \(E\), and \(Z_a=Z_0+\cdots+Z_{m-2}\) modulo \(p\).
+So \(M\) is determined by the \(2m-2\) syndromes
+\[
+ \xi_i=M(Z_i)\ (0\leq i\leq m-1),\qquad \eta_i=M(X_iX_a)\ (0\leq i\leq m-2),
+\]
+with \(\xi_a=\xi_0+\cdots+\xi_{m-2}\).
+
+\paragraph{Symmetry.}
+The search for \(m=9\), and the SAT runs for \(m=7,8\), use the following
+normalization.
+
+\begin{lemma}[Physical normalization]\label{lem:symmetry}
+Fix any total order on \(\F^{10}\). If a linear map satisfying
+\eqref{eq:adm} exists, then one exists with
+\[
+ \xi_0<\xi_1<\cdots<\xi_{m-1},\qquad
+ \eta_i<\eta_i+\xi_i\quad(0\leq i\leq m-2).
+\]
+\end{lemma}
+\begin{proof}
+Each \(Z_i\) and each \(Z_i+Z_j\) has \(\cost\leq2\), so
+\eqref{eq:adm} forces the \(\xi_i\) to be nonzero and distinct. A
+permutation of the qubits in \(T\) fixes \(p=Z^m\), preserves all
+weights, and maps \(S\) to another code with the same \(T\), \(p\)
+and \(C\); it permutes the \(\xi_i\), so we may sort them. After the
+permutation the map is re-expressed in the same basis, and still
+\(\xi_a=\xi_0+\cdots+\xi_{m-2}\). For \(i\leq m-2\), the local
+exchange \(X\leftrightarrow Y\) on qubit \(i\) fixes every \(Z_j\) and
+every \(X_jX_a\) with \(j\ne i\), and sends \(X_iX_a\) to
+\(X_iX_a+Z_i\). It therefore exchanges \(\eta_i\) and \(\eta_i+\xi_i\)
+and changes nothing else. These operations preserve all weights, so they
+preserve \eqref{eq:adm}.
+\end{proof}
+
+%=====================================================================
+\section{The extension search}\label{sec:search}
+
+Call a linear map \(M:E\to\F^{10}\) \emph{admissible} for \(C\) if it
+satisfies \eqref{eq:adm}. By Lemma~\ref{lem:map}, the theorem follows
+once no class in Table~\ref{tab:classes} has an admissible map.
+
+\begin{proposition}\label{prop:search}
+None of the \(3{,}957\) classes in Table~\ref{tab:classes} has an
+admissible map.
+\end{proposition}
+
+The proof is a finite computation. We describe what is computed, why the
+search is complete, and how it was checked.
+
+\paragraph{The data for one class.}
+From the generators of \(C\), compute a basis \(v_1,\ldots,v_{10}\) of
+\(C^\perp\) and the syndrome of each single-qubit Pauli operator on
+\(W\). The table \(\delta\) is computed by breadth-first search on
+\(\F^{10}\), starting from \(0\) and adding one single-qubit syndrome
+per step: a path of length \(j\) gives a word of weight at most \(j\)
+with that syndrome, and a word of weight \(j\) gives a path of length
+\(j\), so the distance found is exactly \(\delta\). A rank check confirms
+that the syndrome map has kernel \(C\). On the local side, \(\cost(e)\)
+is computed for all \(2^{2m-2}\) elements of \(E\) directly from the
+definition. Only the elements with \(\cost(e)\leq4\) constrain \(M\);
+for each of them, \(Me\) must avoid every syndrome with
+\(\delta<5-\cost(e)\).
+
+\paragraph{Depth-first search.}
+The search assigns the \(2m-2\) basis images one at a time in a fixed
+order. Once a set of basis images is assigned, the image of every element
+of \(E\) whose expansion uses only those basis vectors is determined, as
+the corresponding sum. After each assignment the search tests
+\eqref{eq:adm} on every newly determined element and backtracks on a
+failure. The forward-checking version also keeps, for each unassigned
+basis vector, the set of values still allowed; a value is removed only
+when a specific determined element would violate \eqref{eq:adm}. The
+search is complete: an admissible map assigns some value to every basis
+vector, every element of \(E\) is tested as soon as its basis vectors
+are assigned, and a branch is discarded only when it violates a necessary
+inequality. If the search finishes without an admissible map, none
+exists.
+
+\paragraph{SAT encoding.}
+As a second, separately written method, the \(10(2m-2)\) entries of \(M\)
+are Boolean variables. For each element \(e\) with \(\cost(e)\leq4\),
+the bits of \(Me\) are expressed by XOR chains, and for each forbidden
+syndrome \(u\) a clause requires \(Me\neq u\). The encoding uses its own
+basis of \(E\) and its own parity-check matrix for \(C\). The formula is
+satisfiable exactly when an admissible map exists. It is solved with
+CaDiCaL \cite{cadical} through PySAT \cite{pysat}.
+
+\paragraph{The runs.}
+Every class was tested by two methods, as follows.
+\begin{center}\small
+\begin{tabular}{@{}cccl@{}}\toprule
+\(m\)&Classes&First method&Second method\\\midrule
+6&37&Depth-first search&SAT encoding\\
+7&2,298&Depth-first search with forward checking&SAT encoding with Lemma~\ref{lem:symmetry}\\
+8&1,579&Depth-first search with forward checking&SAT encoding with Lemma~\ref{lem:symmetry}\\
+9&43&Depth-first search with Lemma~\ref{lem:symmetry}&Second depth-first search with Lemma~\ref{lem:symmetry}\\\bottomrule
+\end{tabular}
+\end{center}
+The depth-first searches for \(m\leq8\) use no symmetry reduction. The
+two \(m=9\) searches are separate programs with different coset labels
+and search orders. In every run, no class has an admissible map. The
+symmetry conditions of Lemma~\ref{lem:symmetry} only remove maps that have
+an equivalent admissible map satisfying them, so they cannot hide an
+admissible map.
+
+\paragraph{Positive control.}
+A search that never finds anything could be broken. As a control, the
+local data of a known pure \(\qc{16,4,5}\) code, built and checked by
+complete enumeration of its centralizer, are given to every program.
+Each program, with and without the symmetry conditions, finds the
+admissible map coming from that code.
+
+%=====================================================================
+\section{Proof of the theorem and the computations}\label{sec:proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Suppose \(S\) is a \(\qc{16,5,d}\) code with \(d\geq5\). By
+Corollary~\ref{cor:pure} it is pure to distance five and its minimum
+stabilizer weight is \(m\in\{6,7,8,9\}\). Choose \(p\) and \(T\) as
+in Section~\ref{sec:shorten}. By Lemma~\ref{lem:rankone}, the shortened
+code \(C\) is an additive \((16-m,2^{22-2m},{\geq}5)_4\) code, equivalent
+to one of the classes in Table~\ref{tab:classes}, and we may take \(C\)
+to be that representative. Lemma~\ref{lem:map} gives an admissible map
+for \(C\), contradicting Proposition~\ref{prop:search}. Hence no such
+code exists. Since a \(\qc{16,5,4}\) code exists \cite{grassl},
+\(d_{\max}(16,5)=4\).
+\end{proof}
+
+\paragraph{What the computations check.}
+The proof uses three finite computations: the six certificates of
+Table~\ref{tab:certs} and the parity identity of Lemma~\ref{lem:parity};
+the census behind Table~\ref{tab:classes}; and the extension search of
+Proposition~\ref{prop:search}. The certificate checker rebuilds every row
+and verifies every coefficient in exact integer arithmetic, using the
+Python standard library only. The census program regenerates the
+classifications, checks \eqref{eq:mass} at every step, and compares
+canonical certificates with the representatives in \pathcode{cells.json}.
+The replay script reruns the certificates, the parity identity, the
+positive controls, and the complete searches for \(m=6,7\) in about 25
+minutes on an Apple M3 laptop; the complete \(m=8\) depth-first search
+takes about 6 core-hours, the SAT runs for \(m=7,8\) about 11
+core-hours, and the \(m=9\) searches about 14 core-hours. The whole
+computation was also rerun by an outside reader using a separately
+written program, with matching results.
+
+%=====================================================================
+\section*{Data availability}
+The programs, certificates, class representatives and search records are
+available at \url{https://github.com/brandonlign/quantum} and archived on
+Zenodo at
+\href{https://doi.org/10.5281/zenodo.23874369}{doi:10.5281/zenodo.23874369}.
+The representatives used here are in \pathcode{cells.json} (SHA-256
+\texttt{181b2754\ldots d4d114755}).
+The search programs, their logs and the replay script
+\pathcode{replay.sh} are in \pathcode{verification/release16/}.
+
+\section*{Acknowledgments}
+We thank two expert readers for comments on an earlier draft. Claude
+helped develop the proofs, write and debug the code, run the
+computational checks, and revise the paper.
+
+\begin{thebibliography}{99}
+
+\bibitem{sdp}
+G. Angl\`es Munn\'e and F. Huber,
+SDP bounds on quantum codes: rational certificates,
+\href{https://arxiv.org/abs/2603.19901}{arXiv:2603.19901} (2026).
+
+\bibitem{bierbrauer}
+J. Bierbrauer, R. Fears, S. Marcugini, and F. Pambianco,
+The nonexistence of a \(\qc{13,5,4}\)-quantum stabilizer code,
+\emph{IEEE Trans. Inf. Theory} \textbf{57} (2011), 4788--4793.
+\href{https://doi.org/10.1109/TIT.2011.2146430}{doi:10.1109/TIT.2011.2146430}.
+
+\bibitem{cadical}
+A. Biere, T. Faller, K. Fazekas, M. Fleury, N. Froleyks, and F. Pollitt,
+CaDiCaL 2.0, in: \emph{Computer Aided Verification (CAV 2024)},
+LNCS 14681, Springer, 2024, 133--152.
+\href{https://doi.org/10.1007/978-3-031-65627-9_7}{doi:10.1007/978-3-031-65627-9\_7}.
+
+\bibitem{crss}
+A. R. Calderbank, E. M. Rains, P. W. Shor, and N. J. A. Sloane,
+Quantum error correction via codes over GF(4),
+\emph{IEEE Trans. Inf. Theory} \textbf{44} (1998), 1369--1387.
+\href{https://doi.org/10.1109/18.681315}{doi:10.1109/18.681315}.
+
+\bibitem{grassl}
+M. Grassl, Bounds on the minimum distance of additive quantum codes,
+\url{https://codetables.de/QECC.php?q=4}, entry \((n,k)=(16,5)\),
+accessed 16 October 2026.
+
+\bibitem{dodeca}
+M. Grassl, D. Krotov, L. Sok, and P. Sol\'e,
+The punctured dodecacode is unique,
+\emph{Math. Educ. Math.} \textbf{55} (2026), 393--404.
+\href{https://doi.org/10.55630/mem.2026.55.393-404}{doi:10.55630/mem.2026.55.393-404};
+\href{https://arxiv.org/abs/2601.08008}{arXiv:2601.08008}.
+
+\bibitem{pysat}
+A. Ignatiev, A. Morgado, and J. Marques-Silva,
+PySAT: A Python toolkit for prototyping with SAT oracles, in:
+\emph{Theory and Applications of Satisfiability Testing (SAT 2018)},
+LNCS 10929, Springer, 2018, 428--437.
+\href{https://doi.org/10.1007/978-3-319-94144-8_26}{doi:10.1007/978-3-319-94144-8\_26}.
+
+\bibitem{lai}
+C.-Y. Lai, Twisted Fourier analysis of quantum weight enumerators,
+\href{https://arxiv.org/abs/2610.37894}{arXiv:2610.37894} (2026).
+
+\bibitem{nauty}
+B. D. McKay and A. Piperno,
+Practical graph isomorphism, II,
+\emph{J. Symbolic Comput.} \textbf{60} (2014), 94--112.
+\href{https://doi.org/10.1016/j.jsc.2013.09.003}{doi:10.1016/j.jsc.2013.09.003}.
+
+\bibitem{rains}
+E. M. Rains, Quantum shadow enumerators,
+\emph{IEEE Trans. Inf. Theory} \textbf{45} (1999), 2361--2366.
+\href{https://doi.org/10.1109/18.796376}{doi:10.1109/18.796376}.
+
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,9 @@
+COMPACT EQUIVALENT CONSTRUCTION
+
+The binary monomial coordinate change in verification/normal_form/NORMAL_FORM.json maps the compact orbit construction onto the twelve-generator code used elsewhere in this project. It is a permutation of coordinates and an invertible symplectic relabeling of the three nonidentity Pauli labels at each coordinate.
+
+Run verification/normal_form/verify_equivalence.py to check the transformation on all 34 ambient basis vectors and all 4,096 stabilizer words. The program also verifies the group order 60, its faithful A5 action on five sites, the 12+5 coordinate orbits, and the thirty weight-eight orbit words.
+
+Run verification/normal_form/verify_standalone.py to construct the code from the printed cycles, two rotations and one seed without reading any other files. It checks rank 12, isotropy, the complete stabilizer weight distribution, and all 1,276 radius-two syndromes. Distinctness of these syndromes excludes a nonzero normalizer word of weight at most four. The explicit weight-five witness 1,327,119 proves distance exactly five.
+
+This is an equivalent presentation, not a second code, an asymptotic family, a full automorphism-group classification, or a phase-consistent physical A5 gate representation. The original row convention remains in force for the main weight distributions, rational optimality certificate and local-unitary obstruction.

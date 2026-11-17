@@ -1,0 +1,40 @@
+cell n=5 k=1: classes=1 labelled mass 243 = 243: True
+cell n=5 k=2: classes=1 labelled mass 1296 = 1296: True
+cell n=5 k=3: classes=0 labelled mass 0 = 0: True
+cell n=5 k=4: classes=0 labelled mass 0 = 0: True
+cell n=5 k=5: classes=0 labelled mass 0 = 0: True
+cell n=5 k=6: classes=0 labelled mass 0 = 0: True
+cell n=5 k=7: classes=0 labelled mass 0 = 0: True
+cell n=5 k=8: classes=0 labelled mass 0 = 0: True
+cell n=5 k=9: classes=0 labelled mass 0 = 0: True
+cell n=5 k=10: classes=0 labelled mass 0 = 0: True
+cell n=5 k=11: classes=0 labelled mass 0 = 0: True
+cell n=6 k=3: classes=1 labelled mass 1399680 = 1399680: True
+cell n=6 k=4: classes=0 labelled mass 0 = 0: True
+cell n=6 k=5: classes=0 labelled mass 0 = 0: True
+cell n=6 k=6: classes=0 labelled mass 0 = 0: True
+cell n=6 k=7: classes=0 labelled mass 0 = 0: True
+cell n=6 k=8: classes=0 labelled mass 0 = 0: True
+cell n=6 k=9: classes=0 labelled mass 0 = 0: True
+cell n=6 k=10: classes=0 labelled mass 0 = 0: True
+cell n=6 k=11: classes=0 labelled mass 0 = 0: True
+cell n=7 k=5: classes=1 labelled mass 67184640 = 67184640: True
+cell n=7 k=6: classes=0 labelled mass 0 = 0: True
+cell n=7 k=7: classes=0 labelled mass 0 = 0: True
+cell n=7 k=8: classes=0 labelled mass 0 = 0: True
+cell n=7 k=9: classes=0 labelled mass 0 = 0: True
+cell n=7 k=10: classes=0 labelled mass 0 = 0: True
+cell n=7 k=11: classes=0 labelled mass 0 = 0: True
+cell n=8 k=7: classes=0 labelled mass 0 = 0: True
+cell n=8 k=8: classes=0 labelled mass 0 = 0: True
+cell n=8 k=9: classes=0 labelled mass 0 = 0: True
+cell n=8 k=10: classes=0 labelled mass 0 = 0: True
+cell n=8 k=11: classes=0 labelled mass 0 = 0: True
+cell n=9 k=9: classes=0 labelled mass 0 = 0: True
+cell n=9 k=10: classes=0 labelled mass 0 = 0: True
+cell n=9 k=11: classes=0 labelled mass 0 = 0: True
+cell n=10 k=11: classes=0 labelled mass 0 = 0: True
+(10, 11) classes: 0
+(9, 9) classes: 0
+(8, 7) classes: 0
+cells (10,2^11,5), (9,2^9,5), (8,2^7,5) are empty

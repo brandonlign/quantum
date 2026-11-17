@@ -1,0 +1,4 @@
+PASS: subset [2, 3, 4, 6, 7, 9, 10, 12]
+Shortened stabilizer exactly [0, 221778000]
+Reduced normalized-code-projector purity 1/128
+2^|T| times purity = 2, not a power of 4; impossible for GF(4)-linear stabilizers.

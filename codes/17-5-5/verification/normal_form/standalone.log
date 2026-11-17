@@ -1,0 +1,34 @@
+{
+  "group_order": 60,
+  "status": "PASS",
+  "n": 17,
+  "k": 5,
+  "distance": 5,
+  "stabilizer_rank": 12,
+  "stabilizer_weight_enumerator": {
+    "0": 1,
+    "8": 30,
+    "10": 720,
+    "12": 1344,
+    "14": 1680,
+    "16": 321
+  },
+  "weight_at_most_two_distinct_syndromes": 1276,
+  "weight_five_logical_witness": 1327119,
+  "seed": 1688740056,
+  "orbit_size": 30,
+  "rows": [
+    55087267,
+    68571782,
+    176768038,
+    209992226,
+    271755905,
+    1096098020,
+    1493714444,
+    1688740056,
+    1747719429,
+    2244004008,
+    4368680706,
+    8707711507
+  ]
+}

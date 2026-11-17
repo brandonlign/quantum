@@ -1,0 +1,251 @@
+\section{Purity, a forced weight-eight word, and the local types}\label{sec:forced}
+
+Assume that \(S\leq V_{17}\) is a \(\qc{17,3,d\geq6}\)
+stabilizer, so \(\dim S=14\), \(|S|=2^{14}\), and \(\dim S^\perp=20\).
+The counts \(A_j\) include products of basis generators.
+This section proves that \(S\) is pure, that it contains a word of
+weight eight, and that the stabilizer supported on such a word has one
+of five types.
+
+\subsection{Exact weight-enumerator certificates}\label{sec:certificates}
+
+The weight-enumerator equations count words of each weight without
+specifying the full code. The MacWilliams identities express centralizer
+counts in terms of stabilizer counts, and the shadow identities give
+additional nonnegative counts. A certificate is an integer combination
+of these necessary relations that gives a contradiction under a stated
+case assumption. Its check uses integer arithmetic alone.
+
+The ordinary weight enumerator records only total weight. A split
+enumerator also records which coordinate blocks contain the nonidentity
+letters. This is needed when a specified stabilizer word or subgroup
+occupies one block. The formulas below are the MacWilliams and shadow
+identities applied separately to each block.
+
+Partition the physical coordinates into blocks of sizes
+\(n_1,\ldots,n_s\). Let \(A^{\rm split}_{\mathbf i}\) count stabilizer words with
+split weight \(\mathbf i=(i_1,\ldots,i_s)\). Put \(B=|S|=2^{n-k}\), and
+\[
+ \mathcal{K}_j^{\ell}(w)=\sum_{u=\max(0,j-\ell+w)}^{\min(j,w)}
+          (-1)^u3^{j-u}\binom wu\binom{\ell-w}{j-u}.
+\]
+Character orthogonality gives the centralizer count
+\[
+ |\{v\in S^\perp:\operatorname{splitwt}(v)=\mathbf j\}|
+ =B^{-1}\mathcal T_{\mathbf j},\quad
+ \mathcal T_{\mathbf j}=\sum_{\mathbf i}
+       \left(\prod_\ell \mathcal{K}_{j_\ell}^{n_\ell}(i_\ell)\right)A^{\rm split}_{\mathbf i}.
+\]
+The character identity behind this formula is
+\[
+ \mathbf 1_{v\in S^\perp}=B^{-1}\sum_{s\in S}(-1)^{\langle v,s\rangle}.
+\]
+The sum is \(B\) when every word of \(S\) commutes with \(v\),
+and zero otherwise. Summing it over words of a fixed split weight
+produces the products of Krawtchouk polynomials above. This explains why
+the transformed coefficients count actual centralizer words.
+On an isotropic stabilizer the parity function is linear, by
+\eqref{eq:polar}. The affine set
+\[
+ \mathcal A=\{v:\langle v,s\rangle=\wt(s)\bmod2
+                          \text{ for every }s\in S\}
+\]
+is a nonempty coset of \(S^\perp\), since every linear functional on
+\(S\) extends to the ambient space. Character orthogonality gives its
+split weight counts as \(B^{-1}\widehat{\mathcal T}_{\mathbf j}\), where
+\[
+ \widehat{\mathcal T}_{\mathbf j}=\sum_{\mathbf i}(-1)^{\sum i_\ell}
+       \left(\prod_\ell \mathcal{K}_{j_\ell}^{n_\ell}(i_\ell)\right)A^{\rm split}_{\mathbf i}.
+\]
+Both transforms are nonnegative. Centralizer inclusion and distance give
+\[
+ \mathcal T_{\mathbf j}\geq BA^{\rm split}_{\mathbf j},\qquad
+ \mathcal T_{\mathbf j}=BA^{\rm split}_{\mathbf j}\quad(1\leq\textstyle\sum j_\ell<d).
+\]
+These statements hold without assuming purity.
+
+If a specified isotropic subgroup \(R_i\) lies on block \(i\), enumerate
+every coset of \(R_i\) in \(R_i^\perp\). Its pattern
+\(p=(p_0,\ldots,p_{n_i})\) counts words at each physical weight.
+Let \(y\geq0\) count stabilizer cosets aggregated by their block
+patterns and suffix weight. Then a split count is the corresponding
+linear combination of products of the \(p_j\)'s.
+With no prescribed subgroup a block may instead use the split counts
+themselves as variables. Every actual stabilizer containing the prescribed
+subgroups gives such nonnegative variables, since it is closed under their
+addition. The model need not reconstruct a linear code from an arbitrary
+feasible point; only necessity is used.
+
+The row families are:
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}lX@{}}\toprule
+Row&Definition\\\midrule
+Unit&\(A^{\rm split}_{\mathbf0}=1\).\\
+Total&\(\sum A^{\rm split}_{\mathbf i}=B\).\\
+Low distance&\(\mathcal T_{\mathbf j}-BA^{\rm split}_{\mathbf j}=0\), \(1\leq\sum j_\ell<d\).\\
+Inclusion&\(BA^{\rm split}_{\mathbf j}-\mathcal T_{\mathbf j}\leq0\).\\
+Centralizer&\(-\mathcal T_{\mathbf j}\leq0\).\\
+Shadow&\(-\widehat{\mathcal T}_{\mathbf j}\leq0\).\\
+Weight assumptions&\(\sum_{\sum i_\ell=w}A^{\rm split}_{\mathbf i}=A_w\), or its explicitly assumed lower bound.\\
+Coset relations&A specified linear relation valid separately on every physical pattern.\\\bottomrule
+\end{tabularx}
+\end{center}
+The checker verifies each coset relation against the regenerated patterns.
+No property of a later shortened code is inserted into these reductions.
+The variables may be allowed to take nonnegative real values. This
+enlarges the set of possible enumerators, so infeasibility of the
+resulting linear system still excludes every actual code. Integrality
+is used separately in the explicitly stated parity and counting steps.
+
+Write the system as \(Ez=b\), \(Gz\leq g\), \(z\geq0\).
+A certificate consists of arbitrary integer equality multipliers \(\nu\)
+and nonnegative integer inequality multipliers \(\lambda\) with
+\[
+ c=\nu E+\lambda G\geq0,\qquad \nu b+\lambda g<0.
+\]
+The condition \(c\geq0\) is checked coordinate by coordinate: since
+all variables in \(z\) are nonnegative, it makes \(cz\geq0\).
+Equality rows may be multiplied by either sign; inequality rows need
+nonnegative multipliers so their directions are preserved.
+For a feasible \(z\), one would have
+\(0\leq cz\leq\nu b+\lambda g<0\), a contradiction.
+The checker tests every coefficient column and the negative right-hand side
+with exact integers. The multipliers may be found by numerical optimization; the certificate
+is checked using integer arithmetic alone.
+
+\subsection{Purity and the forced word}
+
+\begin{proposition}[Exact enumerator consequences]\label{prop:17-enumerator}
+The hypothetical code is pure to distance six, contains a stabilizer word
+of weight eight, and satisfies
+\begin{equation}\label{eq:light-budget}
+ A_6+A_7\leq2.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The split-coset integer certificates for stabilizer weights one through
+five exclude all five possibilities without assuming purity.
+For a proposed word of weight \(w\), local Clifford operations normalize
+it to \(Z^w\); the system uses the coset-pattern columns of
+\(\langle Z^w\rangle\) on its support, with low-distance equations
+through weight five. Hence \(A_1=\cdots=A_5=0\), which implies purity
+because the logical distance is at least six. With these zeros imposed,
+the ordinary enumerator system plus \(A_8=0\) has an exact infeasibility
+certificate with negative right-hand side \(-3,932,160\). The six
+certificates are:
+\begin{center}\small
+\begin{tabular}{@{}lrr@{}}\toprule
+Case&Columns&Negative right-hand side\\\midrule
+Weight 1&17&\(-786,432\)\\
+Weight 2&48&\(-5,324,800\)\\
+Weight 3&45&\(-442,368\)\\
+Weight 4&84&\(-81,920\)\\
+Weight 5&78&\(-114,688\)\\
+Pure, \(A_8=0\)&18&\(-3,932,160\)\\\bottomrule
+\end{tabular}
+\end{center}
+``Columns'' means the number of nonnegative variables in the expanded
+system.
+
+For the last assertion, write \(\mathcal{K}_j(w)=\mathcal{K}_j^{17}(w)\)
+and \(B=2^{14}\). The low-weight rows are
+\(\sum_w \mathcal{K}_j(w)A_w-BA_j=0\) for \(1\leq j\leq5\), and the
+shadow rows are \(-\sum_w(-1)^w\mathcal{K}_j(w)A_w\leq0\).
+Combine the unit row \(A_0=1\) with multiplier \(-1,835,008\),
+the total row with multiplier 116, the five low-weight rows with
+\((60,25,11,3,1)\), the five pure-zero rows \(A_j=0\)
+(\(1\leq j\leq5\)) with
+\((-851968,-278528,-507904,-147456,-180224)\), and the shadow rows
+\(j=0,\ldots,4\) with \((88,32,18,4,2)\).
+The result is
+\(32768(A_6+A_7)\leq65536\). Dividing by 32768 proves
+\eqref{eq:light-budget}.
+\end{proof}
+
+\subsection{A nine-coordinate dimension bound}
+
+The following additive bound makes the forced support useful. It uses a
+parity property that is not visible in the first few nonnegative
+MacWilliams coefficients alone.
+
+\begin{lemma}[A nine-coordinate dimension bound]\label{lem:nine-bound}
+An additive code on nine sites with minimum distance at least six has
+binary dimension at most six.
+\end{lemma}
+\begin{proof}
+A code of larger dimension contains a dimension-seven subcode. Suppose
+\(|C|=128\), with nonzero weight counts \(A_6,A_7,A_8,A_9\) summing to
+127. The first three nonnegative dual MacWilliams coefficients give
+\[
+ A_7+2A_8+3A_9\leq102,\qquad
+ A_8+3A_9\geq75,\qquad
+ 3(A_7+A_8)-4A_9\geq17.
+\]
+The first two imply \(A_7\leq3A_9-48\), hence \(A_9\geq16\), and
+also \(A_7+A_8\leq27\). The third then gives \(A_9\leq16\).
+Equality forces
+\((A_6,A_7,A_8,A_9)=(84,0,27,16)\).
+
+On a binary additive space, weight parity is a quadratic form: its failure
+to be additive is the symplectic product in \eqref{eq:polar}.
+For a quadratic form \(\varepsilon\) on a \(c\)-dimensional binary space \(U\),
+define its Gauss sum by
+\[
+ G(\varepsilon)=\sum_{v\in U}(-1)^{\varepsilon(v)}.
+\]
+For weight parity, this is the number of even-weight words minus the
+number of odd-weight words. If the polar form has rank \(2\rho\), then
+\(G(\varepsilon)\) is zero or \(\pm2^{c-\rho}\). Indeed, squaring the sum and
+substituting \(y=x+z\) gives
+\[
+ G(\varepsilon)^2=2^c\sum_{z\in\rad(U)}(-1)^{\varepsilon(z)}.
+\]
+The restriction of \(\varepsilon\) to the radical is linear. The last sum is
+therefore zero if that restriction is nonzero, and otherwise equals
+\(|\rad(U)|=2^{c-2\rho}\). This proves the asserted possibilities.
+The forced distribution would instead give Gauss sum
+\(128-2\cdot16=96\). Since \(c=7\) and \(0\leq\rho\leq3\),
+the possible nonzero absolute values are \(128,64,32,16\), none of
+which is 96. This proves the bound.
+\end{proof}
+
+\subsection{The five local types}\label{sec:types}
+
+Choose a weight-eight stabilizer word \(p\), put \(T=\operatorname{supp}p\),
+and normalize \(p=Z^8\). Let \(R=S\cap V_T\), \(r=\dim R\).
+By \eqref{eq:dimC}, the shortened centralizer has length nine and
+dimension \(4+r\); by purity its minimum distance is at least six.
+Lemma~\ref{lem:nine-bound} therefore gives \(1\leq r\leq2\).
+The rest of the argument applies to every choice of the weight-eight
+word \(p\).
+
+If \(r=1\), then \(R=\langle Z^8\rangle\).
+If \(r=2\), choose \(\zeta\in R\setminus\langle p\rangle\).
+Let \(\alpha\) be the number of sites where \(\zeta\) has an \(X\)-component.
+It is even by commutation. Since both \(\zeta\) and \(\zeta+p\) have weight
+at least six, \(8+\alpha\geq12\), so \(\alpha\in\{4,6,8\}\).
+Phase maps fixing \(Z\) remove \(Y\) on those sites. On the other
+\(8-\alpha\) sites, let \(\beta\) count the \(Z\)'s of \(\zeta\).
+Then \(\alpha+\beta\geq6\) and \(8-\beta\geq6\).
+Replacing \(\zeta\) by \(\zeta+p\) exchanges \(\beta\) with \(8-\alpha-\beta\).
+Consequently \(\alpha=4\) forces \(\beta=2\); at \(\alpha=6\) we may take
+\(\beta=0\) or one; and \(\alpha=8\) forces \(\beta=0\).
+Site permutations now give the following list.
+
+\begin{center}
+\begin{tabular}{@{}clcc@{}}\toprule
+\(\dim R\)&Generators of \(R\)&Nonzero local weights&\(\dim C\)\\\midrule
+1&\(Z^8\)&8&5\\
+2&\(Z^8,\ XXXXZZII\)&6,6,8&6\\
+2&\(Z^8,\ XXXXXXII\)&6,8,8&6\\
+2&\(Z^8,\ XXXXXXZI\)&7,7,8&6\\
+2&\(Z^8,\ X^8\)&8,8,8&6\\\bottomrule
+\end{tabular}
+\end{center}
+
+This list covers every possible local stabilizer, with \(R=S\cap V_T\).
+In every case \(C\) is a nine-site additive code of minimum distance at
+least six, of binary dimension five for the rank-one type and six for
+the rank-two types. Section~\ref{sec:classification} classifies these
+codes: there are 32,865 dimension-five classes and 56 dimension-six
+classes.

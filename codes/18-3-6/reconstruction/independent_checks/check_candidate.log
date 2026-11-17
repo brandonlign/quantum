@@ -1,0 +1,22 @@
+{
+  "rank": 15,
+  "isotropic": true,
+  "normalizer_rank": 21,
+  "stabilizer_minimum": 6,
+  "stabilizer_weight_enumerator": {
+    "0": 1,
+    "6": 4,
+    "8": 130,
+    "9": 480,
+    "10": 1436,
+    "11": 2688,
+    "12": 4312,
+    "13": 6464,
+    "14": 7260,
+    "15": 5760,
+    "16": 2981,
+    "17": 992,
+    "18": 260
+  },
+  "raw_rows_sha256": "f21d8c1338f7f8ffb910dc8d06830d243deb2e81b142e4d4eeec77e49515ccc0"
+}

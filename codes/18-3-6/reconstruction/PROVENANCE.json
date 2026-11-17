@@ -1,0 +1,57 @@
+{
+  "construction": "An 8+10-coordinate affine-Poisson gluing, followed by symplectic orthogonal complementation.",
+  "left_local_sites": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "right_local_sites": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "left_C4": [
+    65280,
+    255,
+    3891,
+    13141
+  ],
+  "left_A2": [
+    65280,
+    255
+  ],
+  "right_E7": [
+    209139,
+    52428,
+    258816,
+    4557,
+    25930,
+    74594,
+    786483
+  ],
+  "right_B3": [
+    209139,
+    52428,
+    258816
+  ],
+  "local_encoding": "x | (z << n), with local n = 8 or 10",
+  "global_encoding": "x | (z << 18)",
+  "map_file": "construction/HIT.json",
+  "local_bases_and_cost_tables": "construction/PHYSICAL_HIT_CONTEXT.json",
+  "status": "Verified pure [[18,3,6]] construction.",
+  "historical_identity": "Exact equality to an earlier lost generator file is not established. Matching selected weight counts is not an equivalence proof.",
+  "authors": "No author list asserted.",
+  "raw_rows_sha256": "dba2fe382bf11f1025ebd5da867bc83642b9350d4f585e31c7d36917966b91df"
+}

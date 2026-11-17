@@ -1,0 +1,27 @@
+[
+  {
+    "code": "code_b_style",
+    "transvection_v": 4328808577,
+    "unitary_convention": "U_v = exp(+i*pi*P_v/4) = (I+i P_v)/sqrt(2)",
+    "bare_conjugation_negative_generator_indices_zero_based": [
+      8,
+      11
+    ],
+    "Pauli_correction_w": 17435,
+    "Pauli_correction_string": "XXIXXIIIIIXIIIXIII",
+    "exact_relation": "(P_w U_v) P_(A_j) (P_w U_v)^dagger = P_(derivative_j), with every displayed generator Hermitian and positive"
+  },
+  {
+    "code": "code_c_style",
+    "transvection_v": 8607273026,
+    "unitary_convention": "U_v = exp(+i*pi*P_v/4) = (I+i P_v)/sqrt(2)",
+    "bare_conjugation_negative_generator_indices_zero_based": [
+      2,
+      3,
+      4
+    ],
+    "Pauli_correction_w": 280636,
+    "Pauli_correction_string": "ZIXXXXIIIIIXIIXIII",
+    "exact_relation": "(P_w U_v) P_(A_j) (P_w U_v)^dagger = P_(derivative_j), with every displayed generator Hermitian and positive"
+  }
+]
