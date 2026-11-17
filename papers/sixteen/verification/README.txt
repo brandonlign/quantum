@@ -6,7 +6,8 @@ cells.json
   SHA-256 181b27547b89c25c0ff783dc8ac9cb926e4d8b2d78e9631a8854780d4d114755
 
 The certificates, census and extension searches are in
-verification/release16/. From that folder:
+quantum-extension/verification/release16/ (verification/release16/ in the
+public repository). From that folder:
 
   ./replay.sh            certificates, parity identity, positive controls,
                          complete m=6,7 searches, m=8 and m=9 spot checks
@@ -14,7 +15,8 @@ verification/release16/. From that folder:
   ./replay.sh --census   also re-checks completeness of cells.json (needs pynauty)
   ./replay.sh --full     also reruns the complete m=8 search and the m=7,8 SAT runs
                          (about 17 core-hours)
-  cd search && PHIPROG=./phisearch python3 run_c.py 9
-                         complete m=9 search (about 14 core-hours)
+  ./replay.sh --all      the whole proof: census, and both methods for every
+                         class including both m=9 searches (about 45 core-hours)
 
-Logs of the original complete runs are in search/logs/ (see README.md there).
+Every search step fails unless every class is excluded; a node-limit stop
+counts as not excluded. Logs of the complete runs are in search/logs/.

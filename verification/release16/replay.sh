@@ -6,8 +6,9 @@
 #   ./replay.sh --census   also re-verify completeness of census/cells.json (needs pynauty;
 #                          CENSUS_PYTHON=... selects a different interpreter for this step)
 #   ./replay.sh --full     also rerun the full m=8 DFS (~6 core-hours) and the full SAT cross-check
-#                          for m=7,8 (~11 core-hours); m=9 is not run here (about 14 core-hours:
-#                          cd search && PHIPROG=./phisearch python3 run_c.py 9)
+#                          for m=7,8 (~11 core-hours)
+#   ./replay.sh --all      the whole proof: --census, --full, and both complete m=9 searches
+#                          (~14 core-hours each); about 45 core-hours in all
 #   Environment: PYTHON (needs numpy, sympy, python-sat), CENSUS_PYTHON, CC.
 set -euo pipefail
 cd "$(dirname "$0")"
@@ -15,8 +16,14 @@ PY=$(command -v "${PYTHON:-python3}" || echo "${PYTHON:-python3}"); case "$PY" i
 # the census step needs pynauty; set CENSUS_PYTHON if that lives in a different interpreter
 PYC=$(command -v "${CENSUS_PYTHON:-$PY}" || echo "${CENSUS_PYTHON:-$PY}"); case "$PYC" in /*) ;; *) PYC="$PWD/$PYC";; esac
 CC=${CC:-cc}
-CENSUS=0; FULL=0
-for a in "$@"; do case "$a" in --census) CENSUS=1;; --full) FULL=1;; *) echo "unknown option $a"; exit 2;; esac; done
+CENSUS=0; FULL=0; M9=0
+for a in "$@"; do case "$a" in --census) CENSUS=1;; --full) FULL=1;; --all) CENSUS=1; FULL=1; M9=1;; *) echo "unknown option $a"; exit 2;; esac; done
+# every search below must end with "survivors []"; a node-limit stop counts as a survivor
+check_none() {
+  local out; out=$(cat); echo "$out"
+  if ! echo "$out" | grep -q survivors || echo "$out" | grep survivors | grep -vq 'survivors \[\]$'; then
+    echo "FAILED: unresolved classes"; exit 1; fi
+}
 
 echo "== 1. Farkas certificates (Proposition 3; exact integers, standard library only)"
 $PY certificates/check_certificates.py
@@ -39,8 +46,8 @@ $PY sat_control.py | tail -1
 $PY sat_sym_control.py | tail -1
 
 echo "== 6. m=6 and m=7: full DFS (no symmetry reduction) and SAT (with Lemma 10)"
-PHIPROG=./phisearch2 $PY run_c.py 6 7 | grep survivors
-$PY sat_sym.py 6:all | tail -1
+PHIPROG=./phisearch2 $PY run_c.py 6 7 | grep survivors | check_none
+$PY sat_sym.py 6:all | tail -1 | check_none
 
 echo "== 7. Spot checks m=8 (DFS) and m=9 (DFS with Lemma 10; a few minutes each)"
 $PY - <<'EOF'
@@ -56,7 +63,12 @@ EOF
 
 if [ $FULL = 1 ]; then
   echo "== 8. Full m=8 DFS and full SAT cross-check for m=7,8"
-  PHIPROG=./phisearch2 $PY run_c.py 8 | grep survivors
-  $PY sat_sym.py 7:all 8:all | tail -1
+  PHIPROG=./phisearch2 $PY run_c.py 8 | grep survivors | check_none
+  $PY sat_sym.py 7:all 8:all | tail -1 | check_none
+fi
+if [ $M9 = 1 ]; then
+  echo "== 9. Both complete m=9 searches (phisearch, and phisearch3 with independent coset labels)"
+  PHIPROG=./phisearch $PY run_c.py 9 | grep survivors | check_none
+  $PY run_m9_alt.py all 7 | tail -1 | check_none
 fi
 echo "REPLAY OK"
