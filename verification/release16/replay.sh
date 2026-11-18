@@ -24,11 +24,16 @@ check_none() {
   if ! echo "$out" | grep -q survivors || echo "$out" | grep survivors | grep -vq 'survivors \[\]$'; then
     echo "FAILED: unresolved classes"; exit 1; fi
 }
+# a positive control must report that a map exists
+check_found() {
+  local out; out=$(cat); echo "$out"
+  echo "$out" | grep -Eq ': (FOUND|True) ' || { echo "FAILED: positive control"; exit 1; }
+}
 
-echo "== 1. Farkas certificates (Proposition 3; exact integers, standard library only)"
+echo "== 1. Farkas certificates (exact integers, standard library only)"
 $PY certificates/check_certificates.py
 
-echo "== 2. Parity congruence (Lemma 4)"
+echo "== 2. Parity congruence"
 $PY parity_congruence.py | tail -1
 
 if [ $CENSUS = 1 ]; then
@@ -41,15 +46,15 @@ cd search
 for p in phisearch phisearch2 phisearch3; do $CC -O3 -o $p $p.c; done
 
 echo "== 5. Positive controls on the existing [[16,4,5]] code (all must be FOUND/True)"
-for p in phisearch phisearch2 phisearch3; do PHIPROG=./$p $PY control_c.py | tail -1; done
-$PY sat_control.py | tail -1
-$PY sat_sym_control.py | tail -1
+for p in phisearch phisearch2 phisearch3; do PHIPROG=./$p $PY control_c.py | tail -1 | check_found; done
+$PY sat_control.py | tail -1 | check_found
+$PY sat_sym_control.py | tail -1 | check_found
 
-echo "== 6. m=6 and m=7: full DFS (no symmetry reduction) and SAT (with Lemma 10)"
+echo "== 6. m=6 and m=7: full DFS (no symmetry reduction) and SAT (with the symmetry lemma)"
 PHIPROG=./phisearch2 $PY run_c.py 6 7 | grep survivors | check_none
 $PY sat_sym.py 6:all | tail -1 | check_none
 
-echo "== 7. Spot checks m=8 (DFS) and m=9 (DFS with Lemma 10; a few minutes each)"
+echo "== 7. Spot checks m=8 (DFS) and m=9 (DFS with the symmetry lemma; a few minutes each)"
 $PY - <<'EOF'
 import json, subprocess
 from full import syndromes

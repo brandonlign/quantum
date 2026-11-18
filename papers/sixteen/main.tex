@@ -60,12 +60,19 @@ codes; nonexistence; shortening; computer-assisted proof.
 %=====================================================================
 \section{Introduction}\label{sec:intro}
 
-An \(\qc{n,k,d}\) quantum code uses \(n\) physical qubits to store \(k\)
-logical qubits. Its minimum distance \(d\) is the smallest number of
-qubits on which a Pauli operator can act nontrivially on the encoded
-information while commuting with every stabilizer, and a code of
-distance \(d\) corrects arbitrary errors on up to \(\lfloor
-(d-1)/2\rfloor\) qubits. Let \(d_{\max}(n,k)\) be the largest minimum
+Can sixteen physical qubits protect five logical qubits against
+arbitrary errors on any two of them? For stabilizer codes this question
+has been open, and this paper answers it: they cannot.
+
+A stabilizer code is given by an abelian group \(S\) of Pauli operators,
+the stabilizers, and the weight of a Pauli operator is the number of
+qubits on which it acts nontrivially. An \(\qc{n,k,d}\) code uses \(n\)
+physical qubits to store \(k\) logical qubits. Its minimum distance
+\(d\) is the least weight of a Pauli operator that commutes with every
+stabilizer without being one, that is, of an operator that changes the
+encoded information while going undetected. A code of distance \(d\)
+corrects arbitrary errors on up to \(\lfloor (d-1)/2\rfloor\) qubits, so
+correcting any two errors needs distance five. Let \(d_{\max}(n,k)\) be the largest minimum
 distance of a binary stabilizer code with \(n\) physical and \(k\)
 logical qubits. For small \(n\) and \(k\), Grassl's tables
 \cite{grassl} record the best distance known to be achievable and the
@@ -73,7 +80,7 @@ best upper bound known. Where the two numbers differ the question is
 open: either a better code exists and has not yet been found, or one
 has to prove that it cannot exist.
 
-This paper settles the case \((n,k)=(16,5)\). The table lists a
+The case \((n,k)=(16,5)\) is one of these. The table lists a
 \(\qc{16,5,4}\) code, obtained by extending a \(\qc{14,5,4}\) code by two
 coordinates, while the linear programming bound still allows distance
 five. So before this work \(4\leq d_{\max}(16,5)\leq5\). We show that
@@ -88,22 +95,6 @@ The theorem covers degenerate codes as well as pure ones: we prove that
 such a code would have to be pure, rather than assuming it. It is a
 statement about stabilizer (additive) codes; nonadditive codes are not
 considered.
-
-Several recent methods bear on this case without deciding it. The
-semidefinite programming bounds of Angl\`es Munn\'e and Huber \cite{sdp}
-apply to all codes; their Table~1 gives \(32\leq K\leq 42\) for the
-code-space dimension at \((n,d)=(16,5)\), so \(K=2^5=32\) is not
-excluded. Lai \cite{lai} develops refined weight-enumerator tests, and
-his Section~VII-D still leaves 27 candidate weight distributions for a
-\(\qc{16,5,5}\) code. Our argument instead combines weight-enumerator
-certificates with a structural reduction and a finite search, in the
-spirit of the proof by Bierbrauer et al.\ \cite{bierbrauer} that no
-\(\qc{13,5,4}\) code exists. It relies on the classification of small
-additive codes of distance five by Grassl, Krotov, Sok and Sol\'e
-\cite{dodeca}, and on the standard symplectic description of stabilizer
-codes together with the MacWilliams and shadow identities
-\cite{crss,rains}. The same method also shows that no \(\qc{17,3,6}\)
-code exists; that proof is given separately.
 
 \subsection*{The idea of the proof}
 
@@ -132,13 +123,31 @@ centralizer words are described by a linear map \(M\) from a
 \((2m-2)\)-dimensional space of operators on \(T\) to the \(1024\)
 cosets of \(C\). The distance of \(S\) becomes a condition on \(M\): an
 operator on \(T\) of weight \(c\) must be sent to a coset whose lightest
-word has weight at least \(5-c\).
+word has weight at least \(5-c\). For example, a single \(Z\) on one
+qubit of \(T\) has weight one, so every operator outside \(T\) that
+completes it to a centralizer word must have weight at least four.
 
 \emph{Step 3: search every class.} For each of the \(3{,}957\) codes
 \(C\), a computer searches for a linear map \(M\) that meets the
 condition, and finds none. Every class is searched twice, by two
-separately written methods, and each program does find the map that
-comes from a known \(\qc{16,4,5}\) code when it is given that code.
+separately written methods. Given the data of a known \(\qc{16,4,5}\)
+code instead, each program reports that a map exists.
+
+Several recent methods bear on this case without deciding it. The
+semidefinite programming bounds of Angl\`es Munn\'e and Huber \cite{sdp}
+apply to all codes; their Table~1 gives \(32\leq K\leq 42\) for the
+code-space dimension at \((n,d)=(16,5)\), so \(K=2^5=32\) is not
+excluded. Lai \cite{lai} develops refined weight-enumerator tests, and
+his Section~VII-D still leaves 27 candidate weight distributions for a
+\(\qc{16,5,5}\) code. Our argument instead combines weight-enumerator
+certificates with a structural reduction and a finite search, in the
+spirit of the proof by Bierbrauer et al.\ \cite{bierbrauer} that no
+\(\qc{13,5,4}\) code exists. It relies on the classification of small
+additive codes of distance five by Grassl, Krotov, Sok and Sol\'e
+\cite{dodeca}, and on the standard symplectic description of stabilizer
+codes together with the MacWilliams and shadow identities
+\cite{crss,rains}. The same method also shows that no \(\qc{17,3,6}\)
+code exists; that proof is given separately.
 
 Section~\ref{sec:prelim} fixes notation. Steps 1, 2 and 3 are carried
 out in Sections~\ref{sec:purity}, \ref{sec:shorten}--\ref{sec:map} and
@@ -720,18 +729,28 @@ Fix any total order on \(\F^{10}\). If a linear map satisfying
 \]
 \end{lemma}
 \begin{proof}
-Each \(Z_i\) and each \(Z_i+Z_j\) has \(\cost\leq2\), so
-\eqref{eq:adm} forces the \(\xi_i\) to be nonzero and distinct. A
-permutation of the qubits in \(T\) fixes \(p=Z^m\), preserves all
-weights, and maps \(S\) to another code with the same \(T\), \(p\)
-and \(C\); it permutes the \(\xi_i\), so we may sort them. After the
-permutation the map is re-expressed in the same basis, and still
-\(\xi_a=\xi_0+\cdots+\xi_{m-2}\). For \(i\leq m-2\), the local
-exchange \(X\leftrightarrow Y\) on qubit \(i\) fixes every \(Z_j\) and
-every \(X_jX_a\) with \(j\ne i\), and sends \(X_iX_a\) to
-\(X_iX_a+Z_i\). It therefore exchanges \(\eta_i\) and \(\eta_i+\xi_i\)
-and changes nothing else. These operations preserve all weights, so they
-preserve \eqref{eq:adm}.
+Let \(M\) satisfy \eqref{eq:adm}. Each \(Z_i\) has cost \(1\) and each
+\(Z_i+Z_j\) with \(i\neq j\) has cost \(2\), so \(\delta(\xi_i)\geq4\)
+and \(\delta(\xi_i+\xi_j)\geq3\); since \(\delta(0)=0\), the \(\xi_i\)
+are nonzero and distinct.
+
+Let \(g\) be the map induced on \(E\) by a permutation of the qubits in
+\(T\), or by the exchange \(X\leftrightarrow Y\) on one qubit of \(T\).
+Both fix \(p=Z^m\), so \(g\) is a linear bijection of \(E\), and both
+preserve the weight of every operator, so \(\cost(ge)=\cost(e)\). Hence
+\(\cost(e)+\delta(Mge)=\cost(ge)+\delta(M(ge))\geq5\) for every nonzero
+\(e\), and \(M\circ g\) satisfies \eqref{eq:adm} as well.
+
+A permutation \(\pi\) of \(T\) sends \(Z_i\) to \(Z_{\pi(i)}\), so
+\(M\circ\pi\) has \(\xi'_i=\xi_{\pi(i)}\) for all \(0\leq i\leq m-1\);
+choosing \(\pi\) to sort the \(\xi_i\) gives the first condition. Next
+let \(g_i\) be the exchange on qubit \(i\leq m-2\). It fixes every
+\(Z_j\) and every \(X_jX_a\) with \(j\neq i\), and sends \(X_iX_a\) to
+\(Y_iX_a=X_iX_a+Z_i\). So \(M\circ g_i\) has \(\eta'_i=\eta_i+\xi_i\)
+and the same values as \(M\) on the other basis vectors. Since
+\(\xi_i\neq0\), the values \(\eta_i\) and \(\eta_i+\xi_i\) differ, and
+composing with \(g_i\) for each \(i\) with \(\eta_i>\eta_i+\xi_i\) gives
+the second condition without changing the \(\xi_j\).
 \end{proof}
 
 %=====================================================================
@@ -754,14 +773,14 @@ is complete, and how the result was checked.
 
 \subsection{The data for one class}
 
-From the generators of \(C\) we compute a basis \(v_1,\ldots,v_{10}\)
-of \(C^\perp\) and the syndrome of each single-qubit Pauli operator on
-\(W\). The table \(\delta\) is computed by breadth-first search on
-\(\F^{10}\), starting from \(0\) and adding one single-qubit syndrome
-per step: a path of length \(j\) gives a word of weight at most \(j\)
-with that syndrome, and a word of weight \(j\) gives a path of length
-\(j\), so the distance found is exactly \(\delta\). A rank check
-confirms that the syndrome map has kernel \(C\). On the local side,
+From the generators of \(C\) we compute, by Gaussian elimination, a
+linear map \(s:W\to\F^{10}\) with kernel \(C\); its value \(s(w)\), the
+syndrome of \(w\), labels the coset \(w+C\). The table \(\delta\) is
+computed by listing all \(4^{16-m}\) Pauli operators \(w\) on \(W\) and
+keeping, for each syndrome, the least weight of an operator with that
+syndrome. The program checks that every generator of \(C\) has syndrome
+\(0\) and that every nonzero operator with syndrome \(0\) has weight at
+least five. On the local side,
 \(\cost(e)\) is computed for all \(2^{2m-2}\) elements of \(E\) directly
 from the definition. Only the elements with \(\cost(e)\leq4\) constrain
 \(M\). There are \(751\), \(1{,}967\), \(3{,}711\) and \(6{,}447\) such
@@ -770,17 +789,21 @@ nonzero elements for \(m=6,7,8,9\), out of \(2^{2m-2}-1\).
 \subsection{Two search methods}
 
 The first method is a depth-first search. It assigns the \(2m-2\) basis
-images one at a time in a fixed order. Once a set of basis images is
+images one at a time. Once a set of basis images is
 assigned, the image of every element of \(E\) whose expansion uses only
 those basis vectors is determined, as the corresponding sum. After each
 assignment the search tests \eqref{eq:adm} on every newly determined
 element and backtracks on a failure. The forward-checking version also
 keeps, for each unassigned basis vector, the set of values still
 allowed; a value is removed only when a specific determined element
-would violate \eqref{eq:adm}. The search is complete: an admissible map
-assigns some value to every basis vector, every element of \(E\) is
-tested as soon as its basis vectors are assigned, and a branch is
-discarded only when it violates a necessary inequality. If the search
+would violate \eqref{eq:adm}, and it next assigns the basis vector with
+the fewest allowed values. The plain version uses a fixed order. With
+Lemma~\ref{lem:symmetry}, the \(\xi_i\) are assigned first and in order,
+so that the order condition can be tested as they are assigned. The
+search is complete for any order: every allowed value of the chosen
+basis vector is tried, every element of \(E\) is tested as soon as its
+basis vectors are assigned, and a branch is discarded only when it
+violates a necessary inequality. If the search
 finishes without an admissible map, none exists.
 
 The second method, written separately, is a SAT encoding. The
@@ -804,9 +827,14 @@ Every class was tested by two methods, as follows.
 9&43&Depth-first search with Lemma~\ref{lem:symmetry}&Second depth-first search with Lemma~\ref{lem:symmetry}\\\bottomrule
 \end{tabular}
 \end{center}
-The depth-first searches for \(m\leq8\) use no symmetry reduction. The
-two \(m=9\) searches are separate programs with different coset labels
-and search orders. In all runs the order of Lemma~\ref{lem:symmetry} is
+The depth-first searches for \(m\leq8\) use no symmetry reduction. For
+\(m=7\) the plain depth-first search and the SAT encoding without
+Lemma~\ref{lem:symmetry} were also run on every class. The two \(m=9\)
+searches are separate programs: the first is the plain search with
+Lemma~\ref{lem:symmetry}, the second the forward-checking search with
+Lemma~\ref{lem:symmetry}, run on syndromes computed by the separate
+elimination of the SAT encoding. Both take the list of elements of \(E\)
+with \(\cost(e)\leq4\) from the same routine. In all runs the order of Lemma~\ref{lem:symmetry} is
 the order of the integers whose binary digits are the syndrome bits.
 The symmetry conditions only remove maps that have an equivalent
 admissible map satisfying them, so they cannot hide an admissible map.
@@ -814,15 +842,20 @@ admissible map satisfying them, so they cannot hide an admissible map.
 In every run, no class has an admissible map. The forward-checking
 search visits \(5.0\cdot10^5\) nodes in total for \(m=7\) and
 \(4.5\cdot10^9\) for \(m=8\); the two \(m=9\) searches visit
-\(1.2\cdot10^{10}\) and \(7.5\cdot10^9\) nodes. The logs record the
-result and node count for every class.
+\(1.2\cdot10^{10}\) and \(7.5\cdot10^9\) nodes. The logs, in
+\pathcode{search/logs/}, record the result and node count for every
+class: \pathcode{full2_run.log} and \pathcode{sat_run.log} for the plain
+search and the SAT encoding for \(m=6,7\); \pathcode{run_c78.log} and
+\pathcode{sat_sym_78.log} for \(m=7,8\); and \pathcode{run_c9.log} and
+\pathcode{run_m9_alt_*.log} for \(m=9\).
 
 A search that never finds anything could simply be broken, so we also
 ran a positive control. The local data of a known pure \(\qc{16,4,5}\)
 code, built and checked by complete enumeration of its centralizer, were
 given to every program; for this code \(m=6\) and \(W/C\) has dimension
-\(11\). Each program, with and without the symmetry conditions, finds
-the admissible map that comes from that code.
+\(11\). Each program, with and without the symmetry conditions, reports
+that an admissible map exists, and the replay script stops with an error
+if one does not.
 
 %=====================================================================
 \section{Proof of the theorem and the computations}\label{sec:proof}
@@ -855,8 +888,9 @@ reruns all three, including both methods for every class, and stops
 with an error if any class is not excluded; a search stopped by a node
 limit counts as not excluded. It takes about 45 core-hours. Without
 options it runs the certificates, the parity identity, the positive
-controls, and the complete searches for \(m=6,7\) in about 25 minutes on
-an Apple M3 laptop. The computation was also rerun by an outside reader
+controls, and complete searches for \(m=6,7\) (the forward-checking
+search and the SAT encoding with Lemma~\ref{lem:symmetry}) in about 25
+minutes on an Apple M3 laptop. The computation was also rerun by an outside reader
 using a separately written program, with matching results.
 
 %=====================================================================
