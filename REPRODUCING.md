@@ -34,6 +34,7 @@ listed in [`codes/17-5-5/README.md`](codes/17-5-5/README.md).
 
 ```sh
 python3 codes/18-3-6/verification/verify_all.py
+python3 codes/18-3-6/verification/check_paper.py
 python3 codes/18-3-6/published-example-audit/audit_cel_published.py
 ```
 
@@ -41,7 +42,9 @@ python3 codes/18-3-6/published-example-audit/audit_cel_published.py
 vectors of each code and checks the MacWilliams identities, the logical
 witnesses, the gluing construction of code A and the transformations giving B
 and C. Expected output: `codes/18-3-6/verification/EXPECTED_VERIFICATION.txt`.
-The second command checks that the 1999 example of Cohen, Encheva and Litsyn
+`check_paper.py` reads the generator table, enumerator, syndrome counts,
+witness and upper-bound certificate from `papers/seventeen/paper/main.tex` and
+checks them. The third command checks that the 1999 example of Cohen, Encheva and Litsyn
 cannot contain the self-dual subcode its construction needs. See
 [`codes/18-3-6/README.md`](codes/18-3-6/README.md) for the C++ error checks.
 

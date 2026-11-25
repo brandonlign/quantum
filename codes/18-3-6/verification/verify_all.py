@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact portable certificate for all claims in the accompanying manuscript.
+"""Exact portable certificate for the three [[18,3,6]] codes.
 Python 3.10+, standard library only; run without -O. Does not edit inputs.
 """
 from pathlib import Path

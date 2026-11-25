@@ -15,10 +15,9 @@ binary stabilizer codes ([codetables.de](https://codetables.de/QECC/QECC.php?q=4
 - [`papers/sixteen/main.pdf`](papers/sixteen/main.pdf): *The shortest binary
   stabilizer code with five logical qubits and distance five*. Proves that no
   [[16,5,5]] code exists and gives the [[17,5,5]] code.
-- [`papers/seventeen/paper/main.pdf`](papers/seventeen/paper/main.pdf): proves
-  that no [[17,3,6]] code exists.
-- [`codes/18-3-6/manuscript.pdf`](codes/18-3-6/manuscript.pdf): the three
-  [[18,3,6]] codes.
+- [`papers/seventeen/paper/main.pdf`](papers/seventeen/paper/main.pdf): *The
+  shortest binary stabilizer code with three logical qubits and distance six*.
+  Proves that no [[17,3,6]] code exists and gives the [[18,3,6]] codes.
 
 ## Checking each result
 
@@ -42,7 +41,7 @@ expected output. Recorded outputs are in `results/`.
 | Folder | Contents |
 |---|---|
 | `papers/sixteen/` | the [[16,5,5]]/[[17,5,5]] paper (LaTeX source and PDF) |
-| `papers/seventeen/` | the [[17,3,6]] paper |
+| `papers/seventeen/` | the [[17,3,6]]/[[18,3,6]] paper (LaTeX source and PDF) |
 | `codes/17-5-5/` | generators and checks for the [[17,5,5]] code |
 | `codes/18-3-6/` | generators, checks and construction of the [[18,3,6]] codes |
 | `verification/release16/` | the [[16,5,5]] certificates, census and searches (`replay.sh`) |
