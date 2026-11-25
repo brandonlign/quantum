@@ -1,6 +1,6 @@
 # Licenses
 
-The manuscript and computational data are licensed under
+The papers and computational data are licensed under
 [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/).
 
 The author's code is covered by the MIT license in `LICENSE` and retained source

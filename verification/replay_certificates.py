@@ -59,7 +59,6 @@ def main():
     assert __debug__, 'Assertions must remain enabled; run without -O'
     total = 0
     for group, checker, expected in [
-        ('14', 'check_certificates14.py', 11),
         ('16', 'check_certificates.py', 6),
         ('17', 'check_certificates.py', 7),
         ('17-frame-counts', 'check_certificates.py', 13),
@@ -68,11 +67,9 @@ def main():
         assert len(paths) == expected, (group, len(paths), expected)
         subprocess.run([sys.executable, '-B', str(HERE/checker), *map(str, paths)], check=True)
         total += len(paths)
-    for script in ['low_weight14.py', 'parity14.py']:
-        subprocess.run([sys.executable, '-B', str(HERE/script)], check=True)
     parity16()
     profile17()
-    print(f'PASS: {total} exact certificates and four ordinary identities', flush=True)
+    print(f'PASS: {total} exact certificates and two ordinary identities', flush=True)
 
 
 if __name__ == '__main__':

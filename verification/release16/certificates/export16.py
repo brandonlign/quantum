@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Export [[16,5,5]] Farkas certificates (found by system.py) to the labelled JSON
-format of the [[14,3,5]] paper's Appendix A, for checking by check_certificates.py."""
+format read by check_certificates.py."""
 import json, sys
 from fractions import Fraction
 from math import lcm

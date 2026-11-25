@@ -1,7 +1,6 @@
 """Completeness of census/cells.json and emptiness of the cells used in Lemma 7 of the paper.
 
-Runs the orbit-stabilizer mass-checked lengthening census (mass_census.py, identical to
-verification/s7_mass_check.py of the [[14,3,5]] repository) twice:
+Runs the orbit-stabilizer mass-checked lengthening census (mass_census.py) twice:
   * to (10,2^10): visits (7,2^4), (8,2^6), (9,2^8), (10,2^10) and asserts the labelled mass identity
     in every cell; then checks that the classes equal the representatives in cells.json as sets of
     canonical nauty certificates;

@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 """Generic [[n,k,d]] version of check16.py: n,k,d are read from spec["code"]; low rows require 1<=|c|<=d-1.
-Originally: standalone checker, adapted to [[16,5,5]] (n=16, |S|=2^11) from the [[14,3,5]] paper's
-verification/check_certificates.py.  Only changes: n=16, and weight rows must match the
-file's declared weight_assumptions.  Original docstring follows.
+Weight rows must match the file's declared weight_assumptions.
 
 Standalone checker for the Section 5 Farkas certificates (Appendix A).
 

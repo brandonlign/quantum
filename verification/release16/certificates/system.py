@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generic split-enumerator coset relaxation (Section 5.1 / Appendix A of the [[14,3,5]] paper),
+"""Generic split-enumerator coset relaxation (Appendix A of the paper),
 generalised to arbitrary [[n,k,d]].  Builds integer matrices; searches a Farkas
 certificate by floating LP, then rationalises and VERIFIES IT EXACTLY.
 A returned 'CERT' is an exact proof of infeasibility of the relaxation;

@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
-"""Standalone checker, adapted to [[16,5,5]] (n=16, |S|=2^11) from the [[14,3,5]] paper's
-verification/check_certificates.py.  Only changes: n=16, and weight rows must match the
-file's declared weight_assumptions.  Original docstring follows.
+"""[[16,5,5]] version (n=16, |S|=2^11); weight rows must match the file's declared
+weight_assumptions.
 
 Standalone checker for the Section 5 Farkas certificates (Appendix A).
 
